@@ -1,0 +1,95 @@
+import /init.recovery.${ro.hardware}.rc
+
+on early-init
+    start ueventd
+    start healthd
+
+on init
+    export PATH /sbin
+    export ANDROID_ROOT /system
+    export ANDROID_DATA /data
+    export EXTERNAL_STORAGE /sdcard
+
+    symlink /system/etc /etc
+
+    mkdir /storage
+    mkdir /storage/sdcard
+# Begin added by TCL pengpeng, mail: pengpeng01@tcl.com
+    mkdir /mnt/
+    mkdir /mnt/sdcard
+    mkdir /mnt/usb
+# End of TCL
+    mkdir /system
+    mkdir /data
+    mkdir /cache
+   	mkdir /impdat
+   	mkdir /tclconfig
+   	mkdir /midbase
+   	mkdir /database
+    mount /tmp /tmp tmpfs
+    wait /dev/block/mmcblk0p13
+    mount ext4 /dev/block/mmcblk0p13 /impdat nosuid nodev noauto_da_alloc
+    chmod 0777 /impdat
+    wait /dev/block/mmcblk0p15
+    mount ext4 /dev/block/mmcblk0p15 /tclconfig nosuid nodev noauto_da_alloc
+    chmod 0777 /tclconfig
+    wait /dev/block/mmcblk0p17
+    mount ext4 /dev/block/mmcblk0p17 /midbase nosuid nodev noauto_da_alloc
+    chmod 0777 /midbase
+    wait /dev/block/mmcblk0p14
+    mount ext4 /dev/block/mmcblk0p14 /database nosuid nodev noauto_da_alloc
+    chmod 0777 /database
+#    insmod /dtv_driver.ko osd1_src_width=960 osd1_src_height=540 osd2_src_width=960 osd2_src_height=540 
+    insmod /dtv_driver.ko osd1_src_width=960 osd1_src_height=540 osd2_src_width=1920 osd2_src_height=1080
+    insmod /mtk-hcd.ko
+    insmod /usb-storage.ko
+	
+    chown root shell /tmp
+    chmod 0775 /tmp
+
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idVendor 18D1
+    write /sys/class/android_usb/android0/idProduct D001
+    write /sys/class/android_usb/android0/functions adb
+    write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
+    write /sys/class/android_usb/android0/iProduct ${ro.product.model}
+    write /sys/class/android_usb/android0/iSerial ${ro.serialno}
+
+
+on boot
+
+    ifup lo
+    hostname localhost
+    domainname localdomain
+
+    class_start default
+
+service console /sbin/sh
+    console
+
+on property:sys.powerctl=*
+   powerctl ${sys.powerctl}
+
+service ueventd /sbin/ueventd
+    critical
+
+service healthd /sbin/healthd -n
+    critical
+
+service recovery /sbin/recovery
+    console
+
+service adbd /sbin/adbd recovery
+    disabled
+    socket adbd stream 660 system system
+
+# Always start adbd on userdebug and eng builds
+on property:ro.debuggable=1
+    write /sys/class/android_usb/android0/enable 1
+    start adbd
+
+# Restart adbd so it can run as root
+on property:service.adb.root=1
+    write /sys/class/android_usb/android0/enable 0
+    restart adbd
+    write /sys/class/android_usb/android0/enable 1
