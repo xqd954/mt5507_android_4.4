@@ -1,0 +1,4 @@
+config MTK_MT7662
+	bool "MTK chip MT7662 configuration"
+	help
+		"MTK chip MT7662"

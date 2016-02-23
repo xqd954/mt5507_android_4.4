@@ -1,0 +1,7 @@
+#This file collects all the PS trace files which is needed for Catcher decoding
+#Users can add his trace files here.
+#Users could add some comments in a new line beginning with #
+
+#Logging trace header
+include/tst_trace.h
+../btadp_int/include/bluetooth_trc.h

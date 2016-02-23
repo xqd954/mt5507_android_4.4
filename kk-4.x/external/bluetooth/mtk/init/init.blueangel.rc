@@ -1,0 +1,29 @@
+on boot
+   chown bluetooth net_bt_stack /data/misc/bluetooth
+
+on post-fs-data
+   //insmod /system/lib/modules/mt76xx.ko
+   chmod 777 /system/bin/mtkbt
+   
+  # bluetooth
+    mkdir /data/@btmtk 0770 bluetooth net_bt
+    chown bluetooth bluetooth /dev/uhid
+    chmod 0660 /dev/hid-keyboard
+    #chown bluetooth bluetooth /dev/btn
+    #chmod 0660 /dev/btn
+    chmod 0660 /dev/tun
+    
+    #Use uinput's default permission
+    chown system net_bt_admin /dev/uinput
+   
+    
+# start blueangel deamon
+service blueangel /system/bin/mtkbt
+	socket bt.int.adp dgram 660 bluetooth net_bt
+	socket bt.a2dp.stream dgram 660 bluetooth net_bt
+    class main
+
+service dhcpcd_bt-pan /system/bin/logwrapper /system/bin/dhcpcd -A -BK -dd
+    class main
+    disabled
+    oneshot

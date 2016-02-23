@@ -1,0 +1,153 @@
+# 1 "include/tst_trace.h"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "include/tst_trace.h"
+# 197 "include/tst_trace.h"
+# 1 "../btadp_int/include/bt_adp_log.h" 1
+# 134 "../btadp_int/include/bt_adp_log.h"
+typedef enum
+{
+   TRACE_FUNC,
+   TRACE_STATE,
+   TRACE_INFO,
+   TRACE_WARNING,
+   TRACE_ERROR,
+   TRACE_GROUP_1,
+   TRACE_GROUP_2,
+   TRACE_GROUP_3,
+   TRACE_GROUP_4,
+   TRACE_GROUP_5,
+   TRACE_GROUP_6,
+   TRACE_GROUP_7,
+   TRACE_GROUP_8,
+   TRACE_GROUP_9,
+   TRACE_GROUP_10,
+   TRACE_PEER
+}trace_class_enum;
+
+
+typedef enum {
+   INVALID_SAP = 0,
+
+   BCHS_L4C_SAP,
+   BCHS_MMI_SAP,
+   BT_A2DP_SAP,
+   BT_APP_SAP,
+   BT_AVRCP_SAP,
+   BT_HFG_SAP,
+   BT_BPP_SAP,
+   BT_BIP_SAP,
+   BT_PBAP_SAP,
+   BT_OBEX_SAP,
+
+   PS_SIM_SAP,
+
+   LAST_SAP_CODE = 0xFFFFFFFF
+} sap_type;
+
+typedef struct
+{
+   kal_uint32 frame_number;
+   kal_uint32 time_stamp;
+   kal_uint32 msg_index;
+   trace_class_enum trace_class;
+   kal_uint16 buf_length;
+} tst_index_trace_header_struct;
+
+typedef struct
+{
+   kal_uint32 frame_number;
+   kal_uint32 time_stamp;
+   module_type module_id;
+   kal_uint16 buf_length;
+} tst_prompt_trace_header_struct;
+
+typedef struct
+{
+ const kal_uint8* pTraceHeader;
+ const kal_uint8* pData;
+ const kal_uint8* pData2;
+ kal_uint32 lenTraceHeader;
+ kal_uint32 lenData;
+ kal_uint32 lenData2;
+ kal_uint32 frameMessageType;
+} tst_trace_frame_arg;
+
+typedef struct
+{
+   kal_uint32 frame_number;
+   kal_uint32 time_stamp;
+   module_type src_mod_id;
+   module_type dest_mod_id;
+   sap_type sap_id;
+   msg_type msg_id;
+   kal_uint16 local_len;
+   kal_uint16 peer_len;
+   kal_uint32 local_addr;
+   kal_uint32 peer_addr;
+} tst_log_prim_header_struct;
+
+void bt_trace( trace_class_enum trc_class, kal_uint32 msg_index, const char *arg_type,...);
+
+
+
+void bt_prompt_trace(module_type mod_id, const char *fmt,...);
+void bt_log_primitive(ilm_struct* ilm_ptr);
+void bt_assert(char* expr, char* file, kal_uint32 line);
+void bt_assert_reset(char* expr, char* file, kal_uint32 line);
+void bt_log_setting(kal_uint32 trace, kal_uint8 primitive, kal_uint8 prompt);
+# 198 "include/tst_trace.h" 2
+
+
+
+
+START_MODULE_MSG MOD_TST 20
+   TST_MSG1 "System lost %d primtives and %d traces and %d EM datas"
+   TST_MSG2 "System lost %d traces, %d primtives and %d others"
+   TR_MSG1 "Lost Primitive [%d / %d] (32 %d, 64 %d, 128 %d, 256 %d, 512 %d, 1024 %d, 2048 %d)"
+   TR_MSG2 "Lost Trace [%d / %d] (32 %d, 64 %d, 128 %d, 256 %d, 512 %d, 1024 %d, 2048 %d)"
+   TR_MSG3 "Lost EM [%d / %d] (32 %d, 64 %d, 128 %d, 256 %d, 512 %d, 1024 %d, 2048 %d)"
+   DROP_IN_DUMP "Lost one message not filled completely (length is %d)"
+   TR_TRACE_PEER_MSG "Message class: TRACE_PEER"
+   TR_BUFFER_TRACE "Buffer to trace by kal_buffer_trace"
+   TR_REDUMP_WARN "Caution: To re-dump TST ring buffer!"
+   TR_REDUMP_END_WARN "Caution: Finish re-dumping TST ring buffer!"
+   TR_ONLY_LOG_TO_FILE_START "Caution: Start to only log to file!"
+   TR_ONLY_LOG_TO_FILE_STOP "Caution: Resume to log to UART/USB! (%d messeages are in-between)"
+   TST_LGA_EMB_LOGS_MSG "MCU_BUS read_index  = %d, duration = %d, bus_ccnt = %d, trans_all_cnt = %d, trans_cnt = %d, word_all_cnt = %d, word_cnt = %d, busy_all_cnt = %d, busy_cnt = %d"
+   TST_LGA_EMB_LOGS_BUF_LACK "The buffer for LOGACC EMI LOG BUF is overflow"
+   TST_LGA_EMB_COUNTER_OVERRUN "The counter of EMI BUS is overflow for %d times"
+   TST_CLEAN_BUF_DATA "The TST ring buffer is erased, %d PS logs bytes are dropped"
+   TR_CMD_SET_TRAP_FILTER "[TR] The SAP trap settings are applied: SAP type:%Msap_type, is_trap: %d"
+   TR_CMD_SET_EMI_MASTER_MONITOR "The result of monitored masters setting: %d. Set value (%d, %d, %d)"
+   TR_CMD_SET_BW_LIMIT "The result of EMI bandwidth limit cmd is %d"
+   TR_CMD_SET_CPU_LIMIT "The result of Task execution time limit setting is is %d."
+   TR_SET_CATCHER_FILTER_NVRAM_NOT_SAVE "[TST Reader] Filters are set successfully but not saved to NVRAM!!"
+   TR_GET_ERROR_UT_PRIMITIVE "[TST Reader] TR recevied one incorrect UT primitive"
+   TR_GET_ERROR_COMMAND "[TST Reader] TR recevied one incorrect command from PC."
+   TR_DETECT_MODULE_NOT_EXIST "[TST Reader] %Mmodule_type doesn't exist"
+   TR_RECEIVE_UNEXPECTED_CHAR "[TST Reader] TR: Discards %d chars."
+   TR_LOST_ONE_CMD "[TST Reader] tst lost one command !!"
+   TR_SET_CATCHER_FILTER_NVRAM_SAVE_FAIL "[TST Reader] TST Save Filters to Flash Error !! result = %d"
+   TR_QUERY_NON_SUPPORT_AREA "[TST Reader] Don't support read memory range of DSP-DMA (0x6000-0000 ~ 0x6FFF-FFFF) !!"
+   TST_TEST_KAL_TRACE0 "[TST] kal_trace0"
+   TST_TEST_KAL_TRACE1 "[TST] kal_trace1: %c"
+   TST_TEST_KAL_TRACEM21 "[TST] kal_traceM21: %c %d %c %d %c %d %c %d %c"
+   TST_TEST_KAL_TRACE31 "[TST] kal_trace31: %d %d %d %d %d %d %d %c %c %c"
+   TST_TEST_KAL_TRACE32 "[TST] kal_trace32: %d %d %d %d %d %d %d %d "
+   TST_TEST_KAL_TRACE33 "[TST] kal_trace33: %d %d %d %d %d %d %d %d %c "
+   TST_TEST_KAL_TRACE126 "[TST] kal_trace126: %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %c %c"
+   TST_TEST_KAL_TRACE129 "[TST] kal_trace129: %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %c"
+   TST_TEST_KAL_DEV_TRACE0 "[TST] kal_dev_trace0"
+   TST_TEST_KAL_ASSERT_TRACE0 "[TST] kal_assert_trace0"
+   TST_TEST_KAL_TRACE_for_3rd_party0 "[TST] kal_trace_for_3rd_party0"
+   TST_TEST_KAL_TRACE_for_3rd_partyStr "[TST] kal_trace_for_3rd_party: %d, %s"
+   TR_UT_RECEIVE_INJECT_MSG "[TST Reader][UT] Receive one inject UT message. Src_id=%Mmodule_type, dst_id=%Mmodule_type, msg_id=%Mmsg_type"
+   TR_UT_ALLOCATE_UT_LOCAL_BUF "[TST Reader][UT] Allocate a local buffer. Addr: 0x%X, Size: 0x%X"
+   TR_UT_ALLOCATE_UT_LOCAL_BUF_BUFS "[TST Reader][UT] Allocate a buf for local parameter. Addr: 0x%X, Size: 0x%X"
+   TR_UT_ALLOCATE_UT_PEER_BUF "[TST Reader][UT] Allocate a peer buffer. Addr: 0x%X, Size: 0x%X"
+   TR_UT_MSG_REF_COUNT_INCORRECT "[TST Reader][UT] Incorrect reference count for the msg:0x%X"
+   TR_FS_OPEN_FILE_FAILED "[TST Reader] Fail to open files for write. Error code: 0x%X"
+   TR_FS_FILE_SEEK_FAILED "[TST Reader] Fail to seek the file to 0x%x. Error code: 0x%X"
+   TR_FS_WRITE_LENGTH_LESS_THAN_EXPECTATION "[TST Reader] The length being written is less than expected one. Actrual write length 0x%x. Expected write length: 0x%X"
+END_MODULE_MSG

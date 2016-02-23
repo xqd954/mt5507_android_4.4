@@ -1,0 +1,1 @@
+include $(ANDROID_BUILD_TOP)/../../chiling/app_if/mtal/ut/mttest/Android.mk

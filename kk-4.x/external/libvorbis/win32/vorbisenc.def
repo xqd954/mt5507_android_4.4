@@ -1,0 +1,13 @@
+;
+; $Id: //DTV/MP_BR/DTV_X_IDTV0801_002298_3_001/android/kk-4.x/external/libvorbis/win32/vorbisenc.def#1 $
+;
+LIBRARY
+
+EXPORTS
+vorbis_encode_init
+vorbis_encode_setup_managed
+vorbis_encode_setup_vbr
+vorbis_encode_init_vbr
+vorbis_encode_setup_init
+vorbis_encode_ctl
+

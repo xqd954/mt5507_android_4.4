@@ -1,0 +1,132 @@
+/* Copyright Statement:
+ *
+ * This software/firmware and related documentation ("MediaTek Software") are
+ * protected under relevant copyright laws. The information contained herein
+ * is confidential and proprietary to MediaTek Inc. and/or its licensors.
+ * Without the prior written permission of MediaTek inc. and/or its licensors,
+ * any reproduction, modification, use or disclosure of MediaTek Software,
+ * and information contained herein, in whole or in part, shall be strictly prohibited.
+ *
+ * MediaTek Inc. (C) 2010. All rights reserved.
+ *
+ * BY OPENING THIS FILE, RECEIVER HEREBY UNEQUIVOCALLY ACKNOWLEDGES AND AGREES
+ * THAT THE SOFTWARE/FIRMWARE AND ITS DOCUMENTATIONS ("MEDIATEK SOFTWARE")
+ * RECEIVED FROM MEDIATEK AND/OR ITS REPRESENTATIVES ARE PROVIDED TO RECEIVER ON
+ * AN "AS-IS" BASIS ONLY. MEDIATEK EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NONINFRINGEMENT.
+ * NEITHER DOES MEDIATEK PROVIDE ANY WARRANTY WHATSOEVER WITH RESPECT TO THE
+ * SOFTWARE OF ANY THIRD PARTY WHICH MAY BE USED BY, INCORPORATED IN, OR
+ * SUPPLIED WITH THE MEDIATEK SOFTWARE, AND RECEIVER AGREES TO LOOK ONLY TO SUCH
+ * THIRD PARTY FOR ANY WARRANTY CLAIM RELATING THERETO. RECEIVER EXPRESSLY ACKNOWLEDGES
+ * THAT IT IS RECEIVER'S SOLE RESPONSIBILITY TO OBTAIN FROM ANY THIRD PARTY ALL PROPER LICENSES
+ * CONTAINED IN MEDIATEK SOFTWARE. MEDIATEK SHALL ALSO NOT BE RESPONSIBLE FOR ANY MEDIATEK
+ * SOFTWARE RELEASES MADE TO RECEIVER'S SPECIFICATION OR TO CONFORM TO A PARTICULAR
+ * STANDARD OR OPEN FORUM. RECEIVER'S SOLE AND EXCLUSIVE REMEDY AND MEDIATEK'S ENTIRE AND
+ * CUMULATIVE LIABILITY WITH RESPECT TO THE MEDIATEK SOFTWARE RELEASED HEREUNDER WILL BE,
+ * AT MEDIATEK'S OPTION, TO REVISE OR REPLACE THE MEDIATEK SOFTWARE AT ISSUE,
+ * OR REFUND ANY SOFTWARE LICENSE FEES OR SERVICE CHARGE PAID BY RECEIVER TO
+ * MEDIATEK FOR SUCH MEDIATEK SOFTWARE AT ISSUE.
+ *
+ * The following software/firmware and/or related documentation ("MediaTek Software")
+ * have been modified by MediaTek Inc. All revisions are subject to any receiver's
+ * applicable license agreements with MediaTek Inc.
+ */
+
+#ifndef __BTCONFIG_LE_H
+#define __BTCONFIG_LE_H
+
+#include "bt_feature.h"
+
+#ifndef BT_LE_ADV_DATA_SERVICE
+#define BT_LE_ADV_DATA_SERVICE    FALSE
+#endif
+
+/* Connection configurable parameters */
+
+#ifndef BT_LE_DEFAULT_MIN_ADV_INTERVAL
+#define BT_LE_DEFAULT_MIN_ADV_INTERVAL 0x800       /* TGAP(GEN_DISC_ADV_INT_MIN) = TGAP(UNDIR_CONN_ADV_INT_MIN) = 1.28s: 0x800 * 0.625ms */
+#endif
+
+#ifndef BT_LE_DEFAULT_MAX_ADV_INTERVAL
+#define BT_LE_DEFAULT_MAX_ADV_INTERVAL 0x1000      /* TGAP(GEN_DISC_ADV_INT_MAX) = TGAP(UNDIR_CONN_ADV_INT_MAX) = 2.56s: 0x1000 * 0.625ms */
+#endif
+
+#ifndef BT_LE_DEFAULT_CONN_EST_SCAN_INTERVAL
+#define BT_LE_DEFAULT_CONN_EST_SCAN_INTERVAL 0x800       /* 1.28s: 0x800 * 0.625ms */
+#endif
+
+#ifndef BT_LE_DEFAULT_CONN_EST_SCAN_WINDOW
+#define BT_LE_DEFAULT_CONN_EST_SCAN_WINDOW   0x12        /* 11.25ms: 0x12 * 0.625ms  */
+#endif
+
+#ifndef BT_LE_DEFAULT_MAX_CONN_INTERVAL
+#define BT_LE_DEFAULT_MAX_CONN_INTERVAL 0x400   /* 1.28s: 0x400 * 1.25ms*/
+#endif
+
+#ifndef BT_LE_DEFAULT_MIN_CONN_INTERVAL
+#define BT_LE_DEFAULT_MIN_CONN_INTERVAL 0x190   /* 500ms: 0x190 * 1.25ms*/
+#endif
+
+#ifndef BT_LE_DEFAULT_CONN_LATENCY
+#define BT_LE_DEFAULT_CONN_LATENCY 0x0          /* TGAP(conn_est_latency) */
+#endif
+
+/* Before connection establishing: 6 * connInterval (decided by chip) */
+/* After connection establishing: 10 * connInterval (at most allow 10 anchor point irresponsiveness)*/
+#ifndef BT_LE_DEFAULT_SUPERVISION_TO
+#define BT_LE_DEFAULT_SUPERVISION_TO 0x500    /* 1.28*10s: 0x500 * 10ms*/
+#endif
+
+#ifndef BT_LE_DEFAULT_MAX_CE_LENGTH
+#define BT_LE_DEFAULT_MAX_CE_LENGTH 0x140       /* TBC: 200ms: 0x140 * 0,625ms */
+#endif
+
+#ifndef BT_LE_DEFAULT_MIN_CE_LENGTH
+#define BT_LE_DEFAULT_MIN_CE_LENGTH 0x60        /* TBC: 60ms: 0x60 * 0.625ms */
+#endif
+
+#ifndef BT_LE_DEFAULT_DISC_DUAL_SCAN_INTERVAL
+#define BT_LE_DEFAULT_DISC_DUAL_SCAN_INTERVAL   0x140 /* 200ms: 0x140 * 0.625ms */
+#endif
+
+#ifndef BT_LE_DEFAULT_DISC_SCAN_INTERVAL
+#define BT_LE_DEFAULT_DISC_SCAN_INTERVAL   0x12 /* 11.25ms: 0x12 * 0.625ms */
+#endif
+
+#ifndef BT_LE_DEFAULT_DISC_SCAN_WINDOW
+//#define BT_LE_DEFAULT_DISC_SCAN_WINDOW   0x12 /* 11.25ms: 0x12 * 0.625ms  */
+#define BT_LE_DEFAULT_DISC_SCAN_WINDOW   0xA0 /* 11.25ms: 0x12 * 0.625ms  */
+#endif
+
+#ifndef BT_LE_DEFAULT_CONN_TIMEOUT
+#define BT_LE_DEFAULT_CONN_TIMEOUT 20000        /* 20s */
+#endif
+
+/* SM configurable parameters */
+
+/* Separate from BT_SSP_XXXX due to different definition */
+#define SM_DEFAULT_IO_CAPABILITY       SM_IO_CAPABILITY_KEYBOARD_DISPLAY
+#define SM_DEFAULT_OOB_FLAG            SM_OOB_DATA_PRESENT_NO
+#define SM_DEFAULT_BOND_FLAG           SM_BONDING_YES
+#define SM_DEFAULT_MITM_PROTECT        TRUE
+#define SM_DEFAULT_MAX_ENC_KEY_SIZE    16
+#define SM_DEFAULT_MIN_ENC_KEY_SIZE    7
+
+#if SM_DEFAULT_MAX_ENC_KEY_SIZE > 16 || SM_DEFAULT_MAX_ENC_KEY_SIZE < 7
+#error Invalid DEFAULT_MAX_ENC_KEY_SIZE value
+#endif
+
+#if SM_DEFAULT_MIN_ENC_KEY_SIZE > 16 || SM_DEFAULT_MIN_ENC_KEY_SIZE < 7
+#error Invalid DEFAULT_MIN_ENC_KEY_SIZE value
+#endif
+
+#ifdef __BT_4_0_PRIVACY__
+#define SM_DEFAULT_INITIATOR_KEY_DIST  (SM_KEY_DIST_LTK | SM_KEY_DIST_IRK | SM_KEY_DIST_CSRK)
+#define SM_DEFAULT_RESPONDER_KEY_DIST  (SM_KEY_DIST_LTK | SM_KEY_DIST_IRK | SM_KEY_DIST_CSRK)
+#else
+#define SM_DEFAULT_INITIATOR_KEY_DIST  (SM_KEY_DIST_LTK | SM_KEY_DIST_CSRK)
+#define SM_DEFAULT_RESPONDER_KEY_DIST  (SM_KEY_DIST_LTK | SM_KEY_DIST_CSRK)
+#endif
+
+#endif /* __BTCONFIG_LE_H */

@@ -1,0 +1,204 @@
+# char '#' is comment flag, like linux shell
+
+ts_dump_hd_cctv1hd.ts
+{
+#eMediaType=IMTK_PB_CTRL_MEDIA_TYPE_MPEG2_TS
+#u4TotalDuration=0xffffffff
+#u8Size=-1   do not need set
+#video.Width=1920
+#video.Heigh=1080
+#audio.Channels=2
+#audio.SampeRate=48000
+ePacketType=1                                 # 1--IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_188BYTE 2-IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_192BYTE
+eVidInfo.uVidCodecInfo.t_h264_info.eFrmRate=3 # 3--25ﾖ｡  20--IMTK_PB_CTRL_FRAME_RATE_VARIABLEﾗﾔﾊﾊﾓｦ
+eVidInfo.eVidEnc=3                            # 1--mpeg1/2  2--mpeg 4 3--h264
+eVidInfo.u2Pid=0x1022                         # video pid
+eAudInfo.eAudEnc=1                            # 1--mpeg  2--mp3  3--aac
+eAudInfo.u2Pid=0x1023                         # audio pid
+}
+
+ts_dump_hd_cctvhd.ts
+{
+#video.Width=1920
+#video.Heigh=1080
+#audio.Channels=2
+#audio.SampeRate=48000
+ePacketType=1                                 # 1--IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_188BYTE 2-IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_192BYTE
+eVidInfo.uVidCodecInfo.t_h264_info.eFrmRate=3 # 3--25ﾖ｡  20--IMTK_PB_CTRL_FRAME_RATE_VARIABLEﾗﾔﾊﾊﾓｦ
+eVidInfo.eVidEnc=3                            # 1--mpeg1/2  2--mpeg 4 3--h264
+eVidInfo.u2Pid=0x1022                         # video pid
+eAudInfo.eAudEnc=1                            # 1--mpeg  2--mp3  3--aac
+eAudInfo.u2Pid=0x1023                         # audio pid
+}
+
+ts_dump_hd_guangdong.ts
+{
+#video.Width=1920
+#video.Heigh=1080
+#audio.Channels=2
+#audio.SampeRate=48000
+ePacketType=1                                 # 1--IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_188BYTE 2-IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_192BYTE
+eVidInfo.uVidCodecInfo.t_h264_info.eFrmRate=3 # 3--25ﾖ｡  20--IMTK_PB_CTRL_FRAME_RATE_VARIABLEﾗﾔﾊﾊﾓｦ
+eVidInfo.eVidEnc=3                            # 1--mpeg1/2  2--mpeg 4 3--h264
+eVidInfo.u2Pid=0x1022                         # video pid
+eAudInfo.eAudEnc=1                            # 1--mpeg  2--mp3  3--aac
+eAudInfo.u2Pid=0x1023                         # audio pid
+}
+
+ts_dump_hd_shenzheng.ts
+{
+#video.Width=1920
+#video.Heigh=1080
+#audio.Channels=2
+#audio.SampeRate=48000
+ePacketType=1                                 # 1--IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_188BYTE 2-IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_192BYTE
+eVidInfo.uVidCodecInfo.t_h264_info.eFrmRate=3 # 3--25ﾖ｡  20--IMTK_PB_CTRL_FRAME_RATE_VARIABLEﾗﾔﾊﾊﾓｦ
+eVidInfo.eVidEnc=3                            # 1--mpeg1/2  2--mpeg 4 3--h264
+eVidInfo.u2Pid=0x1022                         # video pid
+eAudInfo.eAudEnc=1                            # 1--mpeg  2--mp3  3--aac
+eAudInfo.u2Pid=0x1023                         # audio pid
+}
+
+ts_dump_sd_last_1.ts
+{
+  #eMediaType=IMTK_PB_CTRL_MEDIA_TYPE_MPEG2_TS
+  #u4TotalDuration=0xffffffff
+  #u8Size=-1   do not need set
+#video.Width=576
+#video.Heigh=544
+#audio.Channels=1
+#audio.SampeRate=48000
+ePacketType=1                                 # 1--IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_188BYTE 2-IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_192BYTE
+eVidInfo.uVidCodecInfo.t_h264_info.eFrmRate=3 # 3--25ﾖ｡  20--IMTK_PB_CTRL_FRAME_RATE_VARIABLEﾗﾔﾊﾊﾓｦ
+eVidInfo.eVidEnc=3                            # 1--mpeg1/2  2--mpeg 4 3--h264
+eVidInfo.u2Pid=0x1022                         # video pid
+eAudInfo.eAudEnc=1                            # 1--mpeg  2--mp3  3--aac
+eAudInfo.u2Pid=0x1023                         # audio pid
+}
+
+ts_dump_sd_last_2.ts
+{
+#video.Width=576
+#video.Heigh=544
+#audio.Channels=1
+#audio.SampeRate=48000
+ePacketType=1                                 # 1--IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_188BYTE 2-IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_192BYTE
+eVidInfo.uVidCodecInfo.t_h264_info.eFrmRate=3 # 3--25ﾖ｡  20--IMTK_PB_CTRL_FRAME_RATE_VARIABLEﾗﾔﾊﾊﾓｦ
+eVidInfo.eVidEnc=3                            # 1--mpeg1/2  2--mpeg 4 3--h264
+eVidInfo.u2Pid=0x1022                         # video pid
+eAudInfo.eAudEnc=1                            # 1--mpeg  2--mp3  3--aac
+eAudInfo.u2Pid=0x1023                         # audio pid
+}
+
+ts_dump_sd_last_3.ts
+{
+#video.Width=576
+#video.Heigh=544
+#audio.Channels=1
+#audio.SampeRate=48000
+ePacketType=1                                 # 1--IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_188BYTE 2-IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_192BYTE
+eVidInfo.uVidCodecInfo.t_h264_info.eFrmRate=3 # 3--25ﾖ｡  20--IMTK_PB_CTRL_FRAME_RATE_VARIABLEﾗﾔﾊﾊﾓｦ
+eVidInfo.eVidEnc=3                            # 1--mpeg1/2  2--mpeg 4 3--h264
+eVidInfo.u2Pid=0x1022                         # video pid
+eAudInfo.eAudEnc=1                            # 1--mpeg  2--mp3  3--aac
+eAudInfo.u2Pid=0x1023                         # audio pid
+}
+
+ts_dump_sd_last_4.ts
+{
+#video.Width=576
+#video.Heigh=544
+#audio.Channels=1
+#audio.SampeRate=48000
+ePacketType=1                                 # 1--IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_188BYTE 2-IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_192BYTE
+eVidInfo.uVidCodecInfo.t_h264_info.eFrmRate=3 # 3--25ﾖ｡  20--IMTK_PB_CTRL_FRAME_RATE_VARIABLEﾗﾔﾊﾊﾓｦ
+eVidInfo.eVidEnc=3                            # 1--mpeg1/2  2--mpeg 4 3--h264
+eVidInfo.u2Pid=0x1022                         # video pid
+eAudInfo.eAudEnc=1                            # 1--mpeg  2--mp3  3--aac
+eAudInfo.u2Pid=0x1023                         # audio pid
+}
+
+ts_dump_sd_last_5.ts
+{
+#video.Width=576
+#video.Heigh=544
+#audio.Channels=1
+#audio.SampeRate=48000
+ePacketType=1                                 # 1--IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_188BYTE 2-IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_192BYTE
+eVidInfo.uVidCodecInfo.t_h264_info.eFrmRate=3 # 3--25ﾖ｡  20--IMTK_PB_CTRL_FRAME_RATE_VARIABLEﾗﾔﾊﾊﾓｦ
+eVidInfo.eVidEnc=3                            # 1--mpeg1/2  2--mpeg 4 3--h264
+eVidInfo.u2Pid=0x1022                         # video pid
+eAudInfo.eAudEnc=1                            # 1--mpeg  2--mp3  3--aac
+eAudInfo.u2Pid=0x1023                         # audio pid
+}
+
+shoe.ts
+{
+#video.Width=720
+#video.Heigh=576
+#audio.Channels=1
+#audio.SampeRate=48000
+ePacketType=1                                 # 1--IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_188BYTE 2-IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_192BYTE
+eVidInfo.uVidCodecInfo.t_h264_info.eFrmRate=3 # 3--25ﾖ｡  20--IMTK_PB_CTRL_FRAME_RATE_VARIABLEﾗﾔﾊﾊﾓｦ
+eVidInfo.eVidEnc=1                            # 1--mpeg1/2  2--mpeg 4 3--h264
+eVidInfo.u2Pid=0x281                          # video pid
+eAudInfo.eAudEnc=1                            # 1--mpeg  2--mp3  3--aac
+eAudInfo.u2Pid=0x1201                         # audio pid
+}
+
+sd_wydht_2011-02-12-13-56-57.ts
+{
+#video.Width=768
+#video.Heigh=432
+#audio.Channels=2
+#audio.SampeRate=48000
+ePacketType=1                                 # 1--IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_188BYTE 2-IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_192BYTE
+eVidInfo.uVidCodecInfo.t_h264_info.eFrmRate=3 # 3--25ﾖ｡  20--IMTK_PB_CTRL_FRAME_RATE_VARIABLEﾗﾔﾊﾊﾓｦ
+eVidInfo.eVidEnc=3                            # 1--mpeg1/2  2--mpeg 4 3--h264
+eVidInfo.u2Pid=0x1011                         # video pid
+eAudInfo.eAudEnc=3                            # 1--mpeg  2--mp3  3--aac
+eAudInfo.u2Pid=0x1100                         # audio pid
+}
+
+ChiYan_1M.ts
+{
+#video.Width=1280
+#video.Heigh=720
+#audio.Channels=2
+#audio.SampeRate=48000
+ePacketType=1                                 # 1--IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_188BYTE 2-IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_192BYTE
+eVidInfo.uVidCodecInfo.t_h264_info.eFrmRate=1 # 1--23.976ﾖ｡ 3--25ﾖ｡  20--IMTK_PB_CTRL_FRAME_RATE_VARIABLEﾗﾔﾊﾊﾓｦ
+eVidInfo.eVidEnc=3                            # 1--mpeg1/2  2--mpeg 4 3--h264
+eVidInfo.u2Pid=0x1011                         # video pid
+eAudInfo.eAudEnc=3                            # 1--mpeg  2--mp3  3--aac
+eAudInfo.u2Pid=0x1100                         # audio pid
+}
+
+ts_dump_fb_hd_1_ts.ts
+{
+#video.Width=1920
+#video.Heigh=1080
+#audio.Channels=2
+#audio.SampeRate=48000
+ePacketType=1                                 # 1--IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_188BYTE 2-IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_192BYTE
+eVidInfo.uVidCodecInfo.t_h264_info.eFrmRate=3 # 3--25ﾖ｡  20--IMTK_PB_CTRL_FRAME_RATE_VARIABLEﾗﾔﾊﾊﾓｦ
+eVidInfo.eVidEnc=3                            # 1--mpeg1/2  2--mpeg 4 3--h264
+eVidInfo.u2Pid=0x1022                         # video pid
+eAudInfo.eAudEnc=1                            # 1--mpeg  2--mp3  3--aac
+eAudInfo.u2Pid=0x1023                         # audio pid
+}
+
+ts_dump_fb_sd_1_ts.ts
+{
+#video.Width=576
+#video.Heigh=544
+#audio.Channels=1
+#audio.SampeRate=48000
+ePacketType=1                                 # 1--IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_188BYTE 2-IMTK_PB_CTRL_MPEG2_TS_PACKET_TYPE_192BYTE
+eVidInfo.uVidCodecInfo.t_h264_info.eFrmRate=3 # 3--25ﾖ｡  20--IMTK_PB_CTRL_FRAME_RATE_VARIABLEﾗﾔﾊﾊﾓｦ
+eVidInfo.eVidEnc=3                            # 1--mpeg1/2  2--mpeg 4 3--h264
+eVidInfo.u2Pid=0x1022                         # video pid
+eAudInfo.eAudEnc=1                            # 1--mpeg  2--mp3  3--aac
+eAudInfo.u2Pid=0x1023                         # audio pid
+}
+

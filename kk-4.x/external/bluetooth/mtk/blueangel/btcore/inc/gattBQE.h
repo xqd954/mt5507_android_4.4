@@ -1,0 +1,2609 @@
+
+#if defined(__ATT_TS_SMALL_DATABASE__)
+
+const U8 attBQESmallRecord[] = 
+{
+
+    /* Group from base BT_ATT_BASE_RECORD_HANDLE */
+    
+    /* Handle =   0x0001, Type16 = Primary service, Value = GAP Service*/
+    /* Last define is the max variable size for buffer */
+    ATT_HANDLE16(1, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(BT_UUID_GATT_SERVICE_GAP),
+        
+    /* Handle =   0x0002, Type16 = Primary service, Value = GAP Service*/
+    ATT_HANDLE16(2, BT_UUID_GATT_TYPE_CHARACTERISTIC, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x03, 0x2A00),
+        
+    ATT_HANDLE16(3, 0x2A00, BT_ATT_CONST_VARIABLE, 13),  // 13
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        'T', 'e','s','t', ' ', 'D','a', 't', 'a', 'b', 'a', 's', 'e' ,
+
+    ATT_HANDLE16(4, BT_UUID_GATT_TYPE_CHARACTERISTIC, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x05, 0x2A01),
+        
+    ATT_HANDLE16(5, 0x2A01, BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        17,
+        
+    ATT_HANDLE16(6, BT_UUID_GATT_TYPE_CHARACTERISTIC, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x05, 0x2A04),
+        
+    ATT_HANDLE16(7, 0x2A04, BT_ATT_CONST_VARIABLE, 6), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x00, 0x64, 0x00, 0xc8, 0x00, 0x7D,
+
+    ATT_HANDLE16(0x10, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0x1801),
+
+    ATT_HANDLE16(0x20, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0x0A0B),
+
+        
+    ATT_HANDLE16(0x21, BT_UUID_GATT_TYPE_CHARACTERISTIC, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0022, 0xB004),
+        
+    ATT_HANDLE16(0x22, 0xB004, BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        17,
+#if 0
+    ATT_HANDLE16(0x23, BT_UUID_GATT_CHAR_DESC_CLIENT_CHAR_CONFIG, BT_ATT_FIX_VARIABLE_IN_UPPER_AP, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE_BLE_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x24, BT_UUID_GATT_CHAR_DESC_SERVER_CHAR_CONFIG, BT_ATT_FIX_VARIABLE_IN_UPPER_AP, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE_BLE_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+#endif
+
+};
+
+U8 database23[2] = {0x01, 0x00} ;
+U8 database24[2] = {0x01, 0x00} ;
+
+U8 database0023(U8 type, BtRemoteDevice *link, U16 *len, U8 **raw)
+{
+    U8 i=0;
+    U8 status = BT_STATUS_FAILED;
+
+    switch (type)
+    {
+		case ATT_OP_READ:
+            case ATT_OP_READ_LONG:
+            case ATT_OP_READ_MULTIPLE:
+            case ATT_OP_READ_BY_TYPE:
+            /* Read */
+            *len = 0x02;
+            *raw = &database23;
+            status = BT_STATUS_SUCCESS;
+	        break;
+		case ATT_OP_WRITE:
+		case ATT_OP_WRITE_WO_RESPONSE:
+              case ATT_OP_EXECUTE_WRITE:
+			memcpy(database23, &raw[0], *len);
+            return BT_STATUS_SUCCESS;
+    }
+    return status;
+
+}
+
+U8 database0024(U8 type, BtRemoteDevice *link, U16 *len, U8 **raw)
+{
+    U8 i=0;
+    U8 status = BT_STATUS_FAILED;
+
+    switch (type)
+    {
+		case ATT_OP_READ:
+             case ATT_OP_READ_LONG:
+             case ATT_OP_READ_MULTIPLE:
+             case ATT_OP_READ_BY_TYPE:
+            /* Read */
+            *len = 0x02;
+            *raw = &database24;
+            status = BT_STATUS_SUCCESS;
+	        break;
+		case ATT_OP_WRITE:
+		case ATT_OP_WRITE_WO_RESPONSE:
+              case ATT_OP_EXECUTE_WRITE:
+			memcpy(database24, &raw[0], *len);
+            return BT_STATUS_SUCCESS;
+    }
+    return status;
+
+}
+
+U8 attBaseRecordHandeVariableValueArray[] = 
+{
+	0X00,
+};
+
+const U8 GattSDPPublicBrowseGroup[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),              /* 3 bytes */
+    SDP_UUID_16BIT(SC_PUBLIC_BROWSE_GROUP)  /* Public Browse Group */
+};
+
+const U8 GattSDPClassId[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(BT_UUID_GATT_SERVICE_GAP)   
+};
+
+const U8 GattSDPClassId1[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0x1801)   
+};
+
+const U8 GattSDPClassId2[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0x0A0B)   
+};
+
+const U8 GattSdpProtocolDescList[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    
+	SDP_ATTRIB_HEADER_8BIT(9),	/* Data element sequence for AVDTP, 3 bytes */
+	SDP_UUID_16BIT(PROT_ATT),	  /* TODO: ATT UUID */
+	SDP_UINT_16BIT(1),	   /* Uint16 start handle */
+	SDP_UINT_16BIT(7),	   /* Uint16 end handle */
+    
+};
+
+
+const U8 GattSdpProtocolDescList1[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    
+	SDP_ATTRIB_HEADER_8BIT(9),	/* Data element sequence for AVDTP, 3 bytes */
+	SDP_UUID_16BIT(PROT_ATT),	  /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x10),/* Uint16 start handle */
+	SDP_UINT_16BIT(0x10),  /* Uint16 end handle */
+    
+};
+
+
+const U8 GattSdpProtocolDescList2[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    
+	SDP_ATTRIB_HEADER_8BIT(9),	/* Data element sequence for AVDTP, 3 bytes */
+		SDP_UUID_16BIT(PROT_ATT),	  /* TODO: ATT UUID */
+		SDP_UINT_16BIT(0x20),  /* Uint16 start handle */
+		SDP_UINT_16BIT(0x22),	  /* Uint16 end handle */
+
+    
+};
+
+
+SdpAttribute GattAttributes0[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList),
+    /* Public Browse Group Service */
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes1[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId1),
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList1),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes2[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId2),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList2),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpRecord bqe_gatt_sdp_record0;
+SdpRecord bqe_gatt_sdp_record1;
+SdpRecord bqe_gatt_sdp_record2;
+
+
+void gatt_sdp_init(void)
+{
+	Report(("init small sdp database"));
+	bqe_gatt_sdp_record0.num = sizeof(GattAttributes0) / sizeof(*(GattAttributes0));
+	bqe_gatt_sdp_record0.attribs = (SdpAttribute*) &GattAttributes0;
+	SDP_AddRecord(&bqe_gatt_sdp_record0);
+
+	bqe_gatt_sdp_record1.num = sizeof(GattAttributes1) / sizeof(*(GattAttributes1));
+	bqe_gatt_sdp_record1.attribs = (SdpAttribute*) &GattAttributes1;
+	SDP_AddRecord(&bqe_gatt_sdp_record1);
+
+	bqe_gatt_sdp_record2.num = sizeof(GattAttributes2) / sizeof(*(GattAttributes2));
+	bqe_gatt_sdp_record2.attribs = (SdpAttribute*) &GattAttributes2;
+	SDP_AddRecord(&bqe_gatt_sdp_record2);
+
+}
+
+
+
+#endif // __ATT_TS_SMALL_DATABASE__
+
+
+#if defined(__ATT_TS_LARGE_DATABASE1__)
+
+#define BT_UUID_TESTER_DB_DATA1 \
+            0x00,0x00,0xB0,0x0B,0x00,0x00,0x00,0x00,0x01,\
+            0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+#define BT_UUID_TESTER_DB_DATA2 \
+            0x00,0x00,0xD5,0xD4,0x00,0x00,0x00,0x00,0x01,\
+            0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+#define BT_UUID_TESTER_DB_DATA3 \
+            0x00,0x00,0xA0,0x0C,0x00,0x00,0x00,0x00,0x01,\
+            0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+#define BT_UUID_TESTER_DB_DATA4 \
+            0x00,0x00,0xA0,0x0C,0x00,0x00,0x00,0x00,0x01,\
+            0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+#define BT_UUID_TESTER_DB_DATA5 \
+            0x00,0x00,0xD9,0xD2,0x00,0x00,0x00,0x00,0x01,\
+            0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+            
+#define BT_UUID_TESTER_DB_DATA6 \
+                0x00,0x00,0xD9,0xD3,0x00,0x00,0x00,0x00,0x01,\
+                0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+
+
+
+const U8 attBQELarge1Record[] = 
+{
+
+    /* Group from base BT_ATT_BASE_RECORD_HANDLE */
+    
+    /* Handle =   0x0001, Type16 = Primary service, Value = GAP Service*/
+    /* Last define is the max variable size for buffer */
+    ATT_HANDLE16(1, 0x2801, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0x0A0D),
+        
+    ATT_HANDLE16(2, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0003, 0x0B0C),
+        
+    ATT_HANDLE16(3, 0x0B0C, BT_ATT_CONST_VARIABLE, 1),  // 13
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x0C,
+
+    ATT_HANDLE16(4, 0x2803, BT_ATT_CONST_VARIABLE, 19), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC128(0x02, 0x0005, BT_UUID_TESTER_DB_DATA1),
+
+        
+    ATT_HANDLE128(5, BT_UUID_TESTER_DB_DATA1, BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x0B,
+        
+    ATT_HANDLE16(0x0010, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00B),
+
+    ATT_HANDLE16(0x0011, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x3E, 0x0012, 0xB006),
+        
+    ATT_HANDLE16(0x0012, 0xB006, BT_ATT_FIX_VARIABLE_IN_UPPER_AP, 0x02), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+
+    ATT_HANDLE16(0x0020, 0x2800, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00A),
+
+    ATT_HANDLE16(0x0021, 0x2802, BT_ATT_CONST_VARIABLE, 0x06),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETINCLUDE16(0x0001, 0x0005, 0xA00D),
+
+    ATT_HANDLE16(0x0022, 0x2802, BT_ATT_CONST_VARIABLE, 0x04),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETINCLUDE128(0x0090, 0x0096),
+
+    ATT_HANDLE16(0x0023, 0x2803, BT_ATT_CONST_VARIABLE, 0x05),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0024, 0xB001),
+
+    ATT_HANDLE16(0x0024, 0xB001 , BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x01,
+
+    ATT_HANDLE16(0x0025, 0x2803, BT_ATT_CONST_VARIABLE, 0x05),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x0A, 0x0026, 0xB002),
+
+    ATT_HANDLE16(0x0026, 0xB002 , BT_ATT_FIX_VARIABLE, 50),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x0027, 0x2803, BT_ATT_CONST_VARIABLE, 0x05),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x08, 0x0028, 0xB003),
+
+    ATT_HANDLE16(0x0028, 0xB003 , BT_ATT_FIX_VARIABLE, 1),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_WRITE_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+ 
+
+    ATT_HANDLE16(0x0030, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00B),
+
+    ATT_HANDLE16(0x0031, 0x2803, BT_ATT_CONST_VARIABLE, 0x05),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x08, 0x0032, 0xB007),
+
+    ATT_HANDLE16(0x0032, 0xB007 , BT_ATT_FIX_VARIABLE, 1),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_WRITE_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x0040, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0x1800),
+        
+    ATT_HANDLE16(0x0041, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x042, 0x2A00),
+        
+    ATT_HANDLE16(0x0042, 0x2A00, BT_ATT_CONST_VARIABLE, 13),  // 13
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        'T', 'e','s','t', ' ', 'D','a', 't', 'a', 'b', 'a', 's', 'e' ,
+
+    ATT_HANDLE16(0x0043, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0044, 0x2A01),
+        
+    ATT_HANDLE16(0x0044, 0x2A01, BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        17,
+        
+    ATT_HANDLE16(0x0045, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0046, 0x2A04),
+        
+    ATT_HANDLE16(0x0046, 0x2A04, BT_ATT_CONST_VARIABLE, 6), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x00, 0x64, 0x00, 0xc8, 0x00, 0x7D,
+
+    ATT_HANDLE16(0x0050, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0x1801),
+        
+    ATT_HANDLE16(0x0051, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0052, 0x2A05),
+
+    ATT_HANDLE16(0x0052, 0x2A05, BT_ATT_FIX_VARIABLE, 4), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x0060, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00B),
+        
+    ATT_HANDLE16(0x0061, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x0A, 0x0062, 0xB004),
+
+    ATT_HANDLE16(0x0062, 0xB004, BT_ATT_FIX_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        
+    ATT_HANDLE16(0x0070, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00B),
+        
+    ATT_HANDLE16(0x0071, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x0A, 0x0072, 0xB005),
+    
+    ATT_HANDLE16(0x0072, 0xB005, BT_ATT_FIX_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        
+    ATT_HANDLE16(0x0073, 0x2900, BT_ATT_CONST_VARIABLE, 0x02), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETEXTENDEDPROPERTIES(0x0003),
+
+    ATT_HANDLE16(0x0074, 0x2901, BT_ATT_FIX_VARIABLE, 26), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x0075, 0x2904, BT_ATT_CONST_VARIABLE, 0x07), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARFORMAT(0x04, 0x00, 0x3001, 0x00, 0x3111),
+        
+    ATT_HANDLE128(0x0076, BT_UUID_TESTER_DB_DATA2, BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x44,
+
+    ATT_HANDLE16(0x0080, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00B),
+        
+    ATT_HANDLE16(0x0081, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0082, 0xB008),
+
+    ATT_HANDLE16(0x0082, 0xB008, BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x08,
+
+    ATT_HANDLE16(0x0090, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x10),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        BT_UUID_TESTER_DB_DATA3,
+        
+    ATT_HANDLE16(0x0091, 0x2802, BT_ATT_CONST_VARIABLE, 0x06), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETINCLUDE16(0x0001, 0x0005, 0xA00D),
+
+       
+    ATT_HANDLE16(0x0092, 0x2803, BT_ATT_CONST_VARIABLE, 19), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC128(0x8A, 0x0093, BT_UUID_TESTER_DB_DATA4),
+
+    ATT_HANDLE128(0x0093, BT_UUID_TESTER_DB_DATA4, BT_ATT_FIX_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x0094, 0x2900, BT_ATT_CONST_VARIABLE, 0x02), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETEXTENDEDPROPERTIES(0x0003),
+
+    ATT_HANDLE128(0x0095, BT_UUID_TESTER_DB_DATA5, BT_ATT_FIX_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE128(0x0096, BT_UUID_TESTER_DB_DATA6, BT_ATT_FIX_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_WRITE_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        
+    ATT_HANDLE16(0x00A0, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x10),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        BT_UUID_TESTER_DB_DATA3,
+
+    ATT_HANDLE16(0x00A1, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00A2, 0xB00A),
+
+    ATT_HANDLE16(0x00A2, 0xB00A, BT_ATT_CONST_VARIABLE, 0x01), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x0A,
+
+    ATT_HANDLE16(0x00A3, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00A4, 0xB002),
+
+    ATT_HANDLE16(0x00A4, 0xB002, BT_ATT_FIX_VARIABLE, 21), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        
+    ATT_HANDLE16(0x00A5, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00A6, 0xB002),
+    
+    ATT_HANDLE16(0x00A6, 0xB002, BT_ATT_FIX_VARIABLE, 22), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x00A7, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00A8, 0xB002),
+    
+    ATT_HANDLE16(0x00A8, 0xB002, BT_ATT_FIX_VARIABLE, 23), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x00A9, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00AA, 0xB002),
+    
+    ATT_HANDLE16(0x00AA, 0xB002, BT_ATT_FIX_VARIABLE, 43), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x00AB, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00AC, 0xB002),
+    
+    ATT_HANDLE16(0x00AC, 0xB002, BT_ATT_FIX_VARIABLE, 44), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x00AD, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00AE, 0xB002),
+    
+    ATT_HANDLE16(0x00AE, 0xB002, BT_ATT_FIX_VARIABLE, 45), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+};
+
+U8 attBaseRecordHandeVariableValueArray[] = 
+{
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0026),
+    50, /* Define the variable size for B002*/
+    0x01, 0x01, 0x01, 0x01, 0x01,  /* Variable Value define*/
+    0x02, 0x02, 0x02, 0x02, 0x02, 
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05, 
+    0x06, 0x06, 0x06, 0x06, 0x06, 
+    0x07, 0x07, 0x07, 0x07, 0x07, 
+    0x08, 0x08, 0x08, 0x08, 0x08, 
+    0x09, 0x09, 0x09, 0x09, 0x09, 
+    0x00, 0x00, 0x00, 0x00, 0x00, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0028),
+
+    1,  /* Define the variable size for B003*/
+    0x03,
+    
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0032),
+    1,  /* Define the variable size for B007*/
+    0x07,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0052),
+
+    4,  /* Define the variable size for Service Changed */
+    0x00, 0x01, 0xFF, 0xFF,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0062),
+    1,  /* Define the variable size for B004*/
+    0x04,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0072),
+    1,  /* Define the variable size for B005*/
+    0x05,
+    
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0074),
+    26,  /* Define the variable size for Characteristic User Descriptor*/
+    'A', 'B', 'C', 'D','E', 'F','G','H','I','J','K','L','M','N',
+    'O', 'P', 'Q', 'R','S', 'T','U','V','W','X','Y','Z',     
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0093),
+    1,   /* Define the Value 9*/
+    0x09,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0095),
+    1,   /* Define the Value V9D2 */
+    0x22,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0096),
+    1,   /* Define the Value V9D3 */
+    0x33,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x00A4),
+    21, /* Define the variable size for Value v2*/
+    0x01, 0x01, 0x01, 0x01, 0x01,  /* Variable Value define*/
+    0x02, 0x02, 0x02, 0x02, 0x02, 
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x00A6),
+    22, /* Define the variable size for Value Record A6 */
+    0x02, 0x02, 0x02, 0x02, 0x02, 
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05,
+    0x06, 0x06, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x00A8),
+    23, /* Define the variable size for Value Record A8 */
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05, 
+    0x06, 0x06, 0x06, 0x06, 0x06, 
+    0x07, 0x07, 0x07, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x00AA),
+    43, /* Define the variable size for Value Record AA */
+    0x01, 0x01, 0x01, 0x01, 0x01,  /* Variable Value define*/
+    0x02, 0x02, 0x02, 0x02, 0x02, 
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05,
+    0x06, 0x06, 0x06, 0x06, 0x06,
+    0x07, 0x07, 0x07, 0x07, 0x07, 
+    0x08, 0x08, 0x08, 0x08, 0x08, 
+    0x09, 0x09, 0x09, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x00AC),
+    44, /* Define the variable size for Value Record AC */
+    0x02, 0x02, 0x02, 0x02, 0x02, 
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05,
+    0x06, 0x06, 0x06, 0x06, 0x06,
+    0x07, 0x07, 0x07, 0x07, 0x07, 
+    0x08, 0x08, 0x08, 0x08, 0x08, 
+    0x09, 0x09, 0x09, 0x09, 0x09,
+    0x00, 0x00, 0x00, 0x00, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x00AE),
+    45, /* Define the variable size for Value Record AE */
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05,
+    0x06, 0x06, 0x06, 0x06, 0x06,
+    0x07, 0x07, 0x07, 0x07, 0x07, 
+    0x08, 0x08, 0x08, 0x08, 0x08, 
+    0x09, 0x09, 0x09, 0x09, 0x09,
+    0x00, 0x00, 0x00, 0x00, 0x00, 
+    0x01, 0x01, 0x01, 0x01, 0x01,  /* Variable Value define*/
+    
+};
+
+
+U8 databaseB006_v1;
+U8 databaseB006(U8 type, BtRemoteDevice *link, U16 *len, U8 **raw)
+{
+    U8 i=0;
+    U8 status = BT_STATUS_FAILED;
+
+    switch (type)
+    {
+		case ATT_OP_READ:
+            case ATT_OP_READ_LONG:
+            case ATT_OP_READ_MULTIPLE:
+            case ATT_OP_READ_BY_TYPE:
+            /* Read */
+            *len = 0x01;
+            *raw = &databaseB006_v1;
+            status = BT_STATUS_SUCCESS;
+	        break;
+		case ATT_OP_WRITE:
+		case ATT_OP_WRITE_WO_RESPONSE:
+              case ATT_OP_EXECUTE_WRITE:
+
+            databaseB006_v1 = *raw[0];
+            return BT_STATUS_SUCCESS;
+    }
+    return status;
+
+}
+
+
+const U8 GattSDPPublicBrowseGroup[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),              /* 3 bytes */
+    SDP_UUID_16BIT(SC_PUBLIC_BROWSE_GROUP)  /* Public Browse Group */
+};
+
+const U8 GattSDPClassId[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0xA00B)   
+};
+
+const U8 GattSDPClassId1[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0xA00B)   
+};
+
+const U8 GattSDPClassId2[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0x1800)   
+};
+
+const U8 GattSDPClassId3[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0x1801)   
+};
+const U8 GattSDPClassId4[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0xA00B)   
+};
+const U8 GattSDPClassId5[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(17),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_128BIT(BT_UUID_TESTER_DB_DATA3)   
+};
+const U8 GattSDPClassId6[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(17),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_128BIT(BT_UUID_TESTER_DB_DATA3)    
+};
+
+
+
+
+
+
+
+const U8 GattSdpProtocolDescList[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+    SDP_UINT_16BIT(0x10),     /* Uint16 start handle */
+    SDP_UINT_16BIT(0x12),     /* Uint16 end handle */    
+};
+
+const U8 GattSdpProtocolDescList1[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+	SDP_UUID_16BIT(PROT_ATT),	  /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x30),/* Uint16 start handle */
+	SDP_UINT_16BIT(0x32),  /* Uint16 end handle */
+};
+
+
+const U8 GattSdpProtocolDescList2[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+	SDP_UUID_16BIT(PROT_ATT),	  /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x40),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0x46),	  /* Uint16 end handle */
+
+};
+
+
+const U8 GattSdpProtocolDescList3[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+	SDP_UUID_16BIT(PROT_ATT),	  /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x50),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0x52),	  /* Uint16 end handle */
+
+
+};
+
+
+const U8 GattSdpProtocolDescList4[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+	SDP_UUID_16BIT(PROT_ATT),	  /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x70),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0x76),	  /* Uint16 end handle */
+
+
+
+};
+
+
+const U8 GattSdpProtocolDescList5[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+	SDP_UUID_16BIT(PROT_ATT),	  /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x90),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0x96),	  /* Uint16 end handle */
+};
+
+
+const U8 GattSdpProtocolDescList6[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+	SDP_UUID_16BIT(PROT_ATT),	  /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0xA0),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0xAE),	  /* Uint16 end handle */
+
+};
+
+
+SdpAttribute GattAttributes0[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes1[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId1),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList1),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes2[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId2),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList2),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes3[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId3),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList3),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes4[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId4),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList4),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes5[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId5),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList5),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes6[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId6),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList6),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpRecord bqe_gatt_sdp_record0;
+SdpRecord bqe_gatt_sdp_record1;
+SdpRecord bqe_gatt_sdp_record2;
+SdpRecord bqe_gatt_sdp_record3;
+SdpRecord bqe_gatt_sdp_record4;
+SdpRecord bqe_gatt_sdp_record5;
+SdpRecord bqe_gatt_sdp_record6;
+
+
+
+
+
+
+void gatt_sdp_init(void)
+{
+	Report(("init large sdp database1"));
+	bqe_gatt_sdp_record0.num = sizeof(GattAttributes0) / sizeof(*(GattAttributes0));
+	bqe_gatt_sdp_record0.attribs = (SdpAttribute*) &GattAttributes0;
+	SDP_AddRecord(&bqe_gatt_sdp_record0);
+
+	bqe_gatt_sdp_record1.num = sizeof(GattAttributes1) / sizeof(*(GattAttributes1));
+	bqe_gatt_sdp_record1.attribs = (SdpAttribute*) &GattAttributes1;
+	SDP_AddRecord(&bqe_gatt_sdp_record1);
+
+	bqe_gatt_sdp_record2.num = sizeof(GattAttributes2) / sizeof(*(GattAttributes2));
+	bqe_gatt_sdp_record2.attribs = (SdpAttribute*) &GattAttributes2;
+	SDP_AddRecord(&bqe_gatt_sdp_record2);
+
+	bqe_gatt_sdp_record3.num = sizeof(GattAttributes3) / sizeof(*(GattAttributes3));
+	bqe_gatt_sdp_record3.attribs = (SdpAttribute*) &GattAttributes3;
+	SDP_AddRecord(&bqe_gatt_sdp_record0);
+
+	bqe_gatt_sdp_record4.num = sizeof(GattAttributes4) / sizeof(*(GattAttributes4));
+	bqe_gatt_sdp_record4.attribs = (SdpAttribute*) &GattAttributes4;
+	SDP_AddRecord(&bqe_gatt_sdp_record4);
+
+	bqe_gatt_sdp_record5.num = sizeof(GattAttributes5) / sizeof(*(GattAttributes5));
+	bqe_gatt_sdp_record5.attribs = (SdpAttribute*) &GattAttributes5;
+	SDP_AddRecord(&bqe_gatt_sdp_record5);
+
+	bqe_gatt_sdp_record6.num = sizeof(GattAttributes6) / sizeof(*(GattAttributes6));
+	bqe_gatt_sdp_record6.attribs = (SdpAttribute*) &GattAttributes6;
+	SDP_AddRecord(&bqe_gatt_sdp_record6);
+
+}
+
+
+#endif // __ATT_TS_LARGE_DATABASE1__
+
+
+#if defined(__ATT_TS_LARGE_DATABASE2__)
+
+#define BT_UUID_TESTER_DB_DATA1 \
+            0x00,0x00,0xB0,0x0B,0x00,0x00,0x00,0x00,0x01,\
+            0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+#define BT_UUID_TESTER_DB_DATA2 \
+            0x00,0x00,0xD5,0xD4,0x00,0x00,0x00,0x00,0x01,\
+            0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+#define BT_UUID_TESTER_DB_DATA3 \
+            0x00,0x00,0xA0,0x0C,0x00,0x00,0x00,0x00,0x01,\
+            0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+#define BT_UUID_TESTER_DB_DATA4 \
+            0x00,0x00,0xA0,0x0C,0x00,0x00,0x00,0x00,0x01,\
+            0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+#define BT_UUID_TESTER_DB_DATA5 \
+            0x00,0x00,0xD9,0xD2,0x00,0x00,0x00,0x00,0x01,\
+            0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+            
+#define BT_UUID_TESTER_DB_DATA6 \
+                0x00,0x00,0xD9,0xD3,0x00,0x00,0x00,0x00,0x01,\
+                0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+
+#define BT_UUID_TESTER_DB_DATA7 \
+                0x00,0x00,0xB0,0x09,0x00,0x00,0x00,0x00,0x01,\
+                0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+
+const U8 attBQELarge2Record[] = 
+{
+    ATT_HANDLE16(0x0001, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x10),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        BT_UUID_TESTER_DB_DATA3,
+
+    ATT_HANDLE16(0x0002, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0003, 0xB00A),
+
+    ATT_HANDLE16(0x0003, 0xB00A, BT_ATT_CONST_VARIABLE, 0x01), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x0A,
+
+    ATT_HANDLE16(0x0004, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0005, 0xB002),
+
+    ATT_HANDLE16(0x0005, 0xB002, BT_ATT_FIX_VARIABLE, 21), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        
+    ATT_HANDLE16(0x0006, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0007, 0xB002),
+    
+    ATT_HANDLE16(0x0007, 0xB002, BT_ATT_FIX_VARIABLE, 22), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x0008, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0009, 0xB002),
+    
+    ATT_HANDLE16(0x0009, 0xB002, BT_ATT_FIX_VARIABLE, 23), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x000A, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x000B, 0xB002),
+    
+    ATT_HANDLE16(0x000B, 0xB002, BT_ATT_FIX_VARIABLE, 43), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x000C, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x000D, 0xB002),
+    
+    ATT_HANDLE16(0x000D, 0xB002, BT_ATT_FIX_VARIABLE, 44), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x000E, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x000F, 0xB002),
+    
+    ATT_HANDLE16(0x000F, 0xB002, BT_ATT_FIX_VARIABLE, 45), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x0010, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x10),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        BT_UUID_TESTER_DB_DATA3,
+        
+    ATT_HANDLE16(0x0011, 0x2802, BT_ATT_CONST_VARIABLE, 0x06), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETINCLUDE16(0x0030, 0x0034, 0xA00D),
+
+       
+    ATT_HANDLE16(0x0012, 0x2803, BT_ATT_CONST_VARIABLE, 19), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC128(0x8A, 0x0013, BT_UUID_TESTER_DB_DATA7),
+
+    ATT_HANDLE128(0x0013, BT_UUID_TESTER_DB_DATA7, BT_ATT_FIX_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE128(0x0014, BT_UUID_TESTER_DB_DATA5, BT_ATT_FIX_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE128(0x0015, BT_UUID_TESTER_DB_DATA6, BT_ATT_FIX_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_WRITE_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        
+    ATT_HANDLE16(0x0016, 0x2900, BT_ATT_CONST_VARIABLE, 0x02), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETEXTENDEDPROPERTIES(0x0001),
+
+    ATT_HANDLE16(0x0020, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00B),
+
+    ATT_HANDLE16(0x0021, 0x2803, BT_ATT_CONST_VARIABLE, 0x05),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x08, 0x0022, 0xB007),
+
+    ATT_HANDLE16(0x0022, 0xB007 , BT_ATT_FIX_VARIABLE, 1),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_WRITE_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x0030, 0x2801, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0x0A0D),
+        
+    ATT_HANDLE16(0x0031, 0x2803, BT_ATT_CONST_VARIABLE, 19), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC128(0x02, 0x0032, BT_UUID_TESTER_DB_DATA1),
+        
+    ATT_HANDLE128(0x0032, BT_UUID_TESTER_DB_DATA1, BT_ATT_CONST_VARIABLE, 1),  // 13
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x0B,
+
+    ATT_HANDLE16(0x0033, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0034, 0xB00C),
+
+    ATT_HANDLE16(0x0034, 0xB00C, BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x0C,
+
+    ATT_HANDLE16(0x0040, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0x1801),
+        
+    ATT_HANDLE16(0x0041, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x20, 0x0042, 0x2A05),
+
+    ATT_HANDLE16(0x0042, 0x2A05, BT_ATT_FIX_VARIABLE, 4), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x0050, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00B),
+        
+    ATT_HANDLE16(0x0051, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x0A, 0x0052, 0xB004),
+
+    ATT_HANDLE16(0x0052, 0xB004, BT_ATT_FIX_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x0060, 0x2800, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00A),
+
+    ATT_HANDLE16(0x0061, 0x2802, BT_ATT_CONST_VARIABLE, 0x06),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETINCLUDE16(0x0030, 0x0034, 0xA00D),
+
+    ATT_HANDLE16(0x0062, 0x2802, BT_ATT_CONST_VARIABLE, 0x04),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETINCLUDE128(0x0010, 0x0015),
+
+    ATT_HANDLE16(0x0063, 0x2803, BT_ATT_CONST_VARIABLE, 0x05),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0064, 0xB001),
+
+    ATT_HANDLE16(0x0064, 0xB001 , BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x01,
+
+    ATT_HANDLE16(0x0065, 0x2803, BT_ATT_CONST_VARIABLE, 0x05),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x0A, 0x0066, 0xB002),
+
+    ATT_HANDLE16(0x0066, 0xB002 , BT_ATT_FIX_VARIABLE, 50),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x0067, 0x2803, BT_ATT_CONST_VARIABLE, 0x05),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x08, 0x0068, 0xB003),
+
+    ATT_HANDLE16(0x0068, 0xB003 , BT_ATT_FIX_VARIABLE, 1),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_WRITE_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        
+    ATT_HANDLE16(0x0070, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00B),
+    
+    ATT_HANDLE16(0x0071, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x3E, 0x0072, 0xB006),
+        
+    ATT_HANDLE16(0x0072, 0xB006, BT_ATT_FIX_VARIABLE_IN_UPPER_AP, 0x02), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        
+    ATT_HANDLE16(0x0080, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0x1800),
+        
+    ATT_HANDLE16(0x0081, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x082, 0x2A00),
+        
+    ATT_HANDLE16(0x0082, 0x2A00, BT_ATT_CONST_VARIABLE, 13),  // 13
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        'T', 'e','s','t', ' ', 'D','a', 't', 'a', 'b', 'a', 's', 'e' ,
+    
+    ATT_HANDLE16(0x0083, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0084, 0x2A01),
+        
+    ATT_HANDLE16(0x0084, 0x2A01, BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        17,
+        
+    ATT_HANDLE16(0x0085, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0086, 0x2A04),
+        
+    ATT_HANDLE16(0x0086, 0x2A04, BT_ATT_CONST_VARIABLE, 6), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x00, 0x64, 0x00, 0xc8, 0x00, 0x7D,
+        
+    ATT_HANDLE16(0x0090, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00B),
+        
+    ATT_HANDLE16(0x0091, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x0A, 0x0092, 0xB005),
+    
+    ATT_HANDLE16(0x0092, 0xB005, BT_ATT_FIX_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE128(0x0093, BT_UUID_TESTER_DB_DATA2, BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x44,
+        
+    ATT_HANDLE16(0x0094, 0x2900, BT_ATT_CONST_VARIABLE, 0x02), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETEXTENDEDPROPERTIES(0x0003),
+    
+    ATT_HANDLE16(0x0095, 0x2901, BT_ATT_FIX_VARIABLE, 26), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+    
+    ATT_HANDLE16(0x0096, 0x2904, BT_ATT_CONST_VARIABLE, 0x07), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARFORMAT(0x04, 0x00, 0x3001, 0x00, 0x3111),
+        
+    ATT_HANDLE16(0x00A0, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00B),
+        
+    ATT_HANDLE16(0x00A1, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00A2, 0xB008),
+
+    ATT_HANDLE16(0x00A2, 0xB008, BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x08,
+        
+    ATT_HANDLE16(0xFFFD, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00E),
+        
+    ATT_HANDLE16(0xFFFE, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0xFFFF, 0xB00D),
+    
+    ATT_HANDLE16(0xFFFF, 0xB00D, BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x0D,
+
+};
+
+U8 attBaseRecordHandeVariableValueArray[] = 
+{
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0005),
+    21, /* Define the variable size for Value v2*/
+    0x01, 0x01, 0x01, 0x01, 0x01,  /* Variable Value define*/
+    0x02, 0x02, 0x02, 0x02, 0x02, 
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0007),
+    22, /* Define the variable size for Value Record 7 */
+    0x02, 0x02, 0x02, 0x02, 0x02, 
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05,
+    0x06, 0x06, 
+    
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0009),
+    23, /* Define the variable size for Value Record 9 */
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05, 
+    0x06, 0x06, 0x06, 0x06, 0x06, 
+    0x07, 0x07, 0x07, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x000B),
+    43, /* Define the variable size for Value Record B */
+    0x01, 0x01, 0x01, 0x01, 0x01,  /* Variable Value define*/
+    0x02, 0x02, 0x02, 0x02, 0x02, 
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05,
+    0x06, 0x06, 0x06, 0x06, 0x06,
+    0x07, 0x07, 0x07, 0x07, 0x07, 
+    0x08, 0x08, 0x08, 0x08, 0x08, 
+    0x09, 0x09, 0x09, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x000D),
+    44, /* Define the variable size for Value Record D */
+    0x02, 0x02, 0x02, 0x02, 0x02, 
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05,
+    0x06, 0x06, 0x06, 0x06, 0x06,
+    0x07, 0x07, 0x07, 0x07, 0x07, 
+    0x08, 0x08, 0x08, 0x08, 0x08, 
+    0x09, 0x09, 0x09, 0x09, 0x09,
+    0x00, 0x00, 0x00, 0x00, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x000F),
+    45, /* Define the variable size for Value Record F */
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05,
+    0x06, 0x06, 0x06, 0x06, 0x06,
+    0x07, 0x07, 0x07, 0x07, 0x07, 
+    0x08, 0x08, 0x08, 0x08, 0x08, 
+    0x09, 0x09, 0x09, 0x09, 0x09,
+    0x00, 0x00, 0x00, 0x00, 0x00, 
+    0x01, 0x01, 0x01, 0x01, 0x01,  /* Variable Value define*/
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0013),
+    0x01,   /* Define the variable size for Value 9 */
+    0x09,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0014),
+    0x01,   /* Define the variable size for Value v9d2 */
+    0x22,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0015),
+    0x01,   /* Define the variable size for Value v9d3 */
+    0x33,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0022),    
+    0x01,   /* Define the variable size for Value 7*/
+    0x07,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0042),    
+    0x04,   /* Define the variable size for Service Changed */
+    0x00, 0x00, 0xFF, 0xFF,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0052),    
+    0x01,   /* Define the variable size for Value 4*/
+    0x04,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0066),
+    50, /* Define the variable size for B002*/
+    0x01, 0x01, 0x01, 0x01, 0x01,  /* Variable Value define*/
+    0x02, 0x02, 0x02, 0x02, 0x02, 
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05, 
+    0x06, 0x06, 0x06, 0x06, 0x06, 
+    0x07, 0x07, 0x07, 0x07, 0x07, 
+    0x08, 0x08, 0x08, 0x08, 0x08, 
+    0x09, 0x09, 0x09, 0x09, 0x09, 
+    0x00, 0x00, 0x00, 0x00, 0x00, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0068),    
+    0x01,   /* Define the variable size for Value 3*/
+    0x03,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0092),    
+    0x01,   /* Define the variable size for Value 5*/
+    0x05,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0095),    
+    26,  /* Define the variable size for Characteristic User Descriptor*/
+    'A', 'B', 'C', 'D','E', 'F','G','H','I','J','K','L','M','N',
+    'O', 'P', 'Q', 'R','S', 'T','U','V','W','X','Y','Z',     
+        
+
+};
+
+
+U8 databaseB006_v1;
+U8 databaseB006(U8 type, BtRemoteDevice *link, U16 *len, U8 **raw)
+{
+    U8 i=0;
+    U8 status = BT_STATUS_FAILED;
+
+	Report(("databaseB006"));
+    switch (type)
+    {
+        case ATT_OP_READ:
+        case ATT_OP_READ_LONG:
+        case ATT_OP_READ_MULTIPLE:
+        case ATT_OP_READ_BY_TYPE:
+            /* Read */
+			Report(("databaseB006 A1"));
+
+            *len = 0x01;
+			Report(("databaseB006 A2"));
+
+            *raw = &databaseB006_v1;
+			Report(("databaseB006 A3"));
+            status = BT_STATUS_SUCCESS;
+            break;
+		case ATT_OP_WRITE:
+		case ATT_OP_WRITE_WO_RESPONSE:
+              case ATT_OP_EXECUTE_WRITE:
+            databaseB006_v1 = *raw[0];
+            return BT_STATUS_SUCCESS;
+    }
+    return status;
+
+}
+
+const U8 GattSDPPublicBrowseGroup[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),              /* 3 bytes */
+    SDP_UUID_16BIT(SC_PUBLIC_BROWSE_GROUP)  /* Public Browse Group */
+};
+
+const U8 GattSDPClassId[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(17),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_128BIT(BT_UUID_TESTER_DB_DATA3)    
+};
+
+const U8 GattSDPClassId1[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(17),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_128BIT(BT_UUID_TESTER_DB_DATA3)   
+};
+
+const U8 GattSDPClassId2[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0xA00B)   
+};
+
+const U8 GattSDPClassId3[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0x1801)   
+};
+const U8 GattSDPClassId4[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0xA00B)   
+};
+const U8 GattSDPClassId5[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0xA00B)     
+};
+const U8 GattSDPClassId6[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0x1800)   
+};
+
+
+const U8 GattSDPClassId7[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0xA00B)   
+};
+
+
+const U8 GattSDPClassId8[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0xA00B)   
+};
+
+const U8 GattSDPClassId9[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0xA00E)   
+};
+
+
+
+
+
+
+
+
+
+const U8 GattSdpProtocolDescList[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+	SDP_ATTRIB_HEADER_8BIT(9), /* Data element sequence, 13 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+    SDP_UINT_16BIT(0x01),     /* Uint16 start handle */
+    SDP_UINT_16BIT(0x0F),     /* Uint16 end handle */    
+};
+
+
+const U8 GattSdpProtocolDescList1[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+	SDP_ATTRIB_HEADER_8BIT(9), /* Data element sequence, 13 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+    SDP_UINT_16BIT(0x10),/* Uint16 start handle */
+    SDP_UINT_16BIT(0x16),  /* Uint16 end handle */  
+};
+
+
+const U8 GattSdpProtocolDescList2[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+    SDP_UINT_16BIT(0x20),  /* Uint16 start handle */
+    SDP_UINT_16BIT(0x22),     /* Uint16 end handle */ 
+};
+
+
+
+const U8 GattSdpProtocolDescList3[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x40),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0x42),	  /* Uint16 end handle */
+
+};
+
+
+const U8 GattSdpProtocolDescList4[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x50),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0x52),	  /* Uint16 end handle */
+
+
+};
+
+
+
+const U8 GattSdpProtocolDescList5[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+	SDP_UUID_16BIT(PROT_ATT),	  /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x70),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0x72),	  /* Uint16 end handle */
+
+};
+
+
+const U8 GattSdpProtocolDescList6[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+	SDP_UUID_16BIT(PROT_ATT),	  /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x80),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0x86),	  /* Uint16 end handle */
+
+
+};
+
+
+
+const U8 GattSdpProtocolDescList7[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+	SDP_UUID_16BIT(PROT_ATT),	  /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x90),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0x96),	  /* Uint16 end handle */
+
+
+
+};
+
+
+const U8 GattSdpProtocolDescList8[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+	SDP_UUID_16BIT(PROT_ATT),	  /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0xA0),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0xA2),	  /* Uint16 end handle */
+};
+
+
+
+const U8 GattSdpProtocolDescList9[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+	SDP_UUID_16BIT(PROT_ATT),	  /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0xFFFD),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0xFFFF), 	/* Uint16 end handle */
+};
+
+
+
+SdpAttribute GattAttributes0[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes1[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId1),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList1),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes2[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId2),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList2),
+
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes3[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId3),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList3),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes4[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId4),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList4),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes5[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId5),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList5),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes6[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId6),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList6),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes7[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId7),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList7),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes8[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId8),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList8),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes9[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId9),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList9),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+
+
+SdpRecord bqe_gatt_sdp_record0;
+SdpRecord bqe_gatt_sdp_record1;
+SdpRecord bqe_gatt_sdp_record2;
+SdpRecord bqe_gatt_sdp_record3;
+SdpRecord bqe_gatt_sdp_record4;
+SdpRecord bqe_gatt_sdp_record5;
+SdpRecord bqe_gatt_sdp_record6;
+SdpRecord bqe_gatt_sdp_record7;
+SdpRecord bqe_gatt_sdp_record8;
+SdpRecord bqe_gatt_sdp_record9;
+
+
+
+
+
+
+void gatt_sdp_init(void)
+{
+	Report(("init large sdp database2"));
+	bqe_gatt_sdp_record0.num = sizeof(GattAttributes0) / sizeof(*(GattAttributes0));
+	bqe_gatt_sdp_record0.attribs = (SdpAttribute*) &GattAttributes0;
+	SDP_AddRecord(&bqe_gatt_sdp_record0);
+
+	bqe_gatt_sdp_record1.num = sizeof(GattAttributes1) / sizeof(*(GattAttributes1));
+	bqe_gatt_sdp_record1.attribs = (SdpAttribute*) &GattAttributes1;
+	SDP_AddRecord(&bqe_gatt_sdp_record1);
+
+	bqe_gatt_sdp_record2.num = sizeof(GattAttributes2) / sizeof(*(GattAttributes2));
+	bqe_gatt_sdp_record2.attribs = (SdpAttribute*) &GattAttributes2;
+	SDP_AddRecord(&bqe_gatt_sdp_record2);
+
+	bqe_gatt_sdp_record3.num = sizeof(GattAttributes3) / sizeof(*(GattAttributes3));
+	bqe_gatt_sdp_record3.attribs = (SdpAttribute*) &GattAttributes3;
+	SDP_AddRecord(&bqe_gatt_sdp_record0);
+
+	bqe_gatt_sdp_record4.num = sizeof(GattAttributes4) / sizeof(*(GattAttributes4));
+	bqe_gatt_sdp_record4.attribs = (SdpAttribute*) &GattAttributes4;
+	SDP_AddRecord(&bqe_gatt_sdp_record4);
+
+	bqe_gatt_sdp_record5.num = sizeof(GattAttributes5) / sizeof(*(GattAttributes5));
+	bqe_gatt_sdp_record5.attribs = (SdpAttribute*) &GattAttributes5;
+	SDP_AddRecord(&bqe_gatt_sdp_record5);
+
+	bqe_gatt_sdp_record6.num = sizeof(GattAttributes6) / sizeof(*(GattAttributes6));
+	bqe_gatt_sdp_record6.attribs = (SdpAttribute*) &GattAttributes6;
+	SDP_AddRecord(&bqe_gatt_sdp_record6);
+
+	bqe_gatt_sdp_record7.num = sizeof(GattAttributes7) / sizeof(*(GattAttributes7));
+	bqe_gatt_sdp_record7.attribs = (SdpAttribute*) &GattAttributes7;
+	SDP_AddRecord(&bqe_gatt_sdp_record7);
+
+	bqe_gatt_sdp_record8.num = sizeof(GattAttributes8) / sizeof(*(GattAttributes8));
+	bqe_gatt_sdp_record8.attribs = (SdpAttribute*) &GattAttributes8;
+	SDP_AddRecord(&bqe_gatt_sdp_record8);
+
+	bqe_gatt_sdp_record9.num = sizeof(GattAttributes9) / sizeof(*(GattAttributes9));
+	bqe_gatt_sdp_record9.attribs = (SdpAttribute*) &GattAttributes9;
+	SDP_AddRecord(&bqe_gatt_sdp_record9);
+
+
+
+}
+
+
+
+
+#endif // __ATT_TS_LARGE_DATABASE2__
+
+#if defined(__ATT_TS_LARGE_DATABASE3__)
+
+#define BT_UUID_TESTER_DB_DATA1 \
+            0x00,0x00,0xB0,0x0B,0x00,0x00,0x00,0x00,0x01,\
+            0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+#define BT_UUID_TESTER_DB_DATA2 \
+            0x00,0x00,0xD5,0xD4,0x00,0x00,0x00,0x00,0x01,\
+            0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+#define BT_UUID_TESTER_DB_DATA3 \
+            0x00,0x00,0xA0,0x0C,0x00,0x00,0x00,0x00,0x01,\
+            0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+#define BT_UUID_TESTER_DB_DATA4 \
+            0x00,0x00,0xA0,0x0C,0x00,0x00,0x00,0x00,0x01,\
+            0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+#define BT_UUID_TESTER_DB_DATA5 \
+            0x00,0x00,0xD9,0xD2,0x00,0x00,0x00,0x00,0x01,\
+            0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+            
+#define BT_UUID_TESTER_DB_DATA6 \
+                0x00,0x00,0xD9,0xD3,0x00,0x00,0x00,0x00,0x01,\
+                0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+
+#define BT_UUID_TESTER_DB_DATA7 \
+                0x00,0x00,0xB0,0x09,0x00,0x00,0x00,0x00,0x01,\
+                0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF
+
+
+const U8 attBQELarge3Record[] = 
+{
+    ATT_HANDLE16(0x0001, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00B),
+        
+    ATT_HANDLE16(0x0002, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x0A, 0x0003, 0xB004),
+
+    ATT_HANDLE16(0x0003, 0xB004, BT_ATT_FIX_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x0010, 0x2801, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0x0A0D),
+        
+    ATT_HANDLE16(0x0011, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0012, 0xB00C),
+
+    ATT_HANDLE16(0x0012, 0xB00C, BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x0C,
+
+    ATT_HANDLE16(0x0013, 0x2803, BT_ATT_CONST_VARIABLE, 19), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC128(0x02, 0x0014, BT_UUID_TESTER_DB_DATA1),
+        
+    ATT_HANDLE128(0x0014, BT_UUID_TESTER_DB_DATA1, BT_ATT_CONST_VARIABLE, 1),  
+        ATT_PERMINSIONS(ATT_PERMISSIONS_WRITE_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x0B,
+
+        
+    ATT_HANDLE16(0x0020, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00B),
+        
+    ATT_HANDLE16(0x0021, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00A2, 0xB008),
+    
+    ATT_HANDLE16(0x0022, 0xB008, BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x08,
+        
+    ATT_HANDLE16(0x0030, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00B),
+    
+    ATT_HANDLE16(0x0031, 0x2803, BT_ATT_CONST_VARIABLE, 0x05),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x08, 0x0032, 0xB007),
+    
+    ATT_HANDLE16(0x0032, 0xB007 , BT_ATT_FIX_VARIABLE, 1),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        
+    ATT_HANDLE16(0x0040, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00B),
+    
+    ATT_HANDLE16(0x0041, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x3E, 0x0042, 0xB006),
+        
+    ATT_HANDLE16(0x0042, 0xB006, BT_ATT_FIX_VARIABLE_IN_UPPER_AP, 0x01), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        
+    ATT_HANDLE16(0x0050, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0x1800),
+        
+    ATT_HANDLE16(0x0051, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x052, 0x2A00),
+        
+    ATT_HANDLE16(0x0052, 0x2A00, BT_ATT_CONST_VARIABLE, 13),  // 13
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        'T', 'e','s','t', ' ', 'D','a', 't', 'a', 'b', 'a', 's', 'e' ,
+    
+    ATT_HANDLE16(0x0053, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0054, 0x2A01),
+        
+    ATT_HANDLE16(0x0054, 0x2A01, BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        17,
+        
+    ATT_HANDLE16(0x0055, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0056, 0x2A04),
+        
+    ATT_HANDLE16(0x0056, 0x2A04, BT_ATT_CONST_VARIABLE, 6), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x00, 0x64, 0x00, 0xc8, 0x00, 0x7D,
+        
+    ATT_HANDLE16(0x0060, 0x2800, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00A),
+
+    ATT_HANDLE16(0x0061, 0x2802, BT_ATT_CONST_VARIABLE, 0x06),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETINCLUDE16(0x0030, 0x0034, 0xA00D),
+
+    ATT_HANDLE16(0x0062, 0x2802, BT_ATT_CONST_VARIABLE, 0x04),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETINCLUDE128(0x0010, 0x0015),
+
+    ATT_HANDLE16(0x0063, 0x2803, BT_ATT_CONST_VARIABLE, 0x05),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x0064, 0xB001),
+
+    ATT_HANDLE16(0x0064, 0xB001 , BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x01,
+
+    ATT_HANDLE16(0x0065, 0x2803, BT_ATT_CONST_VARIABLE, 0x05),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x0A, 0x0066, 0xB002),
+ 
+    ATT_HANDLE16(0x0066, 0xB002 , BT_ATT_FIX_VARIABLE, 50),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x0067, 0x2803, BT_ATT_CONST_VARIABLE, 0x05),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x08, 0x0068, 0xB003),
+
+    ATT_HANDLE16(0x0068, 0xB003 , BT_ATT_FIX_VARIABLE, 1),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_WRITE_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x0070, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x10),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        BT_UUID_TESTER_DB_DATA3,
+        
+    ATT_HANDLE16(0x0071, 0x2802, BT_ATT_CONST_VARIABLE, 0x06), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETINCLUDE16(0x0010, 0x0014, 0xA00D),
+
+       
+    ATT_HANDLE16(0x0072, 0x2803, BT_ATT_CONST_VARIABLE, 19), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC128(0x8A, 0x0073, BT_UUID_TESTER_DB_DATA7),
+
+    ATT_HANDLE128(0x0073, BT_UUID_TESTER_DB_DATA7, BT_ATT_FIX_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE128(0x0074, BT_UUID_TESTER_DB_DATA5, BT_ATT_FIX_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x0075, 0x2900, BT_ATT_CONST_VARIABLE, 0x02), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETEXTENDEDPROPERTIES(0x0001),
+
+    ATT_HANDLE128(0x0076, BT_UUID_TESTER_DB_DATA6, BT_ATT_FIX_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_WRITE_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        
+    ATT_HANDLE16(0x0080, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00B),
+        
+    ATT_HANDLE16(0x0081, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x0A, 0x0082, 0xB005),
+    
+    ATT_HANDLE16(0x0082, 0xB005, BT_ATT_FIX_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+
+        
+    ATT_HANDLE16(0x0083, 0x2901, BT_ATT_FIX_VARIABLE, 50), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0),
+
+    ATT_HANDLE16(0x0084, 0x2900, BT_ATT_CONST_VARIABLE, 0x02), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETEXTENDEDPROPERTIES(0x0003),
+
+    ATT_HANDLE128(0x0085, BT_UUID_TESTER_DB_DATA2, BT_ATT_CONST_VARIABLE, 1), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x44,
+    
+    ATT_HANDLE16(0x0086, 0x2904, BT_ATT_CONST_VARIABLE, 0x07), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARFORMAT(0x04, 0x00, 0x3001, 0x00, 0x3111),
+        
+
+    ATT_HANDLE16(0x0090, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0x1801),
+        
+    ATT_HANDLE16(0x0091, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x20, 0x0092, 0x2A05),
+
+    ATT_HANDLE16(0x0092, 0x2A05, BT_ATT_FIX_VARIABLE, 4), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x00A0, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x10),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        BT_UUID_TESTER_DB_DATA3,
+
+    ATT_HANDLE16(0x00A1, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00A2, 0xB00A),
+
+    ATT_HANDLE16(0x00A2, 0xB00A, BT_ATT_CONST_VARIABLE, 0x01), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        0x0A,
+
+    ATT_HANDLE16(0x00A3, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00A4, 0xB002),
+
+    ATT_HANDLE16(0x00A4, 0xB002, BT_ATT_FIX_VARIABLE, 21), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        
+    ATT_HANDLE16(0x00A5, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00A6, 0xB002),
+    
+    ATT_HANDLE16(0x00A6, 0xB002, BT_ATT_FIX_VARIABLE, 22), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x00A7, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00A8, 0xB002),
+    
+    ATT_HANDLE16(0x00A8, 0xB002, BT_ATT_FIX_VARIABLE, 23), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x00A9, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00AA, 0xB002),
+    
+    ATT_HANDLE16(0x00AA, 0xB002, BT_ATT_FIX_VARIABLE, 43), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x00AB, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00AC, 0xB002),
+    
+    ATT_HANDLE16(0x00AC, 0xB002, BT_ATT_FIX_VARIABLE, 44), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0x00AD, 0x2803, BT_ATT_CONST_VARIABLE, 0x05), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETCHARACTERISTIC(0x02, 0x00AE, 0xB002),
+    
+    ATT_HANDLE16(0x00AE, 0xB002, BT_ATT_FIX_VARIABLE, 45), 
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_WRITE, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+
+    ATT_HANDLE16(0xFFFF, BT_UUID_GATT_TYPE_PRIMARY_SERVICE, BT_ATT_CONST_VARIABLE, 0x02),
+        ATT_PERMINSIONS(ATT_PERMISSIONS_READ_ONLY, ATT_SECURITY_READ_NOT_REQUIRED, 0, ATT_SECURITY_WRITE_NOT_REQUIRED, 0), 
+        ATT_SETUUID16(0xA00E),
+
+};
+
+U8 attBaseRecordHandeVariableValueArray[] = 
+{
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0003),
+    0x01,   /* Define the variable size for Value 4*/
+    0x04,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0032),
+    0x01,   /* Define the variable size for Value 7*/
+    0x07,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0066),    
+    0x01,   /* Define the variable size for Value 7*/
+    0x07,  
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0068),    
+    50, /* Define the variable size for B002*/
+    0x01, 0x01, 0x01, 0x01, 0x01,  /* Variable Value define*/
+    0x02, 0x02, 0x02, 0x02, 0x02, 
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05, 
+    0x06, 0x06, 0x06, 0x06, 0x06, 
+    0x07, 0x07, 0x07, 0x07, 0x07, 
+    0x08, 0x08, 0x08, 0x08, 0x08, 
+    0x09, 0x09, 0x09, 0x09, 0x09, 
+    0x00, 0x00, 0x00, 0x00, 0x00, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0073),    
+    0x01,   /* Define the variable size for Value 3*/
+    0x07,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0074),
+    0x01,   /* Define the variable size for Value 9*/
+    0x09,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0076),    
+    0x01,   /* Define the variable size for Value v9d2*/
+    0x22,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0082),
+    0x01,   /* Define the variable size for Value v9d3*/
+    0x33, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0083),    
+    0x01,   /* Define the variable size for Value 5*/
+    0x05,  
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x0093),
+    50,  /* Define the variable size for Characteristic User Descriptor*/
+    'A', 'B', 'C', 'D','E', 'F','G','H','I','J','K','L','M','N',
+    'O', 'P', 'Q', 'R','S', 'T','U','V','W','X','Y','Z',     
+    'A', 'B', 'C', 'D','E', 'F','G','H','I','J','K','L','M','N',
+    'O', 'P', 'Q', 'R','S', 'T','U','V','W','X', 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x00A4),    
+    0x04,   /* Define the variable size for Service Changed */
+    0x00, 0x00, 0xFF, 0xFF,
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x00A6),
+    21, /* Define the variable size for Value v2*/
+    0x01, 0x01, 0x01, 0x01, 0x01,  /* Variable Value define*/
+    0x02, 0x02, 0x02, 0x02, 0x02, 
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x00A8),
+    22, /* Define the variable size for Value Record 7 */
+    0x02, 0x02, 0x02, 0x02, 0x02, 
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05,
+    0x06, 0x06, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x00AA),
+    23, /* Define the variable size for Value Record 9 */
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05, 
+    0x06, 0x06, 0x06, 0x06, 0x06, 
+    0x07, 0x07, 0x07, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x00AC),
+    43, /* Define the variable size for Value Record B */
+    0x01, 0x01, 0x01, 0x01, 0x01,  /* Variable Value define*/
+    0x02, 0x02, 0x02, 0x02, 0x02, 
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05,
+    0x06, 0x06, 0x06, 0x06, 0x06,
+    0x07, 0x07, 0x07, 0x07, 0x07, 
+    0x08, 0x08, 0x08, 0x08, 0x08, 
+    0x09, 0x09, 0x09, 
+
+    BT_UUID16_SIZE, ATT_SETHANDLE(0x00AE),
+    44, /* Define the variable size for Value Record D */
+    0x02, 0x02, 0x02, 0x02, 0x02, 
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05,
+    0x06, 0x06, 0x06, 0x06, 0x06,
+    0x07, 0x07, 0x07, 0x07, 0x07, 
+    0x08, 0x08, 0x08, 0x08, 0x08, 
+    0x09, 0x09, 0x09, 0x09, 0x09,
+    0x00, 0x00, 0x00, 0x00, 
+
+    45, /* Define the variable size for Value Record F */
+    0x03, 0x03, 0x03, 0x03, 0x03, 
+    0x04, 0x04, 0x04, 0x04, 0x04, 
+    0x05, 0x05, 0x05, 0x05, 0x05,
+    0x06, 0x06, 0x06, 0x06, 0x06,
+    0x07, 0x07, 0x07, 0x07, 0x07, 
+    0x08, 0x08, 0x08, 0x08, 0x08, 
+    0x09, 0x09, 0x09, 0x09, 0x09,
+    0x00, 0x00, 0x00, 0x00, 0x00, 
+    0x01, 0x01, 0x01, 0x01, 0x01,  /* Variable Value define*/    
+};
+
+
+U8 databaseB006_v1;
+U8 databaseB006(U8 type, BtRemoteDevice *link, U16 *len, U8 **raw)
+{
+    U8 i=0;
+    U8 status = BT_STATUS_FAILED;
+
+    switch (type)
+    {
+		case ATT_OP_READ:
+            case ATT_OP_READ_LONG:
+            case ATT_OP_READ_MULTIPLE:
+            case ATT_OP_READ_BY_TYPE:
+            /* Read */
+            *len = 0x01;
+            *raw = &databaseB006_v1;
+            status = BT_STATUS_SUCCESS;
+            break;
+		case ATT_OP_WRITE:
+		case ATT_OP_WRITE_WO_RESPONSE:			
+              case ATT_OP_EXECUTE_WRITE:
+            databaseB006_v1 = *raw[0];
+            return BT_STATUS_SUCCESS;
+    }
+    return status;
+
+}
+
+
+const U8 GattSDPPublicBrowseGroup[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),              /* 3 bytes */
+    SDP_UUID_16BIT(SC_PUBLIC_BROWSE_GROUP)  /* Public Browse Group */
+};
+
+const U8 GattSDPClassId[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0xA00B)    
+};
+
+const U8 GattSDPClassId1[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0xA00B)   
+
+};
+
+const U8 GattSDPClassId2[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0xA00B)     
+};
+
+const U8 GattSDPClassId3[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0xA00B)     
+};
+const U8 GattSDPClassId4[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0x1800)    
+};
+const U8 GattSDPClassId5[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(17),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_128BIT(BT_UUID_TESTER_DB_DATA3)    
+};
+const U8 GattSDPClassId6[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0xA00B)    
+};
+
+
+const U8 GattSDPClassId7[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0x1801)   
+};
+
+
+const U8 GattSDPClassId8[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(17),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_128BIT(BT_UUID_TESTER_DB_DATA3)    
+};
+
+const U8 GattSDPClassId9[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(3),      /* Data Element Sequence, 6 bytes */
+    SDP_UUID_16BIT(0xA00E)    
+};
+
+
+
+
+
+
+
+
+
+const U8 GattSdpProtocolDescList[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+    SDP_UINT_16BIT(0x01),     /* Uint16 start handle */
+    SDP_UINT_16BIT(0x03),     /* Uint16 end handle */    
+};
+
+
+const U8 GattSdpProtocolDescList1[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x20),/* Uint16 start handle */
+	SDP_UINT_16BIT(0x22),  /* Uint16 end handle */
+
+};
+
+
+
+const U8 GattSdpProtocolDescList2[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x30),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0x32),	  /* Uint16 end handle */
+};
+
+
+const U8 GattSdpProtocolDescList3[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x40),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0x42),	  /* Uint16 end handle */
+
+};
+
+
+const U8 GattSdpProtocolDescList4[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x50),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0x56),	  /* Uint16 end handle */
+};
+
+
+
+const U8 GattSdpProtocolDescList5[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x70),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0x76),	  /* Uint16 end handle */
+
+};
+
+
+const U8 GattSdpProtocolDescList6[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x80),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0x86),	  /* Uint16 end handle */
+
+
+};
+
+
+
+const U8 GattSdpProtocolDescList7[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0x90),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0x92),	  /* Uint16 end handle */
+
+
+
+};
+
+
+
+const U8 GattSdpProtocolDescList8[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0xA0),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0xAE),	  /* Uint16 end handle */
+
+};
+
+const U8 GattSdpProtocolDescList9[] = 
+{
+    SDP_ATTRIB_HEADER_8BIT(21), /* Data element sequence, 13 bytes */
+
+    SDP_ATTRIB_HEADER_8BIT(8), /* Data element sequence, 13 bytes */
+	SDP_UUID_16BIT(PROT_L2CAP), /* L2CAP UUID */
+    SDP_ATTRIB_HEADER_8BIT(3),  /* Data element sequence for L2CAP, 3 bytes */
+    SDP_UINT_16BIT(BT_PSM_ATT),     /* TODO: ATT PSM */
+    SDP_ATTRIB_HEADER_8BIT(9),  /* Data element sequence for AVDTP, 3 bytes */
+    SDP_UUID_16BIT(PROT_ATT),     /* TODO: ATT UUID */
+	SDP_UINT_16BIT(0xFFFF),  /* Uint16 start handle */
+	SDP_UINT_16BIT(0xFFFF), 	/* Uint16 end handle */
+
+
+};
+
+
+
+SdpAttribute GattAttributes0[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes1[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId1),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList1),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes2[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId2),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList2),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes3[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId3),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList3),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes4[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId4),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList4),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes5[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId5),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList5),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes6[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId6),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList6),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes7[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId7),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList7),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes8[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId8),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList8),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+SdpAttribute GattAttributes9[] = 
+{
+    SDP_ATTRIBUTE(AID_SERVICE_CLASS_ID_LIST, GattSDPClassId9),
+    /* OBEX protocol descriptor list attribute */
+    SDP_ATTRIBUTE(AID_PROTOCOL_DESC_LIST, GattSdpProtocolDescList9),
+    SDP_ATTRIBUTE(AID_BROWSE_GROUP_LIST, GattSDPPublicBrowseGroup),
+};
+
+
+
+SdpRecord bqe_gatt_sdp_record0;
+SdpRecord bqe_gatt_sdp_record1;
+SdpRecord bqe_gatt_sdp_record2;
+SdpRecord bqe_gatt_sdp_record3;
+SdpRecord bqe_gatt_sdp_record4;
+SdpRecord bqe_gatt_sdp_record5;
+SdpRecord bqe_gatt_sdp_record6;
+SdpRecord bqe_gatt_sdp_record7;
+SdpRecord bqe_gatt_sdp_record8;
+SdpRecord bqe_gatt_sdp_record9;
+
+
+
+
+
+
+void gatt_sdp_init(void)
+{
+	Report(("init large sdp database2"));
+	bqe_gatt_sdp_record0.num = sizeof(GattAttributes0) / sizeof(*(GattAttributes0));
+	bqe_gatt_sdp_record0.attribs = (SdpAttribute*) &GattAttributes0;
+	SDP_AddRecord(&bqe_gatt_sdp_record0);
+
+	bqe_gatt_sdp_record1.num = sizeof(GattAttributes1) / sizeof(*(GattAttributes1));
+	bqe_gatt_sdp_record1.attribs = (SdpAttribute*) &GattAttributes1;
+	SDP_AddRecord(&bqe_gatt_sdp_record1);
+
+	bqe_gatt_sdp_record2.num = sizeof(GattAttributes2) / sizeof(*(GattAttributes2));
+	bqe_gatt_sdp_record2.attribs = (SdpAttribute*) &GattAttributes2;
+	SDP_AddRecord(&bqe_gatt_sdp_record2);
+
+	bqe_gatt_sdp_record3.num = sizeof(GattAttributes3) / sizeof(*(GattAttributes3));
+	bqe_gatt_sdp_record3.attribs = (SdpAttribute*) &GattAttributes3;
+	SDP_AddRecord(&bqe_gatt_sdp_record0);
+
+	bqe_gatt_sdp_record4.num = sizeof(GattAttributes4) / sizeof(*(GattAttributes4));
+	bqe_gatt_sdp_record4.attribs = (SdpAttribute*) &GattAttributes4;
+	SDP_AddRecord(&bqe_gatt_sdp_record4);
+
+	bqe_gatt_sdp_record5.num = sizeof(GattAttributes5) / sizeof(*(GattAttributes5));
+	bqe_gatt_sdp_record5.attribs = (SdpAttribute*) &GattAttributes5;
+	SDP_AddRecord(&bqe_gatt_sdp_record5);
+
+	bqe_gatt_sdp_record6.num = sizeof(GattAttributes6) / sizeof(*(GattAttributes6));
+	bqe_gatt_sdp_record6.attribs = (SdpAttribute*) &GattAttributes6;
+	SDP_AddRecord(&bqe_gatt_sdp_record6);
+
+	bqe_gatt_sdp_record7.num = sizeof(GattAttributes7) / sizeof(*(GattAttributes7));
+	bqe_gatt_sdp_record7.attribs = (SdpAttribute*) &GattAttributes7;
+	SDP_AddRecord(&bqe_gatt_sdp_record7);
+
+	bqe_gatt_sdp_record8.num = sizeof(GattAttributes8) / sizeof(*(GattAttributes8));
+	bqe_gatt_sdp_record8.attribs = (SdpAttribute*) &GattAttributes8;
+	SDP_AddRecord(&bqe_gatt_sdp_record8);
+
+	bqe_gatt_sdp_record9.num = sizeof(GattAttributes9) / sizeof(*(GattAttributes9));
+	bqe_gatt_sdp_record9.attribs = (SdpAttribute*) &GattAttributes9;
+	SDP_AddRecord(&bqe_gatt_sdp_record9);
+
+
+
+}
+
+
+
+
+#endif // __ATT_TS_LARGE_DATABASE3__
+

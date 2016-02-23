@@ -1,0 +1,1 @@
+obj-$(CONFIG_MTK_MT7662) +=mt7662/
