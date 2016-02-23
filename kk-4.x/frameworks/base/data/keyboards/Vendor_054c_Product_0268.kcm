@@ -1,0 +1,63 @@
+type SPECIAL_FUNCTION
+
+### Gamepad buttons ###
+
+# BOX
+key BUTTON_A {
+    base:                               none
+}
+
+# TRIANGLE
+key BUTTON_B {
+    base:                               fallback MENU
+}
+
+# CROSS
+key BUTTON_X {
+    base:                               fallback DPAD_CENTER
+}
+
+# CIRCLE
+key BUTTON_Y {
+    base:                               fallback BACK
+}
+
+key BUTTON_L1 {
+    base:                               none
+}
+
+key BUTTON_R1 {
+    base:                               none
+}
+
+key BUTTON_L2 {
+    base:                               none
+}
+
+key BUTTON_R2 {
+    base:                               none
+}
+
+# L3
+key BUTTON_THUMBL {
+    base:                               none
+}
+
+# R3
+key BUTTON_THUMBR {
+    base:                               none
+}
+
+key BUTTON_START {
+    base:                               none
+}
+
+key BUTTON_SELECT {
+    base:                               none
+}
+
+#PS
+key BUTTON_1 {
+    base:                               none
+}
+

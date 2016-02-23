@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** Copyright 2011, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<!-- See storage config details at http://source.android.com/tech/storage/ -->
+
+<StorageList xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- removable is not set in nosdcard product -->
+    <storage
+        android:mountPoint="/storage/sdcard"
+        android:storageDescription="@string/storage_usb"
+        android:primary="true" />
+    <storage android:mountPoint="/storage/sda"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sda1"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sda2"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+	<storage android:mountPoint="/storage/sda3"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+	<storage android:mountPoint="/storage/sda4"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+	<storage android:mountPoint="/storage/sda5"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sda6"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sda7"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+	<storage android:mountPoint="/storage/sda8"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+	<storage android:mountPoint="/storage/sda9"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+	<storage android:mountPoint="/storage/sda10"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdb"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdb1"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdb2"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdb3"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdb4"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdb5"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdb6"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdb7"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdb8"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdb9"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdb10"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdc"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdc1"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdc2"
+        android:storageDescription="@string/storage_usb"   
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdc3"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdc4"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdc5"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdc6"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdc7"
+        android:storageDescription="@string/storage_usb"   
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdc8"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdc9"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdc10"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdd"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdd1"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdd2"
+        android:storageDescription="@string/storage_usb"   
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdd3"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdd4"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdd5"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdd6"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdd7"
+        android:storageDescription="@string/storage_usb"   
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdd8"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdd9"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+    <storage android:mountPoint="/storage/sdd10"
+        android:storageDescription="@string/storage_usb"
+        android:primary="false"/>
+</StorageList>
