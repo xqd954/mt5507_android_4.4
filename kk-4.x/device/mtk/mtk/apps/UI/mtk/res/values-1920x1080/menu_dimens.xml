@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menu_layout_width">600dip</dimen>
+    <dimen name="menu_layout_height">500dip</dimen>
+    <dimen name="left_marge_size">20sp</dimen>
+    <dimen name="large_text_size">14sp</dimen>
+    <dimen name="middle_text_size">14sp</dimen>
+    <dimen name="small_text_size">10sp</dimen>
+    <dimen name="image_view_size">160dip</dimen>
+    <dimen name="middle_margin_edge">10dip</dimen>
+    <dimen name="small_margin_edge">3dip</dimen>
+    <dimen name="large_margin_edge">15dip</dimen>
+    <dimen name="frame_layout_width">450dip</dimen>
+    <dimen name="frame_layout_height">400dip</dimen>
+    <dimen name="progressbar_height">225dip</dimen>
+    <dimen name="layout_alignRight">60dip</dimen>
+    <dimen name="big_large_margin_edge">25dip</dimen>
+    <dimen name="menu_main_margin">23dip</dimen>
+    <dimen name="menu_main_draw_pad">15dip</dimen>
+    <dimen name="prompt_textview_margin">23dip</dimen>
+    <dimen name="menu_main_left_margin_top">15dip</dimen>
+    <dimen name="menu_wifi_txt_size">14sp</dimen>
+    <dimen name="menu_change_value_bar_bottom">60dip</dimen>
+    <dimen name="menu_seekbar_thumb_height">45dp</dimen>
+    <dimen name="menu_seekbar_thumb_width">16dp</dimen>
+</resources>

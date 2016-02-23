@@ -1,0 +1,159 @@
+import /init.mtk_common.rc
+import /init.mtk_rm.rc
+import /init.dtv_driver.rc
+import /init.device.rc
+import /init.build_type.rc
+import /init.build_cfg.rc
+import /init.hybrid_cfg.rc
+import /init.android_two_worlds.rc
+import /init.${ro.coredump}.rc
+import /init.${ro.coredump}_folder.rc
+import /init.sdcard.rc
+
+on early-init
+    
+#on init
+on post-fs-data
+    waitlock /dtv_driver.ko.lock
+    insmod /system/lib/modules/mtk_mmap.ko
+    chown root shell /unmount.sh
+    chmod 0550 /unmount.sh    
+    chmod 0755 /system/bin/logv
+    chmod 0755 /system/bin/logd
+    chmod 0755 /system/bin/logi
+    chmod 0755 /system/bin/logw
+    chmod 0755 /system/bin/loge
+		chmod 0755 /system/bin/pvrsrvctl 
+		exec /system/bin/pvrsrvctl --start
+		chmod 0766 /dev/pvrsrvkm
+		chmod 0766 /dev/pvr_sync
+
+on boot
+    mount debugfs /sys/kernel/debug /sys/kernel/debug
+
+    mkdir /data/misc/wifi 0770 wifi wifi
+    mkdir /data/misc/wifi/sockets 0770 wifi wifi
+    mkdir /data/misc/dhcp 0770 dhcp dhcp
+    chmod 0775 /data/misc/dhcp
+    chown dhcp dhcp /data/misc/dhcp
+    chown system system /sys/module/mtk_mod/parameters/reset_reason
+    write /sys/power/wake_lock MT5398
+    mkdir /etc/Wireless
+    mkdir etc/Wireless/RT2870STA
+
+
+service insmod /sbin/sh /system/etc/script/insmod.sh
+    class main
+    console
+    oneshot
+
+# prepare for init
+service pre-init /sbin/sh /system/etc/service/pre-init.sh
+    class main
+    console
+    oneshot
+
+service post-init /sbin/sh /system/etc/service/post-init.sh
+    class main
+    console
+    oneshot
+
+# dtv_svc service
+service dtv-svc /sbin/sh /system/etc/service/dtv_svc.sh
+    class main
+    console
+    oneshot
+    
+service wpa_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant -dd -Dnl80211 -iwlan0 -c /data/misc/wifi/wpa_supplicant.conf
+#    group wifi inet
+    class main
+    socket wpa_wlan0 dgram 660 wifi wifi
+    disabled
+    oneshot
+    
+service p2p_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant -d -Dnl80211 -iwlan0 -c /data/misc/wifi/wpa_supplicant.conf -N -Dnl80211 -ip2p0 -c/data/misc/wifi/p2p_supplicant.conf -puse_p2p_group_interface=1 -d 
+    class main
+    socket wpa_wlan0 dgram 660 wifi wifi
+    disabled
+    oneshot
+    
+service wpa_supplicantrt /system/bin/logwrapper /system/bin/wpa_supplicantrt -dd -Dnl80211 -iwlan0 -c /data/misc/wifi/wpa.conf 
+    class main
+    disabled
+    oneshot
+    
+service p2p_supplicantrt /system/bin/logwrapper /system/bin/wpa_supplicantrt -dd -Dnl80211 -iwlan0 -c /data/misc/wifi/p2p.conf -e /data/misc/wifi/entropy.bin
+    class main
+    disabled
+    oneshot
+    
+service wpa_supplicant6k /system/bin/logwrapper /system/bin/wpa_supplicantat6k -iwlan0 -dd -Dnl80211 -c /data/misc/wifi/wpa.conf
+    class main
+    disabled
+    oneshot
+    
+service p2p_supplicant6k /system/bin/logwrapper /system/bin/wpa_supplicantat6k -ip2p0 -dd -Dnl80211 -c /data/misc/wifi/p2p.conf
+    class main
+    disabled
+    oneshot
+   
+service wifi_set  /system/bin/wifi_set.sh 
+    disabled
+    oneshot
+    
+    # performance tweaks for flash
+#    write /sys/block/mtdblock3/bdi/read_ahead_kb 4
+#    write /sys/block/mtdblock4/bdi/read_ahead_kb 4
+#    write /sys/block/mtdblock5/bdi/read_ahead_kb 4
+
+    # Power Management
+#    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 245000
+#    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 998400
+#    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
+#    write /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate 40000
+
+    # Wakelock debug
+ #   write /sys/module/wakelock/parameters/debug_mask 7
+
+service dhcpcd /system/bin/dhcpcd -BK
+    class main
+    disabled
+    oneshot
+    
+service dhcpcd_eth0 /system/bin/dhcpcd -BK
+    class main
+    disabled
+    oneshot   
+
+service dhcpcd_wlan0 /system/bin/dhcpcd -BK
+    class main
+    disabled
+    oneshot   
+
+service dhcpcd_p2p /system/bin/dhcpcd -BK
+    class main
+    disabled
+    oneshot
+service iprenew_wlan0 /system/bin/dhcpcd -n
+	class main
+	disabled
+	oneshot
+
+service pppoedial /system/bin/pppoedial
+	class main
+	socket pppoesock stream 0660 root system
+	oneshot
+
+# bugreport is triggered by the KEY_VOLUMEUP and BTN_MOUSE keycodes
+service bugreport /system/bin/dumpstate -d -v -o /usbdisk/bugreports/bugreport
+    class main
+    disabled
+    oneshot
+    keycodes 115 272
+
+#service dspcrashd /system/bin/dspcrashd
+
+service uploadservice /system/bin/uploadservice
+		class main
+		user system
+		group system

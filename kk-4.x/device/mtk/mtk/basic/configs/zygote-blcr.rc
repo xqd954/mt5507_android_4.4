@@ -1,0 +1,14 @@
+on init
+    insmod /blcr_imports.ko
+    insmod_async /blcr.ko.lock /blcr.ko
+
+on fs
+    waitlock /blcr.ko.lock
+
+service zygote /sbin/sh /system/bin/quicklaunch.sh -Xzygote /system/bin --zygote --start-system-server
+    class main
+    socket zygote stream 666
+    onrestart write /sys/android_power/request_state wake
+    onrestart write /sys/power/state on
+    onrestart restart media
+    onrestart restart netd

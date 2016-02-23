@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="fill_parent">
+	<ImageView android:layout_weight="0.8" android:layout_width="match_parent"
+		android:layout_height="match_parent" android:layout_marginLeft="@dimen/epg_title_rpadding"
+		android:src="@drawable/nav_source_list_select_icon" android:id="@+id/epg_type_icon"
+		android:scaleType="centerInside" 
+		android:visibility="invisible" >
+	</ImageView>
+	<TextView android:layout_weight="0.2" android:layout_width="match_parent"
+		android:singleLine="true" android:layout_height="fill_parent"
+		android:textSize="@dimen/epg_type_item_ts" android:id="@+id/epg_type_name"
+		android:layout_marginLeft="@dimen/epg_title_lmargin"
+		android:layout_marginRight="@dimen/epg_title_rpadding">
+	</TextView>
+</LinearLayout>

@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nav_shorttip_bg"
+    android:orientation="vertical"
+    android:paddingTop="30dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/pvr_working_rec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/pvr_record_rec" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/pvr_working_rec_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/pvr_working_rec"
+            android:text="@string/pvr_tshift_working_rec_time"
+            android:textColor="@color/white"
+            android:textSize="@dimen/nav_textsize_normal" >
+        </TextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pvr_working_rec" >
+
+            <TextView
+                android:id="@+id/pvr_working_currenttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="30dp"
+                android:text="@string/pvr_tshift_working_cur_time"
+                android:textColor="@color/white"
+                android:textSize="@dimen/nav_textsize_normal" >
+            </TextView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pvr_working_currenttime"
+                android:padding="@dimen/padding_medium"
+                android:scaleType="fitXY"
+                android:src="@drawable/menu_channel_line" >
+            </ImageView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/pvr_working_dataitem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+          android:orientation="horizontal"
+        >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginLeft="100dip"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/nav_textsize_normal" />
+
+</LinearLayout>

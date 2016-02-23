@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/turnkey_comm_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_longdialog_background"
+    android:orientation="vertical"
+    android:padding="@dimen/menu_main_draw_pad" >
+
+    <TextView
+        android:id="@+id/comm_dialog_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/comm_dialog_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/comm_dialog_buttonYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_dialog_button"
+            android:text="@string/menu_setup_tvchaneledit_sure"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/comm_dialog_buttonNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:background="@drawable/menu_dialog_button"
+            android:text="@string/menu_setup_tvchaneledit_cancel"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

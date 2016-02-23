@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="thr_menu_common_setting">常用设置</string>
+    <string name="thr_menu_confim">确定</string>
+    <string name="thr_menu_cancal">退出</string>
+    <string name="thr_menu">菜单</string>
+    <string name="thr_menu_select">选择</string>
+    
+    <string name="thr_menu_picture_mode">画面模式</string>
+    <string name="thr_menu_track">音轨</string>
+    <string name="thr_menu_Equalizer">均衡器</string>
+    <string name="thr_menu_volume">音量</string>   
+    
+    <string name="app_name">第三方</string>
+    
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:id="@+id/menu_layout">
+
+	<ListView android:id="@+id/mmp_menulistview_list"
+		android:scrollbars="none" 
+		android:fadeScrollbars="true"
+		android:layout_width="fill_parent" 
+		android:listSelector="@android:color/transparent"
+		android:layout_height="wrap_content" 
+		android:divider="@android:color/transparent"
+		android:choiceMode="singleChoice" 
+		android:fadingEdge="none" 
+		android:layout_marginBottom="12dip"></ListView>
+</LinearLayout>

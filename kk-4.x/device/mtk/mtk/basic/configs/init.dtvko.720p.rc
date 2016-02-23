@@ -1,0 +1,3 @@
+on post-fs-data
+    insmod /system/lib/modules/dtv_driver.ko osd1_src_width=960 osd1_src_height=540 osd2_src_width=1920 osd2_src_height=1080
+    write /proc/boottime ir:dtvko-720p-done

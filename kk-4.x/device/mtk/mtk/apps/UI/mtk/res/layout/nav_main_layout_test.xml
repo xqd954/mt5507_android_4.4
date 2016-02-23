@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linear_glview"
+    android:background="@drawable/tv_background" >
+    <com.mediatek.ui.nav.commonview.SnowTextView
+        android:id="@+id/nav_stv_special_model"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/turnkey_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <!-- channel information -->
+
+        <com.mediatek.ui.nav.commonview.BannerView
+            android:id="@+id/nav_banner_info_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2" >
+
+            <!-- text view in left_bottom(SLEEP, TIMER...) -->
+
+            <LinearLayout
+                android:id="@+id/nav_sundry_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/nav_aspect_mar"
+                android:gravity="bottom"
+                android:visibility="gone" >
+
+                <com.mediatek.ui.nav.commonview.NavSundryShowTextView
+                    android:id="@+id/nav_tv_shortTip_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="100dip"
+                    android:background="@drawable/nav_shorttip_bg"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/nav_textsize_normal" />
+            </LinearLayout>
+
+            <!-- volume adjust -->
+
+            <LinearLayout
+                android:id="@+id/nav_volume_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <com.mediatek.ui.nav.commonview.AdjustVolumeView
+                    android:id="@+id/nav_adjust_volume_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- zoom layout -->
+
+    <com.mediatek.ui.nav.commonview.ZoomView
+        android:id="@+id/nav_zoomview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+      <ProgressBar
+		android:id="@+id/fbm_mode_progressbar"
+		android:layout_width="100dip"
+		android:layout_height="100dip"
+		android:visibility="gone"
+		android:layout_centerInParent="true" />
+
+
+   <LinearLayout
+                android:id="@+id/nav_viewlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="@drawable/menu_menuitem_normal" 
+                >
+</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:background="@drawable/mmp_listmode_music_player_bg"
+	android:orientation="vertical">
+
+	<!-- Top -->
+
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<!-- music icon  -->
+		<LinearLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:gravity="bottom">
+			<ImageView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:src="@drawable/mmp_listmode_music_icon">
+			</ImageView>
+		</LinearLayout>
+		<!-- title and the progress bar   -->
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:orientation="vertical"
+			android:layout_marginRight="10dip">
+
+			<TextView android:id="@+id/mmp_musicname"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				style="@style/mmp_pop_tx" 
+				android:gravity="center_vertical"/>
+
+			<LinearLayout android:background="@drawable/mmp_toolbar_progressbar_bg_new"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_gravity="center">
+				<ProgressBar style="@style/mmp_progressbar"
+					android:layout_gravity="center_vertical" 
+					android:id="@+id/mmp_musicback_progress"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"/>
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<!-- end title and progress bar  -->
+
+	</LinearLayout>
+
+	<!-- end Top -->
+
+	<!-- time -->
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:paddingLeft="15dip"
+		android:paddingRight="15dip">
+		<TextView android:id="@+id/mmp_musicback_starttime"
+			android:layout_weight="1" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:text="@string/mmp_pop_starttime"
+			style="@style/mmp_pop_tx"/>
+		<TextView android:id="@+id/mmp_musicback_endtime"
+			android:gravity="right" 
+			android:layout_weight="1"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:text="@string/mmp_pop_starttime" 
+			style="@style/mmp_pop_tx"></TextView>
+	</LinearLayout>
+
+	<!-- end time -->
+
+	<!-- white keyboard   -->
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:background="@drawable/mmp_listmode_music_bar"
+		android:paddingTop="5dip" 
+		android:paddingLeft="24dip"
+		android:paddingRight="20dip">
+		<LinearLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_weight="1"
+			android:gravity="center">
+			<ImageView android:id="@+id/mmp_musicback_play"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:src="@drawable/mmp_thumbnail_player_icon_play"></ImageView>
+		</LinearLayout>
+		<LinearLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_weight="1"
+			android:gravity="center">
+			<ImageView android:id="@+id/mmp_musicback_repeat"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:src="@drawable/mmp_thumbnail_player_icon_repeall"></ImageView>
+		</LinearLayout>
+		<LinearLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_weight="1"
+			android:gravity="center">
+			<ImageView android:id="@+id/mmp_musicback_unkown"
+				android:visibility="invisible" 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:src="@drawable/mmp_thumbnail_player_icon_play"></ImageView>
+		</LinearLayout>
+		<LinearLayout
+			android:layout_height="wrap_content" 
+			android:layout_width="wrap_content"
+			android:layout_weight="1" 
+			android:gravity="center">
+			<ImageView android:id="@+id/mmp_musicback_shuffle"
+				android:src="@drawable/mmp_thumbnail_player_icon_shuffer"
+				android:layout_height="wrap_content" 
+				android:layout_width="wrap_content"></ImageView>
+		</LinearLayout>
+	</LinearLayout>
+
+	<!-- end white keyboard   -->
+
+	<!-- volume  -->
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:gravity="center_vertical">
+
+		<ImageView android:id="@+id/mmp_musicback_volume_img"
+			android:src="@drawable/mmp_toolbar_icon_volume"
+			android:layout_weight="1" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+		</ImageView>
+		<LinearLayout android:background="@drawable/mmp_toolbar_progressbar_bg_new"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_weight="2" 
+			android:layout_marginRight="10dip"
+			android:id="@+id/mmp_volume_progress_bg">
+			<ProgressBar android:id="@+id/mmp_musicback_volume"
+				style="@style/mmp_progressbar" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="center_vertical" />
+		</LinearLayout>
+
+
+	</LinearLayout>
+
+	<!-- end volume  -->
+
+
+
+	<!-- spectrum -->
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:background="@color/black"
+		android:paddingEnd="10dp"
+		android:layout_marginLeft="20dp"
+		android:id="@+id/mmp_music_playback_spectrum">
+		<com.mediatek.ui.mmp.commonview.ScoreView
+			android:id="@+id/mmp_musicscore" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+	</LinearLayout>
+
+
+
+</LinearLayout>

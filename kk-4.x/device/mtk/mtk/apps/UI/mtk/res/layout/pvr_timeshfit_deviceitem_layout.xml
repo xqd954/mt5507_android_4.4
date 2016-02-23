@@ -1,0 +1,50 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/device_info_hint"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginLeft="30sp"
+    android:layout_marginRight="30sp"
+    android:padding="15dip"
+    android:stretchColumns="0,1,2,3"
+    android:textColor="@color/white"
+    android:textSize="@dimen/nav_pvr_textsize" >
+
+    <TableRow>
+
+      <!--   android:textAppearance="@style/nav_pvr_filelist_text" -->
+        
+        <TextView
+            android:id="@+id/disk_label"
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/tk_cm_color_key_green"
+            android:text="@string/pvr_disk_no_name" 
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/disk_size"
+            android:layout_gravity="center_vertical"
+            android:text="@string/pvr_disk_size_temp_3_8_3_8gb"
+            android:textColor="@color/white"
+             />
+
+        <TextView
+            android:id="@+id/disk_is_tshift"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/tk_cm_color_key_blue"
+            android:text="@string/pvr_disk_ispvr_pvr_tshift" 
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/disk_na"
+            android:layout_gravity="right|center_vertical"
+            android:text="@string/pvr_disk_na"
+            android:textColor="@color/white"
+             />
+    </TableRow>
+
+</TableLayout>

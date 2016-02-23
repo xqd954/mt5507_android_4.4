@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- parameter configuration module Navigation bar -->
+	<string name="menu_interface_name">Menu</string>
+	<string name="menu_show_menu_item">视频</string>
+	<string name="menu_tab_video">视频</string>
+	<string name="menu_tab_audio">音频</string>
+	<string name="menu_tab_tv">电视</string>
+	<string name="menu_tab_setup">设置</string>
+	<string name="menu_tab_parent">家长控制</string>
+
+	<!-- parameter configuration module function prompt-->
+	<string name="menu_enter">输入</string>
+	<string name="menu_select">选择</string>
+	<string name="menu_exit">退出</string>
+	<string name="menu_adjust">调节</string>
+	<string name="menu_back">后退</string>
+	<string name="menu_set">设置</string>
+	<string name="menu_ok">确定</string>
+	<string name="menu_cancel">取消</string>
+	<string name="menu_ci_close">关闭CI</string>
+	<string name="menu_scan">扫描</string>
+
+	<!-- the parameter of Video,item display interface strings to be defined -->
+	<string name="menu_video_picture_mode">图像模式</string>
+	<string name="menu_video_backlight">背光</string>
+	<string name="menu_video_brighttness">亮度</string>
+	<string name="menu_video_contrast">对比度</string>
+	<string name="menu_video_saturation">饱和度</string>
+	<string name="menu_video_hue">色调</string>
+	<string name="menu_video_sharpness">清晰度</string>
+	<string name="menu_video_gamma">灰度系数</string>
+	<string name="menu_video_color_temperature">色温</string>
+	<string name="menu_video_color_g_red">红色增益</string>
+	<string name="menu_video_color_g_green">绿色增益</string>
+	<string name="menu_video_color_g_blue">蓝色增益</string>
+	<string name="menu_video_advancedvideo">高级视频</string>
+	<string name="menu_video_3d">3D</string>
+	<string name="menu_video_3d_mode">3D模式</string>
+	<string name="menu_video_3d_nav">3D 识别</string>
+	<string name="menu_video_3d_3t2">3D转2D</string>
+	<string name="menu_video_3d_depth_field">景深</string>
+	<string name="menu_video_3d_protrude">视点</string>
+	<string name="menu_video_3d_distance">视距</string>
+	<string name="menu_video_3d_image_safety">3D护眼功能</string>
+	<string name="menu_video_3d_leftright">左右交换</string>
+	<string name="menu_video_3d_osd">OSD Depth</string>
+	<string name="menu_video_3d_wear_glass">请带上3D眼镜观看!</string>
+	<string name="menu_video_vga_mode">VGA模式</string>
+	<string name="menu_video_dnr">DNR</string>
+	<string name="menu_video_mpeg_nr">MPEG NR</string>
+	<string name="menu_video_luma">自适应亮度控制</string>
+	<string name="menu_video_flesh_tone">肤色</string>
+	<string name="menu_video_di_film_mode">DI胶片模式</string>
+	<string name="menu_video_blue_stretch">蓝电平延伸</string>
+	<string name="menu_video_wme_mode">游戏模式</string>
+	<string name="menu_video_pq_split_mode">PQ拆分屏幕演示</string>
+	<string name="menu_video_mjc">MJC</string>
+	<string name="menu_video_mjc_effect">效果</string>
+	<string name="menu_video_mjc_demo_partition">演示分区</string>
+	<string name="menu_video_mjc_mode">模式</string>
+	<string name="menu_video_mjc_demo">演示</string>
+	<string name="menu_video_hdmi_mode">HDMI模式</string>
+	<string name="menu_video_vga">VGA</string>
+	<string name="menu_video_auto_adjust">自调</string>
+	<string name="menu_video_hposition">水平位置</string>
+	<string name="menu_video_vposition">垂直位置</string>
+	<string name="menu_video_phase">相位</string>
+	<string name="menu_video_clock">时钟</string>
+	<string name="menu_video_3d_leftright_str">左右模式</string>
+	<string name="menu_video_3d_updown_str">上下模式</string>
+	<string name="menu_video_mjc_demo_off">关</string>
+	<string name="menu_video_mjc_demo_on">开</string>
+
+	<!--the parameter of Audio,item display interface strings to be defined -->
+	<string name="menu_audio_balance">平衡</string>
+	<string name="menu_audio_bass">低音</string>
+	<string name="menu_audio_treble">高音</string>
+	<string name="menu_audio_srs_mode">环绕声</string>
+	<string name="menu_audio_equalize">均衡器</string>
+	<string name="menu_audio_speaker_mode">扬声器</string>
+	<string name="menu_audio_spdif_mode">SPDIF类型</string>
+	<string name="menu_audio_spdif_delay">SPDIF延迟</string>
+	<string name="menu_audio_avc_mode">自动音量控制</string>
+	<string name="menu_audio_type">类型</string>
+	<string name="menu_audio_visually_impaired">视力受损</string>
+	<string name="menu_audio_visually_speaker">扬声器</string>
+	<string name="menu_audio_visually_headphone">耳机</string>
+	<string name="menu_audio_visually_volume">音量</string>
+
+	<!-- the parameter of TV,item display interface strings to be defined -->
+	<string name="menu_tv_tuner_mode">调谐器模式</string>
+	<string name="menu_tv_mts">音频频道</string>
+	<string name="menu_tv_audio_language">音频语言</string>
+	<string name="menu_tv_audio_language2nd">第二音频语言</string>
+	<string name="menu_tv_channels">频道</string>
+	<string name="menu_tv_channel_scan">频道扫描</string>
+	<string name="menu_tv_tv_system">电视系统</string>
+	<string name="menu_tv_color_system">彩色电视制式</string>
+	<string name="menu_tv_update_scan">更新扫描</string>
+	<string name="menu_tv_analog_manual_scan">模拟手动扫描</string>
+	<string name="menu_tv_single_rf_scan">单射频扫台</string>
+	<string name="menu_tv_channel_edit">频道编辑</string>
+	<string name="menu_tv_clear_channel_list">清空频道列表</string>
+	<string name="menu_tv_freeze_channel">冻结更改频道</string>
+	<string name="menu_tv_status">状态</string>
+	<string name="menu_tv_status_value">开始扫台</string>
+	<string name="menu_tv_analog_channels">模拟频道</string>
+	<string name="menu_tv_digital_channels">数字频道</string>
+	<string name="menu_tv_start_frequency">起始频率(MHz)</string>
+	<string name="menu_tv_end_frequency">终止频率(MHz)</string>
+	<string name="menu_tv_rf_scan_frequency">扫台频率(MHz)</string>
+	<string name="menu_tv_rf_scan_mode">扫描模式</string>
+	<string name="menu_tv_rf_sym_rate">符号率</string>
+	<string name="menu_tv_rf_signal_level">信号电平：</string>
+	<string name="menu_tv_insert">插入</string>
+	<string name="menu_tv_delete">删除</string>
+	<string name="menu_tv_swap">交换</string>
+	<string name="menu_tv_number">编号</string>
+	<string name="menu_tv_type">类型</string>
+	<string name="menu_tv_frequency">频率</string>
+	<string name="menu_tv_system">系统</string>
+	<string name="menu_tv_name">名称</string>
+	<string name="menu_tv_skip">跳过</string>
+	<string name="menu_tv_scann_allchannels">扫描所有频道.</string>
+	<!-- DTMB Single RF Channel -->
+	<string name="menu_tv_single_rf_channel">RF Channel</string>
+	<string name="menu_tv_single_signal_level">信号强度</string>
+    <string name="menu_tv_single_signal_quality">信号质量</string>
+
+	<!-- channel edit -->
+	<string name="menu_tv_channel_no">频道编号</string>
+	<string name="menu_tv_channel_name">频道名称</string>
+	<string name="menu_tv_freq">频率</string>
+	<string name="menu_tv_sound_system">声音系统</string>
+	<string name="menu_tv_auto_finetune">自动微调</string>
+	<string name="menu_tv_finetune">微调</string>
+	<string name="menu_tv_store">保存</string>
+	<string name="menu_tv_enter">进入</string>
+	<string name="menu_tv_exit">退出</string>
+	<string name="menu_tv_clear_channel_info">确定要清除所有频道数据？</string>
+	<string name="menu_dialog_confirm">确定</string>
+	<string name="menu_dialog_cancel">取消</string>
+	<string name="menu_dialog_numrepeat">频道编号重复!</string>
+
+	<!-- the parameter of Setup,item display interface strings to be defined -->
+	<!-- first level -->
+	<string name="menu_setup_language">OSD 语言</string>
+	<string name="menu_setup_screenmode">屏幕模式</string>
+	<string name="menu_setup_dpms">DPMS</string>
+	<string name="menu_setup_bluemute">蓝色静音</string>
+	<string name="menu_setup_fastboot">快速开机</string>
+	<string name="menu_setup_poweron_music">开机音乐</string>
+	<string name="menu_setup_poweroff_music">关机音乐</string>
+	<string name="menu_setup_capturelogo_select">Capture Logo 选择</string>
+	<string name="menu_setup_time_setup">时间设置</string>
+	<string name="menu_setup_teletext">图文电视</string>
+	<string name="menu_setup_network">网络</string>
+	<string name="menu_setup_version_info">版本信息</string>
+	<string name="menu_setup_msi">多屏互动</string>
+	<string name="menu_setup_reset_default">重设默认值</string>
+	
+	<string name="menu_setup_common_interface">公共接口</string>
+	
+    <!-- CECFUN-->
+	<string name="menu_setup_cec_function">CEC 菜单</string>
+	<string name="menu_setup_cec_auto_turn">自动关闭</string>
+	<string name="menu_setup_cec_device_discovery">设备搜寻</string>
+	<string name="menu_setup_cec_standby">待机</string>
+	<string name="menu_setup_cec_poweron">电源打开</string>
+	<string name="menu_setup_cec_enablesys">启动系统音频控制</string>
+	<string name="menu_setup_cec_disablesys">禁止系统音频控制</string>
+	<!-- CI -->
+	<string name="menu_setup_ci_no_card">无CI卡。</string>
+
+	<!-- second level -->
+	<string name="menu_setup_timezone">时区</string>
+	<string name="menu_setup_time">时间</string>
+	<string name="menu_setup_sleep_timer">睡眠定时器</string>
+	<string name="menu_setup_auto_sleep">自动睡眠</string>
+	<string name="menu_setup_configuration">配置</string>
+	<string name="menu_setup_auto_network_upgrade">网络升级</string>
+	<string name="menu_setup_application">应用程序</string>
+	<string name="menu_setup_version_name">TurnKey</string>
+	<string name="menu_setup_version_ver">1.0</string>
+	<string name="menu_setup_version_number">0001</string>
+	
+	<string name="menu_setup_digital_teletext_language">数字图文电视语言</string>
+	<string name="menu_setup_decoding_page_language">解码页面语言</string>
+	<string name="menu_setup_ttx_presentation_level">TTX 演示级别</string>
+
+	<!-- third level -->
+	<string name="menu_setup_auto_synchronization">自动同步</string>
+	<string name="menu_setup_date">日期</string>
+	<string name="menu_setup_power_on_timer">电源打开定时器</string>
+	<string name="menu_setup_timer">定时器</string>
+	<string name="menu_setup_power_on_channel">开机频道</string>
+	<string name="menu_setup_power_off_timer">电源关闭定时器</string>
+	<string name="menu_setup_internet_connection">Internet 连接</string>
+	<string name="menu_setup_wireless_setting">无线设置</string>
+	<string name="menu_setup_information">信息</string>
+	<string name="menu_setup_ip_setting">IP设置</string>
+	<string name="menu_setup_connection_test">连接测试</string>
+	<string name="menu_setup_interface">接口</string>
+	<string name="menu_setup_dlna">DLNA</string>
+	<string name="menu_setup_my_net_place">我的网络地盘</string>
+
+	<!-- forth level -->
+	<string name="menu_setup_power_on_channel_mode">选择模式</string>
+	<string name="menu_setup_power_on_no_channel">(无频道。)</string>
+	<string name="menu_setup_address_type">地址类型</string>
+	<string name="menu_setup_ip_address">IP 地址</string>
+	<string name="menu_setup_subnetwork_mask">子网掩码</string>
+	<string name="menu_setup_default_gateway">默认网关</string>
+	<string name="menu_setup_first_dns">首选DNS</string>
+	<string name="menu_setup_standby_dns">备用DNS</string>
+	<string name="menu_setup_ethernet_mac">Ethernet MAC</string>
+
+	<!-- wifi setting -->
+	<string name="wifi_setup_title">无线设置</string>
+
+	<!-- pop-up dialog or window  -->
+	<string name="menu_setup_connetion_info1">开始测试网络连接.</string>
+	<string name="menu_setup_connetion_info2">网络连接测试成功</string>
+	<string name="menu_setup_connetion_info3">网络连接测试不成功.</string>
+	<string name="menu_setup_connetion_wait">请等候</string>
+	<string name="menu_setup_upgrade_info1">开始从服务器下载新固件.
+	</string><!-- the same info with English Version -->
+	<string name="menu_setup_upgrade_info2_title">更新向导</string>
+	<string name="menu_setup_upgrade_info2">检查新固件失败.</string>
+	<string name="menu_setup_reset_info1">是否确定?</string>
+
+	<!-- part of factory -->
+	<string name="menu_factory_name">工厂</string>
+	<string name="menu_factory_video">视频</string>
+	<string name="menu_factory_audio">音频</string>
+	<string name="menu_factory_TV">电视</string>
+	<string name="menu_factory_setup">设置</string>
+	<string name="menu_factory_preset">预设频道</string>
+	<!-- part of factory_video -->
+	<string name="menu_factory_video_auto_color">自动色</string>
+	<string name="menu_factory_video_color_temperature">色温</string>
+	<string name="menu_factory_video_auto_phase">Auto Phase</string>
+	<string name="menu_factory_video_phase">Phase</string>
+	<string name="menu_factory_video_h_position">水平位置</string>
+	<string name="menu_factory_video_v_position">垂直位置</string>
+	<string name="menu_factory_video_di_ma">DI MA</string>
+	<string name="menu_factory_video_di_edge">DI 边缘</string>
+	<string name="menu_factory_video_wcg">WCG</string>
+	<string name="menu_factory_video_flip">翻转</string>
+	<string name="menu_factory_video_mirror">镜像</string>
+	<!--factory_video_color_temperature  -->
+	<string name="menu_factory_video_color_rgain">红色增益</string>
+	<string name="menu_factory_video_color_ggain">绿色增益</string>
+	<string name="menu_factory_video_color_bgain">蓝色增益</string>
+	<string name="menu_factory_video_color_roffset">红色补偿</string>
+	<string name="menu_factory_video_color_goffset">绿色补偿</string>
+	<string name="menu_factory_video_color_boffset">蓝色补偿</string>
+
+	<!-- part of factory_audio -->
+	<string name="menu_factory_audio_dolby_banner">杜比标志</string>
+	<string name="menu_factory_audio_compression">压缩</string>
+	<string name="menu_factory_audio_compression_factor">压缩系数</string>
+	<string name="menu_factory_audio_a2_system">A2 系统</string>
+	<string name="menu_factory_audio_pal_system">PAL 系统</string>
+	<string name="menu_factory_audio_eu_system">EU 系统</string>
+	<string name="menu_factory_audio_latency">等待时间</string>
+	<!-- part of factory_audio_a2_system -->
+	<string name="menu_factory_audio_a2_numbersofcheck">Numbers Of Check</string>
+	<string name="menu_factory_audio_a2_numbersofdouble">Numbers Of Double</string>
+	<string name="menu_factory_audio_a2_monoweight">Mono Weight</string>
+	<string name="menu_factory_audio_a2_stereoweight">Stereo Weight</string>
+	<string name="menu_factory_audio_a2_dualweight">Dual Weight</string>
+	<string name="menu_factory_audio_a2_highdeviationmode">High Deviation Mode</string>
+	<string name="menu_factory_audio_a2_carriershiftfunction">Carrier Shift Function</string>
+	<string name="menu_factory_audio_a2_fmcarriermutemode">FM Carrier Mute Mode</string>
+	<string name="menu_factory_audio_a2_fmcarriermutethreshold_high">FM Carrier Mute Threshold High</string>
+	<string name="menu_factory_audio_a2_fmcarriermutethreshold_low">FM Carrier Mute Threshold Low</string>
+	<string name="menu_factory_audio_a2_finetunevolume">Fine Tune Volume</string>
+
+	<!-- part of factory_audio_pal_system -->
+	<string name="menu_factory_audio_pal_correctthreshold">Correct Threshold</string>
+	<string name="menu_factory_audio_pal_totalsyncloop">Total Sync Loop</string>
+	<string name="menu_factory_audio_pal_errorthreshold">Error Threshold</string>
+	<string name="menu_factory_audio_pal_parityerrorthreshold">Parity Error Threshold</string>
+	<string name="menu_factory_audio_pal_everynumberframes">Every Number Frames</string>
+	<string name="menu_factory_audio_pal_highdeviationmode">High Deviation Mode</string>
+	<string name="menu_factory_audio_pal_amcarriermutemode">AM Carrier Mute Mode</string>
+	<string name="menu_factory_audio_pal_amcarriermutethresholdhigh">AM Carrier Mute Threshold High</string>
+	<string name="menu_factory_audio_pal_amcarriermutethresholdlow">AM Carrier Mute Threshold Low</string>
+	<string name="menu_factory_audio_pal_carriershiftfunction">Carrier Shift Function</string>
+	<string name="menu_factory_audio_pal_fmcarriermutemode">FM Carrier Mute Mode</string>
+	<string name="menu_factory_audio_pal_fmcarriermutethresholdhigh">FM Carrier Mute Threshold High</string>
+	<string name="menu_factory_audio_pal_fmcarriermutethresholdlow">FM Carrier Mute Threshold Low</string>
+	<string name="menu_factory_audio_pal_palfinetunevolume">PAL Fine Tune Volume</string>
+	<string name="menu_factory_audio_pal_amfinetunevolume">AM Fine Tune Volume</string>
+	<string name="menu_factory_audio_pal_nicamfinetunevolume">NICAM Fine Tune Volume</string>
+	<!-- part of factory_audio_eu_system -->
+	<string name="menu_factory_audio_eu_fmsaturationmute">FM Saturation Mute</string>
+	<string name="menu_factory_audio_eu_eunoneusystem">EU Non-EU System</string>
+
+	<string name="menu_factory_TV_tunerdiag">调谐器诊断</string>
+	<string name="menu_factory_TV_tunerdiag_noinfo">No Diag.Info</string>
+	<string name="menu_factory_TV_tunerdiag_version">Version:</string>
+	<string name="menu_factory_TV_tunerdiag_freq">RF Freq(KHz):</string>
+	<string name="menu_factory_TV_tunerdiag_lockstate">Lock State:</string>
+	<string name="menu_factory_setup_eventform">事件形式</string>
+	<string name="menu_factory_setup_burningmode">工作模式</string>
+	<string name="menu_factory_setup_cleanstorage">清除存储</string>
+	<string name="menu_factory_setup_clean_dialog">是否确定 ?</string>
+	<string name="menu_factory_preset_dump">转储频道</string>
+	<string name="menu_factory_preset_print">打印频道</string>
+	<string name="menu_factory_preset_restore">恢复频道</string>
+	<string name="menu_factory_setup_ci_update">更新CI </string>
+	<string name="menu_factory_setup_ci_erase">擦除CI</string>
+	<string name="menu_factory_setup_ci_query">查询 CI</string>
+	<string name="menu_factory_setup_ci_update_false">文件未找到</string>
+	<string name="menu_factory_setup_ci_erase_false">擦除成功!</string>
+	<string name="menu_factory_setup_ci_query_false">Valid:N Customer Code:</string>
+
+	<!-- pop-up dialog or window  -->
+	<string name="menu_tv_analog_manual_scan_init">搜索模拟频道</string>
+	<string name="menu_tv_single_rf_scan_init">单射频搜索频道.(仅对数字电视)</string>
+	<string name="menu_setup_channel_scan">扫描</string>
+	<string name="menu_tv_analog_manual_scan_cancel">状态：取消扫描</string>
+	<string name="menu_setup_channel_scan_ana">模拟频道：</string>
+	<string name="menu_setup_channel_scan_dig">数字频道：</string>
+	<string name="menu_tv_store_data">确定要保存数据？</string>
+	<string name="menu_tv_reset_all">确定要重置电视所有设置？</string>
+	<string name="menu_setup_channel_scan_cancel">取消扫描</string>
+	<string name="menu_setup_channel_scan_done">扫描完成</string>
+	<string name="menu_setup_network_upgrade">更新向导...</string>
+	<string name="menu_setup_network_wireless">Wireless Setting</string>
+	<string name="menu_setup_network_no_net">There is no wireless device connected to TV!
+	</string>
+	<string name="menu_setup_tvchaneledit_hint">测试</string>
+	<string name="menu_setup_tvchaneledit_sure">确认</string>
+	<string name="menu_setup_tvchaneledit_cancel">取消</string>
+	<string name="menu_setup_button_yes">Yes</string>
+	<string name="menu_setup_button_no">No</string>
+	<string name="menu_setup_ip_edittext_hint">"000"</string>
+	<string name="menu_setup_ip_error_warning1">请输入一个值在1-233之间</string>
+	<string name="menu_setup_ip_error_warning2">请输入一个值在0-255之间</string>
+	<string name="menu_setup_ip_error_warning3">多个IP地址,子网掩码和默认网关无效.请重新输入!</string>
+	<string name="menu_address_auto">自动</string>
+	<string name="menu_address_ethernet">以太网</string>
+	<string name="menu_address_wireless">无线</string>
+	<string name="menu_versioninfo_name">Model Name</string>
+	<string name="menu_versioninfo_version">Version</string>
+	<string name="menu_versioninfo_number">Serial Number</string>
+	<string name="menu_video_auto_adjust_info">自调</string>
+	<string name="menu_video_auto_color_info">请等待</string>
+
+	<!--Part of Parental  -->
+	<string name="menu_parental_password">密码</string>
+	<string name="menu_parental_channel_block">频道屏蔽</string>
+	<string name="menu_parental_input_block">输入屏蔽</string>
+	<string name="menu_parental_change_password">更改密码</string>
+	<string name="menu_parental_clean_all">清除全部</string>
+	<string name="menu_parental_password_incorrect">密码不正确.\n请重新输入!</string>
+	<string name="menu_parental_password_new">新密码</string>
+	<string name="menu_parental_password_new_re">确认密码</string>
+	<string name="menu_parental_password_matchinfo">密码不一致,\n请重新输入!</string>
+	<string name="menu_parental_password_default">1234</string>
+	<string name="menu_parental_tvsource_tv0">tv0</string>
+
+	<!-- Part of wifi -->
+	<string name="menu_wifi_exit">退出</string>
+	<string name="menu_wifi_cancel">取消</string>
+	<string name="menu_wifi_next">下一步</string>
+	<string name="menu_wifi_select">选择</string>
+	<string name="menu_wifi_input">输入</string>
+	<string name="menu_wifi_set">设置</string>
+	<string name="menu_wifi_prev">上一个</string>
+	<string name="menu_wifi_main_scan">可用网络扫描</string>
+	<string name="menu_wifi_main_manual">手动输入</string>
+	<string name="menu_wifi_main_auto">自动连接</string>
+	<string name="menu_wifi_connected">将会切断当前无线网络连接.\n按右键继续.</string>
+	<string name="menu_wifi_nodongle">当前没有连接无线设备</string>
+	<string name="menu_wifi_connect_fail">连接失败!</string>
+	<string name="menu_wifi_connect_success">连接成功并获取IP!</string>
+	<string name="menu_wifi_invalid_wpa_key">非法 WPA密钥,请检查.</string>
+	<string name="menu_wifi_invalid_wep_key">非法 WEP密钥,请检查.</string>
+	<string name="menu_wifi_no_match">找不到匹配接入点.\n请重试.</string>
+	<string name="menu_wifi_pass_err">密码可能不正确.请检查输入点设置.</string>
+	<string name="menu_wifi_time_out">超时连接失败.\n请重试.</string>
+	<string name="menu_wifi_input_key_nosupport">请输入密码.</string>
+	<string name="menu_wifi_input_key_wpa">请输入 WPA 密钥.</string>
+	<string name="menu_wifi_input_key_wep">请输入WEP密钥.</string>
+	<string name="menu_wifi_input_ssid">请输入接入点名称.</string>
+	<string name="menu_wifi_input_ssid_error">接入点名称合法长度在1～32之间.请检查接入点名称.</string>
+	<string name="menu_wifi_select_auth_mode">请选则安全模式</string>
+	<string name="menu_wifi_auth_mode_none">无</string>
+	<string name="menu_wifi_auth_mode_wep">WEP</string>
+	<string name="menu_wifi_auth_mode_wpa_tkip">WPA-PSK(TKIP)</string>
+	<string name="menu_wifi_auth_mode_wpa_aes">WPA-PSK(AES)</string>
+	<string name="menu_wifi_auth_mode_wpa2_tkip">WPA2-PSK(TKIP)</string>
+	<string name="menu_wifi_auth_mode_wpa2_aes">WPA2-PSK(AES)</string>
+	<string name="menu_wifi_auth_mode_auto">WPA/WPA2-PSK(AUTO)</string>
+	<string name="menu_wifi_ap_security_none">无</string>
+	<string name="menu_wifi_ap_security_notsupport">Not Support</string>
+	<string name="menu_wifi_ap_security_auto">WPA/WPA2-PSK</string>
+	<string name="menu_wifi_ap_security_wpa">WPA-PSK</string>
+	<string name="menu_wifi_ap_security_wpa2">WPA2-PSK</string>
+	<string name="menu_wifi_ap_security_wep">WEP</string>
+	<string name="menu_wifi_ap_head_ssid">接入点名称</string>
+	<string name="menu_wifi_ap_head_bssid">接入点物理地址</string>
+	<string name="menu_wifi_ap_head_security">加密</string>
+	<string name="menu_wifi_ap_head_signal">信号强度</string>
+	<string name="menu_wifi_wps_header1">WPS(无线保护设置)</string>
+	<string name="menu_wifi_wps_header2">-PIN(个人识别号码)</string>
+	<string name="menu_wifi_wps_header3">-PBC(按钮设置)</string>
+	<string name="menu_wifi_wps_main_pin">PIN</string>
+	<string name="menu_wifi_wps_main_pbc">PBC</string>
+	<string name="menu_wifi_wps_pbc_hint">请确保在点击‘下一步’按钮之后的120秒内，按下接入点上的按钮.</string>
+	<string name="menu_wifi_wps_pin_hint">请确保在点击‘下一步’按钮之前，在接入点中输入了PIN码.</string>
+	<string name="menu_wifi_wps_pin_textcode">PIN码:</string>
+	<string name="menu_wifi_wps_pin_inittextcode">[111111]</string>
+	<string name="menu_wifi_wps_pin_refresh">刷新PIN码</string>
+	<string name="menu_wifi_connecting">正在连接接入点</string>
+	<string name="menu_wifi_scaning">正在搜索可用接入点</string>
+	<string name="menu_wifi_wait">请稍后</string>
+	<string name="menu_wifi_no_ap">当前没有扫描到接入点</string> 
+	<string name="menu_wifi_what">操作错误?</string>
+
+	<string name="menu_wifi_need_special">您希望选择一个特定的接入点吗?</string>
+	<string name="menu_teletext_notsupport_tip">无图文信息</string>
+	<string name="menu_tv_device_info">设备信息</string>
+	<string name="pvr_title_device_info">设备信息</string>
+	<string name="cec_setup">Cec 设置</string>
+</resources>

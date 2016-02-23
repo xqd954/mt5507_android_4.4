@@ -1,0 +1,6 @@
+# ori: on post-fs-data
+on post-fs
+	system /sbin/sh /system/etc/service/mtk_rm.sh
+#	write /proc/boottime ir:dtvrm:post-fs-data-finished
+	write /proc/boottime ir:dtvrm:post-fs-finished
+

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" 
+	android:layout_height="match_parent"
+	android:orientation="vertical" 
+	android:background="@drawable/detail_page_little_960"
+	android:paddingTop="20dip" 
+	android:paddingBottom="15dip">
+
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="5dp" 
+		>
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:layout_weight="3"
+			style="@style/mmp_info_tx" 
+			android:text="@string/mmp_info_album"></TextView>
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:layout_weight="2"
+			style="@style/mmp_info_tx" 
+			android:id="@+id/mmp_info_album"></TextView>
+	</LinearLayout>
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="5dp"  
+		>
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:layout_weight="3"
+			style="@style/mmp_info_tx" 
+			android:text="@string/mmp_info_name"></TextView>
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:layout_weight="2"
+			style="@style/mmp_info_tx" 
+			android:id="@+id/mmp_info_name"></TextView>
+	</LinearLayout>
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="5dp"  
+		>
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:layout_weight="3"
+			style="@style/mmp_info_tx" 
+			android:text="@string/mmp_info_size"></TextView>
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:layout_weight="2"
+			style="@style/mmp_info_tx" 
+			android:id="@+id/mmp_info_size"></TextView>
+	</LinearLayout>
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="5dp"  
+		>
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:layout_weight="3"
+			style="@style/mmp_info_tx" 
+			android:text="@string/mmp_info_next"></TextView>
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:layout_weight="2"
+			style="@style/mmp_info_tx" 
+			android:id="@+id/mmp_info_next"></TextView>
+	</LinearLayout>
+</LinearLayout>

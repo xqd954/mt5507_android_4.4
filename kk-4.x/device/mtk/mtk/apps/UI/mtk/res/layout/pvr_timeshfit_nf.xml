@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nav_shorttip_bg" >
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/pvr_nf_info"
+        android:padding="@dimen/padding_medium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/nav_textsize_normal" 
+        android:background="@drawable/menu_menuitem_normal"
+        />
+
+    <ImageView
+        android:id="@+id/pvr_rec_icon_small"
+        android:layout_width="70dip"
+        android:layout_height="50dip"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/padding_medium"
+        android:layout_marginLeft="8dip"
+        android:layout_toLeftOf="@+id/info"
+        android:background="@drawable/pvr_record_rec"
+        >
+    </ImageView>
+		<TextView 
+		    android:id="@+id/pvr_fast_view" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+			android:textSize="15sp"
+			android:visibility="gone"
+			android:layout_marginBottom="10dip"/>
+</RelativeLayout>

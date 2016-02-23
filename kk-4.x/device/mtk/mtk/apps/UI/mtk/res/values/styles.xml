@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="pvr_tshift_schedulelist_btns" parent="android:Widget.Button">
+        <item name="android:background">@drawable/menu_dialog_button</item>
+        <item name="android:gravity">center_horizontal</item>
+         <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:layout_marginRight">25dp</item>
+         <item name="android:layout_marginTop">15dp</item>
+        <item name="android:padding">10dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    
+    <style name="pvr_tshift_textsize_20" >
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+   
+    <style name="pvr_tshift_textsize_23" >
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    
+     <style name="turnkey_ui_checkbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:paddingLeft">28.0px</item>
+        <item name="android:button">@drawable/turnkey_ui_checkbox_drawable</item>
+    </style>
+    
+        <style name="nav_pvr_filelist_text">
+       <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">23sp</item>
+        <item name="android:padding">@dimen/nav_pvr_textview_padding</item>g
+    </style>
+
+    <style name="MTK_Dialog_bg" parent="@android:style/Theme.Dialog">
+		<item name="android:windowBackground">@null</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+	<style name="Theme.pvr_Dialog" parent="android:style/Theme.Dialog">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowBackground">@drawable/tv_background</item>
+		<item name="android:backgroundDimEnabled">true</item>
+	</style>
+</resources>

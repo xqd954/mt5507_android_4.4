@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:id="@+id/mmp_files_grid_layout">
+
+	<LinearLayout android:layout_width="fill_parent" 
+	    android:baselineAligned="false"
+		android:layout_height="fill_parent"
+		android:layout_weight="5"
+		android:id="@+id/multimedia_top" 
+		android:background="@drawable/tk_cm_top_bg"
+		android:gravity="center_vertical">
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:layout_weight="3"
+			android:gravity="center">
+			<ImageView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:id="@+id/multimedia_showinfo_img" />
+			<TextView android:layout_width="wrap_content" 
+			    android:id="@+id/multimedia_showinfo_tv"
+				android:layout_height="wrap_content" 
+				android:text="@string/mmp_photo"
+				android:gravity="center_vertical" 
+				style="@style/multimedia_com_text" />
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent" 
+		    android:baselineAligned="false"
+			android:layout_height="wrap_content" 
+			android:layout_weight="1" 
+			android:gravity="center_vertical">
+			<TextView android:id="@+id/multimedia_tv_filepath"
+				android:layout_width="fill_parent" 
+				android:layout_weight="1"
+				android:drawableLeft="@drawable/mmp_mode_topicon_folder"
+				android:ellipsize="end" 
+				android:singleLine="true" 
+				android:gravity="center_vertical"
+				android:layout_height="wrap_content" 
+				android:text="@string/mmp_filepath"
+				style="@style/multimedia_com_text" />
+	
+	
+			<TextView android:id="@+id/multimedia_tv_right"
+				android:layout_width="fill_parent" 
+				android:layout_weight="3"
+				android:drawableLeft="@drawable/mmp_mode_topicon_file"
+				android:layout_height="wrap_content" 
+				android:text="@string/mmp_pop_pagesize"
+				android:ellipsize="end" 
+				android:singleLine="true" 
+				android:gravity="center_vertical"
+				style="@style/multimedia_com_text" />
+			
+		</LinearLayout>
+
+	</LinearLayout>
+	
+	
+
+
+
+	<LinearLayout android:layout_width="fill_parent" 
+	    android:baselineAligned="false"
+		android:layout_height="fill_parent" 
+		android:layout_weight="1"
+		android:background="@drawable/tk_cm_mid_bg">
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" 
+			android:layout_weight="3">
+			<TextView android:id="@+id/multimedia_showinfo_left"
+				android:layout_marginTop="10dip" 
+				android:layout_width="fill_parent"
+				android:layout_marginLeft="10dp" 
+				android:layout_height="wrap_content" 
+				android:ellipsize="end"></TextView>
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" 
+			android:layout_weight="1">
+			<com.mediatek.ui.mmp.commonview.MediaGridView
+				android:id="@android:id/list" 
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"
+				android:gravity="center" 
+				style="@style/mmp_showinfo_gvstyle"
+				android:stretchMode="columnWidth" 
+				android:smoothScrollbar="true"
+				android:scrollbarThumbVertical="@drawable/mmp_griditem_selected_bg"
+				android:scrollbarTrackVertical="@drawable/mmp_munuitem_bg"
+				android:fadeScrollbars="false"
+				android:listSelector="@drawable/mmp_thumbnail_hilight_bg"/> <!-- #00000000 -->
+		</LinearLayout>
+	</LinearLayout>
+	
+	
+	<TableLayout android:layout_width="fill_parent" 
+		android:id="@+id/multimedia_bottom" 
+		android:layout_height="fill_parent"
+		android:layout_weight="5"
+		android:background="@drawable/tk_cm_top_bg" 
+		android:gravity="center"
+		android:shrinkColumns="*"
+        android:stretchColumns="*">
+	<TableRow >
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="center"
+				android:drawableLeft="@drawable/tk_cm_key_select_updown"
+				android:text="@string/mmp_select" 
+				style="@style/multimedia_com_text"></TextView>
+
+
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="center"
+				style="@style/multimedia_com_text"
+				android:text="@string/mmp_input" 
+				android:drawableLeft="@drawable/tk_cm_key_enter"></TextView>
+
+
+			<TextView style="@style/multimedia_com_text"
+				android:layout_height="wrap_content" 
+                android:layout_gravity="center"
+				android:text="@string/mmp_exit"
+				android:drawableLeft="@drawable/tk_cm_key_exit"
+				android:layout_width="wrap_content"></TextView>
+	</TableRow>
+
+</TableLayout>
+	
+</LinearLayout>

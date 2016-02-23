@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_dialog_auto_adjust"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_dialog_background"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/menu_dialog_auto_adjust_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="false"
+        android:gravity="center"/>
+    <!-- loading -->
+
+    <com.mediatek.ui.setup.Loading
+        android:id="@+id/menu_dialog_auto_adjust_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/menu_dialog_auto_adjust_text"
+        android:layout_alignTop="@id/menu_dialog_auto_adjust_text"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+</RelativeLayout>

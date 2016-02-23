@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/nav_shorttip_bg" >
+
+    <LinearLayout
+        android:id="@+id/tshfit_root1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:orientation="vertical"
+        android:paddingBottom="15dp" >
+
+        <TextView
+            android:id="@+id/tshift_offset_timerview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/pvr_tshift_offset_time"
+            android:textColor="@color/white"
+            android:textSize="@dimen/nav_textsize_normal" />
+
+        <ImageView
+            android:id="@+id/tshift_plcontorl_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/padding_medium"
+            android:src="@drawable/mmp_top_pause" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/tshfit_root2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tshfit_root1"
+        android:layout_alignBottom="@+id/tshfit_root1"
+        android:layout_alignTop="@+id/tshfit_root1"
+        android:layout_toRightOf="@+id/tshfit_root1" >
+
+        <TextView
+            android:id="@+id/tshfit_timeline_time0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/pvr_tshift_0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/nav_textsize_normal" />
+
+        <TextView
+            android:id="@+id/tshfit_timeline_time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/pvr_tshift_13_00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/nav_textsize_normal" />
+
+        <TextView
+            android:id="@+id/tshfit_timeline_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/pvr_tshift_13_30"
+            android:textColor="@color/white"
+            android:textSize="@dimen/nav_textsize_normal" />
+
+        <ProgressBar
+            android:id="@+id/tshfit_timeline_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tshfit_timeline_time0"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp" />
+
+        <ImageView
+            android:id="@+id/tshfit_timeline_dividline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tshfit_timeline_progressBar"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/padding_medium"
+            android:paddingRight="0dp"
+            android:paddingLeft="0dp"
+            android:src="@drawable/mmp_toolbar_line" />
+       
+        <ProgressBar
+            android:id="@+id/tshfit_timeline_dividline1_pb"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tshfit_timeline_time0"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/tshfit_timeline_dividline1"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tshfit_timeline_progressBar"
+            android:layout_toLeftOf="@+id/tshfit_timeline_time2"
+            android:layout_toRightOf="@+id/tshfit_timeline_time2"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/tshfit_timeline_dividline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/padding_medium"
+                android:src="@drawable/mmp_toolbar_line" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/tshfit_timeline_dividline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tshfit_timeline_progressBar"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="0dp"
+            android:src="@drawable/mmp_listmode_slider_v" />
+    </RelativeLayout>
+
+</RelativeLayout>

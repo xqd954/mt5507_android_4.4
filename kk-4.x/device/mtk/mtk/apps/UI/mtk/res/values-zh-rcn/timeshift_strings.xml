@@ -1,0 +1,41 @@
+<resources>
+
+    <string name="disk_not_ready">"磁盘未准备就绪"</string>
+    <string name="create_tshift_file_fail">"Create file failed"</string>
+    <string name="create_tshift_file_success">"Create file success"</string>
+    
+    <string name="feature_not_avaiable">功能上可用</string>
+    <string name="pvr_save_record">个人录像机正在保存记录。</string>
+    <string name="disk_disconnect">Disk Disconnect</string>
+    <string name="attention_unplug_device">Attention: do not unplug device ,or may cause unspecified errors</string>
+    <string name="not_enough_space">没有足够的可用空间。磁盘至少需要有 1G 的空闲容量。</string>
+    <string name="feature_not_support">不支持该功能</string>
+    <string name="format_confirm_dialog_line1">需要清除 USB 磁盘。</string>
+    <string name="format_confirm_dialog_line2">是否确定要清除？</string>
+    <string name="delete_pvr_file_dialog_confirm1">Will delete delete delete this file,</string>
+    <string name="delete_pvr_file_dialog_confirm2">Are you sure?</string>
+    <string name="disk_wizard_welcome_summary">此向导用于设置 USB 磁盘以实现时移功能。请选择设置模式。</string>
+    <string name="disk_wizard_format_summary">为取得更好性能，我们建议您格式化 USB 磁盘。这将擦除所有数据。</string>
+    <string name="disk_wizard_formatconfirm_summary">确实要格式化 USB 磁盘?</string>
+    <string name="disk_wizard_formating_summary">正在格式化</string>
+    <string name="disk_wizard_set_tshift_size_summary">请选择时移功能的文件容量。</string>
+    <string name="disk_wizard_speed_testing_summary">速度测试</string>
+    <string name="disk_wizard_create_tshift_file_summary">正在创建时移文件</string>
+    <string name="disk_wizard_speed_slow_disk_result_summary">速度: %3.1f MB/秒
+
+磁盘可用于时移功能，但我们建议更换磁盘(速度大于 >5.0 MB/秒) 以获得更好的性能。 请按任意键离开此页面。</string>
+    <string name="disk_wizard_speed_fast_disk_result_summary">速度: %3.1f MB/秒
+磁盘可用于时移功能，请按任意键离开此页面。</string>
+    <string name="disk_setting_formating">"正在格式化"</string>
+    <string name="disk_setting_speedtesting">"速度测试"</string>
+    <string name="disk_setting_unplugdevice_warnning">"请勿拔下 USB 磁盘"</string>
+    <string name="disk_setting_format_done">"格式化完成"</string>
+    <string name="disk_setting_format_fail">"格式化失败"</string>
+    <string name="disk_setting_speedtest_done">"速度测试完成"</string>
+    <string name="disk_setting_speedtest_maxspeed">"最大速度是  %3.1f MB/秒"</string>
+	
+	<string name="state_pvr_recording">Recording !</string>
+    <string name="state_file_pvr_playback">PVR Playback</string>
+    <string name="state_file_pvr_playback_subtitle_off">Off</string>
+    <string name="state_file_pvr_playback_subtitle_on">On</string>
+</resources>

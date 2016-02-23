@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:gravity="center_vertical"
+	android:layout_height="wrap_content" android:background="@drawable/nav_audio_adjust_bg">
+
+	<ImageView 
+	    android:id="@+id/menu_arg_image"
+	    android:layout_width="0dip" 
+		android:layout_height="wrap_content" 
+		android:layout_weight="8"/>
+	
+	<TextView 
+	    android:id="@+id/menu_arg_title"
+		android:layout_width="0dip" 
+		android:layout_height="wrap_content"
+		android:textSize="14sp" 
+		android:layout_weight="10"/>
+	
+	<ImageView 
+		android:layout_width="0dip" 
+		android:layout_height="wrap_content"
+		android:layout_weight="3"
+	    android:src="@drawable/nav_audio_adjust_arrow_left"/>
+	
+	<com.mediatek.ui.menu.commonview.MyProgressBar
+		android:id="@+id/menu_arg_pb" 
+		android:layout_width="0dip"
+		android:layout_height="wrap_content" 
+		android:layout_weight="30"
+		android:visibility="gone"
+		style="@android:style/Widget.ProgressBar.Horizontal"/>
+	
+	<SeekBar android:id="@+id/men_arg_sb" 
+	    android:layout_width="0dip"
+		android:layout_height="wrap_content" 
+		android:layout_weight="30"
+		android:visibility="gone"
+        android:progressDrawable="@drawable/menu_probarnormal_seekbar"
+		android:indeterminateDrawable="@drawable/menu_menuitem_middle"
+		android:thumb="@drawable/seekbar_shape_selected"/>
+	
+	<ImageView 
+		android:layout_width="0dip" 
+		android:layout_height="30dip"
+		android:layout_weight="3" 
+	    android:src="@drawable/nav_audio_adjust_arrow_right"/>
+	
+	<TextView 
+	    android:id="@+id/menu_arg_value" 
+		android:layout_width="0dip"
+		android:layout_height="wrap_content" 
+		android:layout_weight="8"/>
+</LinearLayout>

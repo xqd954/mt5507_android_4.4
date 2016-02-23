@@ -1,0 +1,10 @@
+#it's a copy of init.$(MODEL).pre_dtv_driver.rc
+#we do some pre-initialization for each model here.
+
+on early-init
+    #make device node for aq and adsp in adavance, otherwise we might wait a long time for udev generating the two nodes
+    mkdir /dev/block
+    system mknod /dev/block/mmcblk0p5 b 179 5
+    system mknod /dev/block/mmcblk0p6 b 179 6
+    chmod 0600 /dev/block/mmcblk0p5
+    chmod 0600 /dev/block/mmcblk0p6

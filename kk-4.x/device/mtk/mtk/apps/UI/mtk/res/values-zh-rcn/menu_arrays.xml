@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+	<!-- Video -->
+	<string-array name="menu_video_gamma_array">
+		<item>暗</item>
+		<item>中</item>
+		<item>亮</item>
+	</string-array>
+	<string-array name="menu_video_color_temperature2_array">
+		<item>用户</item>
+		<item>冷</item>
+		<item>标准</item>
+		<item>热</item>
+	</string-array>
+	<string-array name="menu_video_dnr_array">
+		<item>关</item>
+		<item>低</item>
+		<item>中</item>
+		<item>强</item>
+		<item>自动</item>
+	</string-array>
+	<!-- mpeg nr -->
+	<string-array name="menu_video_mpeg_nr_array">
+		<item>关</item>
+		<item>低</item>
+		<item>中</item>
+		<item>强</item>
+	</string-array>
+	<string-array name="menu_video_luma_array">
+		<item>关</item>
+		<item>低</item>
+		<item>中</item>
+		<item>强</item>
+	</string-array>
+	<string-array name="menu_video_flesh_tone_array">
+		<item>关</item>
+		<item>低</item>
+		<item>中</item>
+		<item>强</item>
+	</string-array>
+	<!-- di film mode -->
+	<string-array name="menu_video_di_film_mode_array">
+		<item>关</item>
+		<item>SLOW_PIC</item>
+		<item>ACTION_PIC</item>
+	</string-array>
+	<string-array name="menu_video_blue_stretch_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+	<string-array name="menu_video_game_mode_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+	<string-array name="menu_video_pq_split_mode_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+	<!-- effect-->
+	<string-array name="menu_video_mjc_effect_array">
+		<item>关</item>
+		<item>低</item>
+		<item>中</item>
+		<item>高</item>
+	</string-array>
+	<!-- demonstration district -->
+	<string-array name="menu_video_mjc_demo_partition_array">
+		<item>全部</item>
+		<item>右</item>
+		<item>左</item>
+	</string-array>
+	<!-- mjc mode -->
+	<string-array name="menu_video_mjc_mode">
+		<item>正常模式</item>
+		<item>Film模式</item>
+		<item>去模糊化</item>
+	</string-array>
+	<!-- vga mode -->
+	<string-array name="menu_video_vga_mode_array">
+		<item>自动</item>
+		<item>RGB</item>
+		<item>YCbCr</item>
+	</string-array>
+	<!-- hdmi mode -->
+	<string-array name="menu_video_hdmi_mode_array">
+		<item>自动</item>
+		<item>图像模式</item>
+		<item>视频模式</item>
+	</string-array>
+	<!-- 3d mode -->
+	<string-array name="menu_video_3d_mode_array">
+		<item>关</item>
+		<item>自动模式</item>
+		<item>2D转3D</item>
+		<item>帧顺序模式</item>
+		<item>左右模式</item>
+		<item>上下模式</item>
+		<item>REALD MODE</item>
+		<item>SENSIO</item>
+		<item>线交错模式</item>
+		<item>DOT ALT MOD</item>
+		<item>CHK BOARD</item>
+	</string-array>
+	
+	<!--3d_navigation-->
+	<string-array name="menu_video_3d_nav_array">
+		<item>Manual</item>
+		<item>Semi-Auto</item>
+		<item>Auto</item>
+	</string-array>
+	
+	<!--3d_image_safety-->
+	<string-array name="menu_video_3d_image_safety_array">
+		<item>Off</item>
+		<item>Low</item>
+		<item>Middle</item>
+		<item>High</item>
+	</string-array>
+	
+	<!-- the left and right exchange switch -->
+	<string-array name="menu_video_3d_lrswitch_array">
+		<item>开</item>
+		<item>关</item>
+	</string-array>
+	<!-- 3d to 2d switch-->
+	<string-array name="menu_video_3d_3t2switch_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+
+	<!-- Audio -->
+	<string-array name="menu_audio_srs_mode_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+	<string-array name="menu_audio_equalizer_array">
+		<item>关</item>
+		<item>摇滚乐</item>
+		<item>流行乐</item>
+		<item>实况</item>
+		<item>舞蹈</item>
+		<item>电子乐</item>
+		<item>古典乐</item>
+		<item>轻音乐</item>	
+	</string-array>
+	<string-array name="menu_audio_speaker_mode_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+	<string-array name="menu_audio_spdif_mode_array">
+		<item>关</item>
+		<item>PCM RAW</item>
+		<item>PCM 16</item>
+		<item>PCM 24</item>
+	</string-array>
+	<string-array name="menu_audio_avc_mode_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+	<!-- Type -->
+	<string-array name="menu_audio_type_array">
+		<item>普通</item>
+		<item>听力受损</item>
+		<item>视力受损</item>
+	</string-array>
+	<!-- Loudspeaker -->
+	<string-array name="menu_audio_visually_speaker_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+	<!-- headset -->
+	<string-array name="menu_audio_visually_headphone_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+
+	<!-- TV -->
+	<string-array name="menu_tv_tuner_mode_array">
+		<item>天线</item>
+		<item>电缆</item>
+	</string-array>
+	<string-array name="menu_tv_audio_channel_array">
+		<item>单声道</item>
+		<item>立体声</item>
+		<item>双声道1</item>
+		<item>双声道2</item>
+	</string-array>
+
+	<string-array name="menu_tv_audio_language_array">
+		<item>英文</item>
+		<item>简体中文</item>
+		<item>繁体中文</item>
+	</string-array>
+
+	<string-array name="menu_tv_rf_signal_quality">
+		<item>好</item>
+		<item>中</item>
+		<item>差</item>
+	</string-array>
+
+	<string-array name="menu_tv_tv_system_array">
+		<item> 自动</item>
+		<item> B/G</item>
+		<item> A2 B/G</item>
+		<item> I</item>
+		<item> D/K</item>
+		<item> A2 D/K</item>
+		<item> A2 D/K1</item>
+		<item> A2 D/K2</item>
+		<item> M</item>
+	</string-array>
+
+	<string-array name="menu_tv_sound_system_array">
+		<item> B/G</item>
+		<item> A2 B/G</item>
+		<item> I</item>
+		<item> D/K</item>
+		<item> A2 D/K</item>
+		<item> A2 D/K1</item>
+		<item> A2 D/K2</item>
+		<item> M</item>
+	</string-array>
+	<string-array name="menu_tv_color_system_array">
+		<item> 自动</item>
+		<item> PAL</item>
+		<item> SECAM</item>
+		<item> NTSC</item>
+	</string-array>
+	<string-array name="menu_tv_scan_mode_array">
+		<item> 自动</item>
+		<item> 16QAM</item>
+		<item> 32QAM</item>
+		<item> 64QAM</item>
+		<item> 128QAM</item>
+		<item> 256QAM</item>
+	</string-array>
+	<string-array name="menu_tv_channeledit_array">
+		<item>频道信息</item>
+		<item>插入</item>
+		<item>删除</item>
+		<item>交换</item>
+	</string-array>
+	<string-array name="menu_tv_freeze_channel_array">
+		<item> 关</item>
+		<item> 开</item>
+	</string-array>
+	<string-array name="menu_tv_fine_tune_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+	<string-array name="menu_tv_skip_ch_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+
+	<!-- setup  -->
+	<string-array name="menu_setup_language_array">
+		<item>English</item>
+		<item>简体中文</item>
+	</string-array>
+
+	<string-array name="menu_setup_dpms_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+	<string-array name="menu_setup_blue_mute_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+	<string-array name="menu_setup_fast_boot_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+	<string-array name="menu_setup_msi_array">
+	    <item>关</item>
+		<item>开</item>
+	</string-array>
+	<string-array name="menu_setup_poweron_music_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+	<string-array name="menu_setup_capturelogo_array">
+		<item>默认值</item>
+		<item>0</item>
+		<item>1</item>
+		<item>无</item>
+	</string-array>
+
+
+	<string-array name="menu_setup_digital_teletext_language_array">
+		<item>英语</item>
+		<item>爱沙尼亚语</item>
+		<item>芬兰语</item>
+		<item>法语</item>
+		<item>盖尔语</item>
+		<item>爱尔兰语</item>
+		<item>加利西亚语</item>
+		<item>德语</item>
+		<item>希腊语</item>
+		<item>印地语</item>
+		<item>匈牙利语</item>
+		<item>意大利语</item>
+		<item>冰岛语</item>
+		<item>日语</item>
+		<item>朝鲜语</item>
+		<item>普通话</item>
+		<item>毛利语</item>
+		<item>挪威语</item>
+		<item>波兰语</item>
+		<item>葡萄牙语</item>
+		<item>罗马尼亚语</item>
+		<item>俄语</item>
+		<item>萨米语</item>
+		<item>塞尔维亚语</item>
+		<item>斯洛伐克语</item>
+		<item>斯洛文尼亚语</item>
+		<item>西班牙语</item>
+		<item>瑞典语</item>
+		<item>土耳其语</item>
+		<item>威尔士语</item>
+		<item>ORIGINALAUDIO</item>
+		<item>NARRATIVE</item>
+		<item>未定义</item>
+		<item>巴斯克语</item>
+		<item>保加利亚语</item>
+		<item>粤语</item>
+		<item>加泰罗尼亚语</item>
+		<item>克罗地亚语</item>
+		<item>捷克语</item>
+		<item>丹麦语</item>
+		<item>荷兰语</item>
+	</string-array>
+
+
+	<string-array name="menu_setup_decoding_page_language_array">
+		<item>西欧</item>
+		<item>东欧</item>
+		<item>俄罗斯</item>
+		<item>俄罗斯-2</item>
+		<item>希腊语</item>
+		<item>土耳其</item>
+		<item>阿拉伯语/希伯来语</item>
+		<item>波斯语</item>
+		<item>阿拉伯语</item>
+		<item>白俄罗斯语</item>
+	</string-array>
+	
+	<string-array name="menu_setup_ttx_presentation_level_array">
+		<item>1.5 级</item>
+		<item>2.5 级</item>
+	</string-array>
+
+
+	<string-array name="menu_setup_timezone_array">
+		<item>Midway Island/GMT-11:00</item>
+		<item>Hawaii/GMT-10:00</item>
+		<item>Alaska/GMT-8:00</item>
+		<item>Pacific Time/GMT-7:00</item>
+		<item>Tijuana/GMT-7:00</item>
+		<item>Arizona/GMT-7:00</item>
+		<item>Chihuahua/GMT-6:00</item>
+		<item>Mountain Time/GMT-6:00</item>
+		<item>Central America/GMT-6:00</item>
+		<item>Saskatchewan/GMT-6:00</item>
+		<item>Central Time/GMT-5:00</item>
+		<item>Mexico City/GMT-5:00</item>
+		<item>Bogota/GMT-5:00</item>
+		<item>Venezuela/GMT-4:30</item>
+		<item>Eastern Time/GMT-4:00</item>
+		<item>Atlantic Time/GMT-4:00</item>
+		<item>Manaus/GMT-4:00</item>
+		<item>Santiago/GMT-4:00</item>
+		<item>Brasilia/GMT-3:00</item>
+		<item>Buenos Aires/GMT-3:00</item>
+		<item>Montevideo/GMT-3:00</item>
+		<item>Newfoundland/GMT-2:30</item>
+		<item>Greenland/GMT-2:00</item>
+		<item>Mid-Atlantic/GMT-2:00</item>
+		<item>Cape Verde Islands/GMT-1:00</item>
+		<item>作为广播装置</item>
+		<item>Azores/GMT+0:00</item>
+		<item>Casablanca/GMT+0:00</item>
+		<item>London, Dublin/GMT+1:00</item>
+		<item>Windhoek/GMT+1:00</item>
+		<item>W. Africa Time/GMT+1:00</item>
+		<item>Amsterdam, Berlin/GMT+2:00</item>
+		<item>Belgrade/GMT+2:00</item>
+		<item>Brussels/GMT+2:00</item>
+		<item>Sarajevo/GMT+2:00</item>
+		<item>Harare/GMT+2:00</item>
+		<item>Amman, Jordan/GMT+3:00</item>
+		<item>Athens, Istanbul/GMT+3:00</item>
+		<item>Beirut, Lebanon/GMT+3:00</item>
+		<item>Cairo/GMT+3:00</item>
+		<item>Helsinki/GMT+3:00</item>
+		<item>Jerusalem/GMT+3:00</item>
+		<item>Minsk/GMT+3:00</item>
+		<item>Kuwait/GMT+3:00</item>
+		<item>Baghdad/GMT+3:00</item>
+		<item>Nairobi/GMT+3:00</item>
+		<item>Moscow/GMT+4:00</item>
+		<item>Tbilisi/GMT+4:00</item>
+		<item>Dubai/GMT+4:00</item>
+		<item>Kabul/GMT+4:30</item>
+		<item>Tehran/GMT+4:30</item>
+		<item>Baku/GMT+5:00</item>
+		<item>Yerevan/GMT+5:00</item>
+		<item>Uralsk/GMT+5:00</item>
+		<item>Kolkata/GMT+5:30</item>
+		<item>Sri Lanka/GMT+5:30</item>
+		<item>Kathmandu/GMT+5:45</item>
+		<item>Islamabad, Karachi/GMT+6:00</item>
+		<item>Yekaterinburg/GMT+6:00</item>
+		<item>Astana/GMT+6:00</item>
+		<item>Yangon/GMT+6:30</item>
+		<item>Bangkok/GMT+7:00</item>
+		<item>Krasnoyarsk/GMT+8:00</item>
+		<item>Beijing/GMT+8:00</item>
+		<item>Hong Kong/GMT+8:00</item>
+		<item>Kuala Lumpur/GMT+8:00</item>
+		<item>Perth/GMT+8:00</item>
+		<item>Taipei/GMT+8:00</item>
+		<item>Seoul/GMT+9:00</item>
+		<item>Irkutsk/GMT+9:00</item>
+		<item>Tokyo, Osaka/GMT+9:00</item>
+		<item>Adelaide/GMT+9:30</item>
+		<item>Darwin/GMT+9:30</item>
+		<item>Yakutsk/GMT+10:00</item>
+		<item>Brisbane/GMT+10:00</item>
+		<item>Hobart/GMT+10:00</item>
+		<item>Sydney, Canberra/GMT+10:00</item>
+		<item>Guam/GMT+10:00</item>
+		<item>Vladivostok/GMT+11:00</item>
+		<item>Marshall Islands/GMT+12:00</item>
+		<item>Magadan/GMT+12:00</item>
+		<item>Auckland/GMT+12:00</item>
+		<item>Fiji/GMT+12:00</item>
+		<item>Tonga/GMT+13:00</item>
+	</string-array>
+	<string-array name="menu_setup_timezone_name_array">
+		<item>Pacific/Midway</item>
+		<item>Pacific/Honolulu</item>
+		<item>America/Anchorage</item>
+		<item>America/Los_Angeles</item>
+		<item>America/Tijuana</item>
+		<item>America/Phoenix</item>
+		<item>America/Chihuahua</item>
+		<item>America/Denver</item>
+		<item>America/Costa_Rica</item>
+		<item>America/Regina</item>
+		<item>America/Chicago</item>
+		<item>America/Mexico_City</item>
+		<item>America/Bogota</item>
+		<item>America/Caracas</item>
+		<item>America/New_York</item>
+		<item>America/Barbados</item>
+		<item>America/Manaus</item>
+		<item>America/Santiago</item>
+		<item>America/Sao_Paulo</item>
+		<item>America/Argentina/Buenos_Aires</item>
+		<item>America/Montevideo</item>
+		<item>America/St_Johns</item>
+		<item>America/Godthab</item>
+		<item>Atlantic/South_Georgia</item>
+		<item>Atlantic/Cape_Verde</item>
+		<item>As Broadcast</item>
+		<item>Atlantic/Azores</item>
+		<item>Africa/Casablanca</item>
+		<item>Europe/London</item>
+		<item>Africa/Windhoek</item>
+		<item>Africa/Brazzaville</item>
+		<item>Europe/Amsterdam</item>
+		<item>Europe/Belgrade</item>
+		<item>Europe/Brussels</item>
+		<item>Europe/Sarajevo</item>
+		<item>Africa/Harare</item>
+		<item>Asia/Amman</item>
+		<item>Europe/Athens</item>
+		<item>Asia/Beirut</item>
+		<item>Africa/Cairo</item>
+		<item>Europe/Helsinki</item>
+		<item>Asia/Jerusalem</item>
+		<item>Europe/Minsk</item>
+		<item>Asia/Kuwait</item>
+		<item>Asia/Baghdad</item>
+		<item>Africa/Nairobi</item>
+		<item>Europe/Moscow</item>
+		<item>Asia/Tbilisi</item>
+		<item>Asia/Dubai</item>
+		<item>Asia/Kabul</item>
+		<item>Asia/Tehran</item>
+		<item>Asia/Baku</item>
+		<item>Asia/Yerevan</item>
+		<item>Asia/Oral</item>
+		<item>Asia/Calcutta</item>
+		<item>Asia/Colombo</item>
+		<item>Asia/Katmandu</item>
+		<item>Asia/Karachi</item>
+		<item>Asia/Yekaterinburg</item>
+		<item>Asia/Almaty</item>
+		<item>Asia/Rangoon</item>
+		<item>Asia/Bangkok</item>
+		<item>Asia/Krasnoyarsk</item>
+		<item>Asia/Shanghai</item>
+		<item>Asia/Hong_Kong</item>
+		<item>Asia/Kuala_Lumpur</item>
+		<item>Australia/Perth</item>
+		<item>Asia/Taipei</item>
+		<item>Asia/Seoul</item>
+		<item>Asia/Irkutsk</item>
+		<item>Asia/Tokyo</item>
+		<item>Australia/Adelaide</item>
+		<item>Australia/Darwin</item>
+		<item>Asia/Yakutsk</item>
+		<item>Australia/Brisbane</item>
+		<item>Australia/Hobart</item>
+		<item>Australia/Sydney</item>
+		<item>Pacific/Guam</item>
+		<item>Asia/Vladivostok</item>
+		<item>Pacific/Majuro</item>
+		<item>Asia/Magadan</item>
+		<item>Pacific/Auckland</item>
+		<item>Pacific/Fiji</item>
+		<item>Pacific/Tongatapu</item>
+	</string-array>
+	<string-array name="menu_setup_auto_synchronization_array">
+		<item>关</item>
+		<item>从码流Sync</item>
+		<item>从网络Sync</item>
+	</string-array>
+	<string-array name="menu_setup_power_on_timer_array">
+		<item>关</item>
+		<item>一次</item>
+		<item>开</item>
+	</string-array>
+	<string-array name="menu_setup_power_on_channel_mode_array">
+		<item>上次状态</item>
+		<item>用户选择</item>
+	</string-array>
+	<string-array name="menu_setup_power_off_timer_array">
+		<item>关</item>
+		<item>一次</item>
+		<item>开</item>
+	</string-array>
+	<string-array name="menu_setup_sleep_timer_array">
+		<item>关</item>
+		<item>10分钟</item>
+		<item>20分钟</item>
+		<item>30分钟</item>
+		<item>40分钟</item>
+		<item>50分钟</item>
+		<item>60分钟</item>
+		<item>90分钟</item>
+		<item>120分钟</item>
+	</string-array>
+	<string-array name="menu_setup_auto_sleep_array">
+		<item>关</item>
+		<item>1小时</item>
+		<item>2小时</item>
+		<item>3小时</item>
+	</string-array>
+	<string-array name="menu_setup_tv_single_signal_quality">
+		<item>弱</item>
+		<item>良好</item>
+		<item>非常好</item>
+	</string-array>
+	<string-array name="menu_setup_network_connection_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+	<string-array name="menu_setup_address_type_array">
+		<item>自动</item>
+		<item>手动</item>
+	</string-array>
+	<string-array name="menu_setup_dlna_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+	<string-array name="menu_setup_my_network_place_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+
+	<!-- factory -->
+	<string-array name="menu_factory_autovedio_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+
+	<!-- factory_video_dima-->
+	<string-array name="menu_factory_auto_dima_array">
+		<item>动作图像</item>
+		<item>慢图像</item>
+	</string-array>
+
+	<!-- factory_video_deedge-->
+	<string-array name="menu_factory_video_diedge_array">
+		<item>弱</item>
+		<item>强</item>
+	</string-array>
+
+	<!-- factory_video_wcg-->
+	<string-array name="menu_factory_video_wcg_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+
+	<!-- factory_video_flip-->
+	<string-array name="menu_factory_video_flip_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+
+	<!-- factory_video_mirror-->
+	<string-array name="menu_factory_video_mirror_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+
+	<!-- factory_video_color_temperature-->
+	<string-array name="menu_factory_video_colortemperature_array">
+		<item>用户</item>
+		<item>冷</item>
+		<item>标准</item>
+		<item>热</item>
+	</string-array>
+
+	<!-- factory_audio_dolby_banner-->
+	<string-array name="menu_factory_audio_dolbybanner_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+
+	<!-- factory_audio_compression-->
+	<string-array name="menu_factory_audio_compression_array">
+		<item>线</item>
+		<item>Custom-1</item>
+		<item>Custom-2</item>
+		<item>射频</item>
+	</string-array>
+
+	<!-- factory_audio_compression_factor-->
+	<string-array name="menu_factory_audio_compressionfactor_array">
+		<item>关</item>
+		<item>7/8</item>
+		<item>3/4</item>
+		<item>5/8</item>
+		<item>1/2</item>
+		<item>3/8</item>
+		<item>1/4</item>
+		<item>1/8</item>
+		<item>全</item>
+	</string-array>
+	<string-array name="menu_factory_setup_eventform">
+		<item>长形式</item>
+		<item>短形式</item>
+		<item>双形式</item>
+	</string-array>
+	<string-array name="menu_factory_setup_burning_mode">
+		<item>关</item>
+		<item>开</item>
+	</string-array>
+	<string-array name="menu_setup_null_array">
+		<item></item>
+	</string-array>
+	<!-- factory_audio_system_test-->
+	<string-array name="menu_factory_audio_system_test_array">
+		<item>关</item>
+		<item>开</item>
+	</string-array>	
+    <string-array name="menu_cec_on_off">
+	    <item>关</item>
+		<item>开</item>
+	</string-array>
+
+</resources>

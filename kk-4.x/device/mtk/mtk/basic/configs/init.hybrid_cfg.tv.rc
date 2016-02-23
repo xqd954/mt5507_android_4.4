@@ -1,0 +1,17 @@
+# init.rc for tv part
+
+on init
+    export BOOTCLASSPATH /system/framework/core.jar:/system/framework/conscrypt.jar:/system/framework/okhttp.jar:/system/framework/core-junit.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/framework2.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/mms-common.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/apache-xml.jar:/system/framework/webviewchromium.jar:/system/framework/com.mediatek.util.jar:/system/framework/com.mediatek.tv.jar:/system/framework/com.mediatek.tv.custom.jar:/system/framework/com.mediatek.dm.jar:/system/framework/com.mediatek.common.capture.jar:/system/framework/com.mediatek.record.jar:/system/framework/com.mediatek.common.PhotoPlayer.jar:/system/framework/com.mediatek.common.powercontrol.jar:/system/framework/com.mediatek.wfdsink.jar:/system/framework/com.tcl.factory.jar:/system/framework/com.tcl.tvmanager.jar:/system/framework/com.tcl.snapshot.jar:/system/framework/android.tclwidget.jar:/system/framework/com.tcl.device.authentication.jar:/system/framework/com.tcl.deviceinfo.jar:/system/framework/com.tcl.devicemanager.jar:/system/framework/com.tcl.seeker.jar:/system/framework/com.tcl.os.storage.jar:/system/framework/com.tcl.os.system.jar:/system/framework/com.tcl.net.ethernet.jar:/system/framework/com.tcl.media.jar:/system/framework/com.tcl.screenrecorder.jar:/system/framework/com.tcl.adsystem.jar:/system/framework/com.tcl.net.pppoe.jar:/system/framework/com.tcl.tclvoicecontrol.jar
+
+#modify by tank@tcl.com
+#:/system/framework/com.tcl.snapshot.jar
+#end tank@tcl.com
+
+#  service bootanim /system/bin/bootanimation 
+#  replace original bootanimation binary for early TV playback
+service bootanim /system/bin/dtv_bootanim 1 0 
+    class main
+#    user graphics
+#    group graphics
+    disabled
+    oneshot

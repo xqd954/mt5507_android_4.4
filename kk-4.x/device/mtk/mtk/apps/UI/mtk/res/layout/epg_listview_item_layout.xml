@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/translucent_background" >
+
+    <TextView
+        android:id="@+id/epg_channel_name"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:background="@drawable/epg_textviewnormal"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@drawable/epg_channel_font"
+        android:textStyle="bold" />
+
+    <com.mediatek.ui.nav.commonview.EPGLinearLayout
+        android:id="@+id/epg_program_forecast_linearlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/epg_time_rmargin"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical" />
+
+</LinearLayout>

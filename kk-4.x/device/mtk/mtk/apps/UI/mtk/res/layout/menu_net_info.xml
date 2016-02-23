@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_height="fill_parent"
+	android:layout_width="fill_parent" android:layout_marginLeft="15dip" android:layout_marginRight="15dip">
+	<LinearLayout android:orientation="horizontal"
+		android:layout_height="45dip" android:layout_width="fill_parent">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_interface"
+			android:text="@string/menu_setup_interface" android:layout_weight="1" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_interface_r"
+			android:gravity="right" />
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal"
+		android:layout_height="45dip" android:layout_width="fill_parent">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_addtype"
+			android:text="@string/menu_setup_address_type" android:layout_weight="1" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_addtype_r"
+			android:gravity="right" />
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal"
+		android:layout_height="45dip" android:layout_width="fill_parent">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_ipadd"
+			android:text="@string/menu_setup_ip_address" android:layout_weight="1" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_ipadd_r"
+			android:gravity="right" />
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal"
+		android:layout_height="45dip" android:layout_width="fill_parent">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_subcode"
+			android:text="@string/menu_setup_subnetwork_mask"
+			android:layout_weight="1" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_subcode_r"
+			android:gravity="right" />
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal"
+		android:layout_height="45dip" android:layout_width="fill_parent">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_defaultsub"
+			android:text="@string/menu_setup_default_gateway"
+			android:layout_weight="1" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_defaultsub_r"
+			android:gravity="right" />
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal"
+		android:layout_height="45dip" android:layout_width="fill_parent">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_firstdns"
+			android:text="@string/menu_setup_first_dns" android:layout_weight="1" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_firstdns_r"
+			android:gravity="right" />
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal"
+		android:layout_height="45dip" android:layout_width="fill_parent">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_standbydns"
+			android:text="@string/menu_setup_standby_dns" android:layout_weight="1" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_standbydns_r"
+			android:gravity="right" />
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal"
+		android:layout_height="45dip" android:layout_width="fill_parent">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_ethmac"
+			android:text="@string/menu_setup_ethernet_mac" android:layout_weight="1" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/common_netinfo_ethmac_r"
+			android:gravity="right" />
+	</LinearLayout>
+</LinearLayout>

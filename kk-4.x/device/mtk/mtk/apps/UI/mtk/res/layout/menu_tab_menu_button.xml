@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <Button
+        android:id="@+id/widget_buttonShow"
+        style="@style/main_top_button"
+        android:layout_weight="0.85"
+        android:background="@drawable/menu_tab_button_bg_normal"
+        android:focusable="false"
+        android:text="@string/menu_show_menu_item" />
+
+    <Button
+        android:id="@+id/widget_buttonVideo"
+        style="@style/main_top_button"
+        android:focusableInTouchMode="true"
+        android:nextFocusLeft="@+id/widget_buttonParental"
+        android:nextFocusRight="@+id/widget_buttonAudio"
+        android:text="@string/menu_tab_video" />
+
+    <Button
+        android:id="@+id/widget_buttonAudio"
+        style="@style/main_top_button"
+        android:nextFocusLeft="@id/widget_buttonVideo"
+        android:nextFocusRight="@+id/widget_buttonTV"
+        android:text="@string/menu_tab_audio" />
+
+    <Button
+        android:id="@+id/widget_buttonTV"
+        style="@style/main_top_button"
+        android:nextFocusLeft="@id/widget_buttonAudio"
+        android:nextFocusRight="@+id/widget_buttonSetUp"
+        android:text="@string/menu_tab_tv" />
+
+    <Button
+        android:id="@+id/widget_buttonSetUp"
+        style="@style/main_top_button"
+        android:nextFocusLeft="@id/widget_buttonTV"
+        android:nextFocusRight="@+id/widget_buttonParental"
+        android:text="@string/menu_tab_setup" />
+
+    <Button
+        android:id="@+id/widget_buttonParental"
+        style="@style/main_top_button"
+        android:nextFocusLeft="@id/widget_buttonSetUp"
+        android:nextFocusRight="@id/widget_buttonVideo"
+        android:text="@string/menu_tab_parent" />
+
+</LinearLayout>

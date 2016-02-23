@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/nav_channellist" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout android:id="@+id/nav_channel_list_layout"
+		android:orientation="vertical" android:layout_height="fill_parent"
+		android:layout_width="match_parent" android:layout_weight="0.4"
+		android:background="@drawable/nav_channel_list_bg">
+		<!-- android:visibility="gone" -->
+		<TextView android:id="@+id/nav_channel_list_title"
+			android:layout_width="match_parent" android:layout_height="fill_parent"
+			android:text="@string/nav_channel_list" android:textColor="@color/white"
+			android:layout_weight="0.84" android:gravity="center"
+			android:textSize="@dimen/nav_textsize_large" />
+
+		<com.mediatek.ui.commonview.CustListView
+			android:id="@+id/nav_channel_listview" android:layout_height="fill_parent"
+			android:ellipsize="end" android:layout_width="match_parent"
+			android:layout_weight="0.3" android:listSelector="@drawable/nav_ch_list_selector"
+			android:scrollbars="none" android:choiceMode="singleChoice"
+			android:divider="@drawable/translucent_background"
+			android:layout_gravity="right">
+			<requestFocus />
+		</com.mediatek.ui.commonview.CustListView>
+
+		<TableLayout android:layout_height="match_parent"
+			android:layout_width="match_parent" android:layout_weight="0.8"
+			android:orientation="vertical" 
+			android:gravity="bottom|center_horizontal">
+			<TableRow android:id="@+id/nav_page_up_down"
+				android:layout_weight="1" android:visibility="invisible">
+				<TextView android:layout_width="0px" android:layout_height="match_parent"
+					android:text="@string/nav_page_up" android:drawableLeft="@drawable/tk_cm_color_key_red"
+					android:textSize="@dimen/nav_textsize_normal" android:textColor="@color/white"
+					android:gravity="center_vertical|left" android:layout_weight="1" 
+					android:id="@+id/channel_nav_page_up"/>
+				<TextView android:layout_width="0px" android:layout_height="match_parent"
+					android:text="@string/nav_page_down" android:drawableLeft="@drawable/tk_cm_color_key_green"
+					android:textSize="@dimen/nav_textsize_normal" android:textColor="@color/white"
+					android:gravity="center_vertical|left" android:layout_weight="1" 
+					android:id="@+id/channel_nav_page_down"/>
+			</TableRow>
+			<TableRow android:layout_weight="1">
+				<TextView android:layout_width="0px" android:layout_height="match_parent"
+					android:text="@string/nav_select_list" android:drawableLeft="@drawable/tk_cm_color_key_yellow"
+					android:textSize="@dimen/nav_textsize_normal" android:textColor="@color/white"
+					android:gravity="center_vertical|left" android:layout_weight="1" 
+					android:id="@+id/channel_nav_select_list"/>
+				<TextView android:layout_width="0px" android:textSize="@dimen/nav_textsize_normal"
+					android:textColor="@color/white" android:layout_height="match_parent"
+					android:text="@string/nav_exit" android:drawableLeft="@drawable/tk_cm_color_key_blue"
+					android:gravity="center_vertical|left" android:layout_weight="1"
+					android:id="@+id/channel_nav_exit" />
+			</TableRow>
+		</TableLayout>
+	</LinearLayout>
+
+	<LinearLayout android:id="@+id/nav_channel_details_layout"
+		android:orientation="vertical" android:layout_width="fill_parent"
+		android:layout_weight="0.6" android:layout_height="match_parent"
+		android:layout_marginLeft="@dimen/nav_channel_list_detail_margin" android:background="@drawable/nav_channel_details_bg"
+		android:visibility="gone">
+		<TextView android:id="@+id/nav_channel_details_title"
+			android:layout_width="match_parent" android:layout_height="match_parent"
+			android:layout_weight="0.88" android:gravity="center"
+			android:text="@string/nav_channel_details" android:textColor="@color/white"
+			android:textSize="@dimen/nav_textsize_large" />
+
+		<TextView android:id="@+id/nav_channel_details_channel_info"
+			android:layout_width="match_parent" android:layout_height="match_parent"
+			android:layout_weight="0.12" android:text="@string/nav_channel_infoNoProgram"
+			android:textColor="@color/white" android:gravity="top|left"
+			android:paddingLeft="@dimen/nav_channel_details_channel_info_padding" android:paddingRight="@dimen/nav_channel_details_channel_info_padding"
+			android:textSize="@dimen/nav_textsize_normal" />
+
+	</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mmp_main_bottom"
+    android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	android:gravity="center_horizontal|bottom"
+  	android:padding="20dp"
+    android:shrinkColumns="*"
+    android:stretchColumns="*" >
+    <TableRow >
+		<Button android:id="@+id/mmp_yes" 
+		    android:layout_width="match_parent"
+			android:layout_height="wrap_content" 
+			android:text="@string/mmp_yes" 
+			style="@style/mmp_button"
+			/>
+	    <Button android:id="@+id/mmp_yes_to_all" 
+	        android:layout_width="match_parent"
+			android:layout_height="wrap_content" 
+			android:text="@string/mmp_yes_to_all"
+			style="@style/mmp_button" 
+			/>
+		
+	          
+	    <Button android:id="@+id/mmp_no" 
+	        android:layout_width="match_parent"
+			android:layout_height="wrap_content" 
+			android:text="@string/mmp_no" 
+			style="@style/mmp_button"
+			 />
+		<Button android:id="@+id/mmp_cancel" 
+		    android:layout_width="match_parent"
+			android:layout_height="wrap_content" 
+			android:text="@string/mmp_cancel" 
+			style="@style/mmp_button" />
+      </TableRow>
+</TableLayout>
+		
+	

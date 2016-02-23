@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    >
+    <TextView 
+        android:id="@+id/thr_menu_change_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="left"
+        android:textColor="#ffffff"
+        android:textSize="14sp"/>
+        
+     <TextView 
+        android:id="@+id/thr_menu_change_value"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"       
+        style="@style/thr_menu_txt_style"
+        />
+     
+      <ImageView android:id="@+id/thr_menu_change_img"
+        android:layout_width="fill_parent"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menu_select_icon_high_nor"
+       />
+
+</LinearLayout>

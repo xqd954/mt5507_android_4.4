@@ -1,0 +1,4 @@
+KEYCODE_F8;com.tcl.mediacenter;com.tcl.mediacenter.app.Gallery;
+KEYCODE_F9;com.tcl.appmarket2;com.tcl.appmarket2.ui.Loading.LoadingActivity;
+KEYCODE_F6;com.tcl.sticker;com.tcl.sticker.menu.MenuActivity;
+KEYCODE_F5;com.tcl.browser;com.tcl.browser.SiteMapActivity;

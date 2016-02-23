@@ -1,0 +1,23 @@
+on fs
+# mount partitions    
+    wait /dev/block/mmcblk0p18
+    wait /dev/block/mmcblk0p19
+    wait /dev/block/mmcblk0p13
+    wait /dev/block/mmcblk0p15
+    wait /dev/block/mmcblk0p17
+    wait /dev/block/mmcblk0p14
+    
+	exec /sbin/e2fsck -p /dev/block/mmcblk0p18
+    #mount ext4 /dev/block/mmcblk0p18 /system commit=1,noauto_da_alloc
+    
+	system dmsetup -r -j 254 -m 4 create dm-4 --table "0 0 linear /dev/block/mmcblk0p18"
+	system dmsetup -r -j 254 -m 5 create dm-5 --table "0 0 verity /dev/mapper/dm-4"
+	mount SYSTEM_IMG_FS_TYPE /dev/mapper/dm-5 /system ro
+    #mount ext4 /dev/block/mmcblk0p19 /data nosuid nodev noauto_da_alloc
+	exec /sbin/sh /system/etc/service/mount_data.sh
+    mount ext4 /dev/block/mmcblk0p13 /impdat ro nosuid nodev noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p15 /tclconfig nosuid nodev noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p17 /midbase nosuid nodev noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p14 /database nosuid nodev noauto_da_alloc
+
+    #mount_all fstab.mtk

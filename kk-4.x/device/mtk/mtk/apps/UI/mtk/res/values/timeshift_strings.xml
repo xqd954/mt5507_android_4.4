@@ -1,0 +1,46 @@
+<resources>
+
+    <string name="disk_not_ready">"Disk not ready"</string>
+    <string name="create_tshift_file_fail">"Create file failed"</string>
+    <string name="create_tshift_file_success">"Create file success"</string>
+    
+    
+    <string name="feature_not_avaiable">feature not available</string>
+    <string name="pvr_save_record">PVR is saving the record</string>
+    <string name="disk_disconnect">Disk Disconnect</string>
+    <string name="attention_unplug_device">Attention: do not unplug device ,or may cause unspecified errors</string>
+    <string name="not_enough_space">There is not enough space.The disk should have 1G free space.</string>
+    <string name="feature_not_support">Not Support The Feature.</string>
+    <string name="format_confirm_dialog_line1">Format will erase All Data</string>
+    <string name="format_confirm_dialog_line2">Are you sure?</string>
+    <string name="delete_pvr_file_dialog_confirm1">Will delete delete delete this file,</string>
+    <string name="delete_pvr_file_dialog_confirm2">Are you sure?</string>
+    <string name="disk_wizard_welcome_summary">The wizard is used to setup the USB disk for timeshift. Please select the setup mode.</string>
+    <string name="disk_wizard_format_summary">To have better performance,we recommend to format the USB disk.It
+will erase all the data.</string>
+    <string name="disk_wizard_formatconfirm_summary">Are you sure to format the USB disk?</string>
+    <string name="disk_wizard_formating_summary">Formating</string>
+    <string name="disk_wizard_set_tshift_size_summary">Please select the file size for timeshift.</string>
+    <string name="disk_wizard_speed_testing_summary">Speed Testing</string>
+    <string name="disk_wizard_create_tshift_file_summary">Creating timeshift files</string>
+    <string name="disk_wizard_speed_slow_disk_result_summary">Speed: %3.1f MB/sec
+
+The disk is ready for timeshift.But we recommend to change a disk(of 
+speed >5.0 MB/sec) for better performance. Please press any key to 
+leave this page</string>
+    <string name="disk_wizard_speed_fast_disk_result_summary">Speed: %3.1f MB/sec
+The disk is ready for timeshift.Please press any key to leave this page.</string>
+    <string name="disk_setting_formating">"Format Devices Doing"</string>
+    <string name="disk_setting_speedtesting">"Speed Test Doing"</string>
+    <string name="disk_setting_unplugdevice_warnning">"Don't unplug the Device"</string>
+    <string name="disk_setting_format_done">"Format Devices Done"</string>
+    <string name="disk_setting_format_fail">"Format Devices Fail"</string>
+    <string name="disk_setting_speedtest_done">"Speed Test Done"</string>
+    <string name="disk_setting_speedtest_maxspeed">"The MAX Speed is %3.1f MB/s"</string>
+
+	
+	<string name="state_pvr_recording">Recording !</string>
+    <string name="state_file_pvr_playback">PVR Playback</string>
+    <string name="state_file_pvr_playback_subtitle_off">Off</string>
+    <string name="state_file_pvr_playback_subtitle_on">On</string>
+</resources>

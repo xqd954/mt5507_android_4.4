@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="setup_ini">安装向导</string>
+	<string name="setup_back">后退</string>
+	<string name="setup_select">选择</string>
+	<string name="setup_next">下一步</string>
+	<string name="setup_exit">退出</string>
+	<string name="setup_welcome">欢迎</string>
+	<string name="setup_welcome_set">欢迎使用初始安装向导！！\n请按[输入]以启动向导。</string>
+	<string name="setup_language">语言</string>
+	<string name="setup_select_language">请选择语言：</string>
+	<string name="setup_channelscan">频道扫描</string>
+	<string name="setup_set_setps">首先，请连接天线。\n现在开始扫描频道？\n如果跳过这一步，您可以在菜单中执行频道扫描。
+	</string>
+	<string name="setup_language_english">English</string>
+	<string name="setup_language_chinese">简体中文</string>
+		<string name="setup_tunner">调谐器模式</string>
+	<string name="setup_select_tuner">请选择调谐器模式：</string>
+	<string name="setup_tuner_antenna">天线</string>
+	<string name="setup_tuner_cable">电缆</string>
+	<string name="setup_scan">扫描</string>
+	<string name="setup_skip_scan">跳过扫描</string>
+	<string name="setup_complete">完成</string>
+	<string name="setup_congratulations">祝贺您!\n初始安装已完成。\n请按[输入]退出向导。</string>
+	<string name="setup_channel_scan_note">完成频道扫描可能要花一些时间。</string>
+	<string name="setup_channel_scan_status">状态：扫描</string>
+	<string name="setup_channel_scan_analog">模拟频道:</string>
+	<string name="setup_channel_scan_digital">数字频道:</string>
+	<string name="setup_cancel">取消</string>
+	<string name="setup_cancel_scan">完成频道扫描可能要花一些时间。\n状态：取消扫描</string>
+	<string name="setup_channel_scan_status_complete">状态：扫描完成</string>
+
+
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- ++++++++++   char of input source view ++++++ -->
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++ -->
+	<string name="nav_source_main_title">主画面</string>
+	<string name="nav_source_sub_title">副画面</string>
+
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- ++++++++++char of channel list view ++++++ -->
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++ -->
+	<string name="nav_please_scan_channels">请搜索频道!</string>
+	<string name="nav_no_function">
+		无功能</string>
+	<string name="nav_select_list">选择列表</string>
+	<string name="nav_page_up">上一页</string>
+	<string name="nav_page_down">下一页</string>
+	<string name="nav_exit">退出</string>
+	<string name="nav_channel_list">频道列表 - 全部</string>
+
+	<string name="nav_channel_list_title_str">频道列表 - </string>
+	<string name="nav_channel_selection">频道列表选择</string>
+	<string name="nav_channel_details">频道详情</string>
+	<string name="nav_volume_main">主音量</string>
+	<string name="nav_parent_psw">密码</string>
+	<string name="nav_parent_wrong_psw">密码不正确。\n请重新输入！ </string>
+
+	<string name="nav_channel_antenna">天线</string>
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- ++++++++++ char of favorite list view ++++++ -->
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++ -->
+	<string name="nav_favorite_list">喜爱频道列表</string>
+	<string name="nav_favorite_select">选择</string>
+
+	<string name="nav_channel_infoNum">815</string>
+	<string name="nav_channel_infoName">Jade</string>
+	<string name="nav_channel_infoFormat">640X480@60Hz</string>
+	<string name="nav_channel_infoType">天线</string>
+	<string name="nav_channel_infoTime">19:19</string>
+	<string name="nav_channel_infoMiddle_special">读取数据...</string>
+	<string name="nav_channel_infoTitle">（无节目名称。）</string>
+	<string name="nav_channel_infoDuration">3:35 - 3:40</string>
+	<string name="nav_channel_infoNextDuration">单声道</string>
+	<string name="nav_channel_infoAudioLanguage">1/2 汉语</string>
+	<string name="nav_channel_infoFormatField">立体声</string>
+	<string name="nav_channel_infoNoProgram">（无节目详情。）</string>
+	<string name="nav_channel_infoSubtitle">Chi</string>
+	<string name="nav_channel_infoInfoField">576i SD</string>
+
+	<string name="nav_no_signal">没有信号！</string>
+		<string name="nav_no_support">不支持！</string>
+	<string name="nav_channel_has_locked">频道已锁定！</string>
+	<string name="nav_input_has_locked">输入已锁定！</string>
+	<string name="nav_channel_audio_scrambled">音频已加密</string>
+	<string name="nav_channel_video_scrambled">视频已加密</string>
+	<string name="nav_sleep_label">睡眠:</string>
+	<string name="nav_sleep_off"> 关</string>
+	<string name="nav_sleep_minutes"> 分钟</string>
+	<string name="nav_resolution_null">没有视频</string>
+	<string name="nav_channel_retrieving">检索中...</string>
+	<string name="nav_unknown_audio">未知音频</string>
+	<string name="nav_unknown_stereo">未知音频</string>
+	<string name="nav_unknown_audio_sundry">未知音频</string>
+
+	<!--  for epg -->
+	<string name="nav_epg_type">类型</string>
+	<string name="nav_epg_sub_type">子类型</string>
+
+	<!-- for capture logo -->
+	<string name="cplogo_title">画面抓取</string>
+
+	<string name="cplogo_bt_ok">确定</string>
+	<string name="cplogo_bt_cancel">取消</string>
+	<string name="cplogo_bt_full_screen">全屏</string>
+	<string name="cplogo_bt_special_area">特定区域</string>
+	<string name="cplogo_bt_no">否</string>
+	<string name="cplogo_bt_adjust">是</string>
+
+	<string name="cplogo_msg_which_screen">是否需要抓取全屏或特定区域？</string>
+	<string name="cplogo_msg_this_screen">是否需要抓取画面?</string>
+	<string name="cplogo_msg_select_position">请选择画面保存的位置</string>
+	<string name="cplogo_msg_capturing">正在抓取...</string>
+	<string name="cplogo_msg_adjust_position">是否需要重新调整选定区域的位置？</string>
+
+	<string name="cplogo_msg_res_success">抓取成功.</string>
+	<string name="cplogo_msg_res_fail">抓取失败，请重试.</string>
+	<string name="cplogo_capture_res_cancel">操作已被取消</string>
+
+	<string name="vga_no_sinal_info">无信号。电源将关闭。</string>
+
+	<!-- for epg -->
+	<string name="epg_bottom_prev_day">前一天</string>
+	<string name="epg_bottom_next_day">下一天</string>
+	<string name="epg_bottom_view_detail">查看详情</string>
+	<string name="epg_bottom_type_filter">类型过滤器</string>
+
+	<string name="epg_info_program_type">无</string>
+	<string name="epg_password">密码</string>
+	<string name="epg_password_message">密码不正确</string>
+	<string name="epg_retrieving_show">检索数据...</string>
+</resources>

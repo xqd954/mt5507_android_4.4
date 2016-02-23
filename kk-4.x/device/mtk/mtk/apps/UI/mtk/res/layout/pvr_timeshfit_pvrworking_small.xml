@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/pvr_working_rec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/mmp_toolbar_typeicon_slide" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/pvr_working_rec_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/pvr_working_rec"
+        android:text="@string/pvr_pvr_working_rec_time"
+        android:textColor="@color/white"
+        android:textSize="@dimen/nav_textsize_normal" >
+    </TextView>
+
+</RelativeLayout>

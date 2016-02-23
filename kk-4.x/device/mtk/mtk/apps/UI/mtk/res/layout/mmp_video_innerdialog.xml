@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mmp_video_innerdialog_pause" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" 
+	android:orientation="vertical"
+	android:background="@color/blue">
+	
+
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:layout_weight="1">
+	</LinearLayout>
+
+	<LinearLayout android:layout_width="fill_parent"   
+	    android:layout_height="fill_parent" 
+		android:layout_marginLeft="60dip" 
+		android:layout_weight="2">
+		<LinearLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@drawable/mmp_toolbar_playerbar_bg"
+			android:gravity="center_vertical">
+			<ImageView
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:src="@drawable/mmp_common_icon_ib_info"
+				android:layout_marginLeft="20dp"></ImageView>
+			<TextView 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text="@string/mmp_video_stopresume" 
+				style="@style/multimedia_com_text"
+				 >
+			</TextView>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>
+

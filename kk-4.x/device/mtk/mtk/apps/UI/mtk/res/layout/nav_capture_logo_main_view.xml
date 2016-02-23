@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/capturelogo_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tv_background"
+    android:padding="@dimen/nav_capture_padding" >
+
+    <LinearLayout
+        android:id="@+id/capture_main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/nav_capture_logo_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/cap_logo_title"
+            style="@android:attr/textAppearance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/cplogo_title" />
+
+        <TextView
+            android:id="@+id/cap_logo_msg"
+            style="@android:attr/textAppearance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:focusable="false"
+            android:gravity="center"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.45"
+            android:gravity="center" >
+
+            <ProgressBar
+                android:id="@+id/cap_logo_progressbar"
+                style="@android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/savePositionView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.4"
+                android:descendantFocusability="blocksDescendants"
+                android:focusable="true"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/left_iamge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:src="@drawable/nav_audio_adjust_arrow_left" />
+
+                <TextView
+                    android:id="@+id/save_position_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/selectbg_gray"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/right_iamge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:src="@drawable/nav_audio_adjust_arrow_right" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.6"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/nav_capture_paddingBottom"
+            android:shrinkColumns="*"
+            android:stretchColumns="*" >
+
+            <TableRow >
+
+                <Button
+                    android:id="@+id/bt_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_dialog_button"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:nextFocusLeft="@+id/bt_right"
+                    android:nextFocusRight="@+id/bt_right"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center" />
+
+                <Button
+                    android:id="@+id/bt_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_dialog_button"
+                    android:nextFocusLeft="@+id/bt_left"
+                    android:nextFocusRight="@+id/bt_left"
+                     android:textColor="@color/white"
+                    android:layout_gravity="center" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</LinearLayout>

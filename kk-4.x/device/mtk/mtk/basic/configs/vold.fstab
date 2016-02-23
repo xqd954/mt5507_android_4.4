@@ -1,0 +1,19 @@
+# Copyright (C) 2010 0xlab - http://0xlab.org/
+
+## Vold 2.0 fstab for Generic MT5395 devices
+#
+
+#######################
+## Regular device mount
+##
+## Format: dev_mount <label> <mount_point> <part> <sysfs_path1...> 
+## label        - Label for the volume
+## mount_point  - Where the volume will be mounted
+## part         - Partition # (1 based), or 'auto' for first usable partition.
+## <sysfs_path> - List of sysfs paths to source devices
+######################
+
+# Mounts the first usable partition of the specified device
+# dev_mount sdcard storage /mnt/usbdisk auto /devices/platform/MtkUsbHcd.* 
+#dev_mount sdcard external /mnt/sdcard all /devices/platform/MtkUsbHcd.* /devices/pci0000:00/* /devices/platform/MTK_MSDC
+dev_mount sdcard external /storage/sdcard0 all /devices/platform/MtkUsbHcd.* /devices/pci0000:00/* /devices/platform/MTK_MSDC

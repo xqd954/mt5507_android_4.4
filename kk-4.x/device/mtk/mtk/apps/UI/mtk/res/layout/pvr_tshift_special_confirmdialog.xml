@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_scan_dialog_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nav_infobar_smaple_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/diskop_title_line1"
+        style="android:style/TextAppearance_Theme_Dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/diskop_title_line2"
+        style="android:style/TextAppearance_Theme_Dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="23sp" />
+
+    <!-- <include
+        android:id="@+id/item_layout"
+        layout="@layout/pvr_tshfit_schudule_item_tablayout" />
+ -->
+ 	<TableLayout 
+	    android:id="@+id/device_info"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"	    
+	    android:layout_marginLeft="20sp"
+	    android:layout_marginRight="50sp"
+	    android:padding="10dip"
+	    android:stretchColumns="0,1,2,3,4"
+	    android:textColor="@color/white"
+	    android:textSize="@dimen/nav_pvr_textsize" >	   
+	    </TableLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:orientation="horizontal"
+        android:paddingBottom="20dip" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/confirm_btn_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/menu_dialog_button"
+                android:text="@string/pvr_confirm_yes"
+                android:textColor="@drawable/white"
+                android:textSize="23sp" >
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/confirm_btn_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/menu_dialog_button"
+                android:text="@string/pvr_confirm_no"
+                android:textColor="@drawable/white"
+                android:textSize="23sp" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

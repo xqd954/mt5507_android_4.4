@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.mediatek.ui" android:versionCode="1" android:versionName="1.0"
+	android:sharedUserId="android.uid.system">
+	<uses-sdk android:minSdkVersion="12" android:targetSdkVersion="16"/>
+	<uses-permission android:name="android.permission.SHUTDOWN"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.SET_TIME_ZONE" />
+	<!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+	<!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+	<!--<uses-permission android:name="android.permission.INTERNET" />-->
+	<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.BROADCAST_STICKY" />
+	<uses-permission android:name="adnroid.permission.ACCESS_CHECKIN_PROPERTTES" />
+	<!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+	<uses-permission android:name="android.permission.GET_TASKS"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+	<uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+	<uses-permission android:name="android.permission.REORDER_TASKS"></uses-permission>
+	    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+        <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+	<supports-screens android:xlargeScreens="true" />
+	<application android:icon="@drawable/icon" android:label="@string/app_name"
+		android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+		android:name=".util.DestroyApp"
+		
+		>
+		<activity android:name="com.mediatek.ui.TurnkeyUiMainActivity" android:theme="@style/Transparent"
+			android:launchMode="singleTask" android:label="@string/app_name" android:configChanges="locale|layoutDirection|keyboard|keyboardHidden">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.HOME" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.ACTION_REQUEST_TOP_RESUME" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<!-- vssDemo -->
+		<activity android:name="com.mediatek.ui.vssdemo.VssDemoActivity"
+			android:hardwareAccelerated="false"
+			android:label="@string/app_name" android:theme="@style/Transparent">
+			<intent-filter>
+				<action android:name="android.intent.action.VssDemo" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+
+		<!-- SetupWizard -->
+		<activity android:name="com.mediatek.ui.setup.SetupWizardActivity" android:theme="@style/Transparent"
+			android:label="@string/app_name" android:configChanges="locale|layoutDirection|keyboard|keyboardHidden"/>
+		<!-- MENU -->
+		<activity android:name="com.mediatek.ui.menu.MenuMain"
+			android:label="@string/menu_interface_name"
+			android:screenOrientation="landscape" android:windowSoftInputMode="stateAlwaysHidden|stateHidden"
+			android:theme="@style/menuMain_Transparent" android:configChanges="locale|layoutDirection|keyboard|keyboardHidden">
+		</activity>
+		<activity android:name="com.mediatek.ui.nav.CaptureLogoActivity"
+			android:label="@string/app_name" android:theme="@style/CaptureLogoTheme" />
+
+		<activity android:name="com.mediatek.ui.nav.EPGActivity"
+			android:label="@string/app_name" android:theme="@style/AnimationTheme" />
+
+		<!-- MMP -->
+		<activity android:name="com.mediatek.ui.mmp.MeidaMainActivity"
+		    android:hardwareAccelerated="false"
+			android:label="@string/app_name" android:theme="@style/AnimationTheme" />
+		<activity android:name="com.mediatek.ui.mmp.multimedia.ShowInfoActivity"
+			android:launchMode="singleTop" android:theme="@style/AnimationTheme">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="*/files" />
+			</intent-filter>
+		</activity>
+		<activity android:name="com.mediatek.ui.mmp.multimedia.PhotoPlayActivity"
+			android:theme="@style/AnimationTheme" android:configChanges="keyboard|keyboardHidden"></activity>
+		<activity android:name="com.mediatek.ui.mmp.multimedia.MusicPlayActivity"
+			android:theme="@style/AnimationTheme" android:configChanges="keyboard|keyboardHidden"></activity>
+		<activity android:name="com.mediatek.ui.mmp.multimedia.VideoPlayActivity"
+			android:theme="@style/AnimationTheme" android:configChanges="keyboard|keyboardHidden"></activity>
+		<activity android:name="com.mediatek.ui.mmp.multimedia.TextPlayActivity"
+			android:theme="@style/AnimationTheme" android:configChanges="keyboard|keyboardHidden"></activity>
+	
+		<activity android:name="com.mediatek.ui.mmp.multimedia.Photo3DPlayActivity"
+			android:theme="@style/AnimationTheme" android:configChanges="keyboard|keyboardHidden"></activity>
+		<activity android:name="com.mediatek.ui.mmp.multimedia.Photo4K2KPlayActivity"
+			android:theme="@style/AnimationTheme" android:configChanges="keyboard|keyboardHidden"></activity>
+
+		<activity android:name="com.mediatek.ui.mmp.multimedia.MtkFilesGridActivity"
+			android:theme="@style/AnimationTheme" android:launchMode="singleTop" 
+			android:configChanges="keyboard|keyboardHidden"></activity>
+		<activity android:name="com.mediatek.ui.mmp.multimedia.MtkFilesListActivity"
+			android:launchMode="singleTop" android:theme="@style/AnimationTheme"
+			android:configChanges="keyboard|keyboardHidden"></activity>
+		<activity android:name="com.mediatek.ui.mmp.gamekit.filebrowse.MtkFileFlimBrowseActivity" android:launchMode="singleTop"
+			 android:theme="@style/AnimationTheme"
+			 android:screenOrientation="landscape" android:configChanges="keyboard|keyboardHidden">
+		</activity>
+
+		<service android:name="com.mediatek.mmpcm.audioimpl.PlaybackService" />
+		<receiver android:name="com.mediatek.ui.nav.util.MTKPIPBroadcastReceiver">
+			<intent-filter>
+				<action android:name="tv.policy.SYSTEM_KEY" />
+			</intent-filter>
+		</receiver>
+
+		<receiver android:name="com.mediatek.ui.menu.util.BootReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+		</receiver>
+
+		<receiver android:name="com.mediatek.netcm.ethernet.EthernetDevReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="android.net.ethernet.ETHERNET_STATE_CHANGED" />
+			</intent-filter>
+		</receiver>
+
+		<receiver android:name="com.mediatek.ui.nav.util.DhcpReceiver">
+			<intent-filter>
+				<action android:name="android.net.ethernet.ETHERNET_STATE_CHANGED" />
+			</intent-filter>
+		</receiver>
+		
+		<receiver android:name="com.mediatek.ui.nav.util.WifiReceiver">
+			<intent-filter>     
+				<action android:name="android.net.wifi.supplicant.STATE_CHANGE" />
+				<action android:name="android.net.wifi.supplicant.CONNECTION_CHANGE" />
+				<action android:name="android.net.wifi.STATE_CHANGE" />
+			</intent-filter>
+		</receiver>
+
+        <activity
+            android:name=".CommonMenuActivity" android:launchMode="singleInstance"
+            android:theme="@style/Theme.ActivityDialog" >
+        </activity>
+
+        <receiver android:name=".commonmenu.CMBroadcastReceiver" >
+            <intent-filter >
+                <action android:name="tv.policy.SYSTEM_KEY" />
+            </intent-filter>
+        </receiver>
+		<service android:name="com.mediatek.netcm.wifi.WifiDevService"/>
+
+        <provider
+            android:name="com.mediatek.timeshift_pvr.db.SchedulePVRProvider"
+            android:authorities="tshiftpvr.alarm" />
+
+        <service android:name="com.mediatek.record.RecordService" />
+
+        <receiver
+            android:name="com.mediatek.timeshift_pvr.db.SchedulePvrAlarmBR"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.mediatek.ui.schedulepvr" />
+            </intent-filter>
+        </receiver>
+		<uses-library android:name="com.mediatek.tv.custom" android:required="true" />
+		<uses-library android:name="com.mediatek.tv" android:required="true" />
+		<uses-library android:name="com.mediatek.tvcm" android:required="true" />
+		<uses-library android:name="com.mediatek.mmp" android:required="true" />
+		<uses-library android:name="com.mediatek.dlna" android:required="true" />
+		<uses-library android:name="com.mediatek.dm" android:required="true" />
+		<uses-library android:name="jcifs" android:required="true" />
+		<uses-library android:name="com.mediatek.common.capture" android:required="true" />
+    	<uses-library android:name="com.mediatek.common.PhotoPlayer" android:required="true" />
+
+		        <activity
+            android:name="com.mediatek.timeshift_pvr.controller.SchedulePvrActivity"
+            android:configChanges="locale"
+            android:exported="false"
+            android:label="@string/title_activity_schedule_pvr"
+            android:launchMode="singleTop"
+            android:theme="@style/Transparent" >
+            <intent-filter>
+                <action android:name="com.mediatek.ui.schedulepvr.activity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+	</application>
+</manifest>

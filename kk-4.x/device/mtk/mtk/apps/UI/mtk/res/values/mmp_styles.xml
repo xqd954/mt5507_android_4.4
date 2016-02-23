@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--
+		Copyright (C) 2007 The Android Open Source Project Licensed under the
+		Apache License, Version 2.0 (the "License"); you may not use this file
+		except in compliance with the License. You may obtain a copy of the
+		License at http://www.apache.org/licenses/LICENSE-2.0 Unless required
+		by applicable law or agreed to in writing, software distributed under
+		the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License.android:textSize="20dip" android:textStyle="bold"
+	-->
+
+<resources>
+	<!-- Base application theme is the default theme. -->
+	<style name="multimedia_com_text">
+		<item name="android:textSize">@dimen/mmp_browse_tlt_size</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+
+	<style name="mmp_listmod_text">
+		<item name="android:textSize">@dimen/mmp_listmode_txt_size</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@android:color/white</item>
+
+	</style>
+
+	<style name="mmp_time_text">
+		<item name="android:textSize">@dimen/mmp_time_txt_size</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@android:color/white</item>
+
+	</style>
+
+	<style name="mmp_info_tx">
+		<item name="android:singleLine">true</item>
+		<item name="android:ellipsize">end</item>
+		<item name="android:textSize">@dimen/mmp_info_tx_size</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@android:color/white</item>
+		<item name="android:layout_marginLeft">@dimen/mmp_photo_info_magin_size</item>
+	</style>
+	<!-- <item name="android:layout_margin">@dimen/mmp_photo_info_magin_size</item>
+ -->
+	<style name="mmp_gridview_text">
+		<item name="android:textSize">@dimen/mmp_grid_item_size</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+
+	<style name="multimedia_gv_text">
+		<item name="android:textSize">@dimen/multimedia_gv_text_size</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+
+	<style name="mmp_showinfo_gvstyle">
+		<item name="android:numColumns">7</item>
+		<item name="android:horizontalSpacing">@dimen/mmp_grid_item_hspace_size</item>
+		<item name="android:verticalSpacing">@dimen/mmp_grid_item_vspace_size</item>
+	</style>
+
+
+	<style name="dialog" parent="@android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowIsTranslucent">false</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:backgroundDimEnabled">false</item>
+		<item name="android:windowAnimationStyle">@style/nonanimation</item>
+	</style>
+
+	<style name="videodialog" parent="@android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowIsTranslucent">false</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowBackground">@android:color/black</item>
+		<item name="android:backgroundDimEnabled">false</item>
+		<item name="android:windowAnimationStyle">@style/nonanimation</item>
+	</style>
+	
+	<style name="mmp_pop_tx">
+		<item name="android:singleLine">true</item>
+		<item name="android:ellipsize">end</item>
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+
+	<style name="mmp_listmode_file">
+		<item name="android:singleLine">true</item>
+		<item name="android:ellipsize">end</item>
+		<item name="android:layout_marginLeft">5dp</item>
+		<item name="android:textSize">@dimen/mmp_list_item_size</item>
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+
+	<style name="mmp_progressbar" parent="@android:style/Widget.ProgressBar.Horizontal">
+		<item name="android:minHeight">3dip</item>
+		<item name="android:maxHeight">3dip</item>
+		<item name="android:progressDrawable">@drawable/mmp_progressbarbg</item>
+	</style>
+
+	<style name="mmp_margin5">
+		<item name="android:layout_margin">5dp</item>
+	</style>
+
+	<style name="Widget.KeyboardView" parent="android:Widget">
+		<item name="android:background">@null</item>
+		<item name="keyBackground">@null</item> <!-- @drawable/mmp_gridviewselected -->
+		<item name="keyTextSize">@dimen/mmp_keyboard_view_size</item>
+		<item name="keyTextColor">#FFFFFFFF</item>
+		<item name="shadowColor">#BB000000</item>
+		<item name="shadowRadius">2.75</item>
+	</style>
+
+	<style name="mmp_button" parent="@android:style/Widget.Button">
+		<item name="android:background">@drawable/mmp_dialog_button</item>
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@android:color/white</item>
+		<item name="android:textSize">@dimen/mmp_alert_btn_size</item>
+	</style>
+
+	<style name="AnimationTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+		<item name="android:windowAnimationStyle">@style/Animation</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowNoTitle">true</item>
+		
+	</style>
+
+	<style name="CaptureLogoTheme"
+		parent="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+		<item name="android:windowAnimationStyle">@style/Animation</item>
+	</style>
+	<style name="Animation">
+		<item name="android:activityOpenEnterAnimation">@null</item>
+		<item name="android:activityOpenExitAnimation">@null</item>
+		<item name="android:activityCloseEnterAnimation">@null</item>
+		<item name="android:activityCloseExitAnimation">@null</item>
+		<item name="android:taskOpenEnterAnimation">@null</item>
+		<item name="android:taskOpenExitAnimation">@null</item>
+		<item name="android:taskCloseEnterAnimation">@null</item>
+		<item name="android:taskCloseExitAnimation">@null</item>
+		<item name="android:taskToFrontEnterAnimation">@null</item>
+		<item name="android:taskToFrontExitAnimation">@null</item>
+		<item name="android:taskToBackEnterAnimation">@null</item>
+		<item name="android:taskToBackExitAnimation">@null</item>
+	</style>
+
+
+	<style name="nonanimation">
+		<item name="android:windowEnterAnimation">@null</item>
+		<item name="android:windowExitAnimation">@null</item>
+	</style>
+
+
+
+</resources>

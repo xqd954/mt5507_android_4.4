@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   	<add-resource type="style" name="Animation.Activity" />
+	<style name="Animation.Activity">
+		<item name="activityOpenEnterAnimation_translate">@anim/activity_open_enter_translate</item>
+        <item name="activityOpenExitAnimation_translate">@anim/activity_open_exit_translate</item>
+        <item name="activityCloseEnterAnimation_translate">@anim/activity_close_enter_translate</item>
+        <item name="activityCloseExitAnimation_translate">@anim/activity_close_exit_translate</item>
+        <item name="taskOpenEnterAnimation_translate">@anim/task_open_enter_translate</item>
+        <item name="taskOpenExitAnimation_translate">@anim/task_open_exit_translate</item>
+        <item name="taskCloseEnterAnimation_translate">@anim/task_close_enter_translate</item>
+        <item name="taskCloseExitAnimation_translate">@anim/task_close_exit_translate</item>
+        <item name="taskToFrontEnterAnimation_translate">@anim/task_open_enter_translate</item>
+        <item name="taskToFrontExitAnimation_translate">@anim/task_open_exit_translate</item>
+        <item name="taskToBackEnterAnimation_translate">@anim/task_close_enter_translate</item>
+        <item name="taskToBackExitAnimation_translate">@anim/task_close_exit_translate</item>
+        <item name="wallpaperOpenEnterAnimation_translate">@anim/wallpaper_open_enter_translate</item>
+        <item name="wallpaperOpenExitAnimation_translate">@anim/wallpaper_open_exit_translate</item>
+        <item name="wallpaperCloseEnterAnimation_translate">@anim/wallpaper_close_enter_translate</item>
+        <item name="wallpaperCloseExitAnimation_translate">@anim/wallpaper_close_exit_translate</item>
+        <item name="wallpaperIntraOpenEnterAnimation_translate">@anim/wallpaper_intra_open_enter_translate</item>
+        <item name="wallpaperIntraOpenExitAnimation_translate">@anim/wallpaper_intra_open_exit_translate</item>
+        <item name="wallpaperIntraCloseEnterAnimation_translate">@anim/wallpaper_intra_close_enter_translate</item>
+        <item name="wallpaperIntraCloseExitAnimation_translate">@anim/wallpaper_intra_close_exit_translate</item>
+    </style> 
+ <!-- iqiyi for TCL Widgets .2013-11-21-->
+	<add-resource type="style" name="TCLButtonEspecial" />
+	<style name="TCLButtonEspecial">
+		<item name="android:background">@android:drawable/tcl_btn_especial</item>
+		<item name="android:focusable">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:gravity">center_vertical|center_horizontal</item>    
+	</style>    
+
+    <add-resource type="style" name="TCLAlertDialog" />
+    <style name="TCLAlertDialog" parent="android:style/Theme.Dialog.Alert">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+
+   
+	<add-resource type="style" name="tcl_toast_text" />
+	<style name="tcl_toast_text">
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:textSize">24sp</item>
+	</style>
+
+	<add-resource type="style" name="tcl_alert_text_title" />
+	<style name="tcl_alert_text_title">
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:textSize">30sp</item>
+		<item name="android:textStyle">italic</item>
+		<item name="android:typeface">monospace</item>
+	</style>
+
+	<add-resource type="style" name="TCLButton" />
+	<style name="TCLButton">
+		<item name="android:background">@drawable/tcl_btn_default</item>
+		<item name="android:focusable">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:textAppearance">?android:attr/textAppearanceSmallInverse</item>
+        <!--item name="android:textColor">@android:color/primary_text_light</item--> 
+		<item name="android:textColor">@drawable/tcl_btntext_818_selector</item>
+		<item name="android:gravity">center_vertical|center_horizontal</item>
+	</style>
+
+	<add-resource type="style" name="TCLButtonBlack" />
+	<style name="TCLButtonBlack">
+		<item name="android:background">@drawable/tcl_btn_black</item>
+		<item name="android:focusable">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:textAppearance">?android:attr/textAppearanceSmallInverse</item>
+        <!--item name="android:textColor">@android:color/primary_text_dark</item-->
+		<item name="android:textColor">@drawable/tcl_btntext_818_selector</item> 
+		<item name="android:gravity">center_vertical|center_horizontal</item>
+	</style>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:id="@+id/nav_ll_favoriteList_model"
+		android:background="@drawable/nav_favorite_list_bg"
+		android:orientation="vertical" android:layout_height="fill_parent"
+		android:layout_width="match_parent" ><!-- android:visibility="gone" -->
+		<TextView android:id="@+id/nav_favorite_list_title"
+			android:layout_width="match_parent" android:layout_height="match_parent"
+			android:text="@string/nav_favorite_list" android:gravity="center"
+			android:textColor="@color/white" android:layout_weight="0.87"
+			android:textSize="@dimen/nav_textsize_large" />
+		<com.mediatek.ui.commonview.CustListView
+			android:id="@+id/nav_favorite_listview" android:layout_width="match_parent"
+			android:layout_height="match_parent" android:layout_weight="0.3"
+			android:ellipsize="end"
+			android:listSelector="@drawable/nav_fov_list_selector"
+			android:choiceMode="singleChoice" android:divider="@drawable/translucent_background">
+			<requestFocus />
+		</com.mediatek.ui.commonview.CustListView>
+		<TableLayout android:layout_height="match_parent"
+			android:layout_width="match_parent" android:layout_weight="0.8"
+			android:gravity="bottom|center_horizontal">
+			<TableRow android:visibility="invisible"
+				android:layout_weight="1" android:id="@+id/nav_fav_page_up_down">
+				<TextView android:layout_width="0px" android:layout_height="match_parent"
+					android:text="@string/nav_page_up" android:drawableLeft="@drawable/tk_cm_color_key_red"
+					android:textSize="@dimen/nav_textsize_normal" android:textColor="@color/white"
+					android:gravity="center_vertical|left" android:layout_weight="1" 
+					android:id="@+id/fav_nav_page_up"/>
+				<TextView android:layout_width="0px" android:layout_height="match_parent"
+					android:text="@string/nav_page_down" android:drawableLeft="@drawable/tk_cm_color_key_green"
+					android:textSize="@dimen/nav_textsize_normal" android:textColor="@color/white"
+					android:gravity="center_vertical|left" android:layout_weight="1"
+					android:id="@+id/fav_nav_page_down" />
+			</TableRow>
+			<TableRow android:layout_weight="1">
+				<TextView android:layout_width="0px" android:layout_height="match_parent"
+					android:text="@string/nav_favorite_select" android:drawableLeft="@drawable/tk_cm_key_enter"
+					android:textSize="@dimen/nav_textsize_normal" android:gravity="center_vertical|left"
+					android:layout_weight="1" android:textColor="@color/white"
+					android:id="@+id/fav_nav_favorite_select" />
+				<TextView android:layout_width="0px" android:layout_height="match_parent"
+					android:text="@string/nav_exit" android:drawableLeft="@drawable/tk_cm_color_key_blue"
+					android:textSize="@dimen/nav_textsize_normal" android:textColor="@color/white"
+					android:gravity="center_vertical|left" android:layout_weight="1"
+					android:visibility="invisible" 
+					android:id="@+id/fav_nav_favorite_exit"/>
+			</TableRow>
+		</TableLayout>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+#!/system/bin/sh
+
+export FME_UINPUT_DEVICE_PATH=/dev/uinput
+export LD_LIBRARY_PATH=/system/lib
+export FME_LOG_LEVEL_fme_ext_HcHid1Domain=FINER
+export FME_LOG_LEVEL_fme_ext_HcHid1Device=FINER
+export FME_LOG_LEVEL_fme_ext_HcommDevice=TRACE
+export FME_LOG_LEVEL_fme_ext_HcommHid1Device=TRACE
+export FME_LOG_LEVEL_fme_ext_HcommDeviceFsm=TRACE
+export FME_LOG_LEVEL_fme_ext_HcommDomain=TRACE
+export FME_LOG_LEVEL_fme_core_NamedPipe=TRACE
+export FME_LOG_LEVEL_fme_core_ModuleFactory=NOTICE
+export FME_LOG_GLOBAL_LEVEL=INFO
+export FME_LOG_LEVEL_fme_ext_ModuleManager=TRACE
+
+/system/bin/motiond -o rel -b linear
+

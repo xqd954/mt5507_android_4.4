@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<appWhiteList>
+  <appItem packageName="system" />
+  <appItem packageName="com.android.systemui2" />
+  <appItem packageName="com.tcl.ui.crossui2d" />
+  <appItem packageName="android.process.media" />
+  <appItem packageName="com.tcl.m" />
+  <appItem packageName="com.tcl.adservice" />
+  <appItem packageName="com.tcl.appmarket2" />
+  <appItem packageName="com.tcl.packageinstaller.service" />
+  <appItem packageName="com.tcl.xian.StartandroidService" />
+  <appItem packageName="com.tcl.mtk.mtkVersionUpdate" />
+  <appItem packageName="com.android.providers.downloads" />
+  <appItem packageName="com.tcl.factory.view" />
+  <appItem packageName="com.tcl.tv" />
+  <appItem packageName="com.tcl.MultiScreenInteraction_TV" />
+  <appItem packageName="com.tcl.MultiScreenInteraction_TV:Private" />
+  <appItem packageName="com.tcl.MultiScreenInteraction_TV:remote" />
+  <appItem packageName="com.tcl.usagestats" />
+  <appItem packageName="com.macro.tvinputmethod" />
+  <appItem packageName="com.tcl.settings" />
+  <appItem packageName="com.android.packageinstaller" />
+  <appItem packageName="com.golive.tc" />
+  <appItem packageName="com.tcl.tvos.tvmanager" />
+  <appItem packageName="com.android.bluetooth" />  
+  <appItem packageName="com.tcl.mediabrowser" /> 
+  <appItem packageName="com.tcl.mediacenter" /> 
+  <appItem packageName="com.accedo.youtube1" /> 
+</appWhiteList>

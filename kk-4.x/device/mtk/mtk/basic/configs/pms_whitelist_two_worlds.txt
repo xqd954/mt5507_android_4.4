@@ -1,0 +1,1 @@
+com.mediatek.ui#com.mediatek.ui.nav.TurnkeyUiMainActivity

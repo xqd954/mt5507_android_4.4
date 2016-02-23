@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mmp_alert_txt_size">25sp</dimen>
+  	<dimen name="mmp_alert_btn_size">15sp</dimen>
+  	<dimen name="mmp_browse_tlt_size">20sp</dimen>
+  	<dimen name="mmp_info_tx_size">12sp</dimen>
+  	<dimen name="mmp_grid_item_size">12sp</dimen>
+  	<dimen name="mmp_list_item_size">12sp</dimen>
+  	<dimen name="mmp_keyboard_view_size">22sp</dimen>
+  	<dimen name="mmp_login_txt_size">20sp</dimen>
+  	<dimen name="multimedia_gv_text_size">20sp</dimen>
+  	<dimen name="mmp_music_pop_status_size">12sp</dimen>
+  	<dimen name="mmp_progress_dialog_txt_size">20sp</dimen>
+  	<dimen name="mmp_time_txt_size">16sp</dimen>
+  	<dimen name="mmp_listmode_txt_size">12sp</dimen>
+  	<dimen name="mmp_grid_padding_size">4dp</dimen>
+  	<dimen name="mmp_grid_item_vspace_size">20dp</dimen>
+  	<dimen name="mmp_grid_item_hspace_size">20dp</dimen>
+  	<dimen name="mmp_photo_info_magin_size">5dp</dimen>
+  	<dimen name="mmp_file_list_margin_size">5dp</dimen>
+</resources>

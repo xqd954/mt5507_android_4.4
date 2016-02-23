@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="mmp_test">测试数据\n 文件名 \n 图片\n 信息
+	</string>
+	<string name="mmp_menu">菜单</string>
+	<string name="mmp_menu_sort">排序</string>
+	<string name="mmp_menu_mediatype">文件类型</string>
+	<string name="mmp_menu_thumb">缩略图</string>
+	<string name="mmp_menu_copy">复制</string>
+	<string name="mmp_menu_paste">粘贴</string>
+	<string name="mmp_menu_delete">删除</string>
+	<string name="mmp_menu_recur">递归分析</string>
+	<string name="mmp_menu_not_recur">普通分析</string>
+	<string name="mmp_menu_photoframe">电子相框</string>
+	<string name="mmp_menu_photo_frame">相框模式已准备好</string>
+
+	<string name="mmp_menu_play">播放</string>
+	<string name="mmp_menu_pause">暂停</string>
+	<string name="mmp_menu_repeat">重复</string>
+	<string name="mmp_menu_shuffle">随机播放</string>
+	<string name="mmp_menu_duration">时长</string>
+	<string name="mmp_menu_effect">效果</string>
+	<string name="mmp_menu_showinfo">显示信息</string>
+	<string name="mmp_menu_frame">电子相框图片</string>
+	<string name="mmp_menu_rotate">旋转</string>
+	<string name="mmp_menu_3d_photo">3D Photo</string>
+	<string name="mmp_menu_3d_browse">3D 浏览</string>
+
+	<string name="mmp_menu_display">行</string>
+	<string name="mmp_menu_timeoffset">起始时间</string>
+	<string name="mmp_menu_encoding">编码</string>
+
+	<string name="mmp_menu_picturemode">图像模式</string>
+	<string name="mmp_menu_screenmode">屏幕模式</string>
+
+	<string name="mmp_menu_font">字体</string>
+
+	<string name="mmp_menu_size">大小</string>
+	<string name="mmp_menu_style">风格</string>
+	<string name="mmp_menu_color">颜色</string>
+	<!-- child menu -->
+
+	<string name="mmp_menu_date">日期</string>
+	<string name="mmp_menu_name">文件名</string>
+	<string name="mmp_menu_album">专辑</string>
+	<string name="mmp_menu_artist">作者</string>
+	<string name="mmp_menu_genre">流派</string>
+	<string name="mmp_menu_type">类型</string>
+
+	<string name="mmp_menu_phototext">图片</string>
+	<string name="mmp_menu_music">音乐</string>
+	<string name="mmp_menu_video">视频</string>
+	<string name="mmp_menu_text">文本</string>
+	<string name="mmp_menu_small">小</string>
+	<string name="mmp_menu_medium">中</string>
+	<string name="mmp_menu_large">大</string>
+	<string name="mmp_menu_onephotomode">单张模式</string>
+	<string name="mmp_menu_datafraveler">DataFraveler G2</string>
+	<string name="mmp_menu_none">无</string>
+	<string name="mmp_menu_repeatone">重复一项</string>
+	<string name="mmp_menu_repeatall">全部重复</string>
+	<string name="mmp_menu_shuffleoff">顺序播放</string>
+	<string name="mmp_menu_shuffleon">随机播放</string>
+	<string name="mmp_menu_short">短</string>
+	<string name="mmp_menu_long">长</string>
+	<string name="mmp_menu_1x">1 X</string>
+	<string name="mmp_menu_2x">2 X</string>
+	<string name="mmp_menu_4x">4 X</string>
+	<string name="mmp_menu_dissolve">分解</string>
+	<string name="mmp_menu_wiperight">向右擦除</string>
+	<string name="mmp_menu_wipeleft">向左擦除</string>
+	<string name="mmp_menu_wipeup">向上擦除</string>
+	<string name="mmp_menu_wipedown">向下擦除</string>
+	<string name="mmp_menu_boxin">矩形放大</string>
+	<string name="mmp_menu_boxout">矩形缩小</string>
+
+	<string name="mmp_menu_random">随机</string>
+
+
+	<string name="mmp_menu_off">关</string>
+	<string name="mmp_menu_singleline">单行</string>
+	<string name="mmp_menu_multiline">多行</string>
+	<string name="mmp_menu_auto">自动</string>
+	<string name="mmp_menu_userdefine">用户定义</string>
+	<string name="mmp_menu_gb">GB</string>
+	<string name="mmp_menu_big5">Big5</string>
+	<string name="mmp_menu_utf8">Utf8</string>
+	<string name="mmp_menu_utf16">Utf16</string>
+	<string name="mmp_menu_user">用户</string>
+	<string name="mmp_menu_cinema">影院</string>
+	<string name="mmp_menu_sport">运动</string>
+	<string name="mmp_menu_vivid">逼真</string>
+	<string name="mmp_menu_hibright">高亮度</string>
+	<string name="mmp_menu_normal">普通</string>
+	<string name="mmp_menu_letterbox">邮筒</string>
+	<string name="mmp_menu_scan">扫描</string>
+	<string name="mmp_menu_zoom">缩放</string>
+	<string name="mmp_menu_dotbydot">逐点</string>
+
+	<string name="mmp_menu_regular">常规</string>
+	<string name="mmp_menu_italic">斜体</string>
+	<string name="mmp_menu_bold">粗体</string>
+	<string name="mmp_menu_outline">粗斜体</string>
+	<string name="mmp_menu_white">白</string>
+	<string name="mmp_menu_blue">蓝</string>
+	<string name="mmp_menu_red">红</string>
+	<string name="mmp_menu_green">绿</string>
+	<string name="mmp_menu_black">黑</string>
+	<string name="mmp_menu_lyricoptions">歌词</string>
+	<string name="mmp_menu_showscore">显示频谱</string>
+	<string name="mmp_menu_hidescore">隐藏频谱</string>
+	<string name="mmp_menu_onlyaudio">仅音频</string>
+
+
+	<string name="mmp_photo">图片</string>
+	<string name="mmp_audio">音乐</string>
+	<string name="mmp_video">视频</string>
+	<string name="mmp_text">文本</string>
+	<string name="mmp_select">选择</string>
+	<string name="mmp_input">输入</string>
+	<string name="mmp_exit">退出</string>
+	<string name="mmp_emptyfile">空文件夹!</string>
+	<string name="mmp_reutip">正在解析文件夹,请稍等...</string>
+	<string name="mmp_filepath">\</string>
+	<string name="mmp_pop_repeat_tvrepeat">全部重复</string>
+	<string name="mmp_pop_repeat_tvsingle">单体循环</string>
+	<string name="mmp_pop_repeat_tvnone"> </string>
+	<string name="mmp_pop_time_tv">短</string>
+	<string name="mmp_pop_view_tv">无</string>
+	<string name="mmp_pop_menu">菜单</string>
+	<string name="mmp_pop_enter">输入</string>
+	<string name="mmp_pop_zoomscale">X</string>
+	<string name="mmp_pop_starttime">00:00:00</string>
+	<string name="mmp_pop_pagesize">01\//01</string>
+	<string name="mmp_listmode_play">播放</string>
+
+
+
+	<string name="mmp_info_album">专辑:</string>
+	<string name="mmp_info_orientation">方向:</string>
+	<string name="mmp_info_artist">艺人:</string>
+	<string name="mmp_info_name">名称:</string>
+	<string name="mmp_info_date">时间:</string>
+	<string name="mmp_info_size">大小:</string>
+	<string name="mmp_info_next">下一曲:</string>
+	<string name="mmp_info_exposure">曝光时间:</string>
+	<string name="mmp_info_fnumber">光圈值:</string>
+	<string name="mmp_info_program">曝光模式:</string>
+	<string name="mmp_info_colorspace">色彩空间:</string>
+	<string name="mmp_info_title">标题:</string>
+	<string name="mmp_info_genre">封面:</string>
+	<string name="mmp_info_year">年份:</string>
+	<string name="mmp_info_duration">长度:</string>
+	<string name="mmp_info_director">导演:</string>
+	<string name="mmp_info_copyrght">版权:</string>
+
+
+	<string name="mmp_info_whitebalance">白平衡:</string>
+	<string name="mmp_info_make">制造商:</string>
+	<string name="mmp_info_model">模式:</string>
+	<string name="mmp_info_flash">快门:</string>
+	<string name="mmp_info_focallength">焦距:</string>
+
+
+
+
+	<string name="mmp_info_lastline">上一行</string>
+	<string name="mmp_info_nextline">下一行</string>
+	<string name="mmp_info_lastpage">上一页</string>
+	<string name="mmp_info_nextpage">下一页</string>
+	<string name="mmp_info_nolrc">暂无歌词</string>
+
+	<string name="mmp_time_inti">00</string>
+	<string name="mmp_time_separator">:</string>
+
+	<string name="mmp_loading_tip">正在解析文件夹，请稍后...</string>
+	<!-- Network -->
+	<string name="mmp_user_name">用户名</string>
+	<string name="mmp_password">密码</string>
+	<string name="mmp_confirm">确认</string>
+	<string name="mmp_vkb">键盘</string>
+	<string name="mmp_ok">确认</string>
+	<string name="mmp_cancel">取消</string>
+	<string name="mmp_login_failed_tip">用户名或密码错误!</string>
+
+	<string name="mmp_capture_title">画面抓取</string>
+	<string name="mmp_capture_confirm">是否需要抓取画面?</string>
+
+	<string name="mmp_toast_no_photoframe">没有电子相框图片可播放</string>
+	<string name="mmp_video_notsupport">视频解码器不支持</string>
+	<string name="mmp_audio_notsupport">音频解码器不支持</string>
+	<string name="mmp_video_stopresume">stop Resume</string>
+	<string name="mmp_can_notpause">Can Not Pause</string>
+	
+	<string name="mmp_photo_type_notsupport">图片格式不支持</string>
+
+	<string name="mmp_frame_photo_sleeptime">休眠时间</string>
+
+
+	<string name="mmp_sleeptime_lable">休眠时间:</string>
+	<string name="mmp_lable_rorate">旋转</string>
+	<string name="mmp_lable_degree">度</string>
+
+	<string name="mmp_lable_subtitle_off">Off</string>
+
+	<string name="mmp_menu_pic_setting">Picture Setting</string>
+	<string name="mmp_file_notsupport">文件不支持</string>
+	<string name="mmp_notsupport">不支持</string>
+	<string name="mmp_seek_notsupport">拖动不支持</string>
+	<string name="mmp_step_notsupport">单步不支持</string>
+	<string name="mmp_featue_notsupport">功能不可用</string>
+	<string name="mmp_nodevice">没有设备连接到电视!</string>
+	<string name="mmp_time_out">The time code you input is wrong!\nPlease assure it\'s less than total time</string>
+  <string name="mmp_file_corrupt">文件已损坏</string>
+  	<string name="mmp_menu_mount_iso">挂载当前ISO文件</string>
+	<string name="mmp_menu_unmount_iso">卸载当前设备</string>
+
+	<string name="mmp_txt_const_font">无</string>
+
+  <!-- Network -->
+</resources>

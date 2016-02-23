@@ -1,0 +1,3 @@
+on early-init
+    insmod_async /dtv_driver.ko.lock /dtv_driver.ko osd1_src_width=960 osd1_src_height=540 osd2_src_width=1280 osd2_src_height=720
+    write /proc/boottime ir:dtv_driver-720:early-init-done

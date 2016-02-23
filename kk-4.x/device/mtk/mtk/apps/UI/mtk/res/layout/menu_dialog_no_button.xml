@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/turnkey_comm_dialog" android:layout_gravity="center_horizontal"
+		android:background="@drawable/menu_longdialog_background"
+	android:layout_width="match_parent" android:layout_height="match_parent">
+	<TextView android:id="@+id/comm_dialog_title"
+		android:singleLine="true" android:gravity="center"
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		android:textSize="15sp" android:textStyle="bold" />
+	<TextView android:id="@+id/comm_dialog_text"
+		android:gravity="center" android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" android:layout_centerInParent="true"
+		android:singleLine="false" />
+	<LinearLayout android:layout_below="@id/comm_dialog_text" 
+		android:layout_centerHorizontal="true" android:layout_width="140dip"
+		android:layout_height="wrap_content" >
+		<TextView android:id="@+id/comm_dialog_wait" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:visibility="invisible" />
+
+		<com.mediatek.ui.setup.Loading
+		    android:id="@+id/comm_dialog_loading"
+		    style="@style/textViewStyle"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:focusable="false"
+		    android:gravity="center_horizontal"
+		    android:visibility="invisible" />
+
+	</LinearLayout>
+</RelativeLayout>

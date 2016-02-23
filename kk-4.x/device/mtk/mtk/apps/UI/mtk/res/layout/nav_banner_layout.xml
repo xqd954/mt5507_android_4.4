@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/banner_info_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/nav_banner_marginTop"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:visibility="visible" >
+
+    <!-- banner info top part : basic and simple info panel -->
+
+    <LinearLayout
+        android:id="@+id/banner_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/nav_banner_marginLeft"
+        android:background="@drawable/nav_infobar_basic_bg"
+        android:gravity="center" >
+
+        <!-- banner info top-left part : basic info panel -->
+
+        <LinearLayout
+            android:id="@+id/banner_basic_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/nav_banner_marginLeft"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <!-- current program name -->
+
+            <TextView
+                android:id="@+id/banner_current_program_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.35"
+                android:gravity="top|left"
+                android:text="@string/nav_channel_infoTitle"
+                android:textColor="@color/white"
+                android:textSize="@dimen/nav_textsize_normal" />
+
+            <!-- second line -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.35"
+                android:orientation="vertical" >
+
+                <!-- show no signal , no channels , locked tips -->
+
+                <TextView
+                    android:id="@+id/banner_special_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/nav_textsize_large"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/banner_basic_second_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <!-- current program duration -->
+
+                    <TextView
+                        android:id="@+id/banner_current_program_duration"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="left"
+                        android:textColor="@color/dark_yellow"
+                        android:textSize="@dimen/nav_textsize_timeduration" />
+                    <!-- current audio language -->
+
+                    <TextView
+                        android:id="@+id/banner_audio_language"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/nav_textsize_large" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- third line -->
+
+            <LinearLayout
+                android:id="@+id/banner_basic_third_line"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.30" >
+
+                <!-- left part of third line -->
+
+                <LinearLayout
+                    android:id="@+id/banner_basic_third_line_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <!-- left top part of third line -->
+
+                    <LinearLayout
+                        android:id="@+id/banner_next_program_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6" >
+
+                        <!-- next program duration -->
+
+                        <TextView
+                            android:id="@+id/banner_next_program_duration"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="left"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/nav_textsize_timeduration" />
+                        <!-- next program name -->
+
+                        <TextView
+                            android:id="@+id/banner_next_program_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left|center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/nav_textsize_timeduration" />
+                    </LinearLayout>
+
+                    <!-- left bottom part of third line -->
+
+                    <LinearLayout
+                        android:id="@+id/banner_basic_icons_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/nav_channel_list_padTop"
+                        android:layout_weight="4" >
+
+                        <!-- lock icon -->
+
+                        <TextView
+                            android:id="@+id/banner_channel_lock_icon"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:drawableRight="@drawable/nav_banner_lock_icon"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/nav_textsize_normal"
+                            android:visibility="invisible" />
+                        <!-- favorite icon -->
+
+                        <TextView
+                            android:id="@+id/banner_channel_favorite_icon"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            android:drawableLeft="@drawable/nav_infobar_favorite"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/nav_textsize_normal"
+                            android:visibility="visible" />
+                        
+                        <!-- ttx icon -->
+                        <TextView android:id="@+id/banner_channel_ttx_icon"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:drawableLeft="@drawable/nav_infobar_ttx_icon"
+                            android:visibility="invisible" />
+                        
+                        <!-- subtitle icon -->
+
+                        <TextView
+                            android:id="@+id/banner_channel_subtitle_icon"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"                    
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/nav_banner_icon_sttl"
+                            android:drawablePadding="@dimen/banner_channel_subtitle_icon_drawablePadding"
+
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/nav_textsize_timeduration"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- right part of third line -->
+
+                <LinearLayout
+                    android:id="@+id/banner_basic_third_line_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical" >
+
+                    <!-- video format -->
+
+                    <TextView
+                        android:id="@+id/banner_video_format"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/nav_textsize_large" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- banner info top-right part : simple info panel -->
+
+        <LinearLayout
+            android:id="@+id/banner_simple_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="3"
+            android:orientation="vertical" 
+            android:visibility="invisible">
+
+            <!-- channel number or source name -->
+
+            <TextView
+                android:id="@+id/banner_simple_first_line"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/nav_textsize_normal" />
+            <!-- second line of simple banner -->
+
+            <RelativeLayout
+                android:id="@+id/banner_simple_second_line_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <!-- channel name -->
+
+                <TextView
+                    android:id="@+id/banner_simple_channel_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/nav_channel_list_padTop"
+                    android:layout_marginTop="@dimen/nav_channel_list_padTop"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/nav_textsize_normal" />
+                <!-- input source locked icon -->
+
+                <ImageView
+                    android:id="@+id/banner_simple_lock_icon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:src="@drawable/nav_banner_lock_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <!-- third line of simple line -->
+
+            <RelativeLayout
+                android:id="@+id/banner_simple_third_line_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/banner_simple_third_middle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/dark_yellow"
+                    android:textSize="@dimen/nav_textsize_normal"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:id="@+id/banner_simple_type_time_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/banner_simple_receiver_type"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/dark_yellow"
+                        android:textSize="@dimen/nav_textsize_normal" />
+
+                    <TextView
+                        android:id="@+id/banner_simple_time"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/dark_yellow"
+                        android:textSize="@dimen/nav_textsize_normal" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- banner info bottom part : detail info panel -->
+
+    <LinearLayout
+        android:id="@+id/banner_detail_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nav_infobar_basic_bg" >
+
+        <!-- detail info content -->
+
+        <TextView
+            android:id="@+id/banner_detail_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:textColor="@color/white"
+            android:textSize="@dimen/nav_textsize_normal" />
+
+        <LinearLayout
+            android:id="@+id/banner_detail_info_right_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <!-- page up icon -->
+
+            <ImageView
+                android:id="@+id/banner_detail_info_uparrow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/nav_detail_icon_arrow_up" />
+            <!-- page num -->
+
+            <TextView
+                android:id="@+id/banner_detail_info_pagenum"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/nav_textsize_normal" />
+            <!-- page down icon -->
+
+            <ImageView
+                android:id="@+id/banner_detail_info_downarrow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/nav_detail_icon_arrow_down" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

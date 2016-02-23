@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:gravity="center_vertical"
+	android:background="@color/mmp_seek_time_color">
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:id="@+id/time_hour"
+		android:text="@string/mmp_time_inti" 
+		style="@style/mmp_time_text">
+	</TextView>
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:text="@string/mmp_time_separator"
+		style="@style/mmp_time_text" 
+		>
+	</TextView>
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:id="@+id/time_minute"
+		android:text="@string/mmp_time_inti"
+		style="@style/mmp_time_text">
+	</TextView>
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:text="@string/mmp_time_separator"
+		style="@style/mmp_time_text" 
+		>
+
+	</TextView>
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:id="@+id/time_seconds"
+		android:text="@string/mmp_time_inti" 
+		style="@style/mmp_time_text">
+	</TextView>
+</LinearLayout>

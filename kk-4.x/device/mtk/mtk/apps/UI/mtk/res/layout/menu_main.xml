@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menumain_relativeLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/tv_background"
+    android:focusable="true" >
+
+
+    <LinearLayout
+        android:id="@+id/layout_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/menu_bg"
+        android:nextFocusDown="@+id/menumain_tabmenubar"
+        android:orientation="vertical"
+        android:padding="@dimen/small_margin_edge" >
+
+        <com.mediatek.ui.menu.commonview.TabMenuButtonBar
+            android:id="@+id/menumain_tabmenubar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="2dip"
+            android:nextFocusDown="@+id/menumain_listView"
+            android:nextFocusUp="@+id/menumain_listView"
+            android:padding="1dip" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="@dimen/menu_main_left_margin_top"
+            android:layout_weight="0.1" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.72"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/menumain_left_icon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.2"
+                    android:scaleType="centerInside" />
+
+                <RelativeLayout
+                    android:id="@+id/menumain_left_function"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/menu_main_margin"
+                    android:layout_marginTop="@dimen/menu_main_draw_pad"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/menumain_left_ci"
+                        style="@style/menu_prompt_show"
+                        android:drawableLeft="@drawable/tk_cm_key_select_updown"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/menumain_left_enter"
+                        style="@style/menu_prompt_show"
+                        android:layout_below="@id/menumain_left_ci"
+                        android:layout_marginTop="@dimen/prompt_textview_margin"
+                        android:drawableLeft="@drawable/tk_cm_key_enter"
+                        android:text="@string/menu_enter" />
+
+                    <TextView
+                        android:id="@+id/menumain_left_select"
+                        style="@style/menu_prompt_show"
+                        android:layout_below="@id/menumain_left_enter"
+                        android:layout_marginTop="@dimen/prompt_textview_margin"
+                        android:drawableLeft="@drawable/tk_cm_key_select_updown"
+                        android:text="@string/menu_select" />
+
+                    <TextView
+                        android:id="@+id/menumain_left_exit"
+                        style="@style/menu_prompt_show"
+                        android:layout_below="@id/menumain_left_select"
+                        android:layout_marginTop="@dimen/prompt_textview_margin"
+                        android:drawableLeft="@drawable/tk_cm_key_exit"
+                        android:text="@string/menu_exit" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/menumain_framLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/large_margin_edge"
+                android:layout_weight="0.25" >
+
+                <!-- scan station and listView layout -->
+
+                <LinearLayout
+                    android:id="@+id/menumain_analog_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/large_margin_edge"
+                    android:layout_marginTop="@dimen/middle_margin_edge"
+                    android:focusable="true"
+                    android:gravity="center_horizontal"
+                    android:nextFocusDown="@+id/menumain_analog_layout"
+                    android:nextFocusLeft="@+id/menumain_analog_layout"
+                    android:nextFocusRight="@+id/menumain_analog_layout"
+                    android:nextFocusUp="@+id/menumain_analog_layout"
+                    android:visibility="gone" >
+
+                    <com.mediatek.ui.menu.commonview.AnalogProgressView
+                        android:id="@+id/menumain_factory_progresscomm"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/progressbar_height"
+                        android:layout_marginTop="@dimen/middle_margin_edge"
+                        android:background="@drawable/menu_dialog_background" />
+                </LinearLayout>
+                <!-- display text information:in the version used -->
+
+                <LinearLayout
+                    android:id="@+id/menumain_version_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dip"
+                    android:visibility="gone" >
+
+                    <com.mediatek.ui.menu.commonview.VersionInfoView
+                        android:id="@+id/menumain_versionlayout_comm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" />
+                </LinearLayout>
+                <!-- pure layout display text information:configuration information used -->
+
+
+                <!-- service for CI -->
+
+                <com.mediatek.ui.menu.commonview.CIMainView
+                    android:id="@+id/menumain_ci_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="10dip"
+                    android:layout_marginRight="@dimen/big_large_margin_edge"
+                    android:visibility="gone" />
+
+                <!-- main listView -->
+
+                <LinearLayout
+                    android:id="@+id/menumain_contentlist_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@id/menumain_analog_layout"
+                    android:orientation="vertical" >
+
+                    <com.mediatek.ui.menu.commonview.ChannelMenuView
+                        android:id="@+id/menumain_channelmenu"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="7dip"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="10dip"
+                        android:visibility="gone" />
+                    <!-- channel list displaying menu -->
+				<RelativeLayout android:layout_width="fill_parent"
+            		android:layout_height="fill_parent">
+            		
+            	<!-- 	<ImageView android:layout_width="20dp"
+            		android:layout_height="match_parent"
+            		android:background="@color/listviewedg"
+            		android:id="@+id/menuman_listView_edg"/>
+            		 -->
+            		
+            		 <com.mediatek.ui.menu.commonview.MenuSetUpListView
+                        android:id="@+id/menumain_listView_temp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/big_large_margin_edge"
+                        android:cacheColorHint="@color/menu_main_MenuSetUpListView"
+                        android:fadingEdge="none"
+                        android:fastScrollEnabled="true"
+                        android:focusable="true"
+                       	android:listSelector="@drawable/menu_optionbg"
+                        android:nextFocusDown="@id/menumain_listView"
+                        android:nextFocusLeft="@id/menumain_listView"
+                        android:nextFocusRight="@id/menumain_listView"
+                        android:nextFocusUp="@id/menumain_listView"
+                        android:scrollbars="none"
+                        android:visibility="gone"
+                        android:scrollingCache="false" />
+                        
+                        
+                    <com.mediatek.ui.menu.commonview.MenuSetUpListView
+                        android:id="@+id/menumain_listView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/big_large_margin_edge"
+                        android:cacheColorHint="@color/menu_main_MenuSetUpListView"
+                        android:fadingEdge="none"
+                        android:fastScrollEnabled="true"
+                        android:focusable="true"
+                       	android:listSelector="@drawable/menu_optionbg"
+                        android:nextFocusDown="@id/menumain_listView"
+                        android:nextFocusLeft="@id/menumain_listView"
+                        android:nextFocusRight="@id/menumain_listView"
+                        android:nextFocusUp="@id/menumain_listView"
+                        android:scrollbars="none"
+                        android:scrollingCache="false" />
+                        
+                        
+                     
+                        
+                        
+                 </RelativeLayout>
+                </LinearLayout>
+                <!-- channel list displaying bottom -->
+
+                <com.mediatek.ui.menu.commonview.ChannelMenuViewBottom
+                    android:id="@+id/menumain_channelmenu_bottom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="15dip"
+                    android:paddingBottom="10dip"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.mediatek.ui.menu.commonview.ChangeValueBarView
+        android:id="@+id/changeValueViewBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:focusable="true" />
+
+</RelativeLayout>

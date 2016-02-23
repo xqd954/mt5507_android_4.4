@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="setup_ini">Initial Setup</string>
+	<string name="setup_back">Back</string>
+	<string name="setup_select">Select</string>
+	<string name="setup_next">Next</string>
+	<string name="setup_exit">Exit</string>
+	<string name="setup_welcome">Welcome</string>
+	<string name="setup_welcome_set">Welcome to use the Wizard for Initial
+		Setup!!\nPlease press [ENTER] to start the wizard.</string>
+	<string name="setup_language">Language</string>
+	<string name="setup_select_language">Please select your language:</string>
+	<string name="setup_tunner">Tuner Mode</string>
+	<string name="setup_select_tuner">Please select your tuner mode：</string>
+	<string name="setup_channelscan">Channel Scan</string>
+	<string name="setup_set_setps">First,please connect antenna.\nStart channel scan
+		now?\nIf you skip this step,the channel scan could be performed in
+		Menu.</string>
+	<string name="setup_language_english">English</string>
+	<string name="setup_language_chinese">简体中文</string>
+	<string name="setup_tuner_antenna">Antenna</string>
+	<string name="setup_tuner_cable">Cable</string>
+	<string name="setup_scan">Scan</string>
+	<string name="setup_skip_scan">Skip Scan</string>
+	<string name="setup_complete">Complete</string>
+	<string name="setup_congratulations">Congratulations!\nCompleted Initial Setup.\nPlease
+		press [ENTER] to exit this wizard.</string>
+	<string name="setup_channel_scan_note">The channel scan may take a while to complete.
+	</string>
+	<string name="setup_channel_scan_status">Status:Scanning</string>
+	<string name="setup_channel_scan_analog">Analog Channels:</string>
+	<string name="setup_channel_scan_digital">Digital Channels:</string>
+	<string name="setup_cancel">Cancel</string>
+	<string name="setup_cancel_scan">The channel scan may take a while to
+		complete.\nStatus:Scan Cancel</string>
+	<string name="setup_channel_scan_status_complete">Status:Scan Complete</string>
+
+
+	<!-- char of simulation main view -->
+	<string name="nav_test_user_help">
+		[0-9]\t(0-9) To change channel.\n
+		[SOURCE]\t(A) To
+		display the input source list.\n
+		[TIMER]\t(B) To display the time.\n
+		[SLEEP]\t(C) To set the sleep time.\n
+		[ZOOM]\t(D) To select the zoom.\n
+		[PEFFECT]\t(E) To select the screen effect.\n
+		[SEFFECT]\t(F) To select
+		the sound effect.\n
+		[ASPECT]\t(G) To change the aspect ratio.\n
+		[CHUP]\t(O) To turn up the channel.\n
+		[CHDN]\t(Q) To turn down the
+		channel.\n
+		[MUTE]\t(R) To mute or un-mute the sound.\n
+		[VOLUME_UP]\t(M)
+		To turn up the volume.\n
+		[VOLUME_DOWN]\t(N) To turn down the volume.\n
+		[DPAD_CENTER]\t (ENTER) To display the channel list.\n
+		[INFO]\t(S) To
+		display the channel info.\n
+		[EJECT]\t(U) To display the channel info.\n
+		[PLAYPAUSE]\t(V) To display the favorite list.\n
+		[YELLOW]\t(K) To
+		select the type of the channel list.\n
+	</string>
+	<string name="nav_test_tv">TV</string>
+
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- ++++++++++ char of input source view++++++ -->
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++ -->
+	<string name="nav_source_main_title">Main</string>
+	<string name="nav_source_sub_title">Sub</string>
+
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- ++++++++++ char of channel list view ++++++ -->
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++ -->
+	<string name="nav_please_scan_channels">Please Scan Channels!</string>
+	<string name="nav_no_function">
+		No Function</string>
+	<string name="nav_select_list">Select Channel</string>
+	<string name="nav_page_up">Page Up</string>
+	<string name="nav_page_down">Page Down</string>
+	<string name="nav_exit">Exit</string>
+	<!-- <string name="nav_channel_list">Channel List - All</string> -->
+	<string name="nav_channel_list">Channel List</string>
+
+	<string name="nav_channel_list_title_str">Channel List - </string>
+	<string name="nav_channel_selection">Channel List Selection</string>
+	<string name="nav_channel_details">Channel Details</string>
+	<string name="nav_volume_main">Master Volume</string>
+	<string name="nav_parent_psw">Password</string>
+	<string name="nav_parent_wrong_psw">Password incorrect.\n Please enter again! </string>
+
+	<string name="nav_channel_antenna">Antenna</string>
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- ++++++++++ char of favorite list view ++++++ -->
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++ -->
+	<string name="nav_favorite_list">Favorite List</string>
+	<string name="nav_favorite_select">Select</string>
+
+	<string name="nav_channel_infoNum">815</string>
+	<string name="nav_channel_infoName">Jade</string>
+	<string name="nav_channel_infoFormat">640X480@60Hz</string>
+	<string name="nav_channel_infoType">Antenna</string>
+	<string name="nav_channel_infoTime">19:19</string>
+	<string name="nav_channel_infoMiddle_special">Retrieving Data...</string>
+	<string name="nav_channel_infoTitle">(No program Title.)</string>
+	<string name="nav_channel_infoDuration">3:35 - 3:40</string>
+	<string name="nav_channel_infoNextDuration">Insite the Stock ExChange</string>
+	<string name="nav_channel_infoAudioLanguage">1/2 Chinese</string>
+	<string name="nav_channel_infoFormatField">Stereo</string>
+	<string name="nav_channel_infoNoProgram">(No Program Details.)</string>
+	<string name="nav_channel_infoSubtitle">Chi</string>
+	<string name="nav_channel_infoInfoField">576i SD</string>
+
+	<string name="nav_no_signal">No Signal!</string>
+	<string name="nav_no_support">No Support!</string>
+	<string name="nav_channel_has_locked">Channel Locked!</string>
+	<string name="nav_input_has_locked">Input Locked!</string>
+	<string name="nav_channel_audio_scrambled">Scrambled Audio</string>
+	<string name="nav_channel_video_scrambled">Scrambled Video</string>	
+	<string name="nav_sleep_label">Sleep:</string>
+	<string name="nav_sleep_off"> Off</string>
+	<string name="nav_sleep_minutes"> Minutes</string>
+	<string name="nav_resolution_null">No Video</string>
+	<string name="nav_channel_retrieving">Retrieving Data...</string>
+	<string name="nav_unknown_audio">unknown audio</string>
+	<string name="nav_unknown_stereo">unknown stereo</string>
+	<string name="nav_unknown_audio_sundry">Unknown</string>
+
+	<!--  for epg -->
+	<string name="nav_epg_type"> Type</string>
+	<string name="nav_epg_sub_type"> Sub Type</string>
+
+	<!-- for capture logo (YELLOW KEY) -->
+	<string name="cplogo_title">Capture Logo</string>
+	<string name="cplogo_bt_ok">Ok</string>
+	<string name="cplogo_bt_cancel">Cancel</string>
+	<string name="cplogo_bt_full_screen">Full Screen</string>
+	<string name="cplogo_bt_special_area">Special Area</string>
+	<string name="cplogo_bt_no">No</string>
+	<string name="cplogo_bt_adjust">Adjust</string>
+	<string name="cplogo_msg_which_screen">Do you want to capture full screen or special area?
+	</string>
+	<string name="cplogo_msg_this_screen">Do you want to capture this screen?</string>
+	<string name="cplogo_msg_select_position">Please select a position to save the logo</string>
+	<string name="cplogo_msg_capturing">Capturing ...</string>
+	<string name="cplogo_msg_adjust_position">Do you want to adjust the position of the special
+		area?</string>
+	<string name="cplogo_msg_res_success">Capture successfully</string>
+	<string name="cplogo_msg_res_fail">Capture failed, please try again</string>
+	<string name="cplogo_capture_res_cancel">This operation has been canceled</string>
+
+	<string name="vga_no_sinal_info">No signal. The power will be turned off.</string>
+
+	<!-- for epg -->
+	<string name="epg_bottom_prev_day">Prev day</string>
+	<string name="epg_bottom_next_day">Next day</string>
+	<string name="epg_bottom_view_detail">View detail</string>
+	<string name="epg_bottom_type_filter">Type filter</string>
+
+	<string name="epg_info_program_type">None</string>
+	<string name="epg_password">Password</string>
+	<string name="epg_password_message">password is wrong</string>
+	<string name="epg_retrieving_show">Retrieving...</string>
+
+
+</resources>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+	<string-array name="nav_channel_types">
+		<item>全部</item>
+		<!--<item>模拟</item>
+		<item>数字</item>
+		--><item>广播</item>
+	</string-array>
+
+
+	<string-array name="nav_sleep_strings">
+		<item>睡眠：关</item>
+		<item>睡眠：10分钟</item>
+		<item>睡眠：20分钟</item>
+		<item>睡眠：30分钟</item>
+		<item>睡眠：40分钟</item>
+		<item>睡眠：50分钟</item>
+		<item>睡眠：60分钟</item>
+		<item>睡眠：90分钟</item>
+		<item>睡眠：120分钟</item>
+	</string-array>
+	<string-array name="nav_zoom_strings">
+		<item>缩放x1</item>
+		<item>缩放x2</item>
+		<item>缩放x1/2</item>
+	</string-array>
+
+	<!-- OFF, Rock, Pop, Live, Dance, Techno, Classic and Soft -->
+	<string-array name="nav_s_effect_strings">
+		<item>用户</item>
+		<item>标准</item>
+		<item>现场1</item>		
+	</string-array>
+
+	<string-array name="nav_freeze_strings">
+		<item>冻结：开</item>
+		<item>冻结：关</item>
+	</string-array>
+
+	<!-- MTS -->
+	<string-array name="nav_mts_strings">
+		<item>未知</item>
+		<item>单声道</item>
+		<item>立体声</item>
+		<item>SUB_LANG</item>
+		<item>DUAL1</item>
+		<item>DUAL2</item>
+		<item>NICAM_MONO</item>
+		<item>NICAM_STEREO</item>
+		<item>NICAM_DUAL1</item>
+		<item>NICAM_DUAL2</item>
+		<item>FM_MONO</item>
+		<item>FM_STEREO</item>
+	</string-array>
+	
+	<!-- AUDIO_TVCM -->
+	<string-array name="nav_audio_tvcm_strings">
+		<item>baq</item>
+		<item>eus</item>
+		<item>bul</item>
+		<item>cat</item>
+		<item>scr</item>
+		<item>cze</item>
+		<item>dan</item>
+		<item>dut</item>
+		<item>eng</item>
+		<item>fin</item>
+		<item>fre</item>
+		<item>gla</item>
+		<item>gdh</item>
+		<item>gle</item>
+		<item>glg</item>
+		<item>ger</item>
+		<item>gre</item>
+		<item>hun</item>
+		<item>ita</item>
+		<item>nor</item>
+		<item>pol</item>
+		<item>por</item>
+		<item>rum</item>
+		<item>rus</item>
+		<item>scc</item>
+		<item>slo</item>
+		<item>slv</item>
+		<item>spa</item>
+		<item>swe</item>
+		<item>tur</item>
+		<item>wel</item>
+		<item>ice</item>
+		<item>isl</item>
+		<item>smi</item>
+		<item>tha</item>
+		<item>vie</item>
+		<item>ara</item>
+		<item>zho</item>
+		<item>chi</item>
+		<item>per</item>
+		<item>kor</item>
+		<item>est</item>
+		<item>mao</item>
+		<item>cmn</item>
+		<item>yue</item>
+		<item>jpn</item>
+		<item>hin</item>
+		<item>nar</item>
+		<item>qaa</item>
+		<item>und</item>
+	</string-array>
+
+	<!-- AUDIO -->
+	<string-array name="nav_audio_strings">
+		<item>巴斯克语</item>
+		<item>巴斯克语</item>
+		<item>保加利亚语</item>
+		<item>加泰罗尼亚语</item>
+		<item>克罗地亚语</item>
+		<item>捷克语</item>
+		<item>丹麦语</item>
+		<item>荷兰语</item>
+		<item>英语</item>
+		<item>芬兰语</item>
+		<item>法语</item>
+		<item>盖尔语</item>
+		<item>盖尔语</item>
+		<item>爱尔兰</item>
+		<item>加利西亚语</item>
+		<item>德语</item>
+		<item>希腊语</item>
+		<item>匈牙利语</item>
+		<item>意大利语</item>
+		<item>挪威语</item>
+		<item>波兰语</item>
+		<item>葡萄牙语</item>
+		<item>罗马尼亚语</item>
+		<item>俄语</item>
+		<item>塞尔维亚</item>
+		<item>斯洛伐克语</item>
+		<item>斯洛文尼亚语</item>
+		<item>西班牙语</item>
+		<item>瑞典语</item>
+		<item>土耳其语</item>
+		<item>威尔士语</item>
+		<item>冰岛语</item>
+		<item>冰岛语</item>
+		<item>萨米语</item>
+		<item>泰语</item>
+		<item>越南语</item>
+		<item>阿拉伯语</item>
+		<item>繁体中文</item>
+		<item>简体中文</item>
+		<item>波斯语</item>
+		<item>韩语</item>
+		<item>爱沙尼亚语</item>
+		<item>毛利语</item>
+		<item>普通话</item>
+		<item>粤语</item>
+		<item>日语</item>
+		<item>印地语</item>
+		<item>叙述</item>
+		<item>原始音频</item>
+		<item>未定义</item>
+	</string-array>
+
+	<string-array name="nav_epg_filter_type">
+		<item>电影</item>
+		<item>新闻</item>
+		<item>时装秀</item>
+		<item>运动</item>
+		<item>少儿节目</item>
+		<item>音乐</item>
+		<item>艺术</item>
+		<item>社会</item>
+		<item>教育</item>
+		<item>休闲</item>
+		<item>专题</item>
+	</string-array>
+
+	<string-array name="nav_epg_subtype_movie">
+		<item>戏剧</item>
+		<item>侦探</item>
+		<item>冒险片</item>
+		<item>科幻</item>
+		<item>戏剧</item>
+		<item>肥皂剧</item>
+		<item>爱情片</item>
+		<item>严肃片</item>
+		<item>成人电影</item>
+	</string-array>
+
+	<string-array name="nav_epg_subtype_news">
+		<item>时事</item>
+		<item>天气预报</item>
+		<item>新闻杂志</item>
+		<item>纪录片</item>
+		<item>讨论</item>
+	</string-array>
+	<string-array name="nav_epg_subtype_show">
+		<item>时装秀</item>
+		<item>游戏</item>
+		<item>综艺节目</item>
+		<item>脱口秀</item>
+	</string-array>
+
+	<string-array name="nav_epg_subtype_sports">
+		<item>运动</item>
+		<item>专题</item>
+		<item>运动杂志</item>
+		<item>足球</item>
+		<item>网球</item>
+		<item>团队运动</item>
+		<item>田径</item>
+		<item>赛车运动</item>
+		<item>水上运动</item>
+		<item>冬季运动</item>
+		<item>马术</item>
+		<item>武术</item>
+	</string-array>
+
+	<string-array name="nav_epg_subtype_children">
+		<item>少儿节目</item>
+		<item>学龄前少儿节目</item>
+		<item>娱乐（6-14岁）</item>
+		<item>娱乐（10-16岁）</item>
+		<item>信息</item>
+		<item>卡通片</item>
+	</string-array>
+
+	<string-array name="nav_epg_subtype_music">
+		<item>音乐</item>
+		<item>摇滚</item>
+		<item>严肃片</item>
+		<item>民歌</item>
+		<item>爵士乐</item>
+		<item>音乐剧</item>
+		<item>芭蕾</item>
+	</string-array>
+
+	<string-array name="nav_epg_subtype_arts">
+		<item>艺术</item>
+		<item>表演艺术</item>
+		<item>纯艺术</item>
+		<item>宗教</item>
+		<item>大众文化</item>
+		<item>文学</item>
+		<item>电影</item>
+		<item>实验</item>
+		<item>广播</item>
+		<item>新媒体</item>
+		<item>艺术杂志</item>
+		<item>时尚</item>
+	</string-array>
+
+	<string-array name="nav_epg_subtype_social">
+		<item>社会</item>
+		<item>杂志</item>
+		<item>经济</item>
+		<item>名人传记</item>
+	</string-array>
+
+	<string-array name="nav_epg_subtype_education">
+		<item>教育</item>
+		<item>自然</item>
+		<item>科技</item>
+		<item>医学</item>
+		<item>外国</item>
+		<item>社会科学</item>
+		<item>继续教育</item>
+		<item>语言</item>
+	</string-array>
+
+	<string-array name="nav_epg_subtype_leisure">
+		<item>休闲爱好</item>
+		<item>旅游</item>
+		<item>手工艺</item>
+		<item>驾车</item>
+		<item>健身与健康</item>
+		<item>厨艺</item>
+		<item>广告</item>
+		<item>园艺</item>
+	</string-array>
+
+	<string-array name="nav_epg_subtype_special">
+		<item>原语</item>
+		<item>黑白</item>
+		<item>未发行</item>
+		<item>现场直播</item>
+	</string-array>
+
+	<string-array name="nav_bottom_volume">
+		<item>主音量</item>
+		<item>前左声道音量</item>
+		<item>前右声道音量</item>
+		<item>后左声道音量</item>
+		<item>后右声道音量</item>
+		<item>中置声道音量</item>
+		<item>超低音音量</item>
+	</string-array>
+	
+	 <string-array name="nav_zoom_mode">
+		<item>缩放 x 1/2</item>
+		<item>缩放 x 1</item>
+		<item>缩放 x 2</item>
+	</string-array>
+	
+	<string-array name="nav_receiver_type">
+		<item>电缆</item>
+		<item>天线</item>
+	</string-array>
+
+	<string-array name="pvr_tshift_initdisk_step1">
+		<item>自动</item>
+		<item>手动</item>
+	</string-array>
+	<string-array name="pvr_tshift_initdisk_step_format">
+		<item>格式化</item>
+		<item>跳过</item>
+	</string-array>
+	<string-array name="pvr_tshift_initdisk_step_formatconfirm">
+		<item>格式化</item>
+		<item>取消</item>
+	</string-array>
+	
+	<string-array name="week_day">
+	    <item>星期日</item>
+		<item>星期一</item>
+		<item>星期二</item>
+		<item>星期三</item>
+		<item>星期四</item>
+		<item>星期五</item>
+		<item>星期六</item>
+	</string-array>
+	
+</resources>

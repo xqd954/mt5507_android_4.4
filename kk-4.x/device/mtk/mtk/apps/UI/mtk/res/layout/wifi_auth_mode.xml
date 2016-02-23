@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent">
+	<LinearLayout android:layout_width="wrap_content" android:id="@+id/wifi_auth_mode_btn_layout"
+		android:layout_height="wrap_content" android:orientation="vertical">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:textColor="@color/white"
+			android:layout_marginLeft="10dip"
+			android:textSize="20dip" android:text="@string/menu_wifi_select_auth_mode">
+		</TextView>
+		<Button android:id="@+id/wifi_auth_none" android:background="@drawable/wifi_main_selector"
+			android:layout_width="800dip" android:layout_height="45dip"
+			android:textColor="@color/white" android:textSize="20dip"
+			android:text="@string/menu_wifi_auth_mode_none" android:gravity="center_vertical"
+			android:layout_marginTop="20dip">
+		</Button>
+		<Button android:id="@+id/wifi_auth_wep" android:background="@drawable/wifi_main_selector"
+			android:layout_width="800dip" android:layout_height="45dip"
+			android:textColor="@color/white" android:textSize="20dip"
+			android:text="@string/menu_wifi_auth_mode_wep" android:gravity="center_vertical"
+			android:layout_marginTop="20dip">
+		</Button>
+		<!--  <Button android:id="@+id/wifi_auth_wpa_tkip"
+			android:background="@drawable/wifi_main_selector"
+			android:layout_width="800dip" android:layout_height="45dip"
+			android:textColor="@color/white" android:textSize="20dip"
+			android:text="@string/menu_wifi_auth_mode_wpa_tkip" android:gravity="center_vertical"
+			android:layout_marginTop="20dip">
+		</Button>
+		<Button android:id="@+id/wifi_auth_wpa_aes" android:background="@drawable/wifi_main_selector"
+			android:layout_width="800dip" android:layout_height="45dip"
+			android:textColor="@color/white" android:textSize="20dip"
+			android:text="@string/menu_wifi_auth_mode_wpa_aes" android:gravity="center_vertical"
+			android:layout_marginTop="20dip">
+		</Button>
+		<Button android:id="@+id/wifi_auth_wpa2_tkip"
+			android:background="@drawable/wifi_main_selector"
+			android:layout_width="800dip" android:layout_height="45dip"
+			android:textColor="@color/white" android:textSize="20dip"
+			android:text="@string/menu_wifi_auth_mode_wpa2_tkip" android:gravity="center_vertical"
+			android:layout_marginTop="20dip">
+		</Button>
+		<Button android:id="@+id/wifi_auth_wpa_aes" android:background="@drawable/wifi_main_selector"
+			android:layout_width="800dip" android:layout_height="45dip"
+			android:textColor="@color/white" android:textSize="20dip"
+			android:text="@string/menu_wifi_auth_mode_wpa2_aes" android:gravity="center_vertical"
+			android:layout_marginTop="20dip">
+		</Button>-->
+		<Button android:id="@+id/wifi_auth_wpa_auto"
+			android:background="@drawable/wifi_main_selector"
+			android:layout_width="800dip" android:layout_height="45dip"
+			android:textColor="@color/white" android:textSize="20dip"
+			android:text="@string/menu_wifi_auth_mode_auto" android:gravity="center_vertical"
+			android:layout_marginTop="20dip">
+		</Button>
+	</LinearLayout>
+</RelativeLayout>

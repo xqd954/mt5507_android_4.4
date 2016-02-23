@@ -1,0 +1,4 @@
+on post-fs-data
+    mkdir /data/coredump
+    chmod 777 /data/coredump
+    write /proc/sys/kernel/core_pattern /data/coredump/core_%e_sig%s_pid%p

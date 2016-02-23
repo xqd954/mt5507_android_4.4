@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pj="http://schemas.android.com/apk/res/com.mediatek.ui"
+    xmlns:bm="com.mediatek.ui"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:id="@+id/mmp_main_layout"
+    >
+
+    <LinearLayout
+        android:id="@+id/mmp_main_top"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="5"
+        android:background="@drawable/tk_cm_top_bg"
+        >
+    </LinearLayout>
+
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@drawable/tk_cm_mid_bg"
+        android:baselineAligned="false"
+        android:gravity="center">
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+           ></LinearLayout>
+
+          
+		<com.mediatek.ui.mmp.carousel.controls.Carousel
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"	
+		        android:layout_weight="5"
+			    android:id="@+id/carousel"  
+			    pj:UseReflection="true"
+			    pj:Items="@array/entries" 
+			    pj:SelectedItem="0"
+			    android:animationDuration="500"
+		        android:gravity="center"
+		        android:visibility="gone"
+			/>    	
+	        
+          
+	    <LinearLayout
+	        android:id="@+id/mmp_btn_layout"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="5"
+	        android:gravity="center"
+	         android:visibility="gone">
+	        
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	           >
+	
+	            <TextView
+	                android:id="@+id/mmp_btn_photo"
+	                style="@style/multimedia_gv_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="10dp"
+	                android:background="@drawable/mmp_gridbg"
+	                android:drawableTop="@drawable/mmp_mainmenu_icon_photo"
+	                android:ellipsize="end"
+	                android:focusable="true"
+	                android:gravity="center"
+	                android:singleLine="true"
+	                android:text="@string/mmp_menu_phototext" >
+	            </TextView>
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:focusable="true"
+	            android:gravity="center"
+	           >
+	
+	            <TextView
+	                android:id="@+id/mmp_btn_audio"
+	                style="@style/multimedia_gv_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="10dp"
+	                android:background="@drawable/mmp_gridbg"
+	                android:drawableTop="@drawable/mmp_mainmenu_icon_audio"
+	                android:ellipsize="end"
+	                android:focusable="true"
+	                android:gravity="center"
+	                android:nextFocusLeft="@id/mmp_btn_photo"
+	                android:singleLine="true"
+	                android:text="@string/mmp_menu_music" >
+	            </TextView>
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:focusable="true"
+	            android:gravity="center"
+	            >
+	
+	            <TextView
+	                android:id="@+id/mmp_btn_video"
+	                style="@style/multimedia_gv_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="10dp"
+	                android:background="@drawable/mmp_gridbg"
+	                android:drawableTop="@drawable/mmp_mainmenu_icon_video"
+	                android:ellipsize="end"
+	                android:focusable="true"
+	                android:gravity="center"
+	                android:nextFocusLeft="@id/mmp_btn_audio"
+	                android:singleLine="true"
+	                android:text="@string/mmp_menu_video" >
+	            </TextView>
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            >
+	
+	            <TextView
+	                android:id="@+id/mmp_btn_text"
+	                style="@style/multimedia_gv_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="10dp"
+	                android:background="@drawable/mmp_gridbg"
+	                android:drawableTop="@drawable/mmp_mainmenu_icon_text"
+	                android:ellipsize="end"
+	                android:focusable="true"
+	                android:gravity="center"
+	                android:nextFocusLeft="@id/mmp_btn_video"
+	                android:nextFocusRight="@id/mmp_btn_photo"
+	                android:singleLine="true"
+	                android:text="@string/mmp_menu_text" >
+	            </TextView>
+	        </LinearLayout>
+	    </LinearLayout>
+	     <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            
+	            >
+	     </LinearLayout>
+	</LinearLayout>
+    
+    <TableLayout
+        android:id="@+id/mmp_main_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+     	android:layout_weight="5"
+        android:background="@drawable/tk_cm_top_bg"
+        android:gravity="center"
+        android:shrinkColumns="*"
+        android:stretchColumns="*" 
+        >
+
+        <TableRow >
+
+            <TextView
+                style="@style/multimedia_com_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/tk_cm_key_select_updown"
+                android:text="@string/mmp_select" >
+            </TextView>
+
+            <TextView
+                style="@style/multimedia_com_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/tk_cm_key_enter"
+                android:text="@string/mmp_input" >
+            </TextView>
+
+            <TextView
+                style="@style/multimedia_com_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/tk_cm_key_exit"
+                android:text="@string/mmp_exit" >
+            </TextView>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

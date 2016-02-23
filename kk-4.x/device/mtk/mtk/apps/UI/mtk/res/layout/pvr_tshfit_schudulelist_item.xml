@@ -1,0 +1,175 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/nav_capture_logo_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/schedulelist_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/pvr_tshift_textsize_23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:gravity="center_horizontal"
+                android:padding="25dip"
+                android:text="@string/pvr_schedulepvr_schedule_list"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/schedulelist_item_title_diskinfo"
+                style="@style/pvr_tshift_textsize_23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:gravity="center_horizontal"
+                android:padding="25dip"
+                android:text="@string/pvr_schedulepvr_diskinfo"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/playlist_hint"
+            style="@style/pvr_tshift_textsize_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:stretchColumns="0"
+            android:textColor="@color/white" >
+
+            <TableRow>
+
+                <ImageView
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dip"
+                    android:src="@drawable/pvr_add_schedule" />
+
+                <TextView
+                    android:layout_column="1"
+                    android:padding="3dip"
+                    android:text="@string/pvr_schedulepvr_add_schedule"
+                    android:textAppearance="@style/nav_pvr_filelist_text" />
+
+                <ImageView
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dip"
+                    android:src="@drawable/tk_cm_key_select_updown" />
+
+                <TextView
+                    android:layout_column="1"
+                    android:padding="3dip"
+                    android:text="@string/pvr_schedulepvr_selected"
+                    android:textAppearance="@style/nav_pvr_filelist_text" />
+
+                <ImageView
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:padding="5dip"
+                    android:src="@drawable/tk_cm_key_exit" />
+
+                <TextView
+                    android:layout_column="1"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:text="@string/pvr_schedulepvr_exit"
+                    android:textAppearance="@style/nav_pvr_filelist_text" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:id="@+id/schedulelist_item_btns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/playlist_hint"
+            android:layout_alignParentRight="true"
+            
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="60sp"
+            android:orientation="horizontal"
+            android:padding="2dip" >
+
+            <Button
+                android:id="@+id/schedulelist_item_btn_first"
+                style="@style/pvr_tshift_schedulelist_btns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pvr_schedule_replace" />
+
+            <Button
+                android:id="@+id/schedulelist_item_btn_second"
+                style="@style/pvr_tshift_schedulelist_btns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pvr_schedule_add" />
+
+            <Button
+                android:id="@+id/schedulelist_item_btn_third"
+                style="@style/pvr_tshift_schedulelist_btns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pvr_schedule_cancel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/schedulelist_item_weeklist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/schedulelist_item_btns"
+            android:layout_centerHorizontal="true"
+            android:padding="1dip" 
+            android:layout_marginLeft="55dp"
+            android:focusable="true"
+            >
+
+            <GridView
+                android:id="@+id/week_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:focusable="true"
+                android:horizontalSpacing="10dp"
+                android:layout_marginLeft="55dp"
+                android:listSelector="@drawable/mmp_listselected"
+                android:nextFocusUp="@+id/schedulelist_item_list"
+                android:numColumns="4" >
+            </GridView>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/schedulelist_item_list"
+            style="@style/pvr_tshift_textsize_20"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/schedulelist_item_weeklist"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/schedulelist_item_title"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:dividerHeight="0dip"
+            android:gravity="center_horizontal"
+            android:listSelector="@drawable/mmp_listselected"
+            android:nextFocusDown="@+id/week_gridview"
+            android:padding="0dip"
+            android:textColor="@color/white" >
+        </ListView>
+    </RelativeLayout>
+
+</LinearLayout>

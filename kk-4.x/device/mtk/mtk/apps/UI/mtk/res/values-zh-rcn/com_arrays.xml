@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--Screen mode-->
+	<string-array name="screen_mode_array">
+		<item>未知</item>
+		<item>普通</item>
+		<item>信箱</item>
+		<item>缩放</item>
+		<item>用户</item>
+		<item>全景</item>
+		<item>逐点</item>
+		<item>自动</item>
+		<item>客户定义 1</item>
+		<item>客户定义 2</item>
+		<item>客户定义 3</item>
+		<item>客户定义 4</item>
+		<item>客户定义 5</item>
+		<item>客户定义 6</item>
+		<item>客户定义 7</item>
+		<item>NLZ Custom Def 0</item>
+		<item>NLZ Custom Def 1</item>
+		<item>NLZ Custom Def 2</item>
+		<item>NLZ Custom Def 3</item>
+	</string-array>
+
+	<!--Picture effect-->
+	<string-array name="picture_effect_array">
+		<item>用户</item>
+		<item>影院</item>
+		<item>运动</item>
+		<item>逼真</item>
+		<item>高亮度</item>
+	</string-array>
+
+</resources>

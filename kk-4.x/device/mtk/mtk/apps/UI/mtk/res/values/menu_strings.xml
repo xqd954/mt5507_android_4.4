@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- parameter configuration module Navigation bar -->
+	<string name="menu_interface_name">Menu</string>
+	<string name="menu_show_menu_item">Video</string>
+	<string name="menu_tab_video">Video</string>
+	<string name="menu_tab_audio">Audio</string>
+	<string name="menu_tab_tv">TV</string>
+	<string name="menu_tab_setup">Setup</string>
+	<string name="menu_tab_parent">Parental</string>
+
+	<!-- parameter configuration module function prompt-->
+	<string name="menu_enter">Enter</string>
+	<string name="menu_select">Select</string>
+	<string name="menu_exit">Exit</string>
+	<string name="menu_adjust">Adjust</string>
+	<string name="menu_back">Back</string>
+	<string name="menu_set">Set</string>
+	<string name="menu_ok">OK</string>
+	<string name="menu_cancel">Cancel</string>
+	<string name="menu_ci_close">Close CI</string>
+	<string name="menu_scan">Scan</string>
+
+	<!-- the parameter of Video,item display interface strings to be defined -->
+	<string name="menu_video_picture_mode">Picture Mode</string>
+	<string name="menu_video_backlight">Back Light</string>
+	<string name="menu_video_brighttness">Brightness</string>
+	<string name="menu_video_contrast">Contrast</string>
+	<string name="menu_video_saturation">Saturation</string>
+	<string name="menu_video_hue">HUE</string>
+	<string name="menu_video_sharpness">Sharpness</string>
+	<string name="menu_video_gamma">Gamma</string>
+	<string name="menu_video_color_temperature">Color Temperature</string>
+	<string name="menu_video_color_g_red">R Gain</string>
+	<string name="menu_video_color_g_green">G Gain</string>
+	<string name="menu_video_color_g_blue">B Gain</string>
+	<string name="menu_video_advancedvideo">Advanced Video</string>
+	<string name="menu_video_3d">3D</string>
+	<string name="menu_video_3d_mode">3D Mode</string>
+	<string name="menu_video_3d_nav">3D Navigation</string>
+	<string name="menu_video_3d_3t2">3D-to-2D</string>
+	<string name="menu_video_3d_depth_field">Depth of Field</string>
+	<string name="menu_video_3d_protrude">Protrude</string>
+	<string name="menu_video_3d_distance">Distance to TV</string>
+	<string name="menu_video_3d_image_safety">Image Safety</string>
+	<string name="menu_video_3d_leftright">L-R Switch</string>
+	<string name="menu_video_3d_osd">OSD Depth</string>
+	<string name="menu_video_3d_wear_glass">Please Wear 3D Glasses!</string>
+	<string name="menu_video_vga_mode">VGA Mode</string>
+	<string name="menu_video_dnr">DNR</string>
+	<string name="menu_video_mpeg_nr">MPEG NR</string>
+	<string name="menu_video_luma">Adaptive Luma Control</string>
+	<string name="menu_video_flesh_tone">Flesh Tone</string>
+	<string name="menu_video_di_film_mode">DI Film Mode</string>
+	<string name="menu_video_blue_stretch">Blue Stretch</string>
+	<string name="menu_video_wme_mode">Game Mode</string>
+	<string name="menu_video_pq_split_mode">PQ split screen Demo</string>
+	<string name="menu_video_mjc">MJC</string>
+	<string name="menu_video_mjc_effect">Effect</string>
+	<string name="menu_video_mjc_demo_partition">Demo Partition</string>
+	<string name="menu_video_mjc_mode">Mode</string>
+	<string name="menu_video_mjc_demo">Demo</string>
+	<string name="menu_video_hdmi_mode">HDMI Mode</string>
+	<string name="menu_video_vga">VGA</string>
+	<string name="menu_video_auto_adjust">Auto Adjust</string>
+	<string name="menu_video_hposition">H.Position</string>
+	<string name="menu_video_vposition">V.Position</string>
+	<string name="menu_video_phase">Phase</string>
+	<string name="menu_video_clock">Clock</string>
+	<string name="menu_video_3d_leftright_str">Left/Right</string>
+	<string name="menu_video_3d_updown_str">UP/Down</string>
+	<string name="menu_video_mjc_demo_off">Off</string>
+	<string name="menu_video_mjc_demo_on">On</string>
+	
+	<!-- the parameter of Audio,item display interface strings to be defined -->
+	<string name="menu_audio_balance">Balance</string>
+	<string name="menu_audio_bass">Bass</string>
+	<string name="menu_audio_treble">Treble</string>
+	<string name="menu_audio_srs_mode">Sound Surround</string>
+	<string name="menu_audio_equalize">Equalizer</string>
+	<string name="menu_audio_speaker_mode">Speaker</string>
+	<string name="menu_audio_spdif_mode">SPDIF Type</string>
+	<string name="menu_audio_spdif_delay">SPDIF Delay</string>
+	<string name="menu_audio_avc_mode">Auto Volume Control</string>
+	<string name="menu_audio_type">Type</string>
+	<string name="menu_audio_visually_impaired">Visually Impaired</string>
+	<string name="menu_audio_visually_speaker">Speaker</string>
+	<string name="menu_audio_visually_headphone">Headphone</string>
+	<string name="menu_audio_visually_volume">Volume</string>
+
+	<!-- the parameter of TV item display interface strings to be defined-->
+	<string name="menu_tv_tuner_mode">Tuner Mode</string>
+	<string name="menu_tv_mts">Audio Channel</string>
+	<string name="menu_tv_audio_language">Audio Language</string>
+	<string name="menu_tv_audio_language2nd">Audio Language 2nd</string>	
+	<string name="menu_tv_channels">Channels</string>
+	<string name="menu_tv_channel_scan">Channel Scan</string>
+	<string name="menu_tv_tv_system">TV System</string>
+	<string name="menu_tv_color_system">Color System</string>
+	<string name="menu_tv_update_scan">Update Scan</string>
+	<string name="menu_tv_analog_manual_scan">Analog Manual Scan</string>
+	<string name="menu_tv_single_rf_scan">Single RF Scan</string>
+	<string name="menu_tv_channel_edit">Channel Edit</string>
+	<string name="menu_tv_clear_channel_list">Clear Channel List</string>
+	<string name="menu_tv_freeze_channel">Freeze Channel</string>
+	<string name="menu_tv_status">Status</string>
+	<string name="menu_tv_status_value">Scanning</string>
+	<string name="menu_tv_analog_channels">Analog Channels</string>
+	<string name="menu_tv_digital_channels">Digital  Channels</string>
+	<string name="menu_tv_start_frequency">Start Frequency(MHz)</string>
+	<string name="menu_tv_end_frequency">End Frequency(MHz)</string>
+	<string name="menu_tv_rf_scan_frequency">Scan Frequency(MHz)</string>
+	<string name="menu_tv_rf_scan_mode">QAM Style</string>
+	<string name="menu_tv_rf_sym_rate">Symbolrate</string>
+	<string name="menu_tv_rf_signal_level">Signal Level: </string>
+	<string name="menu_tv_insert">Insert</string>
+	<string name="menu_tv_delete">Delete</string>
+	<string name="menu_tv_swap">Swap</string>
+	<string name="menu_tv_number">Num.</string>
+	<string name="menu_tv_type">Type</string>
+	<string name="menu_tv_frequency">Freq.</string>
+	<string name="menu_tv_system">System</string>
+	<string name="menu_tv_name">Name</string>
+	<string name="menu_tv_skip">Skip</string>
+	<string name="menu_tv_scann_allchannels">Scan All Channels.</string>
+
+	<!-- DTMB Single RF Channel -->
+	<string name="menu_tv_single_rf_channel">RF Channel</string>
+	<string name="menu_tv_single_signal_level">Signal Level</string>
+    <string name="menu_tv_single_signal_quality">Signal Quality</string>
+	<!-- channel edit-->
+	<string name="menu_tv_channel_no">Channel Number :</string>
+	<string name="menu_tv_channel_name">Channel Name :</string>
+	<string name="menu_tv_freq">Frequency ： </string>
+	<string name="menu_tv_sound_system">Sound system</string>
+	<string name="menu_tv_auto_finetune">AFT</string>
+	<string name="menu_tv_finetune">Finetune</string>
+	<string name="menu_tv_enter">Enter</string>
+    <string name="menu_tv_exit">Exit</string>
+    <string name="menu_tv_store">Store</string>
+	<string name="menu_tv_clear_channel_info">Are you sure?</string>
+	<string name="menu_dialog_confirm">OK</string>
+	<string name="menu_dialog_cancel">Cancel</string>
+	<string name="menu_dialog_numrepeat">Channel Number Duplicate!</string>
+
+	<!-- the parameter of Setup,item display interface strings to be defined -->
+	<!-- first level -->
+	<string name="menu_setup_language">OSD Language</string>
+	<string name="menu_setup_screenmode">Screen Mode</string>
+	<string name="menu_setup_dpms">DPMS</string>
+	<string name="menu_setup_bluemute">Blue Mute</string>
+	<string name="menu_setup_fastboot">Hot Boot</string>
+	<string name="menu_setup_poweron_music">Power On Music</string>
+	<string name="menu_setup_poweroff_music">Power Off Music</string>
+	<string name="menu_setup_capturelogo_select">Capture Logo Select</string>
+	<string name="menu_setup_time_setup">Time Setup</string>
+	<string name="menu_setup_teletext">Teletext</string>
+	<string name="menu_setup_network">Network</string>
+	<string name="menu_setup_version_info">Version Info</string>
+	<string name="menu_setup_msi">MSI</string>
+	<string name="menu_setup_reset_default">Reset Default</string>
+	<string name="menu_setup_common_interface">Common Interface</string>
+	
+		<!-- CECFUN-->
+	<string name="menu_setup_cec_function">CEC Function</string>
+	<string name="menu_setup_cec_auto_turn">Auto Turn Off</string>
+	<string name="menu_setup_cec_device_discovery">Device Discovery</string>
+	<string name="menu_setup_cec_standby">Standby</string>
+	<string name="menu_setup_cec_poweron">Power On</string>
+	<string name="menu_setup_cec_enablesys">Enable Sys. Aud. Ctrl</string>
+	<string name="menu_setup_cec_disablesys">Disable Sys. Aud. Ctrl</string>
+	
+	<!-- CI -->
+	<string name="menu_setup_ci_no_card">No CI card presented.</string>
+
+	<!-- second level -->
+	<string name="menu_setup_timezone">Time Zone</string>
+	<string name="menu_setup_time">Time</string>
+	<string name="menu_setup_sleep_timer">Sleep Timer</string>
+	<string name="menu_setup_auto_sleep">Auto Sleep</string>
+	<string name="menu_setup_configuration">Configuration</string>
+	<string name="menu_setup_auto_network_upgrade">Network Upgrade</string>
+	<string name="menu_setup_application">Applications</string>
+	<string name="menu_setup_version_name">TurnKey</string>
+	<string name="menu_setup_version_ver">1.0</string>
+	<string name="menu_setup_version_number">0001</string>
+	
+	<string name="menu_setup_digital_teletext_language">Digital TeleText Language</string>
+	<string name="menu_setup_decoding_page_language">Decoding Page Language</string>
+	<string name="menu_setup_ttx_presentation_level">TTX Presentation Level</string>
+	<!-- third level -->
+	<string name="menu_setup_auto_synchronization">Auto Synchronization</string>
+	<string name="menu_setup_date">Date</string>
+	<string name="menu_setup_power_on_timer">Power On Timer</string>
+	<string name="menu_setup_timer">Timer</string>
+	<string name="menu_setup_power_on_channel">Power On Channel</string>
+	<string name="menu_setup_power_off_timer">Power Off Timer</string>
+	<string name="menu_setup_internet_connection">Internet Connection</string>
+	<string name="menu_setup_wireless_setting">Wireless Setting</string>
+	<string name="menu_setup_information">Information</string>
+	<string name="menu_setup_ip_setting">IP Setting</string>
+	<string name="menu_setup_connection_test">Connection Test</string>
+	<string name="menu_setup_interface">Interface</string>
+	<string name="menu_setup_dlna">DLNA</string>
+	<string name="menu_setup_my_net_place">My Network Places</string>
+  <string name="menu_setup_wow">WOW</string>
+	<!-- forth level -->
+	<string name="menu_setup_power_on_channel_mode">Select Mode</string>
+	<string name="menu_setup_power_on_no_channel">(No Channel.)</string>
+	<string name="menu_setup_address_type">Address Type</string>
+	<string name="menu_setup_ip_address">IP Address</string>
+	<string name="menu_setup_subnetwork_mask">Subnet Mask</string>
+	<string name="menu_setup_default_gateway">Default Gateway</string>
+	<string name="menu_setup_first_dns">Primary DNS</string>
+	<string name="menu_setup_standby_dns">Secondary DNS</string>
+	<string name="menu_setup_ethernet_mac">Ethernet MAC</string>
+	
+	<!-- wifi setting -->
+	<string name="wifi_setup_title">Wireless Setting</string>
+
+	
+	
+	<!-- pop-up dialog or window  -->
+	<string name="menu_setup_connetion_info1">Start to test the network connection.</string>
+	<string name="menu_setup_connetion_info2">The network connection test is success!</string>
+	<string name="menu_setup_connetion_info3">The network connection test is not success!</string>
+	<string name="menu_setup_connetion_wait">please wait</string>
+	<string name="menu_setup_upgrade_info1">Start to download new firmware from server.</string>
+	<string name="menu_setup_upgrade_info2_title">Updating Wizard</string>
+	<string name="menu_setup_upgrade_info2">Check new firmware failed.</string>
+	<string name="menu_setup_reset_info1">Are you sure?</string>
+
+	<!-- part of factory -->
+	<string name="menu_factory_name">Factory</string>
+	<string name="menu_factory_video">Video</string>
+	<string name="menu_factory_audio">Audio</string>
+	<string name="menu_factory_TV">TV</string>
+	<string name="menu_factory_setup">Setup</string>
+	<string name="menu_factory_preset">Preset Ch</string>
+	<!-- part of factory_video -->
+	<string name="menu_factory_video_auto_color">Auto Color</string>
+	<string name="menu_factory_video_color_temperature">Color Temperature</string>
+	<string name="menu_factory_video_auto_phase">Auto Phase</string>
+	<string name="menu_factory_video_phase">Phase</string>
+	<string name="menu_factory_video_h_position">H.Position</string>
+	<string name="menu_factory_video_v_position">V.Position</string>
+	<string name="menu_factory_video_di_ma">DI MA</string>
+	<string name="menu_factory_video_di_edge">DI Edge</string>
+	<string name="menu_factory_video_wcg">WCG</string>
+	<string name="menu_factory_video_flip">Flip</string>
+	<string name="menu_factory_video_mirror">Mirror</string>
+	<!--factory_video_color_temperature  -->
+	<string name="menu_factory_video_color_rgain">R Gain</string>
+	<string name="menu_factory_video_color_ggain">G Gain</string>
+	<string name="menu_factory_video_color_bgain">B Gain</string>
+	<string name="menu_factory_video_color_roffset">R Offset</string>
+	<string name="menu_factory_video_color_goffset">G Offset</string>
+	<string name="menu_factory_video_color_boffset">B Offset</string>
+	
+	<!-- part of factory_audio -->
+	<string name="menu_factory_audio_dolby_banner">Dolby Banner</string>
+	<string name="menu_factory_audio_compression">Compression</string>
+	<string name="menu_factory_audio_compression_factor">Compression Factor</string>
+	<string name="menu_factory_audio_a2_system">A2 System</string>
+	<string name="menu_factory_audio_pal_system">PAL System</string>
+	<string name="menu_factory_audio_eu_system">EU System</string>
+	<string name="menu_factory_audio_latency">Latency</string>
+	<!-- part of factory_audio_a2_system -->
+	<string name="menu_factory_audio_a2_numbersofcheck">Numbers Of Check</string>
+	<string name="menu_factory_audio_a2_numbersofdouble">Numbers Of Double</string>
+	<string name="menu_factory_audio_a2_monoweight">Mono Weight</string>
+	<string name="menu_factory_audio_a2_stereoweight">Stereo Weight</string>
+	<string name="menu_factory_audio_a2_dualweight">Dual Weight</string>
+	<string name="menu_factory_audio_a2_highdeviationmode">High Deviation Mode</string>
+	<string name="menu_factory_audio_a2_carriershiftfunction">Carrier Shift Function</string>
+	<string name="menu_factory_audio_a2_fmcarriermutemode">FM Carrier Mute Mode</string>
+	<string name="menu_factory_audio_a2_fmcarriermutethreshold_high">FM Carrier Mute Threshold High</string>
+	<string name="menu_factory_audio_a2_fmcarriermutethreshold_low">FM Carrier Mute Threshold Low</string>
+	<string name="menu_factory_audio_a2_finetunevolume">Fine Tune Volume</string>
+	
+	<!-- part of factory_audio_pal_system -->
+	<string name="menu_factory_audio_pal_correctthreshold">Correct Threshold</string>
+	<string name="menu_factory_audio_pal_totalsyncloop">Total Sync Loop</string>
+	<string name="menu_factory_audio_pal_errorthreshold">Error Threshold</string>
+	<string name="menu_factory_audio_pal_parityerrorthreshold">Parity Error Threshold</string>
+	<string name="menu_factory_audio_pal_everynumberframes">Every Number Frames</string>
+	<string name="menu_factory_audio_pal_highdeviationmode">High Deviation Mode</string>
+	<string name="menu_factory_audio_pal_amcarriermutemode">AM Carrier Mute Mode</string>
+	<string name="menu_factory_audio_pal_amcarriermutethresholdhigh">AM Carrier Mute Threshold High</string>
+	<string name="menu_factory_audio_pal_amcarriermutethresholdlow">AM Carrier Mute Threshold Low</string>
+	<string name="menu_factory_audio_pal_carriershiftfunction">Carrier Shift Function</string>
+	<string name="menu_factory_audio_pal_fmcarriermutemode">FM Carrier Mute Mode</string>
+	<string name="menu_factory_audio_pal_fmcarriermutethresholdhigh">FM Carrier Mute Threshold High</string>
+	<string name="menu_factory_audio_pal_fmcarriermutethresholdlow">FM Carrier Mute Threshold Low</string>
+	<string name="menu_factory_audio_pal_palfinetunevolume">PAL Fine Tune Volume</string>
+	<string name="menu_factory_audio_pal_amfinetunevolume">AM Fine Tune Volume</string>
+	<string name="menu_factory_audio_pal_nicamfinetunevolume">NICAM Fine Tune Volume</string>
+	<!-- part of factory_audio_eu_system -->
+	<string name="menu_factory_audio_eu_fmsaturationmute">FM Saturation Mute</string>
+	<string name="menu_factory_audio_eu_eunoneusystem">EU Non-EU System</string>
+	
+	<string name="menu_factory_TV_tunerdiag">Tuner Diagnostic</string>
+	<string name="menu_factory_TV_tunerdiag_noinfo">No Diag.Info</string>
+	<string name="menu_factory_TV_tunerdiag_version">Version:</string>
+	<string name="menu_factory_TV_tunerdiag_freq">RF Freq(KHz):</string>
+	<string name="menu_factory_TV_tunerdiag_lockstate">Lock State:</string>
+	<string name="menu_factory_setup_eventform">Event Form</string>
+	<string name="menu_factory_setup_burningmode">Burning Mode</string>
+	<string name="menu_factory_setup_cleanstorage">Clean Storage</string>
+	<string name="menu_factory_setup_clean_dialog">Are you sure ?</string>
+	<string name="menu_factory_preset_dump">Dump Ch</string>
+	<string name="menu_factory_preset_print">Print Ch</string>
+	<string name="menu_factory_preset_restore">Restore Ch</string>
+	<string name="menu_factory_setup_ci_update">Update CI+ Credential From USB</string>
+    <string name="menu_factory_setup_ci_erase">Erase CI+ Credential</string>
+    <string name="menu_factory_setup_ci_query">Query CI+ Credential</string>
+    <string name="menu_factory_setup_ci_update_false">File Not Found</string>
+    <string name="menu_factory_setup_ci_erase_false">Erase Success!</string>
+    <string name="menu_factory_setup_ci_query_false">Valid:N Customer Code:</string>
+
+	<!-- pop-up dialog or window  -->
+	<string name="menu_tv_analog_manual_scan_init">Search for analog channels</string>
+	<string name="menu_tv_single_rf_scan_init">Scan single RF channel. (Digital Only)</string>
+	<string name="menu_tv_analog_manual_scan_cancel">Status:Scan Cancel</string>
+	<string name="menu_setup_channel_scan">scanning</string>
+	<string name="menu_setup_channel_scan_ana">analog channels: </string>
+	<string name="menu_setup_channel_scan_dig">digital channels: </string>
+	<string name="menu_tv_store_data">Are you sure to save?</string>
+	<string name="menu_tv_reset_all">Are you sure to reset all settings？</string>
+	<string name="menu_setup_channel_scan_cancel">cancel scan</string>
+	<string name="menu_setup_channel_scan_done">scan completed</string>
+	<string name="menu_setup_network_upgrade">network upgrade...</string>
+	<string name="menu_setup_network_wireless">Wireless Setting</string>
+	<string name="menu_setup_network_no_net">There is no wireless device connected to TV!</string>
+	<string name="menu_setup_tvchaneledit_hint">Test</string>
+	<string name="menu_setup_tvchaneledit_sure">OK</string>
+	<string name="menu_setup_tvchaneledit_cancel">Cancel</string>
+	<string name="menu_setup_button_yes">Yes</string>
+	<string name="menu_setup_button_no">No</string>
+	<string name="menu_setup_ip_edittext_hint">000</string>
+	<string name="menu_setup_ip_error_warning1">please enter values between 1 and 233 </string>
+    <string name="menu_setup_ip_error_warning2">please enter values between 0 and 255</string>
+    <string name="menu_setup_ip_error_warning3">More than one of the IP Address Subnet Mask and Default Gateway is invalid.Please enter again!</string>
+    <string name="menu_setup_ip_null_warning">disconnected or fetching...</string>
+    <string name="menu_address_auto">Auto</string>
+    <string name="menu_address_ethernet">Ethernet</string>
+    <string name="menu_address_wireless">Wireless</string>
+    <string name="menu_versioninfo_name">Model Name</string>
+    <string name="menu_versioninfo_version">Version</string>
+    <string name="menu_versioninfo_number">Serial Number</string>
+    <string name="menu_video_auto_adjust_info">Auto Adjusting</string>
+    <string name="menu_video_auto_color_info">Please Wait</string>
+    
+    <!--Part of Parental  -->
+    <string name="menu_parental_password">Password</string>
+    <string name="menu_parental_channel_block">Channel Block</string>
+    <string name="menu_parental_input_block">Input Block</string>
+    <string name="menu_parental_change_password">Change Password</string>
+    <string name="menu_parental_clean_all">Clean All</string>
+    <string name="menu_parental_password_incorrect">Password incorrect.\nPlease enter again!</string>
+    <string name="menu_parental_password_new">New Password</string>
+    <string name="menu_parental_password_new_re">Confirm Password</string>
+    <string name="menu_parental_password_matchinfo">Password does not match.\nPlease enter again!</string>
+    <string name="menu_parental_password_default">1234</string>
+    <string name="menu_parental_tvsource_tv0">tv0</string>
+    
+    <!-- Part of wifi -->
+    <string name="menu_wifi_exit">Exit</string>
+    <string name="menu_wifi_cancel">Cancel</string>
+    <string name="menu_wifi_next">Next</string>
+    <string name="menu_wifi_select">Select</string>
+    <string name="menu_wifi_input">Input</string>
+    <string name="menu_wifi_set">Set</string>
+    <string name="menu_wifi_prev">Previous</string>
+    <string name="menu_wifi_main_scan">Scan</string>
+    <string name="menu_wifi_main_manual">Manual</string>
+    <string name="menu_wifi_main_auto">Auto</string>    
+    <string name="menu_wifi_connected">It will cut off connect wireless network connection.\nPress Right key to continue.</string>
+    <string name="menu_wifi_nodongle">There is no wireless device connected to TV</string>
+    <string name="menu_wifi_connect_fail">Connection fail!</string>
+    <string name="menu_wifi_connect_success">Connection success and IP is obtained!</string>
+    <string name="menu_wifi_invalid_wpa_key">Invalid WPA Key,Please check it.</string>
+    <string name="menu_wifi_invalid_wep_key">Invalid WEP Key,Please check it.</string>       
+    <string name="menu_wifi_no_match">No match Access Point is found.\nPlease try again.</string>
+    <string name="menu_wifi_pass_err">Password may be incorrect.Please check the AccessPoint setting.</string>
+    <string name="menu_wifi_time_out">Connection fail due to timeout.\nPlease try again.</string>
+    <string name="menu_wifi_input_key_nosupport">Please input Not Support key.</string>
+    <string name="menu_wifi_input_key_wpa">Please input WPA key.</string>
+    <string name="menu_wifi_input_key_wep">Please input WEP key.</string>  
+    <string name="menu_wifi_input_ssid">Please input SSID.</string>  
+    <string name="menu_wifi_input_ssid_error">The valid length of SSID is 1~32 words.Please check the SSID.</string>
+    <string name="menu_wifi_select_auth_mode">Please Select the Security Mode</string> 
+    <string name="menu_wifi_auth_mode_none">None</string>  
+    <string name="menu_wifi_auth_mode_wep">WEP</string>
+    <string name="menu_wifi_auth_mode_wpa_tkip">WPA-PSK(TKIP)</string>
+    <string name="menu_wifi_auth_mode_wpa_aes">WPA-PSK(AES)</string>
+    <string name="menu_wifi_auth_mode_wpa2_tkip">WPA2-PSK(TKIP)</string>
+    <string name="menu_wifi_auth_mode_wpa2_aes">WPA2-PSK(AES)</string>
+    <string name="menu_wifi_auth_mode_auto">WPA/WPA2-PSK(AUTO)</string>    
+    <string name="menu_wifi_ap_security_none">None</string> 
+    <string name="menu_wifi_ap_security_notsupport">Not Support</string>
+    <string name="menu_wifi_ap_security_auto">WPA/WPA2-PSK</string>
+    <string name="menu_wifi_ap_security_wpa">WPA-PSK</string>
+    <string name="menu_wifi_ap_security_wpa2">WPA2-PSK</string>
+    <string name="menu_wifi_ap_security_wep">WEP</string>
+    <string name="menu_wifi_ap_head_ssid">SSID</string>
+    <string name="menu_wifi_ap_head_bssid">BSSID</string>
+    <string name="menu_wifi_ap_head_security">Security</string>
+    <string name="menu_wifi_ap_head_signal">Signal</string>    
+    <string name="menu_wifi_wps_header1">WPS(Wifi Protected Setup)</string>
+    <string name="menu_wifi_wps_header2">-PIN(Personal Identification Number)</string>
+    <string name="menu_wifi_wps_header3">-PBC(Push Button Configuration)</string>
+    <string name="menu_wifi_wps_main_pin">PIN</string>
+    <string name="menu_wifi_wps_main_pbc">PBC</string>
+    <string name="menu_wifi_wps_pbc_hint">Please press Push Button on the AP within 120 seconds after you click the below \'Next\' button.</string>
+    <string name="menu_wifi_wps_pin_hint">Please ensure the following PIN code is installed to the AP before you click the below \'Next\' button.</string>
+    <string name="menu_wifi_wps_pin_textcode">PIN Code:</string>
+    <string name="menu_wifi_wps_pin_inittextcode">[111111]</string>
+    <string name="menu_wifi_wps_pin_refresh">Refresh PIN</string>
+    <string name="menu_wifi_connecting">TV is Connecting the AP</string>
+    <string name="menu_wifi_scaning">TV is Scanning APs</string>
+    <string name="menu_wifi_wait">Please wait</string>   
+    <string name="menu_wifi_no_ap">There is no available AP</string> 
+   <string name="menu_wifi_what">What the hell are you doing?</string>
+   
+   <string name="menu_wifi_need_special">Do you want to select a special AP?</string>
+   <string name="menu_teletext_notsupport_tip">No Teletext</string>
+   	<string name="schedule_pvr_srctype">Src Type</string>
+	<string name="schedule_pvr_channel_num">Channel Number</string>
+	<string name="schedule_pvr_reminder_type">Schedule Type</string>
+	<string name="schedule_pvr_repeat_type">Repeat Type</string>
+	
+	<string name="schedule_pvr_start_date">Start Date</string>
+	<string name="schedule_pvr_start_time">Start Time</string>
+	<string name="schedule_pvr_stop_time">Stop Time</string>
+	
+	<string name="menu_tv_tshift_config">Time Shifting Mode</string>
+	<string name="menu_tv_device_info">Device Info</string>
+	<string name="menu_setup_schedule_list">Schedule List</string>
+	<string name="cec_setup">cecSetup</string>
+</resources>

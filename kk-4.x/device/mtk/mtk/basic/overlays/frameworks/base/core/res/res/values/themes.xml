@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- //Begin Added by tianjing@tcl.com for TCL Widgets .16items-->
+    <add-resource type="style" name="Theme" />
+    <style name="Theme">
+	<!-- TCL iqiyi 2013-11-21 -->
+ 		 <item name="tclbuttonStyle">@android:style/TCLButton</item>
+		 <item name="tclbuttonblackStyle">@android:style/TCLButtonBlack</item>
+        <item name="tclButtonEspecialStyle">@android:style/TCLButtonEspecial</item>
+        <item name="tclalertDialogStyle">@android:style/TCLAlertDialog</item>
+   </style>
+    <!-- //End Added by tianjing@tcl.com for TCL Widgets .20130124-->
+</resources>

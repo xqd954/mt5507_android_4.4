@@ -1,0 +1,263 @@
+import /init.mtk_common.rc
+import /init.mtk_rm.rc
+import /init.pre_dtv_driver.rc
+import /init.dtv_driver.rc
+import /init.device.rc
+import /init.build_type.rc
+import /init.build_cfg.rc
+import /init.hybrid_cfg.rc
+import /init.android_two_worlds.rc
+import /init.${ro.coredump}.rc
+import /init.${ro.coredump}_folder.rc
+import /init.sdcard.rc
+
+#add tcl env
+export F1_CONFIG /midbase/base/run_config
+
+on early-init
+    setrlimit 8 9000000 9000000
+    write /proc/boottime ir:mt5399:early-init-done
+    
+on init
+# on init > on post-fs
+
+on post-fs
+# post-fs > post-fs-data
+    # Begin add by TCL zhanghangzhi, mail: zhanghangzhi@tcl.com
+    # set RLIMIT_NOFILE(the number of files opened)
+    setrlimit 7 2048 8192
+    # End of TCL
+
+
+on post-fs-data
+    waitlock /dtv_driver.ko.lock
+    insmod /system/lib/modules/mtk_mmap.ko
+	insmod /system/lib/modules/mali.ko
+#add by tank@tcl.com
+    insmod /system/lib/modules/tcl_sim_kb.ko
+#end tank@tcl.com
+    write /proc/boottime ir:mt5399:mtk_mmap.ko-done
+    exec /sbin/sh /system/etc/service/dtv_svc.sh
+    write /proc/boottime ir:mt5399:dtv_svc-done
+    chown root shell /unmount.sh
+	chmod 0666 /dev/mali
+	chmod 0666 /dev/ion
+    chmod 0550 /unmount.sh    
+    chmod 0755 /system/bin/logv
+    chmod 0755 /system/bin/logd
+    chmod 0755 /system/bin/logi
+    chmod 0755 /system/bin/logw
+    chmod 0755 /system/bin/loge
+    chmod 0755 /sbin/busybox
+    
+    #add rwx post-init.sh drop-caches.sh
+    chmod 0777 /system/etc/service/post-init.sh
+    chmod 0777 /system/etc/script/drop_caches.sh
+    #end
+
+    # pppoe.conf/resolv.conf for read-write
+    mkdir /data/misc/ppp 0777 system system
+    mkdir /var/run 0777 system system -p	
+
+on boot
+    mount debugfs /sys/kernel/debug /sys/kernel/debug
+
+    # enable KSM
+    write /sys/kernel/mm/ksm/pages_to_scan 100
+    write /sys/kernel/mm/ksm/sleep_millisecs 500
+    write /sys/kernel/mm/ksm/run 1
+
+
+    mkdir /data/misc/wifi 0770 wifi wifi
+    mkdir /data/misc/wifi/sockets 0770 wifi wifi
+    mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
+    mkdir /data/misc/dhcp 0770 dhcp dhcp
+    chmod 0775 /data/misc/dhcp
+    chown dhcp dhcp /data/misc/dhcp
+    chown system system /sys/module/mtk_mod/parameters/reset_reason
+    write /sys/power/wake_lock MT5399
+    mkdir /etc/Wireless
+    mkdir etc/Wireless/RT2870STA
+	write /proc/boottime ir:mt5399:on-boot-done
+
+service insmod /sbin/sh /system/etc/script/insmod.sh
+    class main
+    console
+    oneshot
+
+# prepare for init
+service pre-init /sbin/sh /system/etc/service/pre-init.sh
+    class main
+    console
+    oneshot
+
+service post-init /sbin/sh /system/etc/service/post-init.sh
+    class main
+    console
+    oneshot
+
+#tcl service 
+service tvh_service /sbin/sh /midbase/base/run.sh
+    class main
+    oneshot
+# dtv_svc service
+#service dtv-svc /sbin/sh /system/etc/service/dtv_svc.sh
+#    class main
+#    console
+#    oneshot
+    
+# local bootup stress
+service local-bt-stress /sbin/sh /system/etc/service/local_bt_stress.sh
+    class main
+    console
+    oneshot
+
+# services for pppoe
+service pppoe-setup /system/bin/pppoe-setup
+    class main
+    disabled
+    oneshot
+service pppoe-start /system/bin/pppoe-start
+    class main
+    disabled
+    oneshot
+service pppoe-status /system/bin/pppoe-status
+    class main
+    disabled
+    oneshot
+service pppoe-stop /system/bin/pppoe-stop
+    class main
+    disabled
+    oneshot
+
+   //ralink use default supplicant 
+service wpa_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant -dd -Dnl80211 -iwlan0 -c /data/misc/wifi/wpa_supplicant.conf
+#    group wifi inet
+    class main
+    socket wpa_wlan0 dgram 660 wifi wifi
+    disabled
+    oneshot
+    
+service p2p_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant -d -Dnl80211 -iwlan0 -c /data/misc/wifi/wpa_supplicant.conf -N -Dnl80211 -ip2p0 -c/data/misc/wifi/p2p_supplicant.conf -puse_p2p_group_interface=1 -d 
+    class main
+    socket wpa_wlan0 dgram 660 wifi wifi
+    disabled
+    oneshot    
+    
+service wpa_supplicantrt /system/bin/logwrapper /system/bin/wpa_supplicantrt -dd -Dnl80211 -iwlan0 -c /data/misc/wifi/wpa.conf 
+    class main
+    disabled
+    oneshot
+    
+service p2p_supplicantrt /system/bin/logwrapper /system/bin/wpa_supplicantrt -dd -Dnl80211 -iwlan0 -c /data/misc/wifi/p2p.conf -e /data/misc/wifi/entropy.bin
+    class main
+    disabled
+    oneshot
+    
+service wpa_supplicant6k /system/bin/logwrapper /system/bin/wpa_supplicantat6k -iwlan0 -dd -Dnl80211 -c /data/misc/wifi/wpa.conf
+    class main
+    disabled
+    oneshot
+    
+service p2p_supplicant6k /system/bin/logwrapper /system/bin/wpa_supplicantat6k -ip2p0 -dd -Dnl80211 -c /data/misc/wifi/p2p.conf
+    class main
+    disabled
+    oneshot
+
+service ap_daemon /system/bin/logwrapper /system/bin/wpa_supplicant \
+    -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf -e/data/misc/wifi/entropy.bin -puse_p2p_group_interface=1 -ddd
+    #   we will start as root and wpa_supplicant will switch to user wifi
+    #   after setting up the capabilities required for WEXT
+    #   user wifi
+    #   group wifi inet keystore
+    class main
+    socket p2p0 dgram 660 wifi wifi
+    disabled
+    oneshot	
+	
+service wifi_set  /system/bin/wifi_set.sh 
+    disabled
+    oneshot
+    
+    # performance tweaks for flash
+#    write /sys/block/mtdblock3/bdi/read_ahead_kb 4
+#    write /sys/block/mtdblock4/bdi/read_ahead_kb 4
+#    write /sys/block/mtdblock5/bdi/read_ahead_kb 4
+
+    # Power Management
+#    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 245000
+#    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 998400
+#    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
+#    write /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate 40000
+
+    # Wakelock debug
+ #   write /sys/module/wakelock/parameters/debug_mask 7
+
+service dhcpcd /system/bin/dhcpcd -BK
+    class main
+    disabled
+    oneshot
+    
+service dhcpcd_eth0 /system/bin/dhcpcd -BK
+    class main
+    disabled
+    oneshot   
+
+service dhcpcd_wlan0 /system/bin/dhcpcd -BK
+    class main
+    disabled
+    oneshot   
+
+service dhcpcd_p2p /system/bin/dhcpcd -BK
+    class main
+    disabled
+    oneshot
+    
+service iprenew_wlan0 /system/bin/dhcpcd -n
+	class main
+	disabled
+	oneshot
+
+service pppoedial /system/bin/pppoedial
+	class main
+	socket pppoesock stream 0660 root system
+	oneshot
+
+# bugreport is triggered by the KEY_VOLUMEUP and BTN_MOUSE keycodes
+service bugreport /system/bin/dumpstate -d -v -o /usbdisk/bugreports/bugreport
+    class main
+    disabled
+    oneshot
+    keycodes 115 272
+
+#service dspcrashd /system/bin/dspcrashd
+
+service uploadservice /system/bin/uploadservice
+		class main
+		user system
+		group system
+		
+on early-init
+    setrlimit 8 9000000 9000000
+
+# [TVOS-Addon] Modify by gaodw@tcl.com for sserver 2014/11/05
+service sserver /system/bin/sserver
+    class main
+#add by w.y@tcl.com for voiceassistance 2014/12/30
+service iflytekdeamon  /system/bin/iflytekdeamon
+    class main
+    user root
+    group root
+    oneshot
+    chmod 755  /system/bin/iflytekdeamon
+    chmod 755  /system/media/addtails.pcm
+    chmod 755  /system/media/tclxirihelp.dat
+
+#add by w.y@tcl.com for kdmStart 2015/01/15
+service kdmStart  /system/bin/kdmStart.sh
+    class main
+    user root
+    group root
+    oneshot
+    chmod 755  /system/bin/kdmStart.sh
+    chmod 755  /system/bin/kdmServer

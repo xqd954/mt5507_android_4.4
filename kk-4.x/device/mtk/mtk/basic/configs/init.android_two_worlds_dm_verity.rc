@@ -1,0 +1,27 @@
+on fs
+	# mount Linux rootfs & create symbolic link
+	mkdir /linux_rootfs
+	wait /dev/block/mmcblk0p10
+	system dmsetup -r -j 254 -m 6 create dm-6 --table "0 0 linear /dev/block/mmcblk0p10"
+	system dmsetup -r -j 254 -m 7 create dm-7 --table "0 0 verity /dev/mapper/dm-6"
+	mount squashfs /dev/mapper/dm-7 /linux_rootfs ro
+	mkdir /lib
+	symlink /linux_rootfs/lib/ld-linux.so.3 /lib/ld-linux.so.3
+	mkdir /bin
+	symlink /linux_rootfs/bin/sh /bin/sh
+	symlink /linux_rootfs/bin/mount /bin/mount
+	symlink /linux_rootfs/bin/mkdir /bin/mkdir	
+
+    symlink /linux_rootfs/openbox /openbox
+
+	# mount Linux 3rd
+	mkdir /3rd
+
+	# mount Linux 3rd_rw
+	mkdir /3rd_rw
+
+	# mount Linux perm
+	mkdir /perm
+
+on property:net.dns1=*
+    write_symlink /etc/resolv.conf "nameserver ${net.dns1}"

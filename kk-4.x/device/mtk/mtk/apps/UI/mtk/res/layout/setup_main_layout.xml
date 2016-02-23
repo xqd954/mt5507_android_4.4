@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- setup wizard -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/setup_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/setup_main_bg"
+    android:orientation="vertical"
+    android:paddingLeft="20dip"
+    android:paddingBottom="20dip"
+    android:paddingRight="20dip">
+
+    <!-- top -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8">
+
+        <TextView
+            android:id="@+id/setup_tv_top_left"
+            style="@style/setup_top_textView"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/setup_tv_top_right"
+            style="@style/setup_top_textView"
+            android:gravity="right|center_vertical" />
+    </LinearLayout>
+
+    <!-- middle -->
+    <!-- welcome,complete -->
+
+    <TextView
+        android:id="@+id/setup_tv_welcome"
+        style="@style/setup_textView"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/setup_wizard_pad_foot" >
+    </TextView>
+
+    <!-- include   list view   layout -->
+
+    <LinearLayout
+        android:id="@+id/setup_ll_middle_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4" >
+
+            <!-- list view,middle -->
+
+            <TextView
+                android:id="@+id/setup_tv_middle"
+                style="@style/setup_textView"
+                android:gravity="center" />
+            <!-- cancel scan,list view,left -->
+
+            <TextView
+                android:id="@+id/setup_tv_middle_cancel_scan"
+                style="@style/setup_textView"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:orientation="horizontal" >
+
+            <!-- null -->
+
+            <TextView
+                style="@style/setup_null_textView"
+                android:layout_weight="0.4" />
+            <!-- list view -->
+
+            <com.mediatek.ui.commonview.CustListView
+                android:id="@+id/setup_list"
+                style="@style/setup_textView"
+                android:layout_weight="0.4"
+                android:dividerHeight="@dimen/nav_channel_list_padTop"
+                android:listSelector="@drawable/setup_list_bg" >
+            </com.mediatek.ui.commonview.CustListView>
+            <!-- scan list view -->
+
+            <com.mediatek.ui.commonview.CustListView
+                android:id="@+id/setup_tuner_list"
+                style="@style/setup_textView"
+                android:layout_weight="0.4"
+                android:dividerHeight="@dimen/nav_channel_list_padTop"
+                android:listSelector="@drawable/setup_list_bg"
+                android:visibility="gone" >
+            </com.mediatek.ui.commonview.CustListView>
+            <!-- scan list view -->
+
+            <com.mediatek.ui.commonview.CustListView
+                android:id="@+id/setup_scan_list"
+                style="@style/setup_textView"
+                android:layout_weight="0.4"
+                android:dividerHeight="@dimen/nav_channel_list_padTop"
+                android:listSelector="@drawable/setup_list_bg"
+                android:visibility="gone" >
+            </com.mediatek.ui.commonview.CustListView>
+            <!-- null -->
+
+            <TextView
+                style="@style/setup_null_textView"
+                android:layout_weight="0.4" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- include  progress bar , scanning layout -->
+
+    <LinearLayout
+        android:id="@+id/setup_ll_scan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/setup_wizard_pad_foot"
+        android:layout_weight="0.3"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <!-- null -->
+
+        <TextView
+            style="@style/setup_null_textView"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/setup_tv_scan_time"
+            style="@style/setup_textView"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:singleLine="true" />
+        <!-- null -->
+
+        <TextView
+            style="@style/setup_null_textView"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <!-- loading... -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent" >
+
+                <TextView
+                    android:id="@+id/setup_tv_scan_scaning"
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:gravity="left" />
+                <!-- loading -->
+
+                <com.mediatek.ui.setup.Loading
+                    android:id="@+id/setup_tv_scan_loading"
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:gravity="left" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/setup_tv_scan_complete"
+                style="@style/setup_textView"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:singleLine="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/setup_tv_scan_analog"
+            style="@style/setup_textView"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="left" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/setup_tv_scan_digital"
+            style="@style/setup_textView"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="left" >
+        </TextView>
+        <!-- null -->
+
+        <TextView
+            style="@style/setup_null_textView"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ProgressBar
+                android:id="@+id/setup_tv_scan_pbar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:max="100" >
+            </ProgressBar>
+
+            <TextView
+                android:id="@+id/setup_tv_scan_percent"
+                style="@style/setup_textView"
+                android:layout_weight="1"
+                android:gravity="center" />
+        </LinearLayout>
+        <!-- null -->
+
+        <TextView
+            style="@style/setup_null_textView"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- foot -->
+
+    <TableLayout
+        android:id="@+id/setup_ll_foot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="0.9"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:visibility="invisible" >
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/setup_bottom_back"
+                android:drawableLeft="@drawable/tk_cm_key_back"
+                android:layout_gravity="center"
+                android:text="@string/setup_back"
+                android:textSize="@dimen/setup_wizard_common_textsize" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/setup_bottom_select"
+                android:drawableLeft="@drawable/tk_cm_key_select_up"
+                android:layout_gravity="center"
+                android:text="@string/setup_select"
+                android:textSize="@dimen/setup_wizard_common_textsize" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/setup_bottom_next"
+                android:drawableLeft="@drawable/tk_cm_key_next"
+                android:layout_gravity="center"
+                android:text="@string/setup_next"
+                android:textSize="@dimen/setup_wizard_common_textsize" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/setup_bottom_exit"
+                android:drawableLeft="@drawable/tk_cm_key_exit"
+                android:layout_gravity="center"
+                android:text="@string/setup_exit"
+                android:textSize="@dimen/setup_wizard_common_textsize" >
+            </TextView>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

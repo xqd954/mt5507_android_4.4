@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" 
+	android:orientation="vertical"
+	android:id="@+id/mmp_largeview">
+	
+    
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:layout_weight="5"
+		android:id="@+id/multimedia_top" 
+		android:background="@drawable/tk_cm_top_bg"
+		android:gravity="center_vertical">
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_marginLeft="30dp" 
+			android:layout_height="wrap_content"
+			android:layout_weight="2" 
+			android:gravity="center">
+			<ImageView android:layout_width="fill_parent"
+				android:layout_weight="1" 
+				android:src="@drawable/mmp_mainmenu_icon_photo"
+				android:layout_height="wrap_content" 
+				android:id="@+id/mmp_list_topimg" />
+			<TextView android:layout_width="fill_parent" 
+			    android:id="@+id/mmp_list_toptv"
+				android:layout_height="wrap_content" 
+				android:text="@string/mmp_photo"
+				android:layout_weight="1" 
+				android:gravity="center_vertical"
+				style="@style/mmp_listmod_text"
+				android:layout_marginLeft="-10dp" />
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:layout_weight="1"
+			android:gravity="center_vertical">
+				<TextView android:id="@+id/mmp_list_filepath"
+					android:layout_width="fill_parent" 
+					android:drawableLeft="@drawable/mmp_mode_topicon_folder"
+					android:layout_weight="1"
+					android:ellipsize="end" 
+					android:singleLine="true" 
+					android:gravity="center_vertical"
+					android:layout_height="wrap_content" 
+					android:text="@string/mmp_filepath"
+					style="@style/mmp_listmod_text" />
+				<TextView android:id="@+id/mmp_list_pagesize"
+					android:layout_width="fill_parent" 
+					android:drawableLeft="@drawable/mmp_mode_topicon_file"
+					android:layout_height="wrap_content" 
+					android:layout_weight="3"
+					android:text="@string/mmp_photo"
+					android:ellipsize="end" 
+					android:singleLine="true" 
+					android:gravity="center_vertical"
+					style="@style/mmp_listmod_text" />
+		</LinearLayout>
+
+	</LinearLayout>
+
+	
+	<!-- the middle part of the layout -->
+
+	<LinearLayout android:layout_width="fill_parent" 
+		android:layout_height="fill_parent" android:background="@drawable/tk_cm_mid_bg"
+		android:layout_weight="1">
+		<LinearLayout android:id="@+id/mmp_listmode_rl"
+			android:orientation="vertical" 
+			android:layout_marginTop="5dp"
+			android:layout_marginLeft="50dip" 
+			android:layout_marginRight="50dp"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:layout_weight="3">
+			<LinearLayout android:layout_width="fill_parent"
+				android:background="@drawable/mmp_listmode_video_bg"
+				android:layout_height="fill_parent" 
+				android:layout_weight="1"
+				android:orientation="vertical">
+				<LinearLayout android:layout_width="fill_parent" 
+				    style="@style/mmp_margin5"
+					android:layout_height="fill_parent" 
+					android:layout_weight="1"
+					android:background="@color/mmp_black">
+					<ImageView android:id="@+id/mmp_listmode_thumnail"
+						android:layout_width="fill_parent" 
+						android:layout_height="fill_parent"
+						android:visibility="gone" />
+						<TextView android:id="@+id/mmp_listmode_textshow"
+						android:layout_width="fill_parent" 
+						android:layout_height="fill_parent"></TextView>
+					<com.mediatek.ui.mmp.commonview.MtkVideoView 
+					    android:id="@+id/mmp_video_videoview"
+						android:layout_width="fill_parent" 
+						android:layout_height="fill_parent"
+						 />
+				</LinearLayout>
+				<LinearLayout android:layout_width="fill_parent"
+					android:layout_height="fill_parent" 
+					android:layout_weight="3">
+					<TextView android:id="@+id/mmp_list_detailinfo"
+						android:layout_width="wrap_content" 
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="5dip"
+						android:maxLines="5" />
+
+				</LinearLayout>
+			</LinearLayout>
+			<LinearLayout android:id="@+id/mmp_listmode_musicicon"
+				android:layout_marginTop="5dp" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" 
+				android:gravity="center"
+				android:layout_weight="2"  ><!--
+				<com.mediatek.ui.mmp.commonview.MusicPlayInfoView
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/mmp_listmode_music" />
+				
+			--></LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_weight="2" 
+			android:layout_marginBottom="20dp"
+			android:layout_height="fill_parent" 
+			>
+			<ListView android:id="@android:id/list"
+				android:smoothScrollbar="true" 
+				android:scrollbarThumbVertical="@drawable/mmp_listmode_slider_v"
+				android:scrollbarTrackVertical="@drawable/mmp_munuitem_bg"
+				android:fadeScrollbars="false" 
+				android:layout_width="fill_parent"
+				android:listSelector="@drawable/mmp_listselected"
+				android:fadingEdge="none"
+				android:layout_height="fill_parent" 
+				android:dividerHeight="3dp"
+				android:layout_margin="@dimen/mmp_file_list_margin_size"
+				android:divider="@android:color/transparent">
+			</ListView>
+		</LinearLayout>
+	</LinearLayout>
+	
+	
+	<!-- the layout display at the bottom -->
+	<TableLayout android:layout_width="fill_parent" 
+			android:id="@+id/mmp_listmodebottom" 
+			android:layout_height="fill_parent"
+			android:layout_weight="5"
+			android:background="@drawable/tk_cm_top_bg" 
+			android:gravity="center"
+			android:shrinkColumns="*"
+	        android:stretchColumns="*">
+		<TableRow >
+		
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="center"
+				android:drawableLeft="@drawable/tk_cm_key_select_updown"
+				android:text="@string/mmp_select" 
+				style="@style/mmp_listmod_text" />
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="center"
+				style="@style/mmp_listmod_text"
+				android:text="@string/mmp_input" 
+				android:drawableLeft="@drawable/tk_cm_key_enter" />
+		
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="center"
+				style="@style/mmp_listmod_text"
+				android:text="@string/mmp_listmode_play" 
+				android:drawableLeft="@drawable/tk_cm_key_enter" />
+	
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="center"
+				android:drawableLeft="@drawable/tk_cm_key_exit"
+				android:text="@string/mmp_exit" 
+				style="@style/mmp_listmod_text" />
+			</TableRow>
+	</TableLayout>
+	
+
+</LinearLayout>

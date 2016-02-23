@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/epg_password_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/epg_input_pwd_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/epg_pwd_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/nav_parent_psw"
+            android:textColor="@color/white"
+            android:textSize="@dimen/nav_textsize_timeduration" />
+
+        <TextView
+            android:id="@+id/epg_pwd_value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/epg_pwd_value_marginLeft"
+            android:layout_marginRight="@dimen/epg_pwd_value_marginRight"
+            android:background="@drawable/ipinputview_normal"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/epg_program_ts"
+            android:textStyle="bold" />
+        <!--
+			android:background="@drawable/selectbg_gray"
+			android:textColor="@android:color/black"
+        -->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/epg_pwd_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/epg_pwd_error_marginTop"
+        android:gravity="center"
+        android:text="@string/nav_parent_wrong_psw"
+        android:textColor="@color/nav_parental_ed"
+        android:textSize="@dimen/nav_textsize_timeduration" />
+<!-- 		android:visibility="gone" android:layout_below="@+id/epg_pwd_view"
+ -->
+
+</LinearLayout>

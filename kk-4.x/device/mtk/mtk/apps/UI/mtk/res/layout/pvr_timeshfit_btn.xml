@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+   <Button 
+    android:id="@+id/btn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="5dp"
+    android:layout_margin="2dp"
+    android:background="@drawable/menu_tab_button_bg_normal"
+    android:textColor="@color/white"
+    android:focusable="true"
+    android:textSize="@dimen/nav_textsize_normal" >
+</Button>
+
+</LinearLayout>

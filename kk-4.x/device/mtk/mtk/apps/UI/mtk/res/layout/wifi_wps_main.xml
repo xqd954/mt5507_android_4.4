@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent">
+	<LinearLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:orientation="vertical"
+		android:id="@+id/wps_header" android:layout_marginTop="50dip"
+		android:layout_marginLeft="100dip">
+		<TextView android:id="@+id/wifi_wps_text1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:textColor="@color/white" android:textSize="20dip"
+			android:paddingLeft="5dip" android:text="@string/menu_wifi_wps_header1">
+		</TextView>
+		<TextView android:id="@+id/wifi_wps_text2"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:textColor="@color/white" android:textSize="20dip"
+			android:paddingLeft="5dip" android:text="@string/menu_wifi_wps_header2"
+			android:layout_marginTop="10dip">
+		</TextView>
+		<TextView android:id="@+id/wifi_wps_text3"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:textColor="@color/white" android:textSize="20dip"
+			android:paddingLeft="5dip" android:text="@string/menu_wifi_wps_header3"
+			android:layout_marginTop="10dip">
+		</TextView>
+	</LinearLayout>
+
+	<LinearLayout android:layout_width="wrap_content" android:layout_below="@+id/wps_header"
+		android:layout_height="wrap_content" android:layout_marginTop="50dip"
+		android:orientation="vertical">
+		<Button android:id="@+id/wifi_wps_main_pin" android:background="@drawable/wifi_main_selector"
+			android:layout_width="800dip" android:layout_height="45dip"
+			android:textColor="@color/white" android:textSize="20dip"
+			android:text="@string/menu_wifi_wps_main_pin" android:gravity="center_vertical">
+		</Button>
+		<Button android:id="@+id/wifi_wps_main_pbc"
+			android:background="@drawable/wifi_main_selector"
+			android:layout_width="800dip" android:layout_height="45dip"
+			android:textColor="@color/white" android:textSize="20dip"
+			android:text="@string/menu_wifi_wps_main_pbc" android:gravity="center_vertical"
+			android:layout_marginTop="15dip">
+		</Button>
+	</LinearLayout>
+</RelativeLayout>

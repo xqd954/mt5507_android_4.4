@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+  <declare-styleable name="TileView">
+    <attr name="tileSize" format="integer" />
+  </declare-styleable>
+  
+  <declare-styleable name="Keyboard">
+		<attr name="keyWidth" format="dimension|fraction" />
+		<attr name="keyHeight" format="dimension|fraction" />
+		<attr name="horizontalGap" format="dimension|fraction" />
+		<attr name="verticalGap" format="dimension|fraction" />
+	</declare-styleable>
+
+	<declare-styleable name="Keyboard_Row">
+		<attr name="rowEdgeFlags">
+			<flag name="top" value="4" />
+			<flag name="bottom" value="8" />
+		</attr>
+		<attr name="keyboardMode" format="reference" />
+	</declare-styleable>
+
+	<declare-styleable name="Keyboard_Key">
+		<attr name="codes" format="integer|string" />
+		<attr name="popupKeyboard" format="reference" />
+		<attr name="popupCharacters" format="string" />
+		<attr name="keyEdgeFlags">
+			<flag name="left" value="1" />
+			<flag name="right" value="2" />
+		</attr>
+		<attr name="isModifier" format="boolean" />
+		<attr name="isSticky" format="boolean" />
+		<attr name="isRepeatable" format="boolean" />
+		<attr name="iconPreview" format="reference" />
+		<attr name="keyOutputText" format="string" />
+		<attr name="keyLabel" format="string" />
+		<attr name="keyIcon" format="reference" />
+		<attr name="keyboardMode" />
+	</declare-styleable>
+
+	<declare-styleable name="KeyboardView">
+		<attr name="keyboardViewStyle" format="reference" />
+		<attr name="keyBackground" format="reference" />
+		<attr name="keyTextSize" format="dimension" />
+		<attr name="labelTextSize" format="dimension" />
+		<attr name="keyTextColor" format="color" />
+		<attr name="keyPreviewLayout" format="reference" />
+		<attr name="keyPreviewOffset" format="dimension" />
+		<attr name="keyPreviewHeight" format="dimension" />
+		<attr name="verticalCorrection" format="dimension" />
+		<attr name="popupLayout" format="reference" />
+		<attr name="shadowColor" format="color" />
+		<attr name="shadowRadius" format="float" />
+	</declare-styleable>
+	
+	<declare-styleable name="KeyboardViewPreviewState">
+		<attr name="state_long_pressable" format="boolean" />
+	</declare-styleable>
+	
+	<declare-styleable name="Carousel">
+		<attr name="android:gravity" />	
+		<attr name="android:animationDuration" />
+		<attr name="UseReflection" format="boolean"/>
+		<attr name="Items" format="integer"/>
+		<attr name="SelectedItem" format="integer"/>
+		<attr name="maxTheta" format="float"/>
+		<attr name="minQuantity" format="integer"/>
+		<attr name="maxQuantity" format="integer"/>
+	</declare-styleable>	
+</resources>
+

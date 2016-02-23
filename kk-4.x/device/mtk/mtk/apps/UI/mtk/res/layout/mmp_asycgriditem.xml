@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:background="@color/mmp_asycgriditem_color" 
+	android:id="@+id/mmp_grid_highlight"
+	>
+	<ImageView android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:id="@+id/multimedia_gv_img"
+		android:layout_margin="@dimen/mmp_grid_padding_size"
+		android:gravity="center"
+		android:scaleType="centerInside"
+		>
+	</ImageView>
+	<TextView android:layout_width="wrap_content" 
+	    style="@style/mmp_gridview_text"
+		android:layout_height="wrap_content" 
+		android:layout_centerHorizontal="true"
+		android:singleLine="true" 
+		android:ellipsize="end"
+		android:layout_marginBottom="@dimen/mmp_grid_padding_size"
+		android:layout_alignParentBottom="true"
+		android:id="@+id/multimedia_gv_tv"/>
+</RelativeLayout>

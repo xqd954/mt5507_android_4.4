@@ -1,0 +1,4 @@
+on fs
+# mount partitions  
+        mount_ubifs 1 system mtd@system /system no_chk_data_crc,bulk_read
+        mount_ubifs 2 userdata mtd@userdata /data nosuid nodev no_chk_data_crc,bulk_read

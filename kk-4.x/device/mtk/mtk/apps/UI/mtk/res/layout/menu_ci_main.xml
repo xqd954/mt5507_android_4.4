@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- for data-menu -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical"
+	android:layout_height="fill_parent" android:layout_width="match_parent" android:paddingRight="15dip">
+	
+	<TextView 
+		android:id="@+id/menu_ci_main_title"
+	    android:layout_width="match_parent"
+		android:layout_height="0dip" 
+		android:layout_weight="1" 
+		android:focusable="false"
+		android:gravity="center_vertical"/>
+	
+	<TextView 
+		android:id="@+id/menu_ci_main_name"
+	    android:layout_width="match_parent"
+		android:layout_height="0dip" 
+		android:layout_weight="1" 
+		android:focusable="false"
+		android:gravity="center_vertical"/>
+	
+	<TextView 
+		android:id="@+id/menu_ci_main_subtitle"
+	    android:layout_width="match_parent"
+		android:layout_height="0dip" 
+		android:layout_weight="1" 
+		android:focusable="false"
+		android:gravity="center_vertical" />
+	
+	<ListView 
+		android:id="@+id/menu_ci_main_list" 
+	    android:layout_width="match_parent"
+		android:layout_height="211dip" 
+		android:fastScrollEnabled="true"
+		android:scrollbars="none"
+		android:cacheColorHint="#00000000" 
+		android:fadingEdge="none"
+		android:divider="@null"
+		android:listSelector="@drawable/menu_optionbg" />
+	
+	<TextView 
+		android:id="@+id/menu_ci_main_bottom"
+	    android:layout_width="match_parent"
+		android:layout_height="0dip" 
+		android:layout_weight="1" 
+		android:focusable="false"
+		android:gravity="center_vertical" />
+</LinearLayout>

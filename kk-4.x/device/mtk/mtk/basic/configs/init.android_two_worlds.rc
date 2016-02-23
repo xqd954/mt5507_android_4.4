@@ -1,0 +1,26 @@
+on fs
+	# mount Linux rootfs & create symbolic link
+	mkdir /linux_rootfs
+    wait /dev/block/mmcblk0p10
+
+	mount squashfs /dev/block/mmcblk0p10 /linux_rootfs ro
+	mkdir /lib
+	symlink /linux_rootfs/lib/ld-linux.so.3 /lib/ld-linux.so.3
+	mkdir /bin
+	symlink /linux_rootfs/bin/sh /bin/sh
+	symlink /linux_rootfs/bin/mount /bin/mount
+	symlink /linux_rootfs/bin/mkdir /bin/mkdir
+
+    symlink /linux_rootfs/openbox /openbox
+
+	# mount Linux 3rd
+	mkdir /3rd
+
+	# mount Linux 3rd_rw
+	mkdir /3rd_rw
+
+	# mount Linux perm
+	mkdir /perm
+
+on property:net.dns1=*
+    write_symlink /etc/resolv.conf "nameserver ${net.dns1}"

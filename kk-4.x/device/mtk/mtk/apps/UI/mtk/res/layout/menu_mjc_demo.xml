@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:shrinkColumns="*"
+    android:stretchColumns="0,2" >
+    <TableRow>
+        <TextView
+            android:layout_gravity="center"
+            android:background="@drawable/menu_mjc_on_off"
+            android:gravity="center"
+            android:text="@string/menu_video_mjc_demo_off" />
+        <ImageView android:src="@drawable/menu_mjc_all" />
+        <TextView
+            android:layout_gravity="center"
+            android:background="@drawable/menu_mjc_on_off"
+            android:gravity="center"
+            android:text="@string/menu_video_mjc_demo_on" />
+    </TableRow>
+</TableLayout>

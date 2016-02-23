@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+            <android.widget.TCLButtonEspecial android:id="@+id/tcl_especial_idbutton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                 
+                android:text="@android:string/tcl_dialog_ok"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:paddingLeft="30dip"
+                android:paddingRight="30dip"
+                android:paddingTop="6dip"
+                android:paddingBottom="6dip"
+                android:layout_marginRight="10dp"/>
+    
+            <android.widget.TCLButtonEspecial android:id="@+id/tcl_especial_idbutton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                
+                android:gravity="center"
+                android:text="@string/tcl_dialog_alonelistener"
+                android:textSize="30sp"
+                android:paddingLeft="30dip"
+                android:paddingRight="30dip"
+                android:paddingTop="6dip"
+                android:paddingBottom="6dip"
+                android:layout_marginRight="10dp"/>
+
+    
+            <android.widget.TCLButtonEspecial android:id="@+id/tcl_especial_idbutton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                
+                android:gravity="center"
+                android:text="@string/tcl_dialog_cancle"
+                android:textSize="30sp"
+                android:paddingLeft="30dip"
+                android:paddingRight="30dip"
+                android:paddingTop="6dip"
+                android:paddingBottom="6dip"
+                />
+     </LinearLayout>

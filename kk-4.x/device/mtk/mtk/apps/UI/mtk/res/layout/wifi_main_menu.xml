@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">		
+	<LinearLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_centerInParent="true"
+			android:orientation="vertical">
+			<Button android:id="@+id/wifi_main_btn_scan"
+				android:background="@drawable/wifi_main_selector"
+				android:layout_width="800dip" android:layout_height="45dip"
+				android:textColor="@color/white" android:textSize="20dip"
+				android:text="@string/menu_wifi_main_scan" android:gravity="center_vertical">
+			</Button>
+			<Button android:id="@+id/wifi_main_btn_manual"
+				android:background="@drawable/wifi_main_selector"
+				android:layout_width="800dip" android:layout_height="45dip"
+				android:textColor="@color/white" android:textSize="20dip"
+				android:text="@string/menu_wifi_main_manual" android:gravity="center_vertical"
+				android:layout_marginTop="15dip">
+			</Button>
+			<Button android:id="@+id/wifi_main_btn_auto"
+				android:background="@drawable/wifi_main_selector"
+				android:layout_width="800dip" android:layout_height="45dip"
+				android:textColor="@color/white" android:textSize="20dip"
+				android:text="@string/menu_wifi_main_auto" android:gravity="center_vertical"
+				android:layout_marginTop="15dip">
+			</Button>
+		</LinearLayout>
+</RelativeLayout>

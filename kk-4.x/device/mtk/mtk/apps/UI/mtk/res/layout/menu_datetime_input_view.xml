@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true" >
+
+    <TextView
+        android:id="@+id/common_itemname"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small_text_size"
+        android:layout_weight="4" />
+
+    <com.mediatek.ui.menu.commonview.DateTimeView
+        android:id="@+id/common_datetimeview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:focusableInTouchMode="true"
+        android:gravity="center" 
+        android:layout_weight="1" />
+
+</LinearLayout>

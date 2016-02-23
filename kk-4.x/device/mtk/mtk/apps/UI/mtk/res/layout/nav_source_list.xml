@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- input resource list -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:id="@+id/nav_ll_sourceList_model" android:background="@drawable/nav_input_source_list_bg"
+	android:orientation="vertical">
+	<TextView android:id="@+id/nav_tv_source_title"
+		android:layout_width="match_parent" android:layout_height="match_parent"
+		android:text="@string/nav_source_main_title" android:gravity="center"
+		android:layout_weight="0.88" android:textSize="@dimen/nav_textsize_large"
+		android:textColor="@color/white" />
+	<com.mediatek.ui.commonview.CustListView
+		android:id="@+id/nav_source_listview" android:layout_width="match_parent"
+		android:layout_height="match_parent" android:listSelector="@drawable/nav_source_list_selector"
+		android:choiceMode="singleChoice" android:divider="@drawable/translucent_background"
+		android:layout_weight="0.12">
+		<requestFocus />
+	</com.mediatek.ui.commonview.CustListView>
+</LinearLayout>

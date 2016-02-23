@@ -1,0 +1,123 @@
+key 2     1
+key 3     2
+key 4     3
+key 5     4
+key 6     5
+key 7     6
+key 8     7
+key 9     8
+key 10    9
+key 11    0
+key 28    DPAD_CENTER
+key 102   HOME
+key 103   DPAD_UP           WAKE_DROPPED
+key 105   DPAD_LEFT         WAKE_DROPPED
+key 106   DPAD_RIGHT        WAKE_DROPPED
+key 108   DPAD_DOWN         WAKE_DROPPED
+key 111   DEL
+key 113   VOLUME_MUTE
+key 114   VOLUME_DOWN
+key 115   VOLUME_UP
+key 116   POWER
+key 139   MENU
+#key 142   SLEEP
+key 158   BACK
+key 358   INFO
+key 398   PROG_RED
+key 399   MENU
+key 400   PROG_YELLOW
+key 401   PROG_BLUE
+#key 362   PROGINFO
+#key 364   FAVCH
+#key 365   EPG
+#key 388   CAPTIONS
+#key 392   AUDIO
+#key 393   VIDEO
+key 402   CHANNEL_UP
+key 403   CHANNEL_DOWN
+#key 547   DISPLAY
+key 549   TV_INPUT
+#key 592   TOOL
+#key 593   PIP
+#key 594   POP
+#key 595   MP
+#key 596   JUMP
+#key 597   WIDE
+#key 598   CAPTION
+#key 599   ROI
+#key 600   FREEZE
+#key 601   CARD
+key 551   3D_MODE
+
+# TCL extended
+key 300   TCL_MITV
+key 301   TCL_USB_MENU
+key 302   TCL_SWING_R1
+key 303   TCL_SWING_R2
+key 304   TCL_SWING_R3
+key 305   TCL_SWING_R4
+key 306   TCL_SWING_L1
+key 307   TCL_SWING_L2
+key 308   TCL_SWING_L3
+key 309   TCL_SWING_L4
+key 310   TCL_UP
+key 311   TCL_DOWN
+key 312   TCL_LEFT
+key 313   TCL_RIGHT
+key 314   INFO
+key 315   TCL_UP_LEFT
+key 316   TCL_UP_RIGHT
+key 317   TCL_DOWN_LEFT
+key 318   TCL_DOWN_RIGHT
+key 319   TCL_CIRCLE_CLOCKWISE
+key 320   TCL_CIRCLE_CTR_CLOCKWISE
+key 321   TCL_GESTURE_X
+key 322   TCL_GESTURE_ALPHA
+key 323   TCL_GESTURE_MUTE
+#key 324   TCL_WAKE_MOUSE
+key 370   TCL_SUBTITLE
+key 388   TCL_TEXT
+key 395   TCL_LIST
+key 217   TCL_SEARCH
+#key 544   QUICK_MENU
+#key 561	  KEY_SET
+#key 562   KEY_HISTORY
+#key 563   KEY_NUMBER
+#key 249   TCL_RETURN
+
+#add by tank@tcl.com
+key 471   TV_INPUT
+#key 363   EPG
+key 104   PAGE_UP
+key 128   MEDIA_STOP
+key 407   MEDIA_NEXT
+#key 412   MEDIA_PREVIOUS
+key 579   MEDIA_REWIND
+key 577   MEDIA_FAST_FORWARD
+key 207   MEDIA_PLAY
+key 119   MEDIA_PAUSE
+key 97    ZOOM_IN
+key 1     ZOOM_OUT
+key 377   TV
+key 220   TV_INPUT
+key 218   TCL_LAST
+#key 32    SOUND_MODE
+key 96    TCL_ALL_APP
+#key 41    TCL_APPSTORE
+#end tank@tcl.com
+
+
+
+#add by malei for vittual keypad
+key 546 GUIDE
+key 562 TCL_HISTORY
+key 195         INFO
+key 418 ZOOM_IN
+key 410 ZOOM_OUT
+
+key 251 TCL_NETFLIX_PLAYPAUSE
+key 201   MEDIA_PAUSE
+key 255 TCL_NETFLIX_FB
+key 254 TCL_NETFLIX_STOP
+key 253 TCL_NETFLIX_FF
+

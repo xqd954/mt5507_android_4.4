@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/turnkey_comm_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_dialog_background"
+    android:padding="@dimen/menu_finetune_padding" >
+
+    <TextView
+        android:id="@+id/comm_finetune_numr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/comm_finetune_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comm_finetune_numr"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/menu_tv_channel_name"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/comm_finetune_namer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/comm_finetune_name"
+        android:layout_toRightOf="@id/comm_finetune_name"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/comm_finetune_frequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/common_finetune_line4"
+        android:layout_below="@id/comm_finetune_name"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/comm_finetune_picgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/common_finetune_line4"
+        android:layout_below="@id/comm_finetune_name"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/menu_finetune_padding"
+        android:layout_toRightOf="@id/comm_finetune_frequency"
+        android:src="@drawable/menu_icon_select_hi" />
+
+    <TableLayout
+        android:id="@+id/common_finetune_line4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:stretchColumns="*" >
+
+        <TableRow>
+
+            <!-- the lower part -->
+
+            <TextView
+                android:id="@+id/comm_finetune_enter"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/tk_cm_key_enter"
+                android:text="@string/menu_tv_enter"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/comm_finetune_exit"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/tk_cm_key_exit"
+                android:text="@string/menu_tv_exit"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

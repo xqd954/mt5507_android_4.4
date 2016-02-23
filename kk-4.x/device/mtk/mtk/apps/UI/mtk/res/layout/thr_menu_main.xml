@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:padding="2dp"  
+    android:background="@drawable/thr_menu_bg">
+
+    <TextView android:id="@+id/thr_menu_title"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        style="@style/thr_menu_txt_style"
+        android:gravity="center"
+        android:layout_weight="4"
+        android:text="@string/thr_menu_common_setting" />
+    <ListView android:id="@+id/thr_menu_list"
+        android:layout_weight="1"       
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:divider="@android:color/transparent"
+        android:listSelector="@drawable/tk_cm_item_selected"
+        android:dividerHeight="30dp"
+       
+        android:fadeScrollbars="true"
+        
+        android:scrollingCache="true" >
+    </ListView>
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"       
+        android:layout_weight="4">
+        <TextView
+                android:id="@+id/thr_menu_cancal"
+                android:layout_weight="1"              
+                android:textSize="14sp"	   
+	            android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/tk_cm_key_exit" 
+                android:layout_alignParentRight="true"  
+                android:paddingRight="30dp"                
+                android:layout_centerHorizontal="true"    
+                android:text="@string/thr_menu_cancal" />
+		<TextView
+                android:id="@+id/thr_select"
+                android:layout_weight="1"           
+                android:textSize="14sp"	   
+	            android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/tk_cm_key_select_up"
+                android:layout_alignParentLeft="true"  
+                android:paddingLeft="26dp"  
+                android:layout_centerHorizontal="true"           
+                android:text="@string/thr_menu_select" />                    
+	</RelativeLayout>
+</LinearLayout>
+

@@ -1,0 +1,4 @@
+service k2logcat /system/bin/k2logcat
+    class main
+    disabled
+    oneshot

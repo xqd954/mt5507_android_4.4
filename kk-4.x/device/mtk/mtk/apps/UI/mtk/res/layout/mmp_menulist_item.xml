@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" 
+	android:layout_height="wrap_content"
+	android:background="@drawable/mmp_listselected"
+	android:id="@+id/mmp_menulist_liner" >
+
+
+	
+	<TextView android:layout_width="match_parent" 
+	    android:gravity="left" 
+	    android:layout_weight="1"
+	    style="@style/mmp_pop_tx"
+		android:id="@+id/mmp_menulist_tv" 
+		android:layout_height="wrap_content">
+	</TextView>
+
+
+
+	<ImageView android:id="@+id/mmp_menulist_img"
+		android:layout_width="match_parent" 
+		android:visibility="invisible"
+		android:layout_weight="5"
+		android:layout_height="wrap_content" 
+		android:src="@drawable/mmp_toolbar_typeicon_paly">
+		
+	</ImageView>
+
+</LinearLayout>

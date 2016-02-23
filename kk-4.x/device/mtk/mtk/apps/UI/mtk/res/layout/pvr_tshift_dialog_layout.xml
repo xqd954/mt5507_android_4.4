@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_scan_dialog_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nav_infobar_smaple_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/diskop_title_line1"
+        style="android:style/TextAppearance_Theme_Dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="23sp"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:id="@+id/diskop_title_line2"
+        style="android:style/TextAppearance_Theme_Dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:layout_gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/menu_scan_proline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dip"
+        android:orientation="horizontal"
+        android:paddingBottom="20dip"
+        android:paddingLeft="20dip" >
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:focusable="false"
+            android:layout_marginRight="20dip" 
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:id="@+id/finishpercentage"
+            style="android:style/TextAppearance_Theme_Dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:focusable="false"
+            android:textSize="25sp"
+             android:textColor="@drawable/white" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/pvr_tshift_device_diskop_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:background="@drawable/menu_dialog_button"
+        android:text="@string/pvr_dialog_exit"
+        android:textColor="@drawable/white"
+        android:textSize="23sp" >
+    </Button>
+
+</LinearLayout>

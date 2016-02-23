@@ -1,0 +1,13 @@
+# init.rc for andriod part (twoworlds)
+
+on init
+    export BOOTCLASSPATH /system/framework/core.jar:/system/framework/conscrypt.jar:/system/framework/okhttp.jar:/system/framework/core-junit.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/framework2.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/mms-common.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/apache-xml.jar:/system/framework/webviewchromium.jar:/system/framework/com.mediatek.util.jar:/system/framework/com.mediatek.dm.jar:/system/framework/com.mediatek.common.capture.jar:/system/framework/com.mediatek.common.PhotoPlayer.jar:/system/framework/com.mediatek.twoworlds.tv.jar:/system/framework/com.mediatek.common.powercontrol.jar:/system/framework/com.extra.eventflow.jar:/system/framework/com.mediatek.eventflow.jar:/system/framework/com.mediatek.wfdsink.jar:/system/framework/com.mediatek.network.jar
+
+#  service bootanim /system/bin/bootanimation 
+#  replace original bootanimation binary for early TV playback
+service bootanim /system/bin/dtv_bootanim 1 0 
+    class main
+#    user graphics
+#    group graphics
+    disabled
+    oneshot

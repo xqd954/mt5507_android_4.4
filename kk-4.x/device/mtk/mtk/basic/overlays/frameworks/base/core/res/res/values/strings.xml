@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- //Begin Added by tianjing@tcl.com for TCL Widgets .21items-->
+   
+    <add-resource type="string" name="tcl_dialog_ok" />
+	<string name="tcl_dialog_ok">"确 认"</string>
+    
+    <add-resource type="string" name="tcl_dialog_cancle" />
+	<string name="tcl_dialog_cancle">"取 消"</string>
+    
+    <add-resource type="string" name="tcl_dialog_alonelistener" />
+	<string name="tcl_dialog_alonelistener">"单独听"</string>
+    
+    <add-resource type="string" name="tcl_shutdown_dialog_toptitle" />
+	<string name="tcl_shutdown_dialog_toptitle">"您要关机吗？"</string>
+    
+    <!-- //End Added by tianjing@tcl.com for TCL Widgets .20130124-->
+    
+       	
+    
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- font size -->
+	<dimen name="nav_textsize_large">19sp</dimen>
+	<dimen name="nav_textsize_normal">18sp</dimen>
+	<dimen name="nav_textsize_timeduration">12sp</dimen>
+  
+	<!-- nav_zoom -->
+	<dimen name="nav_nav_channel_zoom_up_marginBottom">130dp</dimen>
+	<dimen name="nav_channel_zoom_down_marginTop">130dp</dimen>
+	<dimen name="nav_channel_zoom_left_marginRight">280dp</dimen>
+	<dimen name="nav_channel_zoom_right_marginLeft">280dp</dimen>
+	<dimen name="nav_channel_zoom_center_imageview_size">30dp</dimen>
+     <dimen name="nav_channel_zoom_padding">110dp</dimen>
+	<!-- for epg text size -->
+	<dimen name="epg_type_item_ts">22sp</dimen>
+	
+	<!-- for epg_main and epg_list_view -->
+	<dimen name="epg_icon_margin">220dip</dimen>
+	
+	
+</resources>

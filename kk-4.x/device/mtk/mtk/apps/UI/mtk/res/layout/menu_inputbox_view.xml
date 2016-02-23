@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:descendantFocusability="blocksDescendants" 
+	android:gravity="center_vertical">
+	<TextView android:id="@+id/common_textview" 
+		style="@style/listitem_normal_tv"
+		android:layout_weight="4" 
+		android:gravity="left|center_vertical" />
+	<LinearLayout android:layout_weight="3" 
+		android:gravity="center_vertical"
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent">
+		<EditText android:id="@+id/common_edittext1" 
+			style="@style/input_box_edittext"
+			/>
+		<EditText android:id="@+id/common_edittext2" 
+			style="@style/input_box_edittext"
+			/>
+		<EditText android:id="@+id/common_edittext3" 
+			style="@style/input_box_edittext"
+			/>
+		<EditText android:id="@+id/common_edittext4" 
+			style="@style/input_box_edittext"
+			/>
+	</LinearLayout>
+	<TextView android:id="@+id/common_textview5" 
+		style="@style/listitem_normal_tv"
+		android:layout_weight="5" 
+		android:gravity="left|center_vertical"/>
+</LinearLayout>
+  

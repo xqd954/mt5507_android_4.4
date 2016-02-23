@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/nav_source_list_item_tv" android:layout_width="wrap_content"
+	android:layout_height="wrap_content" 
+	 android:gravity="left|center_vertical"
+	android:text="@string/app_name" 
+	android:textColor="@color/white" android:textSize="@dimen/nav_textsize_normal"/>
+
+
+

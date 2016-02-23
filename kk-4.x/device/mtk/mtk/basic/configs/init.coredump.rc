@@ -1,0 +1,4 @@
+on init
+    write /proc/sys/kernel/randomize_va_space 0
+    setrlimit 4 -1 -1
+

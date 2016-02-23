@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- normal -->
+	<item android:state_enabled="false" android:drawable="@drawable/menu_tab_button_bg_normal" /> 
+	<!-- pressed -->
+	<item android:state_pressed="true" android:drawable="@drawable/menu_tab_button_select_bg"/>
+	<!-- focused -->
+	<item android:state_focused="true" 
+		android:drawable="@drawable/menu_tab_button_select_bg" />
+	
+</selector>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/turnkey_comm_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_netdialog_background"
+    android:padding="@dimen/menu_main_draw_pad" >
+
+    <TextView
+        android:id="@+id/comm_dialog_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/comm_dialog_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:singleLine="false" />
+
+    <TextView
+        android:id="@+id/menumain_dialog_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/big_large_margin_edge"
+        android:drawableLeft="@drawable/tk_cm_key_exit"
+        android:drawablePadding="@dimen/large_margin_edge"
+        android:gravity="center"
+        android:text="@string/menu_exit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/middle_text_size"
+        android:textStyle="bold" />
+
+</RelativeLayout>

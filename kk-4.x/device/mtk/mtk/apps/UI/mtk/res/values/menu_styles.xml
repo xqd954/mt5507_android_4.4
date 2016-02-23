@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Theme" parent="android:Theme">
+	</style>
+		<style name="Theme.ToastDialog" parent="android:style/Theme.Dialog">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+	<style name="Theme.TurnkeyCommDialog" parent="android:style/Theme.Dialog">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowBackground">@drawable/tv_background</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+	<style name="Theme.ScanDialog" parent="android:style/Theme.Dialog">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowBackground">@drawable/menu_dialog_background</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+	<style name="Theme.ActivityDialog" parent="android:style/Theme.Dialog">
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+
+	
+	<style name="info_label">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:paddingRight">4dip</item>
+		<item name="android:textAppearance">@style/TextAppearance.info_small</item>
+	</style>
+	
+	<style parent="android:TextAppearance" name="TextAppearance">
+	</style>
+	
+	<style name="TextAppearance.info_small">
+		<item name="android:textSize">12sp</item>
+		<item name="android:textStyle">normal</item>
+	</style>
+	
+	<style name="Theme.MenuActivityDialog">
+		<item name="android:activityOpenEnterAnimation">@null</item>
+		<item name="android:activityOpenExitAnimation">@null</item>
+		<item name="android:activityCloseEnterAnimation">@null</item>
+		<item name="android:activityCloseExitAnimation">@null</item>
+		<item name="android:taskOpenEnterAnimation">@null</item>
+		<item name="android:taskOpenExitAnimation">@null</item>
+		<item name="android:taskCloseEnterAnimation">@null</item>
+		<item name="android:taskCloseExitAnimation">@null</item>
+		<item name="android:taskToFrontEnterAnimation">@null</item>
+		<item name="android:taskToFrontExitAnimation">@null</item>
+		<item name="android:taskToBackEnterAnimation">@null</item>
+		<item name="android:taskToBackExitAnimation">@null</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:colorBackgroundCacheHint">@null</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowNoTitle">true</item>
+	</style>
+	
+	<!-- style for text view,which is item of list view-->
+	<style name="listitem_normal_tv">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">@dimen/small_text_size</item>
+		<item name="android:focusable">false</item>
+		<item name="android:clickable">false</item>
+		<item name="android:gravity">center</item>
+	</style>
+	
+	<!-- style for text view,which is item of list view-->
+	<style name="listitem_normal_wifi">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">20dip</item>
+		<item name="android:focusable">false</item>
+		<item name="android:clickable">false</item>		
+	</style>
+	
+	<!-- style for top button in menu main -->
+	<style name="main_top_button">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">fill_parent</item>
+		<item name="android:layout_alignParentLeft">true</item>
+		<item name="android:gravity">center</item>
+		<item name="android:textSize">@dimen/large_text_size</item>
+		<item name="android:textColor">@android:color/white</item>
+		<item name="android:background">@drawable/menu_dialog_button</item>
+		<item name="android:layout_weight">1</item>
+	</style>
+	
+	<!-- style for input box edit text -->
+	<style name="input_box_edittext">
+		<item name="android:layout_weight">1</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:textSize">@dimen/large_text_size</item>
+		<item name="android:singleLine">true</item> 
+		<item name="android:background">@drawable/ipinputview_normal</item>
+		<item name="android:inputType">number</item>
+		<item name="android:maxLength">3</item>
+		<item name="android:hint">@string/menu_setup_ip_edittext_hint</item>
+		<item name="android:focusable">false</item>
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+	
+	<!-- style for prompt box in left-bottom -->
+	<style name="menu_prompt_show">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColor">@color/white</item>
+    <item name="android:textSize">@dimen/middle_text_size</item>
+    <item name="android:focusable">false</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:drawablePadding">@dimen/menu_main_draw_pad</item>
+  </style>
+	
+	<style name="Transparent" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+	</style>
+	
+	<style name="menuMain_Transparent" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+	</style>
+	
+</resources>
