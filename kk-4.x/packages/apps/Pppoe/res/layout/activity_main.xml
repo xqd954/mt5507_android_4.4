@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/account" />
+
+        <EditText
+            android:id="@+id/enteraccount"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:hint="Please enter your accont"
+            android:maxLength="@integer/MaxCount"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"   
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="70dp" >
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/password" />
+
+        <EditText
+            android:id="@+id/Editpassword"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Please enter your password"
+            android:inputType="textPassword"
+            android:maxLength="@integer/MaxCount"
+            android:singleLine="true" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="63dp" >
+
+        <TextView
+            android:id="@+id/devicename"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/device" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="150dp"
+            android:layout_height="fill_parent" />
+
+        <Button
+            android:id="@+id/dial"
+            android:layout_width="100dp"
+            android:layout_height="38dp"
+            android:text="@string/dial" />
+
+    </LinearLayout>
+
+</RelativeLayout>

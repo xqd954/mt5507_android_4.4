@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">pppoe</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="account">Username</string>
+    <string name="password">Password</string>
+    <string name="device">Device</string>
+    <string name="eth0">Eth0</string>
+    <string name="dial">Dial</string>
+    <string name="ip">IP</string>
+    <string name="mask">MASK</string>
+    <string name="gateway">GATEWAY</string>
+    <string name="dns1">DNS1</string>
+    <string name="dns2">DNS2</string>
+    <string name="hungButton">Hungup</string>
+    <string-array name="devicesitem">
+        <item >eth0</item>
+        <item >wlan0</item>
+    </string-array>
+
+</resources>

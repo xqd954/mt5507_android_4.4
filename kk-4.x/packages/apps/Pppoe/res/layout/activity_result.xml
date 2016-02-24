@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".resultActivity" >
+
+     <LinearLayout
+       android:id="@+id/linearLayout_statues"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       
+        >
+
+       <TextView
+           android:id="@+id/states"
+           android:layout_width="500dp"
+           android:layout_height="wrap_content"
+            />
+
+   </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" 
+        android:layout_below="@+id/linearLayout_statues"
+          android:layout_marginTop="32dp" 
+        >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ip" />
+
+        <com.android.pppoe.BorderTextView   
+            android:id="@+id/ip"
+            android:layout_gravity="center"   
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="16dp" >
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/mask" />
+
+        <com.android.pppoe.BorderTextView   
+            android:id="@+id/mask"
+            android:layout_gravity="center"   
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_marginTop="17dp" >
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/gateway" />
+
+        <com.android.pppoe.BorderTextView 
+            android:id="@+id/gateway"  
+            android:layout_gravity="center"   
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_marginTop="18dp" >
+
+        <TextView
+            android:id="@+id/TextView03"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dns1" />
+
+        <com.android.pppoe.BorderTextView  
+            android:id="@+id/dns1" 
+            android:layout_gravity="center"      
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout4"
+        
+        android:layout_marginTop="18dp" >
+
+        <TextView
+            android:id="@+id/TextView04"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dns2" />
+
+        <com.android.pppoe.BorderTextView
+            android:id="@+id/dns2" 
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/linearLayout5"
+        android:layout_below="@+id/linearLayout5"
+        android:layout_marginTop="18dp" >
+
+        <Button
+            android:id="@+id/hungup"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+             >
+
+</Button>       
+
+    </LinearLayout>
+
+</RelativeLayout>
