@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- //Begin Added by tianjing@tcl.com for TCL Widgets .3items-->
+    <add-resource type="style" name="Theme.DeviceDefault" />
+    <style name="Theme.DeviceDefault" parent="Theme.Holo" >
+	<item name="tclprogressBarStyleCircle">@android:style/Widget.DeviceDefault.TCLProgressBarC</item>
+	<item name="tclprogressBarStyleHorizontal">@android:style/Widget.DeviceDefault.TCLProgressBarH</item>
+	<item name="tclprogressBarStyleHorizontalWhite">@android:style/Widget.DeviceDefault.TCLProgressBarHW</item>
+    </style>
+    <!-- //End Added by tianjing@tcl.com for TCL Widgets .20130124-->
+</resources>

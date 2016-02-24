@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tvos="http://schemas.android.com/apk/res/tvos" >
+    <ZoomButton android:id="@+tvos:id/zoomOut" 
+        android:background="@tvos:drawable/tcl_btn_zoom_down" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <ZoomButton android:id="@+tvos:id/zoomIn" 
+        android:background="@tvos:drawable/tcl_btn_zoom_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+</merge>

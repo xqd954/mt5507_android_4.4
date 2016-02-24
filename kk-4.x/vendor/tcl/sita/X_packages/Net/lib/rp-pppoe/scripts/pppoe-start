@@ -1,0 +1,152 @@
+#!/bin/busybox sh
+# ../scripts/pppoe-start.  Generated from pppoe-start.in by configure.
+#***********************************************************************
+#
+# pppoe-start
+#
+# Shell script to bring up a PPPoE connection
+#
+# Copyright (C) 2000 Roaring Penguin Software Inc.
+#
+# $Id$
+#
+# This file may be distributed under the terms of the GNU General
+# Public License.
+#
+# LIC: GPL
+#
+# Usage: pppoe-start [config_file]
+#        pppoe-start interface user [config_file]
+# Second form overrides USER and ETH from config file.
+# If config_file is omitted, defaults to /etc/ppp/pppoe.conf
+#
+#***********************************************************************
+
+# From AUTOCONF
+prefix=/system
+exec_prefix=${prefix}
+
+# Paths to programs
+CONNECT=${exec_prefix}/bin/pppoe-connect
+# STOP=${exec_prefix}/bin/pppoe-stop
+ECHO="busybox echo"
+IFCONFIG="busybox ifconfig"
+
+# Set to "C" locale so we can parse messages from commands
+LANG=C
+export LANG
+
+# Defaults
+CONFIG=/data/misc/ppp/pppoe.conf
+USER=""
+ETH=""
+ME=`busybox basename $0`
+# Must be root
+if busybox test "`busybox id -u`" != 0  ; then
+    $ECHO "$ME: You must be root to run this script" >& 2
+    exit 1
+fi
+
+# /var/run directory must exist
+if busybox test ! -d /var/run ; then
+	mkdir /var/run
+	chmod 777 /var/run
+	chmod 777 /var/run/*
+fi
+
+if busybox test ! -f "$CONFIG" -o ! -r "$CONFIG"  ; then
+    $ECHO "$ME: Cannot read configuration file '$CONFIG'" >& 2
+    exit 1
+fi
+export CONFIG
+. $CONFIG
+
+# stop pppd
+busybox killall pppoe-connect
+busybox killall pppd
+
+# Check for pidfile
+if busybox test -r "$PIDFILE"  ; then
+    PID=`cat "$PIDFILE"`
+    # Check if still running
+    busybox kill -0 $PID > /dev/null 2>&1
+    if busybox test $? = 0  ; then
+	$ECHO "$ME: There already seems to be a PPPoE connection up (PID $PID)" >& 2
+#	exit 1
+    fi
+    # Delete bogus PIDFILE
+    busybox rm -f "$PIDFILE" "$PIDFILE.pppd" "$PIDFILE.pppoe" "$PIDFILE.start"
+fi
+
+echo $$ > $PIDFILE.start
+
+
+# $STOP
+$CONNECT "$@" > /dev/null 2>&1 &
+CONNECT_PID=$!
+
+if busybox test "$CONNECT_TIMEOUT" = "" -o "$CONNECT_TIMEOUT" = 0  ; then
+    exit 0
+fi
+
+# Don't monitor connection if dial-on-demand
+if busybox test "$DEMAND" != "" -a "$DEMAND" != "no"  ; then
+    exit 0
+fi
+
+# Monitor connection
+TIME=0
+while  true  ; do
+    ${exec_prefix}/bin/pppoe-status $CONFIG > /dev/null 2>&1
+
+    # Looks like the interface came up
+    if busybox test $? = 0  ; then
+	# set net.dns
+	i=0
+    for line in ` cat /data/misc/ppp/resolv.conf `
+    do 
+        i=`busybox expr $i + 1`
+        if busybox test  $i -eq 2  ; then
+            setprop net.dns1   $line
+        fi
+        if busybox test $i -eq 4 ; then
+            setprop net.dns2   $line
+        fi
+    done
+
+    # set gateway for ppp
+    i=0
+    for line in ` cat /data/misc/ppp/ipaddr `
+    do
+        i=`busybox expr $i + 1`
+        if busybox test $i -eq 2 ; then
+            busybox route add default gw   $line
+            break
+        fi
+    done
+	# Print newline if standard input is a TTY
+	busybox tty -s && $ECHO " Connected!"
+	exit 0
+    fi
+
+    if busybox test -n "$FORCEPING" ; then
+	busybox printf "%s" "$FORCEPING"
+    else
+	busybox tty -s && busybox printf "%s" "$PING"
+    fi
+    busybox sleep $CONNECT_POLL
+    TIME=`busybox expr $TIME + $CONNECT_POLL`
+    if busybox test $TIME -gt $CONNECT_TIMEOUT  ; then
+	break
+    fi
+done
+
+$ECHO "TIMED OUT" >& 2
+# Timed out!  Kill the pppoe-connect process and quit
+busybox kill $CONNECT_PID > /dev/null 2>&1
+
+# Clean up PIDFILE(s)
+busybox rm -f "$PIDFILE" "$PIDFILE.pppd" "$PIDFILE.pppoe" "$PIDFILE.start"
+
+exit 1
+

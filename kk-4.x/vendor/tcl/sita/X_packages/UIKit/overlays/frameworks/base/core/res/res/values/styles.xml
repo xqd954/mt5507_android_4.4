@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   	<add-resource type="style" name="Animation.Activity" />
+	<style name="Animation.Activity">
+		<item name="activityOpenEnterAnimation_translate">@anim/activity_open_enter_translate</item>
+        <item name="activityOpenExitAnimation_translate">@anim/activity_open_exit_translate</item>
+        <item name="activityCloseEnterAnimation_translate">@anim/activity_close_enter_translate</item>
+        <item name="activityCloseExitAnimation_translate">@anim/activity_close_exit_translate</item>
+        <item name="taskOpenEnterAnimation_translate">@anim/task_open_enter_translate</item>
+        <item name="taskOpenExitAnimation_translate">@anim/task_open_exit_translate</item>
+        <item name="taskCloseEnterAnimation_translate">@anim/task_close_enter_translate</item>
+        <item name="taskCloseExitAnimation_translate">@anim/task_close_exit_translate</item>
+        <item name="taskToFrontEnterAnimation_translate">@anim/task_open_enter_translate</item>
+        <item name="taskToFrontExitAnimation_translate">@anim/task_open_exit_translate</item>
+        <item name="taskToBackEnterAnimation_translate">@anim/task_close_enter_translate</item>
+        <item name="taskToBackExitAnimation_translate">@anim/task_close_exit_translate</item>
+        <item name="wallpaperOpenEnterAnimation_translate">@anim/wallpaper_open_enter_translate</item>
+        <item name="wallpaperOpenExitAnimation_translate">@anim/wallpaper_open_exit_translate</item>
+        <item name="wallpaperCloseEnterAnimation_translate">@anim/wallpaper_close_enter_translate</item>
+        <item name="wallpaperCloseExitAnimation_translate">@anim/wallpaper_close_exit_translate</item>
+        <item name="wallpaperIntraOpenEnterAnimation_translate">@anim/wallpaper_intra_open_enter_translate</item>
+        <item name="wallpaperIntraOpenExitAnimation_translate">@anim/wallpaper_intra_open_exit_translate</item>
+        <item name="wallpaperIntraCloseEnterAnimation_translate">@anim/wallpaper_intra_close_enter_translate</item>
+        <item name="wallpaperIntraCloseExitAnimation_translate">@anim/wallpaper_intra_close_exit_translate</item>
+    </style> 
+</resources>

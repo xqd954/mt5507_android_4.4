@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"   
+    android:background="@android:drawable/tcl_toast_frame"
+    android:layout_gravity="center"
+    >
+ 	<ImageView
+ 	android:id="@+id/pic"
+ 	android:src="@android:drawable/tcl_info"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="20px"
+	android:layout_marginLeft="20px"
+	android:scaleType="center"	
+	/>
+<TextView android:id="@+id/message2"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:maxWidth="400dip"
+	android:layout_marginRight="30px"
+	android:layout_marginTop="30px"
+	android:layout_marginLeft="25px"
+	android:layout_marginBottom="30px"
+	android:textAppearance="@style/tcl_toast_text"
+	android:lineSpacingExtra="10px"
+	android:layout_gravity="center_vertical"
+	android:editable="false"/>
+</LinearLayout>

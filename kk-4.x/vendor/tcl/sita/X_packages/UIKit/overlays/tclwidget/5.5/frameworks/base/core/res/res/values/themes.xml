@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- //Begin Added by tianjing@tcl.com for TCL Widgets .16items-->
+    <add-resource type="style" name="Theme" />
+    <style name="Theme">
+	<item name="tclprogressBarStyleCircle">@android:style/TCLProgressBarC</item>
+	<item name="tclprogressBarStyleHorizontal">@android:style/TCLProgressBarH</item>
+	<item name="tclprogressBarStyleHorizontalWhite">@android:style/TCLProgressBarHW</item>
+	<item name="tclseekBarStyle">@android:style/TCLSeekBar</item>
+	<item name="tcldlabelDialogStyle">@android:style/TCLDLabelDialog</item>
+	<item name="tcldlabelStyle">@android:style/TCLDLabel</item>
+	<item name="tclradioButtonStyle">@android:style/TCLRadioButton</item>
+	<item name="tclcheckBoxStyle">@android:style/TCLCheckBox</item>
+	<item name="tcleditTextStyle">@android:style/TCLEditText</item>
+        <item name="tclbuttonStyle">@android:style/TCLButton</item>
+        <item name="tclratingBarStyle">@android:style/TCLRatingBar</item>
+	<item name="tclfloatMenuStyle">@android:style/TCLFloatMenu</item>
+	<item name="tclspinnerStyle">@android:style/TCLSpinner</item>
+	<item name="tcllistViewStyle">@android:style/TCLListView</item>
+	<item name="tclalertDialogStyle">@android:style/TCLAlertDialog</item>
+	<item name="tclbuttonblackStyle">@android:style/TCLButtonBlack</item>
+    <!-- TCL iqiyi 2013-11-21 -->
+        <item name="tclButtonEspecialStyle">@style/TCLButtonEspecial</item>
+        <item name="tclListViewEspecialStyle">@style/TCLListViewEspecial</item>
+        <item name="tclProgressBarCEspecial">@android:style/TCLProgressBarCEspecial</item>
+    </style>
+    <!-- //End Added by tianjing@tcl.com for TCL Widgets .20130124-->
+</resources>

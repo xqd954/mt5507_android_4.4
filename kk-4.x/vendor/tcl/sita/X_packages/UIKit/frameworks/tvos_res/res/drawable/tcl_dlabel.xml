@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- <animation-list  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/tcl_tea_progress_1"  android:duration="250"/>
+    <item android:drawable="@drawable/tcl_tea_progress_2"  android:duration="250"/>
+    <item android:drawable="@drawable/tcl_tea_progress_3"  android:duration="250"/>
+    <item android:drawable="@drawable/tcl_tea_progress_4"  android:duration="250"/>
+    <item android:drawable="@drawable/tcl_tea_progress_5"  android:duration="250"/>
+    <item android:drawable="@drawable/tcl_tea_progress_6"  android:duration="250"/>
+    <item android:drawable="@drawable/tcl_tea_progress_7"  android:duration="250"/>
+    <item android:drawable="@drawable/tcl_tea_progress_8"  android:duration="250"/>
+    <item android:drawable="@drawable/tcl_tea_progress_7"  android:duration="250"/>
+    <item android:drawable="@drawable/tcl_tea_progress_6"  android:duration="250"/>
+    <item android:drawable="@drawable/tcl_tea_progress_5"  android:duration="250"/>   
+    <item android:drawable="@drawable/tcl_tea_progress_4"  android:duration="250"/>
+    <item android:drawable="@drawable/tcl_tea_progress_3"  android:duration="250"/>
+    <item android:drawable="@drawable/tcl_tea_progress_2"  android:duration="250"/>
+    <item android:drawable="@drawable/tcl_tea_progress_1"  android:duration="250"/>          
+</animation-list> -->
+<animation-list  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tvos="http://schemas.android.com/apk/res/tvos"
+    android:oneshot="false">
+    <item android:drawable="@tvos:drawable/bootanimation00"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation01"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation02"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation03"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation04"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation05"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation06"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation07"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation08"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation09"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation10"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation11"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation12"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation13"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation14"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation15"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation16"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation17"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation18"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation19"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation20"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation21"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation22"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation23"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation24"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation25"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation26"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation27"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation28"  android:duration="50"/>
+    <item android:drawable="@tvos:drawable/bootanimation29"  android:duration="50"/>
+   
+</animation-list>
+

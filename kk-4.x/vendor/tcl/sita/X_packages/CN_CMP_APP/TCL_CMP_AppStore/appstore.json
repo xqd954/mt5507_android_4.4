@@ -1,0 +1,33 @@
+﻿{
+    "servicelist": [
+        {
+            "serviceid": "appstore",
+            "branches": [
+                {
+                    "detail": {
+                        "dataurl": "http://interface.appstore.huan.tv/service",
+                        "adurl": "http://ads.huan.tv/a.gif",
+                        "homeads": [
+                            "TCL-ANDROID-TCLDMT-APPSTORE3-SYGG1",
+                            "TCL-ANDROID-TCLDMT-APPSTORE3-SYGG2",
+                            "TCL-ANDROID-TCLDMT-APPSTORE3-SYGG3"
+                        ],
+                        "params": {
+                            "region": "CN",
+                            "timezone": "+0800",
+                            "language": "zh_CN"
+                        }
+                    },
+                    "version": "3.3"
+                }
+            ]
+        }
+    ],
+    "serviceinfo": {
+        "platform": "product",
+        "brands": "tcl",
+        "clienttype": "",
+        "ttl": "30",
+        "serviceid": "appstore"
+    }
+}

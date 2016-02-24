@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<machine_info >
+ <item name="產品系列(Product Name)  : " type="hard">C48P1FS</item>
+ <item name="中央處理器(CPU)  : " type="hard"> Cortex-A7 core 1.0GHz 四核（32位）</item>
+ <item name="影像處理器(GPU)  :" type="hard">Mali450 二核</item>
+ <item name="視頻處理器(VPU)  :" type="hard">VE 二核</item>
+ <item name="運動增強處理器(MPU)  :" type="hard">Cotex-A7 NEON 四核</item>
+ <item name="處理器核心數(CoreVolume)  :" type="hard">十二核</item>
+ <item name="記憶體/存儲(Memory/Flash)  :" type="hard">6Gb+32Gb</item>
+ <item name="解析度(Resolution)  :" type="hard">1920X1080</item>
+ <item name="可視角度(Visual angle)  :" type="hard">178°</item>
+ <item name="網路連接(Network system)  :" type="hard">2.4G雙收，雙發WIFI</item>
+ <item name="數位電視(Digital TV)  :" type="hard">DTMB地面數位一體機</item>
+ <item name="數位電視(Digital TV)  :" type="hard">數位小卡一體機</item>
+ <item name="音箱配置(Speaker configuration)  :" type="hard">瀑布懸浮音響</item>
+ 
+ <item name="作業系統(Operating system)  :" type="soft">Android 4.4</item>
+ <item name="操控介面(User Interface)  :" type="soft">T-UI</item>
+ <item name="安全系統(Safe system)  :" type="soft">電視衛士</item>
+ <item name="多屏互聯(Multi-screen interconnect)  :" type="soft">多屏互動</item>
+ <item name="" type="soft">微信互聯（簡版）</item>
+ <item name="影像處理引擎(Graphics engine)  :" type="soft">混合調光專利技術(專利申請號:CN201310309269.3)</item>
+ <item name="" type="soft">晶彩靚黑畫質提升技術</item>
+ <item name="" type="soft">LED背光控制</item>
+ <item name="" type="soft">自然光技術</item>
+ <item name="" type="soft">HMR 480HZ</item>
+ <item name="音訊處理引擎(Audio engine)  :" type="soft">Dolby Digital Plus</item>
+ <item name="節能技術(Energy Technology)  :" type="soft">節能先鋒</item>
+ 
+ </machine_info>

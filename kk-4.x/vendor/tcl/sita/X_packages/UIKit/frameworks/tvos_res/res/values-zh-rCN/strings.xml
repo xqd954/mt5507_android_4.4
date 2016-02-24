@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- //Begin Added by tianjing@tcl.com for TCL Widgets .21items-->
+	<string name="tcl_menu_quit">返回</string>
+	<string name="tcl_menu_logoff">注销</string>
+	<string name="tcl_menu_demon">后台</string>
+	<string name="tcl_menu_163">同步163相册</string>
+	<string name="tcl_menu_qq">同步QQ相册</string>
+	<string name="tcl_menu_sync">管理同步</string>
+	<string name="tcl_dialog_ok">确认</string>
+	<string name="tcl_dialog_cancle">取消</string>
+	<string name="tcl_menu_wallpaper">墙纸设置</string>
+	<string name="tcl_menu_move">移动</string>
+	<string name="tcl_menu_add">添加</string>
+	<string name="tcl_menu_delete">删除</string>
+	<string name="tcl_menu_edit">编辑</string>
+	<string name="tcl_menu_about">关于</string>
+	<string name="tcl_menu_sound">声音设置</string>
+	<string name="tcl_menu_appsearch">应用搜索</string>
+	<string name="tcl_menu_set">设置</string>
+	<string name="tcl_dialog_ask">询问</string>
+	<string name="tcl_dialog_hint">提示</string>
+	<string name="tcl_dialog_select">请选择操作任务</string>
+	<string name="tcl_dialog_ok1">确定</string>
+	<string name="tcl_dialog_ignore">忽略</string>
+    <!-- //End Added by tianjing@tcl.com for TCL Widgets .20130124-->
+</resources>

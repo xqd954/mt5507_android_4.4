@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<machine_info >
+ <item name="Product Name  : " type="hard">L43P1FS</item>
+ <item name="CPU  : " type="hard"> Cortex-A7 core 1.0GHz qual core（32-bit）</item>
+ <item name="GPU  :" type="hard">Mali450 Dual-core</item>
+ <item name="VPU  :" type="hard">VE Dual-core</item>
+ <item name="MPU  :" type="hard">Cotex-A7 NEON qual core</item>
+ <item name="CoreVolume  :" type="hard">Magny core</item>
+ <item name="Memory/Flash  :" type="hard">6Gb+32Gb</item>
+ <item name="Resolution  :" type="hard">1920X1080</item>
+ <item name="Visual angle  :" type="hard">178°</item>
+ <item name="Network system  :" type="hard">2.4G SVLTE WIFI</item>
+ <item name="Digital TV  :" type="hard">Digital terrestrial wave machine</item>
+ <item name="" type="hard">iDTV with micro card</item>
+ <item name="Speaker configuration  :" type="hard">Independent quattro speaker</item>
+ 
+ <item name="Operating system  :" type="soft">Android 4.4</item>
+ <item name="User Interface  :" type="soft">T-UI</item>
+ <item name="Safe system  :" type="soft">TV guardian</item>
+ <item name="Multi-screen interconnect  :" type="soft">nScreen</item>
+ <item name="" type="soft">TV WeChat(simple)</item>
+ <item name="Graphics engine  :" type="soft">Mix dimming patent technology (Application number:CN201310309269.3)</item>
+ <item name="" type="soft">Crystal black picture quality promotion technology</item>
+ <item name="" type="soft">LED backlight control</item>
+ <item name="" type="soft">Natural light technology</item>
+ <item name="" type="soft">HMR 480HZ</item>
+ <item name="Audio engine  :" type="soft">Dolby Digital Plus</item>
+ <item name="Energy Technology  :" type="soft">Energy saving pioneer</item>
+ 
+ </machine_info>

@@ -1,0 +1,2 @@
+only include 
+	1. src/stream-muxer/libmuxer.so

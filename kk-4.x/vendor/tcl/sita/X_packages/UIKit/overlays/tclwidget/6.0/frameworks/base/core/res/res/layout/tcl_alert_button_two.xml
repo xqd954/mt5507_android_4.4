@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 		android:id="@+id/tcl_alert_button"
+ 		
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent">
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="horizontal" android:gravity="center" android:paddingBottom="5dp"
+            android:background="@android:color/transparent"
+           >
+            <LinearLayout 
+               android:layout_width="wrap_content" android:layout_height="wrap_content"
+               android:layout_weight="10"
+               android:gravity="center">
+               
+	            <android.tclwidget.TCLButtonBlack android:id="@+id/button1"
+	                android:layout_width="wrap_content"     android:layout_height="wrap_content" 
+	                android:text="@string/tcl_dialog_ok"
+	                android:textSize="30sp"
+					android:gravity="center"	
+					android:paddingLeft="50dip"     android:paddingRight="50dip"
+	                android:paddingTop="10dip"      android:paddingBottom="10dip"
+	                />
+	            
+      		 </LinearLayout>     
+             <ImageView 
+                 android:id="@+id/tcl_line"
+                 android:layout_width="wrap_content" android:layout_height="fill_parent"
+                 android:layout_weight="1"/>
+ 			<LinearLayout 
+               android:layout_width="wrap_content" android:layout_height="wrap_content"
+               android:gravity="center" android:layout_weight="10">         
+                      
+	            <android.tclwidget.TCLButtonBlack android:id="@+id/button2"
+	                android:layout_width="wrap_content"
+	                android:gravity="center" 
+	                android:text="@string/tcl_dialog_cancle"
+	                android:textSize="30sp"
+	                android:layout_height="wrap_content"
+					android:paddingLeft="50dip" android:paddingRight="50dip"
+	                android:paddingTop="10dip"  android:paddingBottom="10dip"
+	                 />
+	            
+           </LinearLayout> 
+        </LinearLayout>
+     </RelativeLayout>

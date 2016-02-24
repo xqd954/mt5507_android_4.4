@@ -1,0 +1,43 @@
+整机合成：
+	如果要把游戏中心放入TAB页，必须放入整机的白名单
+	com.tcl.gamecenter
+	com.tencent.tvgamehall
+
+预装说明：
+	1、游戏商店com.tcl.gamecenter预装到/system/app下
+	2、腾讯大厅如果要支持Launcher中的Tab页，需要预装com.tencent.tvgamehall到/system/app下
+	3、腾讯大厅预装时，必须要预装对应的so库文件，不同的机芯需要预装的so库是不同的，如下：
+	   · armeabi-v7a(ARMv7-MT07C-H) 目录中对应MT07C的板子，预装位置如下：
+		 /system/lib/libuinputsupport.so
+		 /system/lib/libNativeRQD.so
+		 /system/lib/libtpnsSecurity.so
+	   · arm64-v8a(AArch64-MS828) 目录中对应MS828的板子，预装位置如下：
+		 /system/lib64/libuinputsupport.so
+		 /system/lib/libtpnsSecurity.so
+	所有的文件权限都为 644
+
+运营人员预览说明：
+	预览功能必须Xmpp文件的支持，拷贝XmppManager_signed.apk到/system/app，权限644
+	1、切换外网测试时，需要在/etc下创建 seven.config 文件，写入内容为：seven=1，没有此文件时，默认是外网正式环境
+	2、设备的mac地址必须在7v的cms设备列表中存在（和第一步需匹配，在哪个预览，哪个的列表就必须存在）
+	   CMS>>设备管理>>设备信息列表 中要存在记录
+	   CMS>>设备管理>>用户组列表，把要预览的mac加入预览用户组
+	3、设置seven.config的权限 644
+	4、预览操作请在总编库中预览，栏目库暂时不支持独立游戏商店的预览
+
+所有文件的MD5都已经提供，请用记事本打开MD5文件查看，建议预装进系统后使用md5sum命令验证一下是否对应
+
+
+
+
+更新说明：
+	1、添加新、精、热功能
+	2、添加公告活动功能
+	3、添加评分点赞功能
+
+1.1.9.8更新说明：
+1.修改了按home键停止运行的问题
+
+1.1.10.3更新说明：
+1、增加启动动画2、增加乐游地带对接跳转3、增加KO竞技台对接4、更新首页UI5、修复多个导致游戏中心停止运行的bug
+	

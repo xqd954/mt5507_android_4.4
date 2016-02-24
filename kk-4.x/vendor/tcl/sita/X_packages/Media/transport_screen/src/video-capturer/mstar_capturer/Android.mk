@@ -1,0 +1,92 @@
+LOCAL_PATH := $(call my-dir)
+
+#
+# Build STATIC_LIBRARY 
+#
+include $(CLEAR_VARS)
+LOCAL_MODULE_TAGS := optional
+
+LOCAL_ARM_MODE := arm
+##{{ lvh@tcl
+LOCAL_REQUIRED_MODULES := libemoji
+##}}
+#LOCAL_CPPFLAGS         := -fno-rtti 
+#ANDDROID_PLATFORM           := /home/yex/ics/ics
+ANDDROID_DEP_INCLUDE        := frameworks/base/include frameworks/base/native/include 
+ANDDROID_DEP_INCLUDE_OTHER  := system/core/include hardware/libhardware/include
+ANDDROID_DEP_LIB            := out/target/product/mstara3/system/lib
+#ANDDROID_DEP_LIB            := $(ANDDROID_PLATFORM)/out/target/product/mstara3/symbols/system/lib
+
+LOCAL_C_INCLUDES += $(ANDDROID_DEP_INCLUDE)        \
+                    $(ANDDROID_DEP_INCLUDE_OTHER)  \
+                    $(LOCAL_PATH)/../../libutil    \
+                    $(LOCAL_PATH)
+                    
+
+LOCAL_SRC_FILES :=  Livecamera.cpp          \
+					livecapbase.cpp         \
+					LivecapService.cpp      \
+					MstarVideoCapApi.c      \
+					StartLivecapService.cpp \
+					thread_mutex.cpp 
+
+LOCAL_LDLIBS         := -L$(ANDDROID_DEP_LIB)            
+
+#BUILD_STATIC_LIBRARY no need
+LOCAL_SHARED_LIBRARIES := libutils liblog libbinder libcutils              \
+                          libcamera_client libsurfaceflinger_client libEGL \
+			  			  libGLESv2_dbg libui libgui libmedia libhardware  \
+			  			  libhardware_legacy libsonivox libicuuc libexpat  \
+			  			  libpixelflinger libwpa_client libnetutils        \
+			  			  libskia libstagefright_foundation libgabi++      \
+			  			  libemoji libjpeg libutopia libusbhost libstlport \
+			  			  libutil
+
+LOCAL_SHARED_LIBRARIES := libutils libcutils
+			  			  
+LOCAL_MODULE   := libhlsmsarvideocap
+LOCAL_MODULE_TAGS := eng
+
+LOCAL_PRELINK_MODULE := false
+
+include $(BUILD_STATIC_LIBRARY)
+
+#
+# Build SHARED_LIBRARY 
+#
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := libhlsmsarvideocap
+
+LOCAL_WHOLE_STATIC_LIBRARIES = libhlsmsarvideocap
+
+LOCAL_SHARED_LIBRARIES := libutils liblog libbinder libcutils              \
+                          libcamera_client  libEGL \
+			  			   libui libgui libmedia libhardware  \
+			  			  libhardware_legacy libsonivox libicuuc libexpat  \
+			  			  libpixelflinger libwpa_client libnetutils        \
+			  			  libskia libstagefright_foundation libgabi++      \
+			  			  libemoji libjpeg libutopia libusbhost libstlport \
+			  			  libutil
+
+LOCAL_SHARED_LIBRARIES += libutils libcutils
+			  			  
+LOCAL_MODULE_TAGS := eng
+
+LOCAL_PRELINK_MODULE := false
+
+include $(BUILD_SHARED_LIBRARY)
+
+
+#
+# Build video cap test 
+#
+include $(CLEAR_VARS)
+LOCAL_C_INCLUDES          += $(LOCAL_PATH)              \
+							 $(LOCAL_PATH)/../../libutil
+LOCAL_SRC_FILES           := video_cap_test.c
+LOCAL_SHARED_LIBRARIES    := libhlsmsarvideocap libutil libcutils
+LOCAL_MODULE              := video_cap_test
+LOCAL_MODULE_TAGS         := eng
+LOCAL_PRELINK_MODULE      := false
+include $(BUILD_EXECUTABLE)

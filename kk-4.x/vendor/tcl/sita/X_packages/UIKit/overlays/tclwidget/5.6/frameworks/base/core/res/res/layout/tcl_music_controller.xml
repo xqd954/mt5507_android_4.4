@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<!-- android:background="#CC666600" -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+ 	
+ 	
+<RelativeLayout 
+		android:id="@+id/controll_bar"
+  	android:layout_height="fill_parent"
+  	android:layout_width="fill_parent"
+  	android:paddingBottom="30px"
+  	 	>
+    <FrameLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+       		android:layout_centerHorizontal="true"
+		android:layout_alignParentBottom="true"
+		>
+        
+        <!-- 按钮地板层 -->
+
+		<RelativeLayout 
+		    	android:id="@+id/RelativeLayout01"
+		    	android:layout_height="fill_parent"
+		    	android:layout_width="fill_parent"
+		    	android:background="#00000000" 	>
+		    		<LinearLayout
+			    	android:layout_height="wrap_content"
+			    	android:layout_width="fill_parent"
+			        android:background="@drawable/tcl_button_desk"
+			        android:layout_alignParentBottom="true"			        
+			        >
+			        </LinearLayout>
+		</RelativeLayout>
+<!-- 按钮层 -->
+
+		 <RelativeLayout 
+		    	android:id="@+id/RelativeLayout01"
+		    	android:layout_height="fill_parent"
+		    	android:layout_width="fill_parent"
+		    	android:paddingBottom="11px"
+		    	android:background="#00000000" 	>
+		    		<LinearLayout
+		    		android:id="@+id/button_group"
+			    	android:layout_height="wrap_content"
+			    	android:layout_width="wrap_content"
+			    	android:layout_alignParentBottom="true"
+			    	android:layout_centerHorizontal="true"
+			    	android:orientation="horizontal" >
+					    <ImageButton android:id="@+id/media_controller_pause" 
+			        	android:background="#00ffffff"
+			        	android:layout_marginRight="4px"
+			        	android:layout_marginLeft="4px"
+			                android:layout_width="wrap_content"
+			        	android:layout_height="wrap_content" 
+						android:src="@drawable/tcl_btn_pause" />
+
+						<!-- 快退 -->
+					    <ImageButton android:id="@+id/frw"
+			        	android:background="#00ffffff"
+			        	android:layout_marginRight="4px"
+			        	android:layout_marginLeft="4px"
+			        	android:layout_width="wrap_content"
+			        	android:layout_height="wrap_content" 
+						android:src="@drawable/tcl_btn_frw" />    
+
+						<!-- 快进 -->
+					    <ImageButton android:id="@+id/ff"
+			        	android:background="#00ffffff"
+			        	android:layout_marginRight="4px"
+			        	android:layout_marginLeft="4px"
+			        	android:layout_width="wrap_content"
+			        	android:layout_height="wrap_content" 
+						android:src="@drawable/tcl_btn_ff" />  					        
+					        
+					    <ImageButton android:id="@+id/prev"
+			        	android:background="#00ffffff"
+			        	android:layout_marginRight="4px"
+			        	android:layout_marginLeft="4px"
+			        	android:layout_width="wrap_content"
+			        	android:layout_height="wrap_content" 
+						android:src="@drawable/tcl_btn_prev" />
+						 
+						<ImageButton android:id="@+id/next" 
+			        	android:background="#00ffffff"
+			        	android:layout_marginRight="4px"
+			        	android:layout_marginLeft="4px"
+			            android:layout_width="wrap_content"
+			        	android:layout_height="wrap_content" 
+						android:src="@drawable/tcl_btn_next" />
+						
+						<ImageButton android:id="@+id/recycle"
+			        	android:background="#00ffffff"
+			        	android:layout_marginRight="4px"
+			        	android:layout_marginLeft="4px"
+			        	android:layout_width="wrap_content"
+			        	android:layout_height="wrap_content" 
+						android:src="@drawable/tcl_btn_recycle" />
+						
+						<ImageButton android:id="@+id/volume"
+			        	android:background="#00ffffff"
+			        	android:layout_marginRight="4px"
+			        	android:layout_marginLeft="4px"
+			        	android:layout_width="wrap_content"
+			        	android:layout_height="wrap_content" 
+						android:src="@drawable/tcl_btn_volume" />
+
+						
+						<ImageButton android:id="@+id/close"
+			        	android:background="#00ffffff"
+			        	android:layout_marginRight="4px"
+			        	android:layout_marginLeft="4px"
+			        	android:layout_width="wrap_content"
+			        	android:layout_height="wrap_content" 
+						android:src="@drawable/tcl_btn_return" />
+			        </LinearLayout>
+				</RelativeLayout>
+	</FrameLayout>
+</RelativeLayout>
+
+</FrameLayout>

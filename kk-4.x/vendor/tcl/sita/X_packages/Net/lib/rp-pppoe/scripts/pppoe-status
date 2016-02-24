@@ -1,0 +1,89 @@
+#!/bin/busybox sh
+#***********************************************************************
+#
+# pppoe-status
+#
+# Shell script to report on status of PPPoE connection
+#
+# Copyright (C) 2000-2001 Roaring Penguin Software Inc.
+#
+# $Id$
+#
+# This file may be distributed under the terms of the GNU General
+# Public License.
+#
+# LIC: GPL
+#
+# Usage: pppoe-status [config_file]
+# If config_file is omitted, defaults to /etc/ppp/pppoe.conf
+#
+#***********************************************************************
+
+# Defaults
+CONFIG=/data/misc/ppp/pppoe.conf
+
+case "$#" in
+    1)
+	CONFIG="$1"
+	;;
+esac
+
+if busybox test ! -f "$CONFIG" -o ! -r "$CONFIG"  ; then
+    echo "$0: Cannot read configuration file '$CONFIG'" >& 2
+    exit 1
+fi
+
+. $CONFIG
+
+PPPOE_PIDFILE="$PIDFILE.pppoe"
+PPPD_PIDFILE="$PIDFILE.pppd"
+
+if busybox test "$DEMAND" != "no"  ; then
+    echo "Note: You have enabled demand-connection; pppoe-status may be inaccurate."
+fi
+
+# If no PPPOE_PIDFILE, connection is down, unless we're using the Linux plugin
+if busybox test "$LINUX_PLUGIN" = ""  ; then
+    if busybox test ! -r "$PPPOE_PIDFILE"  ; then
+	echo "pppoe-status: Link is down (can't read pppoe PID file $PPPOE_PIDFILE)"
+        echo "0" > /data/misc/ppp/status.data
+	exit 1
+    fi
+fi
+
+# If no PPPD_PIDFILE, something fishy!
+if busybox test ! -r "$PPPD_PIDFILE"  ; then
+    echo "pppoe-status: Link is down (can't read pppd PID file $PPPD_PIDFILE)"
+    echo "0" > /data/misc/ppp/status.data
+    exit 1
+fi
+
+PPPD_PID=`cat "$PPPD_PIDFILE"`
+
+# Sigh.  Some versions of pppd put PID files in /var/run; others put them
+# in /etc/ppp.  Since it's too messy to figure out what pppd does, we
+# try both locations.
+for i in /data/misc/ppp/ppp*.pid /var/run/ppp*.pid ; do
+    if busybox test -r $i ; then
+	PID=`cat $i`
+	if busybox  test "$PID" = "$PPPD_PID" ; then
+	    IF=`busybox basename $i .pid`
+	    busybox netstat -rn | busybox grep " ${IF}\$" > /dev/null
+	    # /sbin/ifconfig $IF | grep "UP.*POINTOPOINT" > /dev/null
+	    if busybox test "$?" != "0"  ; then
+		echo "pppoe-status: Link is attached to $IF, but $IF is down"
+                echo "0" > /data/misc/ppp/status.data
+		exit 1
+	    fi
+	    echo "pppoe-status: Link is up and running on interface $IF"
+            echo "1" > /data/misc/ppp/status.data
+	    busybox ifconfig $IF
+	    exit 0
+	fi
+    fi
+done
+
+echo "pppoe-status: Link is down -- could not find interface corresponding to"
+echo "pppd pid $PPPD_PID"
+echo "0" > /data/misc/ppp/status.data
+exit 1

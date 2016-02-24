@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- //Begin Added by tianjing@tcl.com for TCL Widgets .21items-->
+	<string name="tcl_menu_quit">Back</string>
+	<string name="tcl_menu_logoff">Log Out</string>
+	<string name="tcl_menu_demon">Background</string>
+	<string name="tcl_menu_163">Sync 163 Album</string>
+	<string name="tcl_menu_qq">Sync QQ Album</string>
+	<string name="tcl_menu_sync">Sync Management</string>
+	<string name="tcl_dialog_ok">"    OK    "</string>
+	<string name="tcl_dialog_cancle">Cancel</string>
+	<string name="tcl_menu_wallpaper">Set wallpaper</string>
+	<string name="tcl_menu_move">Move</string>
+	<string name="tcl_menu_add">Add</string>
+	<string name="tcl_menu_delete">Delete</string>
+	<string name="tcl_menu_edit">Edit</string>
+	<string name="tcl_menu_about">About</string>
+	<string name="tcl_menu_sound">Set sound</string>
+	<string name="tcl_menu_appsearch">App search</string>
+	<string name="tcl_menu_set">Setting</string>
+	<string name="tcl_dialog_ask">Query</string>
+	<string name="tcl_dialog_hint">Info</string>
+	<string name="tcl_dialog_select">Please select the operation task.</string>
+	<string name="tcl_dialog_ok1">"    OK    "</string>
+	<string name="tcl_dialog_ignore">"ignore"</string>
+    <!-- //End Added by tianjing@tcl.com for TCL Widgets .20130124-->
+</resources>

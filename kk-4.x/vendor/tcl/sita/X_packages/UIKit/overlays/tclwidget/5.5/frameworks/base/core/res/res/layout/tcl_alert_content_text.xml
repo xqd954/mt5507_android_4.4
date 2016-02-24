@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="30px"
+	android:layout_marginTop="10px"
+	android:layout_marginBottom="10px"
+	android:paddingRight="30px">
+    
+	<TextView
+    	android:id="@+id/label"
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content" 
+    	android:textAppearance="@style/tcl_toast_text"
+   		android:layout_marginLeft="10px"
+   		android:layout_marginTop="10px"
+    />
+    
+</RelativeLayout>

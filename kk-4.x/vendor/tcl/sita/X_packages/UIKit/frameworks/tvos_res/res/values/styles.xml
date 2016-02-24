@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tvos="http://schemas.android.com/apk/res/tvos"
+	>
+    <!-- //Begin Added by tianjing@tcl.com for TCL Widgets .22items-->
+	<style name="TCLButton">
+		<item name="android:background">@tvos:drawable/tcl_btn_default</item>
+		<item name="android:focusable">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:textAppearance">?android:attr/textAppearanceSmallInverse</item>
+        <!--item name="android:textColor">@android:color/primary_text_light</item--> 
+		<item name="android:textColor">@tvos:drawable/tcl_btntext_818_selector</item>
+		<item name="android:gravity">center_vertical|center_horizontal</item>
+	</style>
+	<style name="TCLButtonBlack">
+		<item name="android:background">@tvos:drawable/tcl_btn_black</item>
+		<item name="android:focusable">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:textAppearance">?android:attr/textAppearanceSmallInverse</item>
+        <!--item name="android:textColor">@android:color/primary_text_dark</item-->
+		<item name="android:textColor">@tvos:drawable/tcl_btntext_818_selector</item> 
+		<item name="android:gravity">center_vertical|center_horizontal</item>
+	</style>
+
+	<style name="TCLCheckBox">
+		<item name="android:focusable">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:textAppearance">?android:attr/textAppearance</item>
+        <!--item name="android:textColor">?android:attr/textColorPrimaryDisableOnly</item-->
+        <item name="android:textColor">@tvos:drawable/tcl_btntext_818_selector</item>
+		<item name="android:gravity">center_vertical|left</item>
+		<item name="android:background">@tvos:drawable/tcl_btn_check_label_background</item>
+		<item name="android:button">@tvos:drawable/tcl_btn_check</item>
+	</style>
+	<style name="TCLRadioButton">
+		<item name="android:focusable">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:textAppearance">?android:attr/textAppearance</item>
+        <!--item name="android:textColor">?android:attr/textColorPrimaryDisableOnly</item-->
+        <item name="android:textColor">@tvos:drawable/tcl_btntext_818_selector</item>
+		<item name="android:gravity">center_vertical|left</item>
+		<item name="android:background">@tvos:drawable/tcl_btn_radio_label_background</item>
+		<item name="android:button">@tvos:drawable/tcl_btn_radio</item>
+	</style>
+	<style name="TCLProgressBarH">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@tvos:drawable/tcl_progress_horizontal</item>
+		<item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+		<item name="android:minHeight">20dip</item>
+		<item name="android:maxHeight">20dip</item>
+	</style>
+	<!--begin, modified by lizhenzhen for progressBar 2012-04-17 email:lizz@tcl.com-->
+	<!--{{tj@tcl, adapt to new tcl_dlabel drawable -->
+	<style name="TCLProgressBarC">
+		<item name="android:indeterminateOnly">true</item>
+		<item name="android:indeterminateDrawable">@tvos:drawable/tcl_dlabel</item>
+		<item name="android:minWidth">160dip</item>
+        	<item name="android:maxWidth">160dip</item>
+        	<item name="android:minHeight">146dip</item>
+        	<item name="android:maxHeight">146dip</item>
+	</style>
+	<!--}}-->
+	<!--end, lizhenzhen-->
+	<style name="TCLProgressBarHW">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@tvos:drawable/tcl_progress_horizontal_white</item>
+		<item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+		<item name="android:minHeight">20dip</item>
+		<item name="android:maxHeight">20dip</item>
+	</style>
+	
+	<style name="TCLDLabelDialog" parent="android:Theme.Dialog">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFrame">@null</item>
+	　      <item name="android:windowIsFloating">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+	
+	<style name="TCLDLabel" parent="android:Widget.ProgressBar">
+		<item name="android:indeterminateDrawable">@tvos:drawable/tcl_progress_medium</item>
+		<item name="android:minWidth">184dip</item>
+		<item name="android:maxWidth">184dip</item>
+		<item name="android:minHeight">184dip</item>
+		<item name="android:maxHeight">184dip</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+	
+	<style name="TCLSeekBar">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@tvos:drawable/tcl_seekbar</item>
+		<item name="android:indeterminateDrawable">@tvos:drawable/tcl_seekbar</item>
+        <item name="android:minHeight">10px</item>
+        <item name="android:maxHeight">10px</item>
+        <item name="android:thumb">@tvos:drawable/tcl_seek_thumb</item>
+        <item name="android:paddingLeft">18px</item>
+        <item name="android:paddingRight">18px</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_centerInParent">true</item>
+	</style>
+
+	<style name="TCLRatingBar">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@tvos:drawable/tcl_ratingbar</item>
+		<item name="android:indeterminateDrawable">@tvos:drawable/tcl_ratingbar</item>
+		<item name="android:minHeight">38dip</item>
+		<item name="android:maxHeight">38dip</item>
+		<item name="android:thumb">@null</item>
+		<item name="android:isIndicator">false</item>
+	</style>
+
+	<style name="TCLEditText">
+		<item name="android:focusable">true</item>
+		<item name="android:focusableInTouchMode">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:background">@tvos:drawable/tcl_edit_text</item>
+		<item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>
+		<!--<item name="android:textColor">@android:color/primary_text_light</item>-->
+		<item name="android:textColor">@tvos:drawable/tcl_btntext_818_selector</item>
+		<item name="android:gravity">center_vertical</item>
+	</style>
+
+	<style name="TCLFloatMenu" parent="android:style/Theme.Dialog">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+
+	<style name="TCLSenroiMenu" parent="@android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:background">@android:color/transparent</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:backgroundDimEnabled">false</item>
+		<!--<item name="android:textAppearance">@android:style/tcl_toast_text</item>-->
+	</style>
+
+	<style name="TCLSpinner">
+		<item name="android:background">@tvos:drawable/tcl_btn_dropdown</item>
+		<item name="android:clickable">true</item>
+	</style>
+
+	<style name="TCLSpinnerDropDownItem">
+		<item name="android:checkMark">@tvos:drawable/tcl_btn_radio</item>
+	</style>
+
+	<style name="TCLListView" parent="android:Widget.AbsListView">
+		<item name="android:listSelector">@tvos:drawable/tcl_list_selector_818_background</item>
+        <item name="android:cacheColorHint">?android:attr/colorBackgroundCacheHint</item>
+        <!--item name="android:divider">@android:drawable/screen_background_light</item-->
+        <item name="android:divider">@null</item>
+	<item name="android:background">@tvos:drawable/tcl_listview_818_bg</item>
+	</style>
+
+	<style name="TCLAlertDialog" parent="@*android:style/Theme.Dialog.Alert">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+
+	<style name="TCLDialogToast" parent="@*android:style/Theme.Dialog.Alert">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+
+	<style name="tcl_toast_text">
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:textSize">24sp</item>
+	</style>
+
+	<style name="tcl_alert_text_title">
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:textSize">30sp</item>
+		<item name="android:textStyle">italic</item>
+		<item name="android:typeface">monospace</item>
+	</style>
+
+	<style name="tcl_listdialog_text_title">
+		<item name="android:textColor">@android:color/primary_text_light</item>
+		<item name="android:textSize">30sp</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	
+    <!-- //End Added by tianjing@tcl.com for TCL Widgets .20130124-->
+    
+    <!-- iqiyi for TCL Widgets .2013-11-21-->
+	<style name="TCLButtonEspecial">
+		<item name="android:background">@tvos:drawable/tcl_btn_especial</item>
+		<item name="android:focusable">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:gravity">center_vertical|center_horizontal</item>    
+	</style>    
+
+
+	<style name="TCLListViewEspecial" parent="android:style/Widget.AbsListView">
+		<item name="android:listSelector">@tvos:drawable/tcl_list_selector_background_especial</item>
+		<item name="android:cacheColorHint">?android:attr/colorBackgroundCacheHint</item>
+		<item name="android:divider">@android:drawable/divider_horizontal_bright</item>
+		<item name="android:background">@tvos:drawable/tcl_especial_bg</item>
+	</style>        
+
+
+	<style name="TCLProgressBarCEspecial">
+		<item name="android:indeterminateOnly">true</item>
+		<item name="android:indeterminateDrawable">@tvos:drawable/tcl_dlabel_especial</item>
+		<item name="android:minWidth">105dip</item>
+		<item name="android:maxWidth">105dip</item>
+		<item name="android:minHeight">100dip</item>
+		<item name="android:maxHeight">100dip</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>      
+</resources>

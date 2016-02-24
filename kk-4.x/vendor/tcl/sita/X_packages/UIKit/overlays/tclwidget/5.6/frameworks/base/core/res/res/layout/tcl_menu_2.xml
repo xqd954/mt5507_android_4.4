@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:background="#00FFFFFF"
+	
+	
+	>
+	<!--RelativeLayout 
+		android:id="@+id/tcl_floatmenu_2"	
+		android:orientation="horizontal"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_marginTop="60px"
+		android:layout_gravity="center"
+		android:gravity="center_horizontal"
+		android:background="#00FFFFFF"		
+		-->
+		<RelativeLayout 		
+			android:id="@+id/left_RelativeLayout"
+			android:layout_width="500dp" 
+			android:layout_height="145dp"			
+			android:background="@drawable/tcl_menu_left"
+			android:focusable="true"
+			android:clickable="true"
+			android:orientation="vertical"
+			android:layout_weight="1"
+			>
+			<RelativeLayout
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_centerInParent="true"	
+			>
+			<ImageView
+			android:id="@+id/left_icon"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:src="@drawable/tcl_icon_wallpaper"
+			android:focusable="true"		
+			android:layout_centerHorizontal="true"		
+			/>
+			<TextView
+			android:id="@+id/left_text"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:text="@string/tcl_menu_wallpaper"
+			android:focusable="true"
+			android:layout_below="@id/left_icon"	
+			android:layout_marginBottom="6dp"	
+			android:layout_weight="2"	
+			android:layout_centerHorizontal="true"
+			android:textAppearance="@style/tcl_toast_text"		
+			/>
+		
+			</RelativeLayout>
+		</RelativeLayout>
+		
+		<RelativeLayout 
+		    android:id="@+id/separateline_RelativeLayout"
+		    android:layout_width="0.5dp"
+		    android:layout_height="145dp"
+		    android:background="@drawable/tcl_separateline2"
+			android:layout_toRightOf="@id/left_RelativeLayout"
+			android:layout_alignTop="@id/left_RelativeLayout"
+			android:layout_alignBottom="@id/left_RelativeLayout"
+		    >
+		</RelativeLayout> 
+	
+		<RelativeLayout 
+			android:id="@+id/right_RelativeLayout"
+			android:layout_width="500dp" 
+			android:layout_height="145dp"
+			android:background="@drawable/tcl_menu_right"
+			
+			android:focusable="true"
+			android:clickable="true"
+			android:orientation="vertical"
+			android:layout_toRightOf="@id/separateline_RelativeLayout"
+			android:layout_weight="1"
+			>
+			<RelativeLayout
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:background="#00FFFFFF"
+			>
+			<ImageView
+			android:id="@+id/right_icon"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:src="@drawable/tcl_icon_add"
+			android:focusable="true"
+			android:layout_centerHorizontal="true"
+			/>
+			<TextView
+			android:id="@+id/right_text"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:text="@string/tcl_menu_add"
+			android:textAppearance="@style/tcl_toast_text"
+			android:focusable="true"
+			android:layout_below="@id/right_icon"	
+			android:layout_marginBottom="10dp"		
+			android:layout_centerHorizontal="true"		
+			/>
+			</RelativeLayout>
+		</RelativeLayout>
+		<!--/RelativeLayout-->
+		
+		
+</LinearLayout >
+

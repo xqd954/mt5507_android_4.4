@@ -1,0 +1,35 @@
+[COMMON]
+OS = "ANDROID";
+VIDEO_MUTE_COLOR = 0;	# 1: black 0: blue
+CH_FREEZE = 1; # 0: disable change channel freeze, 1:enable
+DB_DEFAULT_AREA = 1; #1: db default area is china, 2:db default area is europe
+AREA = 0;
+TYPE = 0;
+ATV_SCAN_STEP = 1500;
+ATV_PLAY_DELAY = 1000; #control atv play mute time after program switch
+ATV_AFT_DELAY = 800; #control atv aft start time delay after channel switch
+MIX_ADJUST_BACKLIGHT_ENABLE = 1;
+
+[PATH]
+PicCurve = "/tclconfig/PicCurve/";
+PQ = "/tclconfig/pq/";
+PQ_PATCH = "/tclconfig/pq/patch/";
+DATABASE = "/database/";
+TMP = "/data/";
+RUN_WPA_SUPPLICANT = "/data/misc/wifi/wpa_supplicant";
+
+[FILE]
+DATABASE_ATV = "/database/AtvData.db";
+DATABASE_DTV = "/database/DtvData.db";
+DATABASE_DTV_CONFIG = "/tclconfig/DtvConfigData.db";
+DATABASE_FACTORY = "/database/FactoryData.db";
+DATABASE_USR = "/database/UsrData.db";
+DATABASE_EPG = "/database/epg/EpgData.db";
+INI_SYS = "/tclconfig/sys.ini";
+PANEL_NAME = "/tclconfig/panel/panel_1920.txt"
+VOLUME_CURVE = "/tclconfig/AudioCurve/VolumeCurve.ini"
+ifconfig eth0 hw ether 00:1f:16:16:0f:0b
+DATABASE_PROPERTY = "/database/PropertyData.db"
+WIFI_SIGNAL_CMD = "awk '$5 ~ /TCLIPTV/ {print $3}'"
+FIFO_APP = "/data/com_fifo";
+FIFO_MID = "/data/com_fifo_mid";            

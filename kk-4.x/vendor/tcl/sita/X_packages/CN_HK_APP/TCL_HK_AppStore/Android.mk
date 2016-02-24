@@ -1,0 +1,43 @@
+LOCAL_PATH :=$(call my-dir)
+include $(CLEAR_VARS)
+
+# Module name should match apk name to be installed
+LOCAL_MODULE := TCL_HK_AppStore3.2
+LOCAL_SRC_FILES := AppStore3.2.apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_SUFFIX:=$(COMMON_ANDROID_PACKAGE_SUFFIX)
+
+#choose apk's location 
+LOCAL_MODULE_PATH := $(TARGET_OUT_APPS)
+LOCAL_CERTIFICATE:=PRESIGNED
+LOCAL_MODULE_TAGS := optional
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+# Module name should match apk name to be installed
+LOCAL_MODULE := TCL_HK_AppStoreUpdate
+LOCAL_SRC_FILES := AppStoreUpdate.apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_SUFFIX:=$(COMMON_ANDROID_PACKAGE_SUFFIX)
+
+#choose apk's location 
+LOCAL_MODULE_PATH := $(TARGET_OUT_APPS)
+LOCAL_CERTIFICATE:=PRESIGNED
+LOCAL_MODULE_TAGS := optional
+include $(BUILD_PREBUILT)
+
+
+include $(CLEAR_VARS)
+# Module name should match apk name to be installed
+LOCAL_MODULE := TCL_HK_PackageInstallerHIS2V3.2_CN
+LOCAL_SRC_FILES := PackageInstallerHIS2V3.2_CN.apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_SUFFIX:=$(COMMON_ANDROID_PACKAGE_SUFFIX)
+
+#choose apk's location 
+LOCAL_MODULE_PATH := $(TARGET_OUT_APPS)
+LOCAL_CERTIFICATE:=PRESIGNED
+LOCAL_MODULE_TAGS := optional
+include $(BUILD_PREBUILT)
+
+

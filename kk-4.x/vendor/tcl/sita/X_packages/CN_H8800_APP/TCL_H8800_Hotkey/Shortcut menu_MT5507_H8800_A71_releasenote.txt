@@ -1,0 +1,31 @@
+
+*****************************************************************
+1.APK名称：          TCL_A71S_ShortCutMenu.apk
+2.APK英文名称：      Shortcut menu
+3.APK中文名称：      热键
+
+
+4.APK包名:             
+Shortcut menu(热键）: com.tcl.common.shortcutmenu
+
+  4.1对应代码路径和版本号：
+  Settings_DTV.apk:        http://10.120.99.80/svn/applications/trunk/java/apps/Hotkey
+ 
+  4.2 apk路径及版本号：
+  apk统一路径：http://10.120.99.80/svn/applications/trunk/java/apps/Hotkey/output/MT5507_H8800_A71_CrossUI
+
+*****************************************************************
+5.版本更改记录：
+  	5.1更新日期：20141103
+	5.2修改日志
+	5.2.1.d （问题描述）系统语言设置为英语，热键里面还是显示中文
+	5.2.1.r (问题原因) 没有添加英语翻译
+	5.2.1.a (问题对策) 添加英语翻译
+	5.2.1.w (修改人名称) 包林玉
+	5.2.1.m(修改人邮箱)   baoly@tcl.com
+	
+	5.2.2.d （问题描述）按Home键，热键UI没有消失
+	5.2.2.r (问题原因) 没有添加该功能
+	5.2.2.a (问题对策) 接收Home键广播，消失热键UI
+	5.2.2.w (修改人名称) 包林玉
+	5.2.2.m(修改人邮箱)   baoly@tcl.com

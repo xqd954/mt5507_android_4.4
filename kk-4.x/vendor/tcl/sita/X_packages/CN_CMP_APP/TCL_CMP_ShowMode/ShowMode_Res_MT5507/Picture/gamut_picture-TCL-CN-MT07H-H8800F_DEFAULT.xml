@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<picture> 
+  <!--picture_item 中的name是用来区分顺序的，内容则对应图片名字 -->  
+  <picture_item num="0" isgamut="true">color_gamut_img1.jpg</picture_item>  
+  <picture_item num="1" isgamut="true">color_gamut_img2.jpg</picture_item>  
+  <picture_item num="2" isgamut="true">color_gamut_img3.jpg</picture_item>  
+  <picture_item num="3" isgamut="false">color_gamut_img4_7800.jpg</picture_item>  
+</picture>

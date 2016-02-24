@@ -1,0 +1,3 @@
+版本：跳吧1.5
+是否导入TVOS：是
+可供下载的平台：NTK，RTK，AMlogic等导入TVOS的平台。

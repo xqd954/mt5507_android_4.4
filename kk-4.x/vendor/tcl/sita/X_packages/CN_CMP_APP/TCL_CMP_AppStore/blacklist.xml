@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<blackListResponse>
+	<callid>1</callid>
+	<servertime>2015-01-21 13:58:03</servertime>
+	<state>0000</state>
+	<note>成功</note>
+	<apiversion>3.0</apiversion>
+	<appClass>
+		<app>
+			<apkpkgname>tv.huan.ht</apkpkgname>
+		</app>
+		<app>
+			<apkpkgname>com.example.videotest2</apkpkgname>
+		</app>
+		<app>
+			<apkpkgname>com.example.videofortest</apkpkgname>
+		</app>
+		<app>
+			<apkpkgname>com.changhong.tvmanager</apkpkgname>
+		</app>
+		<app>
+			<apkpkgname>com.tcl.shop</apkpkgname>
+		</app>
+		<app>
+			<apkpkgname>cn.damai.tv.test</apkpkgname>
+		</app>
+		<app>
+			<apkpkgname>com.huan.edu.finance</apkpkgname>
+		</app>
+	</appClass>
+	<updatetime>2015-01-21 10:25:37</updatetime>
+</blackListResponse>

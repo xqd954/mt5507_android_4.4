@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* Copyright 2012, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources>
+
+  <!-- We don't want to publish private symbols in android.R as part of the
+       SDK.  Instead, put them here. -->
+  <private-symbols package="tvos" />
+
+  <!-- Private symbols that we need to reference from framework code.  See
+       frameworks/base/core/res/MakeJavaSymbols.sed for how to easily generate
+       this.
+  -->
+  <!-- //Begin Added by tianjing@tcl.com for TCL Widgets . -->
+  <java-symbol type="attr" name="tclbuttonblackStyle" />
+  <java-symbol type="attr" name="tclbuttonStyle" />
+  <java-symbol type="attr" name="tclcheckBoxStyle" />
+  <java-symbol type="attr" name="tcleditTextStyle" />
+  <java-symbol type="attr" name="tcllistViewStyle" />
+  <java-symbol type="attr" name="tclradioButtonStyle" />
+  <java-symbol type="attr" name="tclratingBarStyle" />
+  <java-symbol type="attr" name="tclseekBarStyle" />
+  <java-symbol type="attr" name="tclspinnerStyle" />
+  <!-- <java-symbol type="drawable" name="" />-->
+  <java-symbol type="drawable" name="tcl_icon_move" />
+  <java-symbol type="drawable" name="tcl_alert_pulldown" />
+  <java-symbol type="drawable" name="tcl_btn_normal" />
+  <java-symbol type="drawable" name="tcl_btn_pause" />
+  <java-symbol type="drawable" name="tcl_btn_play" />
+  <java-symbol type="drawable" name="tcl_btn_re_all" />
+  <java-symbol type="drawable" name="tcl_btn_re_one" />
+  <java-symbol type="drawable" name="tcl_icon_about" />
+  <java-symbol type="drawable" name="tcl_icon_add" />
+  <java-symbol type="drawable" name="tcl_icon_appsearch" />
+  <java-symbol type="drawable" name="tcl_icon_delete" />
+  <java-symbol type="drawable" name="tcl_icon_edit" />
+  <java-symbol type="drawable" name="tcl_icon_quit" />
+  <java-symbol type="drawable" name="tcl_icon_set" />
+  <java-symbol type="drawable" name="tcl_icon_sound" />
+  <java-symbol type="drawable" name="tcl_icon_wallpaper" />
+  <java-symbol type="drawable" name="tcl_info" />
+  <java-symbol type="drawable" name="tcl_menu_bottom" />
+  <java-symbol type="drawable" name="tcl_menu_centre_bottom" />
+  <java-symbol type="drawable" name="tcl_menu_centre_top" />
+  <java-symbol type="drawable" name="tcl_menu_left" />
+  <java-symbol type="drawable" name="tcl_menu_left_bottom" />
+  <java-symbol type="drawable" name="tcl_menu_left_top" />
+  <java-symbol type="drawable" name="tcl_menu_mid" />
+  <java-symbol type="drawable" name="tcl_menu_right" />
+  <java-symbol type="drawable" name="tcl_menu_right_bottom" />
+  <java-symbol type="drawable" name="tcl_menu_right_top" />
+  <java-symbol type="drawable" name="tcl_question" />
+  <java-symbol type="drawable" name="tcl_separateline2" />
+  <java-symbol type="drawable" name="tcl_separateline_h" />
+  <java-symbol type="drawable" name="tcl_separateline_v_b" />
+  <java-symbol type="drawable" name="tcl_separateline_v_t" />
+  <java-symbol type="drawable" name="tcl_listview_818_bg" />
+    <java-symbol type="drawable" name="tcl_slider_818_bg" />
+  <java-symbol type="drawable" name="tcl_slider_thumb" />
+  <java-symbol type="drawable" name="tcl_warning" />
+  <java-symbol type="id" name="alert_button" />
+  <java-symbol type="id" name="alert_button_full" />
+  <java-symbol type="id" name="alert_content" />
+  <java-symbol type="id" name="alert_content_foot" />
+  <java-symbol type="id" name="alert_content_full" />
+  <java-symbol type="id" name="alert_title" />
+  <java-symbol type="id" name="alert_title_full" />
+  <java-symbol type="id" name="alert_title_icon" />
+  <java-symbol type="id" name="alert_title_text" />
+  <java-symbol type="id" name="close" />
+  <java-symbol type="id" name="ff" />
+  <java-symbol type="id" name="frw" />
+  <java-symbol type="id" name="keep" />
+  <java-symbol type="id" name="label" />
+  <java-symbol type="id" name="left_icon2" />
+  <java-symbol type="id" name="left_RelativeLayout" />
+  <java-symbol type="id" name="left_RelativeLayout2" />
+  <java-symbol type="id" name="left_text" />
+  <java-symbol type="id" name="left_text2" />
+  <java-symbol type="id" name="list_content_foot" />
+  <java-symbol type="id" name="list_title" />
+  <java-symbol type="id" name="media_controller_pause" />
+  <java-symbol type="id" name="message2" />
+  <java-symbol type="id" name="message" />
+  <java-symbol type="id" name="mid_icon" />
+  <java-symbol type="id" name="mid_RelativeLayout" />
+  <java-symbol type="id" name="mid_text" />
+  <java-symbol type="id" name="music" />
+  <java-symbol type="id" name="pic" />
+  <java-symbol type="id" name="recycle" />
+  <java-symbol type="id" name="right_icon2" />
+  <java-symbol type="id" name="right_RelativeLayout" />
+  <java-symbol type="id" name="right_RelativeLayout2" />
+  <java-symbol type="id" name="right_text" />
+  <java-symbol type="id" name="right_text2" />
+  <java-symbol type="id" name="set" />
+  <java-symbol type="id" name="turn_left" />
+  <java-symbol type="id" name="turn_right" />
+  <java-symbol type="id" name="volume" />
+  <java-symbol type="id" name="zoom_down" />
+  <java-symbol type="id" name="zoom_up" />
+  <java-symbol type="id" name="tcl_spinner_listview"  />
+  <java-symbol type="layout" name="tcl_album_controller" />
+  <java-symbol type="layout" name="tcl_alert_button_one" />
+  <java-symbol type="layout" name="tcl_alert_button_two" />
+  <java-symbol type="layout" name="tcl_alert_content_text" />
+  <java-symbol type="layout" name="tcl_alert_full" />
+  <java-symbol type="layout" name="tcl_alert_nobutton" />
+  <java-symbol type="layout" name="tcl_alert_notitle" />
+  <java-symbol type="layout" name="tcl_alert_title" />
+  <java-symbol type="layout" name="tcl_dlabel" />
+  <java-symbol type="layout" name="tcl_listdialog" />
+  <java-symbol type="layout" name="tcl_menu_2" />
+  <java-symbol type="layout" name="tcl_menu_3" />
+  <java-symbol type="layout" name="tcl_menu_4" />
+  <java-symbol type="layout" name="tcl_menu_5" />
+  <java-symbol type="layout" name="tcl_music_controller" />
+  <java-symbol type="layout" name="tcl_toast" />
+  <java-symbol type="layout" name="tcl_toast_img" />
+  <java-symbol type="layout" name="tcl_video_controller" />
+  <java-symbol type="layout" name="tcl_zoom_controls" />
+    <java-symbol type="layout" name="tcl_spinner_popwindow" />
+  <java-symbol type="string" name="tcl_dialog_ask" />
+  <java-symbol type="string" name="tcl_dialog_cancle" />
+  <java-symbol type="string" name="tcl_dialog_hint" />
+  <java-symbol type="string" name="tcl_dialog_ok1" />
+  <java-symbol type="string" name="tcl_dialog_select" />
+  <java-symbol type="style" name="TCLAlertDialog" />
+  <java-symbol type="style" name="TCLDialogToast" />
+  <java-symbol type="style" name="TCLDLabelDialog" />
+  <java-symbol type="style" name="TCLFloatMenu" />
+  <java-symbol type="style" name="TCLSenroiMenu" />
+  <java-symbol type="style" name="tcl_toast_text" />
+
+  <java-symbol type="attr" name="tclprogressBarStyleCircle" />
+  <java-symbol type="attr" name="tclprogressBarStyleHorizontal" />
+  <java-symbol type="attr" name="tclprogressBarStyleHorizontalWhite" />
+  <java-symbol type="style" name="TCLProgressBarC" />
+  <java-symbol type="style" name="TCLProgressBarH" />
+  <java-symbol type="style" name="TCLProgressBarHW" />
+  <!-- //End Added by tianjing@tcl.com for TCL Widgets .20130227-->
+	<!--iqiyi .2013-11- -->
+	<java-symbol type="drawable" name="tcl_btn_especial" />
+	<java-symbol type="drawable" name="tcl_dlabel_especial" />
+	<java-symbol type="drawable" name="tcl_list_selector_background_especial" />
+	<java-symbol type="drawable" name="tcl_list_selector_background_transition_especial" />
+
+
+	<java-symbol type="drawable" name="tcl_btn_default_normal_disable_especial" />
+	<java-symbol type="drawable" name="tcl_btn_default_normal_especial" />
+	<java-symbol type="drawable" name="tcl_btn_default_selected_especial" />
+	<java-symbol type="drawable" name="tcl_especial_bg" />
+	<java-symbol type="drawable" name="tcl_list_especial_highlight" />
+	<java-symbol type="drawable" name="tcl_loading_especial1" />
+	<java-symbol type="drawable" name="tcl_loading_especial2" />
+	<java-symbol type="drawable" name="tcl_loading_especial3" />
+	<java-symbol type="drawable" name="tcl_loading_especial4" />
+	<java-symbol type="drawable" name="tcl_loading_especial5" />
+	<java-symbol type="drawable" name="tcl_loading_especial6" />
+	<java-symbol type="drawable" name="tcl_loading_especial7" />
+	<java-symbol type="drawable" name="tcl_loading_especial8" />
+	<java-symbol type="drawable" name="tcl_loading_especial9" />
+	<java-symbol type="drawable" name="tcl_loading_especial10" />
+	<java-symbol type="drawable" name="tcl_loading_especial11" />
+	<java-symbol type="drawable" name="tcl_loading_especial12" />
+	<java-symbol type="drawable" name="tcl_toast_info_especial" />
+	<java-symbol type="drawable" name="tcl_toast_question_especial" />
+	<java-symbol type="drawable" name="tcl_toast_warning_especial" />
+
+	<java-symbol type="layout" name="tcl_alert_button_one_especial" />
+	<java-symbol type="layout" name="tcl_alert_button_two_especial" />
+	<java-symbol type="layout" name="tcl_alert_content_text_especial" />
+	<java-symbol type="layout" name="tcl_alert_full_especial" />
+	<java-symbol type="layout" name="tcl_dlabel_especial" />
+	<java-symbol type="layout" name="tcl_toast_especial" />
+	<java-symbol type="layout" name="tcl_toast_img_especial" />
+
+	<java-symbol type="style" name="TCLButtonEspecial" />
+	<java-symbol type="style" name="TCLListViewEspecial" />
+	<java-symbol type="style" name="TCLProgressBarCEspecial" />
+
+	<java-symbol type="attr" name="tclButtonEspecialStyle" />
+	<java-symbol type="attr" name="tclListViewEspecialStyle" />
+	<java-symbol type="attr" name="tclProgressBarCEspecial" />
+	<java-symbol type="id" name="tcl_especial_idprogress" />
+	<java-symbol type="id" name="tcl_especial_idtext" />
+	<java-symbol type="id" name="tcl_especial_idmessage" />
+	<java-symbol type="id" name="tcl_especial_idpic" />
+	<java-symbol type="id" name="tcl_especial_idmessage2" />
+	<java-symbol type="id" name="tcl_especial_idalert_gray_full_button" />
+	<java-symbol type="id" name="tcl_especial_idalert_gray_full_content" />
+	<java-symbol type="id" name="tcl_especial_idlabel" />
+	<java-symbol type="id" name="tcl_especial_idbutton1" />
+	<java-symbol type="id" name="tcl_especial_idbutton2" />
+
+
+	<java-symbol type="string" name="tcl_dialog_ignore"/>
+	<java-symbol type="layout" name="tcl_alert_button_three"/>
+	<java-symbol type="id" name="button_center"/>
+	<java-symbol type="layout" name="tcl_alert_button_three_especial"/>
+	<java-symbol type="id" name="tcl_especial_idbutton3"/>
+
+</resources>

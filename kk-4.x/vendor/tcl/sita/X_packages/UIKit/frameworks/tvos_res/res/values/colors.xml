@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="btn_focus">#000000</color>
+    <color name="btn_nomal">#b8a56c</color>
+    <color name="btn_disable">#808080</color>
+</resources>	

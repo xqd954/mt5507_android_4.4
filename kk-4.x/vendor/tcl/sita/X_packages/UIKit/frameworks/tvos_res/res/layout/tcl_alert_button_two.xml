@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 		xmlns:tvos="http://schemas.android.com/apk/res/tvos" 
+ 		android:id="@+tvos:id/tcl_alert_button"
+ 		
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="18px"
+        android:paddingRight="18px"
+        android:layout_gravity="center"   
+        android:orientation="vertical" 
+        android:background="@android:color/transparent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+      		android:gravity="center"
+            android:background="@android:color/transparent"
+           >
+               
+	            <android.tclwidget.TCLButtonBlack android:id="@+tvos:id/button1"
+                android:layout_width="360px"
+                android:layout_marginLeft="20px"
+	                android:text="@tvos:string/tcl_dialog_ok"
+                android:textAppearance="@tvos:style/tcl_toast_text"
+                android:layout_height="wrap_content" 
+				android:gravity="center"
+				android:layout_gravity="center_vertical"
+				 android:layout_marginTop="26px"
+				android:paddingLeft="25dip"
+                android:paddingRight="25dip"
+                android:drawable="@tvos:drawable/tcl_alert_818_btn"/>
+				
+				<RelativeLayout 
+    android:id="@+tvos:id/button_content_sperate"
+    android:layout_height="60px"
+    android:layout_width="wrap_content"
+       
+    android:layout_gravity="center_vertical"
+    android:layout_marginTop="41px"
+     android:layout_marginLeft="380px"
+    android:background="@tvos:drawable/tcl_button_sperateline_818"
+    /> 
+	
+                
+	            <android.tclwidget.TCLButtonBlack android:id="@+tvos:id/button2"
+                android:layout_width="360px"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:layout_marginRight="20px"
+	                android:text="@tvos:string/tcl_dialog_cancle"
+                android:textAppearance="@tvos:style/tcl_toast_text"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26px"
+				android:paddingLeft="25dip"
+                android:paddingRight="25dip"
+                android:drawable="@tvos:drawable/tcl_alert_818_btn"/>
+           
+        </RelativeLayout>
+     </RelativeLayout>

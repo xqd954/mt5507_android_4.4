@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- //Begin Added by tianjing@tcl.com for TCL Widgets .16items-->
+    <add-resource type="style" name="Theme" />
+    <declare-styleable name="Theme">
+		<attr name="tclprogressBarStyleCircle" format="reference" />
+		<attr name="tclprogressBarStyleHorizontal" format="reference" />
+		<attr name="tclprogressBarStyleHorizontalWhite" format="reference" />
+		<attr name="tclseekBarStyle" format="reference" />
+		<attr name="tcldlabelDialogStyle" format="reference" />
+		<attr name="tcldlabelStyle" format="reference" />
+		<attr name="tclradioButtonStyle" format="reference" />
+		<attr name="tclcheckBoxStyle" format="reference" />
+		<attr name="tcleditTextStyle" format="reference" />
+		<attr name="tclbuttonStyle" format="reference" />
+		<attr name="tclratingBarStyle" format="reference" />
+		<attr name="tclfloatMenuStyle" format="reference" />
+		<attr name="tclspinnerStyle" format="reference" />
+		<attr name="tcllistViewStyle" format="reference" />
+		<attr name="tclalertDialogStyle" format="reference" />
+		<attr name="tclbuttonblackStyle" format="reference" />
+		<!-- iqiyi new . -->
+	        <attr name="tclButtonEspecialStyle" format="reference" />
+        	<attr name="tclListViewEspecialStyle" format="reference" />
+	        <attr name="tclProgressBarCEspecial" format="reference" />
+        
+    </declare-styleable>
+    <!-- //End Added by tianjing@tcl.com for TCL Widgets .20130124-->
+</resources>

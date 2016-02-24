@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tvos="http://schemas.android.com/apk/res/tvos" 
+	android:id="@+tvos:id/noButton"
+	android:orientation="vertical"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:background="#00FFFFFF"	>
+     
+	<TextView
+		android:id="@+tvos:id/list_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"		
+		android:gravity="center"
+		android:layout_centerHorizontal="true"
+		android:paddingLeft="40dp"
+		android:paddingRight="40dp"
+		android:textAppearance="@tvos:style/tcl_listdialog_text_title"
+		android:background="@tvos:drawable/tcl_listdialog_818_title"
+	> 
+	</TextView>
+
+	<RelativeLayout
+		android:id="@+id/list_content_foot"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_below="@tvos:id/list_title"
+		android:layout_alignLeft="@tvos:id/list_title"
+		android:layout_alignRight="@tvos:id/list_title"
+		android:background="@tvos:drawable/tcl_listdialog_818_bottom">
+
+	</RelativeLayout>
+</RelativeLayout>

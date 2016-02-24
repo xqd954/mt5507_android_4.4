@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <selector xmlns:android="http://schemas.android.com/apk/res/android">
+	 <item android:state_pressed="false" android:state_focused="false" android:drawable="@drawable/tcl_menu_normal_mid" />
+	 <item android:state_focused="true" android:drawable="@drawable/tcl_menu_focus_mid" />
+	  <item android:state_pressed="true" android:drawable="@drawable/tcl_menu_selector_mid"></item>
+	  <item 
+     android:state_window_focused="false" android:state_enabled="false"
+     android:drawable="@drawable/tcl_senior_menu_centre_disable"></item>
+ <item 
+     android:state_focused="true" android:state_enabled="false"
+     android:drawable="@drawable/tcl_senior_menu_centre_disable_focuse" />
+ <item 
+     android:state_focused="true" android:state_enabled="true"
+     android:drawable="@drawable/tcl_senior_menu_centre_enable" />
+</selector> -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_window_focused="false" android:state_enabled="true"
+        android:drawable="@drawable/tcl_menu_normal_mid" />
+    <item android:state_window_focused="false" android:state_enabled="false"
+        android:drawable="@drawable/tcl_senior_menu_centre_disable" />
+    <item android:state_pressed="true" 
+        android:drawable="@drawable/tcl_menu_selector_mid" />
+    <item android:state_focused="true" android:state_enabled="true"
+        android:drawable="@drawable/tcl_menu_focus_mid" />
+    <item android:state_enabled="true"
+        android:drawable="@drawable/tcl_menu_normal_mid" />
+    <item android:state_focused="true"
+        android:drawable="@drawable/tcl_senior_menu_centre_disable_focuse" />
+    <item
+         android:drawable="@drawable/tcl_senior_menu_centre_disable" />
+</selector>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<animation-list  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/tcl_loading_especial1" android:duration="100" />
+    <item android:drawable="@drawable/tcl_loading_especial2" android:duration="100" />
+    <item android:drawable="@drawable/tcl_loading_especial3" android:duration="100" />
+    <item android:drawable="@drawable/tcl_loading_especial4" android:duration="100" />
+    <item android:drawable="@drawable/tcl_loading_especial5" android:duration="100" />
+    <item android:drawable="@drawable/tcl_loading_especial6" android:duration="100" />
+    <item android:drawable="@drawable/tcl_loading_especial7" android:duration="100" />
+    <item android:drawable="@drawable/tcl_loading_especial8" android:duration="100" />
+    <item android:drawable="@drawable/tcl_loading_especial9" android:duration="100" />
+    <item android:drawable="@drawable/tcl_loading_especial10" android:duration="100" />
+    <item android:drawable="@drawable/tcl_loading_especial11" android:duration="100" />
+    <item android:drawable="@drawable/tcl_loading_especial12" android:duration="100" />
+   
+</animation-list>
+

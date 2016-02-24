@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- //Begin Added by tianjing@tcl.com for TCL Widgets .3items-->
+    <add-resource type="style" name="Widget.DeviceDefault.TCLProgressBarC" />
+    <style name="Widget.DeviceDefault.TCLProgressBarC" parent="TCLProgressBarC" ></style>
+    <add-resource type="style" name="Widget.DeviceDefault.TCLProgressBarH" />
+    <style name="Widget.DeviceDefault.TCLProgressBarH" parent="TCLProgressBarH" ></style>
+    <add-resource type="style" name="Widget.DeviceDefault.TCLProgressBarHW" />
+    <style name="Widget.DeviceDefault.TCLProgressBarHW" parent="TCLProgressBarHW" ></style>
+    <!-- //End Added by tianjing@tcl.com for TCL Widgets .20130124-->
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tvos="http://schemas.android.com/apk/res/tvos">
+    <item android:id="@android:id/background"
+          android:drawable="@tvos:drawable/tcl_progressbar_bg" />  
+          
+     <item android:id="@android:id/progress">  
+         <clip android:drawable="@tvos:drawable/tcl_progressbar_white"/>  
+     </item>              
+</layer-list>

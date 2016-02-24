@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tvos="http://schemas.android.com/apk/res/tvos">
+    <item android:state_window_focused="false" android:state_enabled="true"
+        android:drawable="@tvos:drawable/tcl_btn_default_normal_especial" 
+        android:textColor="@android:color/primary_text_dark"/>
+    <item android:state_window_focused="false" android:state_enabled="false"
+        android:drawable="@tvos:drawable/tcl_btn_default_normal_disable_especial" 
+        android:textColor="@android:color/primary_text_dark"/>
+    <item android:state_pressed="true" 
+        android:drawable="@tvos:drawable/tcl_btn_default_selected_especial" 
+        android:textColor="@android:color/primary_text_light"/>
+    <item android:state_focused="true" android:state_enabled="true"
+        android:drawable="@tvos:drawable/tcl_btn_default_selected_especial"
+        android:textColor="@android:color/primary_text_light" />
+    <item android:state_enabled="true"
+        android:drawable="@tvos:drawable/tcl_btn_default_normal_especial"
+        android:textColor="@android:color/primary_text_dark" />
+    <item android:state_focused="true"
+        android:drawable="@tvos:drawable/tcl_btn_default_normal_disable_especial"
+        android:textColor="@android:color/primary_text_dark" />
+    <item
+         android:drawable="@tvos:drawable/tcl_btn_default_normal_disable_especial"
+         android:textColor="@android:color/primary_text_dark" />
+</selector>

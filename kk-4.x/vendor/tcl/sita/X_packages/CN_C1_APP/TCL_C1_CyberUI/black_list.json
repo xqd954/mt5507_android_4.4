@@ -1,0 +1,101 @@
+{
+    "error_code": 1000,
+    "black_list": [
+        {
+            "package_name": "com.familyselfdoctor.open",
+            "activity_name": "cn.open.webrtc.FamilyDoctorMainActivity"
+        },
+        {
+            "package_name": "com.familyhealthVideo.open",
+            "activity_name": "com.familyhealthVideo.open.FamilyHealthVideoCheckNetConnect"
+        },
+        {
+            "package_name": "com.smit.livevideo",
+            "activity_name": "com.smit.livevideo.LauncherActivity"
+        },
+        {
+            "package_name": "com.tcl.common.guide",
+            "activity_name": "com.tcl.common.guide.NetworkConnectGuide"
+        },
+        {
+            "package_name": "com.android.providers.downloads.ui",
+            "activity_name": "com.android.providers.downloads.ui.DownloadList"
+        },
+        {
+            "package_name": "com.tcl.homeemailbox",
+            "activity_name": "com.tcl.homeemailbox.StartUpActivity"
+        },
+        {
+            "package_name": "com.broadcom.bluetoothmonitor",
+            "activity_name": "com.broadcom.bluetoothmonitor.MainActivity"
+        },
+        {
+            "package_name": "com.tcl.mtk.mtkVersionUpdate",
+            "activity_name": "com.tcl.mtk.mtkVersionUpdate.UI.SystemUpdateActivity"
+        },
+        {
+            "package_name": "com.tcl.android.SystemDemo",
+            "activity_name": "com.tcl.android.SystemDemo.MachineInfo.MachineInfoActivity"
+        },
+        {
+            "package_name": "com.tcl.android.SystemDemo",
+            "activity_name": "com.tcl.android.SystemDemo.SystemDemoActivity"
+        },
+        {
+            "package_name": "com.qiyi.video",
+            "activity_name": "com.qiyi.video.ui.home.HomeActivity"
+        },
+        {
+            "package_name": "com.tcl.common.bootsetwizard",
+            "activity_name": "com.tcl.common.bootsetwizard.BootsetwizardMain"
+        },
+        {
+            "package_name": "com.tcl.tv",
+            "activity_name": "com.tcl.tv.TVActivity"
+        },
+        {
+            "package_name": "com.skyworth.vipclub",
+            "activity_name": "com.utv360.tv.mall.activity.WelcomeActivity"
+        },
+        {
+            "package_name": "com.iflytek.xiri",
+            "activity_name": "com.iflytek.xiri.StartActivity"
+        },
+        {
+            "package_name": "com.iflytek.showcomesettings",
+            "activity_name": "com.iflytek.showcomesettings.MainActivity"
+        },
+        {
+            "package_name": "com.tcl.browser",
+            "activity_name": "com.tcl.browser.SiteMapActivity"
+        },
+        {
+        		"package_name": "com.starcor.hunan",
+			"activity_name": "com.starcor.hunan.SplashActivity"
+        },
+        {
+        		"package_name": "tv.gchw.www",
+        		"activity_name": "tv.gchw.www.activity.WelcomeActivity"
+        },
+        {
+        		"package_name": "com.tcl.mhsfortunetv",
+        		"activity_name": "com.tcl.mhsfortunetv.MainActivity"
+        },
+        {
+        		"package_name": "cn.etouch.ecalendarTv",
+        		"activity_name": "cn.etouch.ecalendarTv.LoadingActivity"
+        },
+        {
+        		"package_name": "com.douguo.recipetv",
+        		"activity_name": "com.douguo.recipetv.MainActivity"
+        },
+        {
+        		"package_name": "com.tcl.bama.launcher",
+        		"activity_name": "com.tcl.bama.launcher.WeatherLocation"
+        },
+        {
+        		"package_name": "com.tcl.bama.launcher",
+        		"activity_name": "com.tcl.bama.launcher.StartTVSettingsActivity"
+        }
+    ]
+}

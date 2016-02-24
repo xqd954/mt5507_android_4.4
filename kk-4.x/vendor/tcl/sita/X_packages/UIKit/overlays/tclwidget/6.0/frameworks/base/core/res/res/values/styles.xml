@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- //Begin Added by tianjing@tcl.com for TCL Widgets .22items-->
+   	<add-resource type="style" name="TCLButton" />
+	<style name="TCLButton">
+		<item name="android:background">@android:drawable/tcl_btn_default</item>
+		<item name="android:focusable">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:textAppearance">?android:attr/textAppearanceSmallInverse</item>
+        <!--item name="android:textColor">@android:color/primary_text_light</item--> 
+		<item name="android:textColor">@android:drawable/tcl_btntext_818_selector</item>
+		<item name="android:gravity">center_vertical|center_horizontal</item>
+	</style>
+   	<add-resource type="style" name="TCLButtonBlack" />
+	<style name="TCLButtonBlack">
+		<item name="android:background">@android:drawable/tcl_btn_black</item>
+		<item name="android:focusable">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:textAppearance">?android:attr/textAppearanceSmallInverse</item>
+        <!--item name="android:textColor">@android:color/primary_text_dark</item-->
+		<item name="android:textColor">@android:drawable/tcl_btn_text_color</item> 
+		<item name="android:gravity">center_vertical|center_horizontal</item>
+	</style>
+   	<add-resource type="style" name="TCLCheckBox" />
+	<style name="TCLCheckBox">
+		<item name="android:focusable">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:textAppearance">?android:attr/textAppearance</item>
+        <!--item name="android:textColor">?android:attr/textColorPrimaryDisableOnly</item-->
+        <item name="android:textColor">@android:drawable/tcl_btntext_818_selector</item>
+		<item name="android:gravity">center_vertical|left</item>
+		<item name="android:background">@android:drawable/tcl_btn_check_label_background</item>
+		<item name="android:button">@android:drawable/tcl_btn_check</item>
+	</style>
+   	<add-resource type="style" name="TCLRadioButton" />
+	<style name="TCLRadioButton">
+		<item name="android:focusable">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:textAppearance">?android:attr/textAppearance</item>
+        <!--item name="android:textColor">?android:attr/textColorPrimaryDisableOnly</item-->
+        <item name="android:textColor">@android:drawable/tcl_btntext_818_selector</item>
+		<item name="android:gravity">center_vertical|left</item>
+		<item name="android:background">@android:drawable/tcl_btn_radio_label_background</item>
+		<item name="android:button">@android:drawable/tcl_btn_radio</item>
+	</style>
+   	<add-resource type="style" name="TCLProgressBarH" />
+	<style name="TCLProgressBarH">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@android:drawable/tcl_progress_horizontal</item>
+		<item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+		<item name="android:minHeight">20dip</item>
+		<item name="android:maxHeight">20dip</item>
+	</style>
+   	<add-resource type="style" name="TCLProgressBarC" />
+	<!--begin, modified by lizhenzhen for progressBar 2012-04-17 email:lizz@tcl.com-->
+	<!--{{tj@tcl, adapt to new tcl_dlabel drawable -->
+	<style name="TCLProgressBarC">
+		<item name="android:indeterminateOnly">true</item>
+		<item name="android:indeterminateDrawable">@android:drawable/tcl_dlabel</item>
+		<item name="android:minWidth">160dip</item>
+        	<item name="android:maxWidth">160dip</item>
+        	<item name="android:minHeight">146dip</item>
+        	<item name="android:maxHeight">146dip</item>
+	</style>
+	<!--}}-->
+	<!--end, lizhenzhen-->
+   	<add-resource type="style" name="TCLProgressBarHW" />
+	<style name="TCLProgressBarHW">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@android:drawable/tcl_progress_horizontal_white</item>
+		<item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+		<item name="android:minHeight">20dip</item>
+		<item name="android:maxHeight">20dip</item>
+	</style>
+   	<add-resource type="style" name="TCLDLabelDialog" />
+	<style name="TCLDLabelDialog" parent="android:Theme.Dialog">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFrame">@null</item>
+	　      <item name="android:windowIsFloating">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+   	<add-resource type="style" name="TCLDLabel" />
+	<style name="TCLDLabel" parent="android:Widget.ProgressBar">
+		<item name="android:indeterminateDrawable">@android:drawable/tcl_progress_medium</item>
+		<item name="android:minWidth">184dip</item>
+		<item name="android:maxWidth">184dip</item>
+		<item name="android:minHeight">184dip</item>
+		<item name="android:maxHeight">184dip</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+   	<add-resource type="style" name="TCLSeekBar" />
+	<style name="TCLSeekBar">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@android:drawable/tcl_seekbar</item>
+		<item name="android:indeterminateDrawable">@android:drawable/tcl_seekbar</item>
+        <item name="android:minHeight">10px</item>
+        <item name="android:maxHeight">10px</item>
+        <item name="android:thumb">@android:drawable/tcl_seek_thumb</item>
+        <item name="android:paddingLeft">18px</item>
+        <item name="android:paddingRight">18px</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_centerInParent">true</item>
+	</style>
+   	<add-resource type="style" name="TCLRatingBar" />
+	<style name="TCLRatingBar">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@android:drawable/tcl_ratingbar</item>
+		<item name="android:indeterminateDrawable">@android:drawable/tcl_ratingbar</item>
+		<item name="android:minHeight">38dip</item>
+		<item name="android:maxHeight">38dip</item>
+		<item name="android:thumb">@null</item>
+		<item name="android:isIndicator">false</item>
+	</style>
+   	<add-resource type="style" name="TCLEditText" />
+	<style name="TCLEditText">
+		<item name="android:focusable">true</item>
+		<item name="android:focusableInTouchMode">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:background">@android:drawable/tcl_edit_text</item>
+		<item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>
+		<!--<item name="android:textColor">@android:color/primary_text_light</item>-->
+		<item name="android:textColor">@android:drawable/tcl_btntext_818_selector</item>
+		<item name="android:gravity">center_vertical</item>
+	</style>
+   	<add-resource type="style" name="TCLFloatMenu" />
+	<style name="TCLFloatMenu" parent="android:style/Theme.Dialog">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+   	<add-resource type="style" name="TCLSenroiMenu" />
+	<style name="TCLSenroiMenu" parent="@android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:background">@android:color/transparent</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:backgroundDimEnabled">false</item>
+		<!--<item name="android:textAppearance">@android:style/tcl_toast_text</item>-->
+	</style>
+   	<add-resource type="style" name="TCLSpinner" />
+	<style name="TCLSpinner">
+		<item name="android:background">@android:drawable/tcl_btn_dropdown</item>
+		<item name="android:clickable">true</item>
+	</style>
+   	<add-resource type="style" name="TCLSpinnerDropDownItem" />
+	<style name="TCLSpinnerDropDownItem">
+		<item name="android:checkMark">@android:drawable/tcl_btn_radio</item>
+	</style>
+   	<add-resource type="style" name="TCLListView" />
+	<style name="TCLListView" parent="Widget.AbsListView">
+		<item name="android:listSelector">@android:drawable/tcl_list_selector_818_background</item>
+        <item name="android:cacheColorHint">?android:attr/colorBackgroundCacheHint</item>
+        <!--item name="android:divider">@android:drawable/screen_background_light</item-->
+        <item name="android:divider">@null</item>
+	<item name="android:background">@android:drawable/tcl_listview_818_bg</item>
+	</style>
+   	<add-resource type="style" name="TCLAlertDialog" />
+	<style name="TCLAlertDialog" parent="android:style/Theme.Dialog.Alert">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+   	<add-resource type="style" name="TCLDialogToast" />
+	<style name="TCLDialogToast" parent="android:style/Theme.Dialog.Alert">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+   	<add-resource type="style" name="tcl_toast_text" />
+	<style name="tcl_toast_text">
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:textSize">24sp</item>
+	</style>
+   	<add-resource type="style" name="tcl_alert_text_title" />
+	<style name="tcl_alert_text_title">
+        <item name="android:textColor">#f8ab33</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">normal</item>
+		<item name="android:typeface">monospace</item>
+	</style>
+   	<add-resource type="style" name="tcl_listdialog_text_title" />
+	<style name="tcl_listdialog_text_title">
+		<item name="android:textColor">@android:color/primary_text_light</item>
+		<item name="android:textSize">30sp</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	
+   	<add-resource type="style" name="Animation.Activity" />
+	<style name="Animation.Activity">
+		<item name="activityOpenEnterAnimation_translate">@anim/activity_open_enter_translate</item>
+        <item name="activityOpenExitAnimation_translate">@anim/activity_open_exit_translate</item>
+        <item name="activityCloseEnterAnimation_translate">@anim/activity_close_enter_translate</item>
+        <item name="activityCloseExitAnimation_translate">@anim/activity_close_exit_translate</item>
+        <item name="taskOpenEnterAnimation_translate">@anim/task_open_enter_translate</item>
+        <item name="taskOpenExitAnimation_translate">@anim/task_open_exit_translate</item>
+        <item name="taskCloseEnterAnimation_translate">@anim/task_close_enter_translate</item>
+        <item name="taskCloseExitAnimation_translate">@anim/task_close_exit_translate</item>
+        <item name="taskToFrontEnterAnimation_translate">@anim/task_open_enter_translate</item>
+        <item name="taskToFrontExitAnimation_translate">@anim/task_open_exit_translate</item>
+        <item name="taskToBackEnterAnimation_translate">@anim/task_close_enter_translate</item>
+        <item name="taskToBackExitAnimation_translate">@anim/task_close_exit_translate</item>
+        <item name="wallpaperOpenEnterAnimation_translate">@anim/wallpaper_open_enter_translate</item>
+        <item name="wallpaperOpenExitAnimation_translate">@anim/wallpaper_open_exit_translate</item>
+        <item name="wallpaperCloseEnterAnimation_translate">@anim/wallpaper_close_enter_translate</item>
+        <item name="wallpaperCloseExitAnimation_translate">@anim/wallpaper_close_exit_translate</item>
+        <item name="wallpaperIntraOpenEnterAnimation_translate">@anim/wallpaper_intra_open_enter_translate</item>
+        <item name="wallpaperIntraOpenExitAnimation_translate">@anim/wallpaper_intra_open_exit_translate</item>
+        <item name="wallpaperIntraCloseEnterAnimation_translate">@anim/wallpaper_intra_close_enter_translate</item>
+        <item name="wallpaperIntraCloseExitAnimation_translate">@anim/wallpaper_intra_close_exit_translate</item>
+    </style>
+    <!-- //End Added by tianjing@tcl.com for TCL Widgets .20130124-->
+    
+    <!-- iqiyi for TCL Widgets .2013-11-21-->
+	<add-resource type="style" name="TCLButtonEspecial" />
+	<style name="TCLButtonEspecial">
+		<item name="android:background">@android:drawable/tcl_btn_especial</item>
+		<item name="android:focusable">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:gravity">center_vertical|center_horizontal</item>    
+	</style>    
+
+	<add-resource type="style" name="TCLListViewEspecial" />
+	<style name="TCLListViewEspecial" parent="android:style/Widget.AbsListView">
+		<item name="android:listSelector">@android:drawable/tcl_list_selector_background_especial</item>
+		<item name="android:cacheColorHint">?android:attr/colorBackgroundCacheHint</item>
+		<item name="android:divider">@android:drawable/divider_horizontal_bright</item>
+		<item name="android:background">@android:drawable/tcl_especial_bg</item>
+	</style>        
+
+	<add-resource type="style" name="TCLProgressBarCEspecial" />
+	<style name="TCLProgressBarCEspecial">
+		<item name="android:indeterminateOnly">true</item>
+		<item name="android:indeterminateDrawable">@android:drawable/tcl_dlabel_especial</item>
+		<item name="android:minWidth">105dip</item>
+		<item name="android:maxWidth">105dip</item>
+		<item name="android:minHeight">100dip</item>
+		<item name="android:maxHeight">100dip</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>      
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<music>
+<!--music_item 中的name是用来区分顺序的，内容则对应音乐名字 -->
+ <music_item name="music_0">test1_p1.wav</music_item>
+ <music_item name="music_1">test2_p1.wav</music_item>
+ <music_item name="music_2">test3_p1.wav</music_item>
+ </music>

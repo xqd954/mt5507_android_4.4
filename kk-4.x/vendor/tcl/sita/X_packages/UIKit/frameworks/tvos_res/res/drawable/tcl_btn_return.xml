@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tvos="http://schemas.android.com/apk/res/tvos">
+    <item android:state_focused="true" android:state_pressed="false" android:drawable="@tvos:drawable/tcl_return_focus" />
+    <item android:state_focused="true" android:state_pressed="true" android:drawable="@tvos:drawable/tcl_return_pressed" />
+    <item android:state_focused="false" android:state_pressed="true" android:drawable="@tvos:drawable/tcl_return_pressed" />
+    <item android:drawable="@tvos:drawable/tcl_return_normal" />
+</selector>

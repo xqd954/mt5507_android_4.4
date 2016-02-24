@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/noButton"
+    android:orientation="vertical"
+    android:layout_width="350dip"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+	<RelativeLayout 
+    android:id="@+id/alert_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+	android:minHeight="50dip"
+    android:background="@drawable/tcl_alert_title" 
+    > 
+    </RelativeLayout>
+    <RelativeLayout
+    android:id="@+id/alert_content_foot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tcl_alert_content_foot"
+    android:layout_below="@id/alert_title"
+    android:layout_alignLeft="@id/alert_title"
+    android:layout_alignRight="@id/alert_title">
+    </RelativeLayout>
+</RelativeLayout>

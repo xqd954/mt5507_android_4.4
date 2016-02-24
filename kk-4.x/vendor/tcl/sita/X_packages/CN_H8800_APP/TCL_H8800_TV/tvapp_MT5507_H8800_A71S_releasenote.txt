@@ -1,0 +1,209 @@
+
+*****************************************************************
+1.APK名称：          TVApp
+2.APK英文名称：     tvapp_MT5507_H8800_A71S_releasenote
+3.APK中文名称：     TV应用
+
+
+4.APK包名:              com.tcl.tv
+
+4.1.使用TVApp注意事项：
+  4.1.1 U盘升级方法:
+   如果之前系统已经预置了apk，需到/system/app删除原有的apk，以及/data/data目录下的包名，方法如下：
+   1).如果是只读文件系统，先remount分区，命令：mount -o remount ,rw /system
+  2).删除apk，rm /system/app/TCL_NTK_TV.apk
+  3).删除data数据包， rm -rf /data/data/com.tcl.tv
+  4).安装pm install /mnt/usb/XXXX/TCL_NTK_TV.apk
+  5).重启
+  备注：如果不是预置到system/app下的apk，
+  可以直接覆盖安装pm install -r /mnt/usb/XXXX/TCL_NTK_TV.apk
+
+
+*****************************************************************
+5.版本更改记录：
+   5.1 第一版修改记录 修改问题时间：20140912 20:10  
+  
+   5.1.1 修改的问题，原因和对策：
+	    9.1.1.1.d （问题描述） 第一次创建（tvapp_NT667_H9700_A71S_releasenote ）
+	    9.1.1.2.r (问题原因)   第一次创建
+	    9.1.1.3.a (问题对策)   第一次创建
+	    9.1.1.4.w (修改人名称)  陈楷强
+            5.1.1.5.m (修改人邮箱)   chenkaiqiang@tcl.com 
+
+   5.2 第一版修改记录 修改问题时间：20140917 19:47  
+  
+   5.2.1 修改的问题，原因和对策：
+	    9.1.1.1.d （问题描述） 无法盲切Projectid
+	    9.1.1.2.r (问题原因)   盲切逻辑问题
+	    9.1.1.3.a (问题对策)   重构盲切的逻辑
+	    9.1.1.4.w (修改人名称)  陈楷强
+            5.1.1.5.m (修改人邮箱)   chenkaiqiang@tcl.com 
+			
+   5.3.1 i 修改频道页面功能   修改时间 2040919-15.00.00
+        d （问题描述）去掉如下功能
+           频道---》信号类型
+           频道---》快速搜台
+        w (修改人名称) 雷夏平
+		
+   5.4.1 i 修改频道搜台相关问题 修改时间 2040922-15.00.00
+          d （问题描述）
+             4312  Open  【ATV】在手动搜台里，终止频率和要求的默认的频率不同 
+             4156  Open  【DTMB】DTMB下手动搜台菜单不能输入954MHZ等新增频点。  
+             4062  Open  【DTMB】频道表为空时，进入手动搜台，起始频道和频率错误（-1,0）。  
+          w (修改人名称) 雷夏平	 	leixp@tcl.com
+
+   5.4.2 i 修改相关问题
+          d （问题描述）
+            4131  Open  【DTMB】接入B口，收看一节目，按节目+-键切换节目，屏幕右上角显示信息“DTS'  
+            4726  Open  【DTV/ATV】频道列表切换台，成功切换台后频道列表不马上消失 
+            DTMB 去掉CI卡设置  
+          w (修改人名称) 雷夏平 
+			
+	5.4.3 i 修改相关问题
+          d （问题描述）		
+			4441  Open  【EPG】收看B口SZTV-2HD，进入EPG,插拔RF线，小视频窗口里显示”无信号“5秒钟才消失 
+			4349  Open  ATV下接入(674.25MHZ 60DB PAL/DK 1KHZ灰阶)，待机开机，有时提示“... 没有信号！”
+			4312  Open  【ATV】在手动搜台里，终止频率和要求的默认的频率不同 
+		  w (修改人名称) 焦兴旺（jiaoxw@tcl.com）  雷夏平（leixp@tcl.com） 
+		  
+	5.4.4 i 修改相关问题 修改时间 2040925-15.00.00
+          d （问题描述）		
+			#PVCS 4221  Open  【EPG】DTMB下EPG菜单里7天节目预告子菜单，移动光标，光标框与节目信息错位   (问题对策) 修改UI布局。 修改人 焦新旺
+			#PVCS 4221  Open  【EPG】DTMB下EPG菜单里7天节目预告子菜单，移动光标，光标框与节目信息错位   (问题对策) 修改UI布局。 修改人 焦新旺
+			没有DVBC，搜台还会搜DVBC
+		  w (修改人名称) 焦兴旺（jiaoxw@tcl.com）  雷夏平（leixp@tcl.com）	  
+
+	5.4.5 i 修改相关问题 修改时间 2040930-19.30.00
+          d （问题描述）		
+			ATV自动搜台无进度条   (问题对策) 初始化进度条。 修改人 曾辉云
+		  w (修改人名称) 曾辉云（zenghuiyun@tcl.com）	
+		  
+	5.4.6 i 合入MS918对遥控器操作优化的修改
+          d （问题描述）
+            优化频道列表的操作速度，优化DTV info信息的显示
+            屏蔽信源选择
+          w (修改人名称) 雷夏平 （leixp@tcl.com）
+      
+    5.5.6 i 修改PVCS问题
+          d （问题描述） pvcs 4966  【信源】HDMI3没有信号时提示：Unknown没有信号！
+          w (修改人名称) 陈楷强 （chenkaiqiang@tcl.com）
+		  
+   5.6.7 i 适配TCL规范回看键
+      d （问题描述）【ATV】回看键无效.Atv and dtv 
+		 		 (问题对策) Add Map TCL keyCode KEYCODE_TCL_LAST = 4081
+      w (修改人名称)曾辉云 （zenghuiyun@tcl.com）
+	  
+   5.6.8 i 适配TCL规范回看键
+      d （问题描述）增加DTMB搜台时，频道号对应的频点
+	     增加在Pmode下按回看健 ，进入工厂菜单
+		 		 (问题对策) Add Map TCL keyCode KEYCODE_TCL_LAST = 4081
+      w (修改人名称)曾辉云 （zenghuiyun@tcl.com）
+	  
+   5.6.9 i 修改如下问题
+      d （问题描述）
+         5549  Open  【DTMB】手动搜台菜单里输入频点为954000KHZ,频道号显示错误：1  
+         5619  Open  【工厂主观】菜单语言为英语，菜单显示重叠或菜单内容超出光标框  
+         5667  Open  【ATV】微调中彩色制式无法设置，设置后不能保存，自动更改。 
+         5691  Open  【来电通】“信源接入，即将跳转”的提示信息一直不会自动消失。 
+      w (修改人名称) 雷夏平	 
+	  
+   5.6.10 i 修改如下问题
+      d （问题描述）
+        修改频道的图标 
+      w (修改人名称) 雷夏平	
+
+   5.6.10 i 修改如下问题
+      d （问题描述）
+        1:修改EPG信息页面与频道管理页面 无操作60秒退出！
+        2：修改按取消搜台时，立即退出搜台对话框
+      w (修改人名称) 雷夏平		
+	  
+   5.6.11 	  
+	  d （问题描述）
+        1:子菜单不显示机顶盒设置
+        2：去掉回看按键的SacnCode判断
+      w (修改人名称) 雷夏平	
+
+   5.6.12
+       d （问题描述）
+       1.无信号，搜台菜单执行从模拟电视到数字电视切换，时间过长
+       2.AV信源只有一路，不应显示AV1（根据配置项显示，现在已支持）
+       3.模拟手动搜索菜单无timeout
+      w (修改人名称) 黄孙明
+	 5.6.13 修改的问题，原因和对策：
+      Mantis ID  573 937 1752 1733
+	  （问题描述）【UI】点击电视页信源菜单的DTV，视频未全屏显示
+     (问题原因) 1.5507内存导致Tv重启isPowerOn变量异常2.resumeFullScreen接口需要延时处理
+     (问题对策) 1.去除不必要变量isPowerOn，确保调用resumefullscreen2.单起线程resumeFullScreen接口需要延时10ms设置
+     (修改人名称) 曾辉云 zenghuiyun@tcl.com
+   5.2.14 修改的问题，原因和对策：
+	    （问题描述）HDMI下输入4K信号，从其它信源切换到该HDMI信源，INFO中不显示分辨率
+       (问题对策) 根据信号变化Msg刷新INFO显示分辨率
+       (修改人名称)  曾辉云
+       (修改人邮箱)   zenghuiyun@tcl.com
+  5.2.15 修改的问题，原因和对策：
+	    （问题描述） 
+          mantis ID 2709: 在tv节目搜索页面，显示是信号输入里，显示字是黑色，背景也是黑色，字体和背景很难分清
+          mantis ID 2704: 在ATV里，频道微调的彩色制式和伴音制式显示都是黑色，背景也是黑色，很难非常颜色（）
+          mantis ID 548: 【DTV】874MHZ以上，搜索不到信号
+            (修改人名称)  黄孙明
+            (修改人邮箱)   zenghuiyun@tcl.com
+  5.2.16 修改的问题，原因和对策：
+	  		 r (问题原因) 支持MHL的HDMI信源端口各平台不一致，导致判断失误
+				 a (问题对策)去除对HDMI信源的判断，完全依赖底层IsMhlPortInUse、CbusStatus接口判断
+				 w (修改人名称) 曾辉云
+   5.2.17   修改的问题，原因和对策：
+            问题描述 ：mantis ID 3275 把自选通打开，接入AV信号，提示AV1
+            修改人：黄孙明
+   5.2.18   修改的问题，原因和对策：
+             问题描述：核对并修改TV APK的翻译
+            （修改人名称）：黄孙明
+             (修改人邮箱)   huangsunming@tcl.com
+   5.2.19   修改的问题，原因和对策：
+             mantisID 4776: 频道微调菜单不能自动退出，与其它菜单重叠，
+            （修改人名称）：黄孙明
+             (修改人邮箱)   huangsunming@tcl.com
+   5.2.20   修改的问题，原因和对策：
+             1.TV进入子菜单后取消autostandby
+             2.7天节目预告左右移动时，有时焦点错位（实际可见item多于肉眼可见item，根据第一项位置调整）
+            （修改人名称）：黄孙明
+             (修改人邮箱)   huangsunming@tcl.com
+   5.2.21 Description:MantisID在模拟电视信源下不插信号线时进入搜台菜单后，选择自动搜台时不能进入搜台状态搜台菜单直接消失。无信号显示LOGO是旧版本
+         Cause:跳转Activity时，TaskMgt.getInstance().finishAll()导致不能进入搜台Activity。SnowView未融合重构代码，适应配置项
+         Solution:改为this.finish。融合SnowVIew重构代码，适应配置项
+         修改人：黄孙明
+   5.2.22  Description:1.mantisID4999将语言设置为英文后，进入菜单-频道-微调-彩色制式，字体显示重叠2.mantisID5131DTV信源下在加密台状态下提示“请插入CI卡！”，但实际机器无CI卡          端口插入，应改为“加密台！”字符好些
+         Cause:1翻译字符串过长2.加密台提示“请插入CI卡”
+         Solution:1翻译字符串去掉复数2.加密台根据有无CI卡提示
+         Reviewed:chengkaiqiang
+    5.2.23 Description:4842:mantisID4842ATV静帧切台，图像蓝屏，声音异常。
+            Cause:长按上下切台键时，执行切台操作
+            Solution:长按时只刷新infobar信息，不执行切台操作，延时执行切台操作
+            Reviewed:chengkaiqiang
+    5.2.24  Description:4842:Description:4842:1.ATV静帧切台，图像蓝屏，声音异常。2.mantisID5135: 在ATV信源下按菜单键后选择“数字选台”进入，再选择数字按OK键后在输入的频道号大          于当前所有搜到的频道号时，没有“无此频道”字符提示但是在DTV信源下是有提示的
+         Cause:1.ATV下长按上下切台键时，连续执行切台操作 2.ATV数字选台不提示“无此频道”
+         Solution:1.ATV下上下键切台时，只刷新infobar信息，不执行切台操作，延时执行切台操作2.ATV数字选台增加提示“无此频道”
+         Reviewed:chengkaiqiang
+         修改人：黄孙明
+    5.2.25 Description:在ATV下数字切台时，inforbar显示宇实际不一致
+         Cause:处理长按切台键时，未初始化inforbar中的频道信息
+         Solution:初始化inforbar中的频道信息
+         Reviewed:zenghuiyun
+         修改人：黄孙明
+   5.2.26 Description:ATV下，上下切台时，中间件先设置缓存的curIndex，后切台的操作，应用不做规避
+         Cause:中间件切台后更新当前节目信息
+         Solution:中间件先设置缓存的curIndex，后切台的操作
+         Reviewed:zenghuiyun
+         修改人：黄孙明
+   5.3.27  Description:1.ID7956:DTV频道编辑，第一个频道隐藏后再次进入编辑界面标志为对号2.ID7959: DVT频道编辑，特定位置光标错误
+         Cause:1.7956在initView中设置焦点框时由于View还未画出，报空指针异常2.7959频道移动后，左右移动焦点框时，实际的焦点与焦点框不对应
+         Solution:1.7956在onwindowFoucusChanged中画出焦点项2.7959在动画结束后强制所在列requestFocus，所在行setSeletion。
+         Reviewed:zenghuiyun
+  5.3.28 Description:1.MT5507 E5800添加EPG快捷键 2.8023:DTV EPG内焦点未选中节目时，节目仍会滚动显示
+         Cause:1.遥控器按键值不对应2.系统获取焦点时不正确
+         Solution:1.在TVActivity中添加KeyEvent.Guide键值2.代码控制滚动焦点
+         Reviewed:zenghuiyun
+   5.3.27 Description:1.mantisID6624:ATV】ATV里修改彩色制式后，切换频道，当前修改频道的彩色制式没变，其他频点的变了2.mantisId8427微调后，切换频道时右上角的频道号颜色显示错误，        黄色频道号与被微调的频道不一致
+        Cause:在ATV下为避免长按切台闪屏，先刷新UI，后切台，导致显示数据与底层不一致。
+        Solution:刷新UI时，先只刷新频道号，执行切台操作后，再一次刷新UI，获取颜色制式，伴音制式等数据
+        Reviewed:zenghuiyun

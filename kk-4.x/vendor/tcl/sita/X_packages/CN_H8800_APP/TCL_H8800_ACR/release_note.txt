@@ -1,0 +1,6 @@
+#######################################creat by tank@tcl.com########################################################
+安装方法：
+将TvSymbolRecognize.apk拷贝到/system/app/目录下；
+将libChannelSwitchDetector.so和libFingerprintGenerator.so拷贝到/system/lib/目录下。
+将libopencv_java.so拷贝到/system/lib/目录下。
+####################################################################################################################

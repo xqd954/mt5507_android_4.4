@@ -1,0 +1,93 @@
+
+*****************************************************************
+1.APK名称：          Settings_DTV
+2.APK英文名称：      Settings_DTV_MT5507_F3800_Iqiyi_releasenote
+3.APK中文名称：      设置TV模式下
+
+
+4.APK包名:             
+Settings_DTV(全局设置）: com.tcl.settings
+TCL_NT667_Bluetooth2（蓝牙设置） com.android.tcl.settings
+
+4.1.使用TVApp注意事项：
+  4.1.1 U盘升级方法:
+   如果之前系统已经预置了apk，需到/system/app删除原有的apk，以及/data/data目录下的包名，方法如下：
+   1).如果是只读文件系统，先remount分区，命令：mount -o remount ,rw /system
+  2).删除apk，rm /system/app/Settings_DTV.apk
+  3).删除data数据包， rm -rf /data/data/com.tcl.settings
+  4).安装pm install /mnt/usb/XXXX/Settings_DTV.apk
+  5).重启
+  备注：如果不是预置到system/app下的apk，
+  可以直接覆盖安装pm install -r /mnt/usb/XXXX/Settings_DTV.apk
+  
+  4.1.2 备注：
+			Settings_DTV.apk:为重构版本的全局Settings,可在任意地方调出。
+			Settings_SMART.apk：Android系统模式调出apk
+			TCL_NT667_Bluetooth2.apk:蓝牙设置
+  4.1.3对应代码路径和版本号：
+  Settings_DTV.apk:        http://svn-server3.tclking.com/svn/applications/trunk/java/apps/SystemSettings
+  Settings_SMART.apk:      http://10.120.99.80/svn/applications/trunk/java/apps/tclapps/Settings/Code/SystemSettings_NT667A_CN/Settings_Smart
+  TCL_NT667_Bluetooth2.apk:http://svn-server3.tclking.com/svn/applications/trunk/java/apps/SystemSettings_IQiyi/SystemSettings_Bluetooth
+
+  4.1.4 apk路径及版本号：
+  apk统一路径：http://svn-server3.tclking.com/svn/applications/trunk/java/apps/SystemSettings/output/MT5507_F3800_Imgo_CrossUI
+  Settings_DTV.apk:        源码版本号 18648;apk版本号18782
+  Settings_SMART.apk：     源码版本号 18821;apk版本号18828
+  TCL_NT667_Bluetooth2.apk:源码版本号 6906; apk版本号18577
+  
+  4.1.5 项目名称更改：
+  1）Settings_DTV_MT5507_F3800_Imgo_releasenote，20141128从焦舰鹏工那边获取信息，项目由芒果TV切换为iqiyi机型。
+  
+  4.1.6 ini 配置项：
+   	MT5507_F3800_Imgo_CrossUI /tclconfig/model/目录下的CN_1_MT07_FACTORY_HD.ini文件如下
+*****************************************************************
+5.版本更改记录：
+   5.1 第一版提交记录，重构设置，所有页面以Dialog形式展示：20140925 15:00
+   5.2 无法在对比度下通过输入1950数字进入工厂菜单
+       无法切换OSD语言菜单                                 20140925 20:04
+      5.3.2.2.d （问题描述） 平台集成提出问题：快捷按键无法调出信号源菜单页面
+	    5.3.2.2.r (问题原因)   增加调用信号页面异常引起。
+	    5.3.2.2.a (问题对策)   删除对应的异常部分。
+	    5.3.2.2.w (修改人名称)  王云华
+      5.3.2.2.m (修改人邮箱)   wangyunhua@tcl.com
+		
+		  5.3.3.2.d （问题描述） sub menu无法进入Setting页面，提示当前的setting不存在。
+	    5.3.3.2.r (问题原因)   新的签名引起，系统更换成新的签名。
+	    5.3.3.2.a (问题对策)   将SMART,Bluetooth重新签名。
+	    5.3.3.2.w (修改人名称)  王云华
+      5.3.3.2.m (修改人邮箱)   wangyunhua@tcl.com
+6.版本更改记录：
+	6.1更新日期：20141009
+	6.2修改日志
+	6.2.1.d （问题描述）PVCS 5046PC信源下几何设置菜单无法进入； 
+	6.2.1.r (问题原因) 之前没有添加该功能； 
+	6.2.1.a (问题对策) 增加该功能； 
+	6.2.1.w (修改人名称) 包林玉
+	6.2.1.m(修改人邮箱)   baoly@tcl.com
+
+	6.2.2.d （问题描述）PVCS 2726 系统设置中通用子菜单缺语言设置，OSD语言切换功能未实现，导致大量相关问题无检查； 
+	6.2.2.r (问题原因) 语言设置在通用模块下面，之前切换中英文之后，没有立即刷新设置UI； 
+	6.2.2.a (问题对策) 切换中英文之后，立即刷新设置UI； 
+	6.2.2.w (修改人名称) 包林玉
+	6.2.2.m (修改人邮箱)   baoly@tcl.com
+7.版本更改记录：
+	7.1更新日期：20141011
+	7.2修改日志
+	7.2.1.d （问题描述）PVCS 5228 设置引导菜单不能进入  
+	7.2.1.r (问题原因) 帮助应用修改了包名； 
+	7.2.1.a (问题对策) 设置里面启动的时候修改下帮助的包名； 
+	7.2.1.w (修改人名称) 包林玉
+	7.2.1.m(修改人邮箱)   baoly@tcl.com
+8.版本更改记录：
+	8.1更新日期：20141021
+	8.2修改日志
+	8.2.1.d（问题描述） PVCS5329 在系统信息界面卸载U盘/移动硬盘/SD卡无提示且不能立即刷新信息  
+	8.2.1.r(问题原因) 没有收到广播
+	8.2.1.a(问题对策) 在layout里面注册广播，无法接收，现在改为dialog里面注册广播 
+	8.2.1.w(修改人名称) 包林玉        
+	8.2.1.m(修改人邮箱) baoly@tcl.com
+
+  
+
+      
+	 	 

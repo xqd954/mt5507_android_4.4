@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- //Begin Added by tianjing@tcl.com for TCL Widgets .16items-->
+    <style name="Theme">
+	<item name="tclprogressBarStyleCircle">@tvos:style/TCLProgressBarC</item>
+	<item name="tclprogressBarStyleHorizontal">@tvos:style/TCLProgressBarH</item>
+	<item name="tclprogressBarStyleHorizontalWhite">@tvos:style/TCLProgressBarHW</item>
+	<item name="tclseekBarStyle">@tvos:style/TCLSeekBar</item>
+	<item name="tcldlabelDialogStyle">@tvos:style/TCLDLabelDialog</item>
+	<item name="tcldlabelStyle">@tvos:style/TCLDLabel</item>
+	<item name="tclradioButtonStyle">@tvos:style/TCLRadioButton</item>
+	<item name="tclcheckBoxStyle">@tvos:style/TCLCheckBox</item>
+	<item name="tcleditTextStyle">@tvos:style/TCLEditText</item>
+  <item name="tclbuttonStyle">@tvos:style/TCLButton</item>
+  <item name="tclratingBarStyle">@tvos:style/TCLRatingBar</item>
+	<item name="tclfloatMenuStyle">@tvos:style/TCLFloatMenu</item>
+	<item name="tclspinnerStyle">@tvos:style/TCLSpinner</item>
+	<item name="tcllistViewStyle">@tvos:style/TCLListView</item>
+	<item name="tclalertDialogStyle">@tvos:style/TCLAlertDialog</item>
+	<item name="tclbuttonblackStyle">@tvos:style/TCLButtonBlack</item>
+	<!-- TCL iqiyi 2013-11-21 -->
+  <item name="tclButtonEspecialStyle">@tvos:style/TCLButtonEspecial</item>
+  <item name="tclListViewEspecialStyle">@tvos:style/TCLListViewEspecial</item>
+  <item name="tclProgressBarCEspecial">@tvos:style/TCLProgressBarCEspecial</item>
+  </style>
+    <!-- //End Added by tianjing@tcl.com for TCL Widgets .20130124-->
+</resources>

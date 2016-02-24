@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/noButton"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"	>
+   
+    
+	<RelativeLayout 
+    android:id="@+id/alert_title_full"
+    android:layout_width="800px"
+    
+    android:layout_height="wrap_content"
+    android:minHeight="50dip"
+
+    android:background="@drawable/tcl_alert_818_title" 
+    android:layout_weight="1"
+    > 
+    </RelativeLayout>
+   
+   
+    <RelativeLayout
+    android:id="@+id/alert_content_full"
+    android:layout_width="800px"
+    android:layout_height="wrap_content"
+  
+  	
+    android:background="@drawable/tcl_alert_818_content"
+    android:layout_below="@id/alert_title_full"
+    android:layout_alignLeft="@id/alert_title_full"
+    android:layout_alignRight="@id/alert_title_full">
+    </RelativeLayout>
+
+  
+    <RelativeLayout 
+    android:id="@+id/alert_button_full"
+    android:layout_width="wrap_content"
+    android:layout_height="90dip"
+    android:background="@drawable/tcl_alert_818_foot"
+    android:layout_below="@id/alert_content_full"
+    android:layout_alignLeft="@id/alert_title_full"
+    android:layout_alignRight="@id/alert_title_full"
+ 	
+    >  
+     <RelativeLayout 
+    android:id="@+id/alert_content_sperate"
+    android:layout_height="wrap_content"
+    android:layout_width="800px"
+    android:background="@drawable/tcl_dialog_sperateline_818"
+    android:layout_marginTop="20dip"
+    /> 
+    </RelativeLayout>
+ 
+</RelativeLayout>

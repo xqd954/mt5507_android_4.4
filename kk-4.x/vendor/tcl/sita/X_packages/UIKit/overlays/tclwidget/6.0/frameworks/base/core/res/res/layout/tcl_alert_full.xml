@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@drawable/tcl_alert_bg"	>
+<RelativeLayout
+	android:id="@+id/noButton"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@android:color/transparent"	>
+   
+    
+	<RelativeLayout 
+    android:id="@+id/alert_title_full"
+    android:layout_width="800px"
+    android:layout_height="wrap_content"
+    android:minHeight="80dip"
+    android:background="@drawable/tcl_alert_title" 
+    android:gravity="center"
+    > 
+    </RelativeLayout>
+   
+	<LinearLayout 
+	    android:layout_width="wrap_content" android:layout_height="wrap_content"
+	    android:background="@drawable/tcl_alert_content_foot"
+    android:layout_below="@id/alert_title_full"
+    android:layout_alignLeft="@id/alert_title_full"
+    android:layout_alignRight="@id/alert_title_full"	    
+    android:orientation="vertical"
+	    >
+    <RelativeLayout
+    android:id="@+id/alert_content_full"
+    android:layout_width="800px"
+    android:layout_height="wrap_content"
+  	android:padding="30dip"
+  	android:gravity="center"
+>
+    </RelativeLayout>
+
+  
+    <RelativeLayout 
+    android:id="@+id/alert_button_full"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"	
+    android:gravity="center"
+    android:paddingBottom="15dp"
+    >  
+    </RelativeLayout>
+ </LinearLayout>
+</RelativeLayout>
+</LinearLayout>

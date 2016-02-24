@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- //Begin Added by tianjing@tcl.com for TCL Widgets .21items-->
+        <add-resource type="string" name="tcl_menu_quit" />
+	<string name="tcl_menu_quit">返回</string>
+        <add-resource type="string" name="tcl_menu_logoff" />
+	<string name="tcl_menu_logoff">注销</string>
+        <add-resource type="string" name="tcl_menu_demon" />
+	<string name="tcl_menu_demon">后台</string>
+        <add-resource type="string" name="tcl_menu_163" />
+	<string name="tcl_menu_163">同步163相册</string>
+        <add-resource type="string" name="tcl_menu_qq" />
+	<string name="tcl_menu_qq">同步QQ相册</string>
+        <add-resource type="string" name="tcl_menu_sync" />
+	<string name="tcl_menu_sync">管理同步</string>
+        <add-resource type="string" name="tcl_dialog_ok" />
+	<string name="tcl_dialog_ok">确认</string>
+        <add-resource type="string" name="tcl_dialog_cancle" />
+	<string name="tcl_dialog_cancle">取消</string>
+        <add-resource type="string" name="tcl_menu_wallpaper" />
+	<string name="tcl_menu_wallpaper">墙纸设置</string>
+        <add-resource type="string" name="tcl_menu_move" />
+	<string name="tcl_menu_move">移动</string>
+        <add-resource type="string" name="tcl_menu_add" />
+	<string name="tcl_menu_add">添加</string>
+        <add-resource type="string" name="tcl_menu_delete" />
+	<string name="tcl_menu_delete">删除</string>
+        <add-resource type="string" name="tcl_menu_edit" />
+	<string name="tcl_menu_edit">编辑</string>
+        <add-resource type="string" name="tcl_menu_about" />
+	<string name="tcl_menu_about">关于</string>
+        <add-resource type="string" name="tcl_menu_sound" />
+	<string name="tcl_menu_sound">声音设置</string>
+        <add-resource type="string" name="tcl_menu_appsearch" />
+	<string name="tcl_menu_appsearch">应用搜索</string>
+        <add-resource type="string" name="tcl_menu_set" />
+	<string name="tcl_menu_set">设置</string>
+        <add-resource type="string" name="tcl_dialog_ask" />
+	<string name="tcl_dialog_ask">询问</string>
+        <add-resource type="string" name="tcl_dialog_hint" />
+	<string name="tcl_dialog_hint">提示</string>
+        <add-resource type="string" name="tcl_dialog_select" />
+	<string name="tcl_dialog_select">请选择操作任务</string>
+        <add-resource type="string" name="tcl_dialog_ok1" />
+	<string name="tcl_dialog_ok1">确定</string>
+    <!-- //End Added by tianjing@tcl.com for TCL Widgets .20130124-->
+</resources>

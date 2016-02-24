@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+   	<item
+        android:id="@android:id/background"  android:gravity="center"  >
+      <nine-patch android:src="@drawable/tcl_seekbar_818_bg"/>
+      </item>
+    <item android:id="@android:id/progress"  android:gravity="center" >
+        <clip> 
+        <nine-patch android:src="@drawable/tcl_seekbar_818_progress" />
+        </clip>
+    </item>      
+</layer-list>

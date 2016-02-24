@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>	
+    <add-resource type="style" name="WindowAnimation" />
+    <declare-styleable name="WindowAnimation">
+        <attr name="activityOpenEnterAnimation_translate" format="reference" />
+        <attr name="activityOpenExitAnimation_translate" format="reference" />
+        <attr name="activityCloseEnterAnimation_translate" format="reference" />
+        <attr name="activityCloseExitAnimation_translate" format="reference" />
+        <attr name="taskOpenEnterAnimation_translate" format="reference" />
+        <attr name="taskOpenExitAnimation_translate" format="reference" />
+        <attr name="taskCloseEnterAnimation_translate" format="reference" />
+        <attr name="taskCloseExitAnimation_translate" format="reference" />
+        <attr name="taskToFrontEnterAnimation_translate" format="reference" />
+        <attr name="taskToFrontExitAnimation_translate" format="reference" />
+        <attr name="taskToBackEnterAnimation_translate" format="reference" />
+        <attr name="taskToBackExitAnimation_translate" format="reference" />
+        <attr name="wallpaperOpenEnterAnimation_translate" format="reference" />
+        <attr name="wallpaperOpenExitAnimation_translate" format="reference" />
+        <attr name="wallpaperCloseEnterAnimation_translate" format="reference" />
+        <attr name="wallpaperCloseExitAnimation_translate" format="reference" />
+        <attr name="wallpaperIntraOpenEnterAnimation_translate" format="reference" />
+        <attr name="wallpaperIntraOpenExitAnimation_translate" format="reference" />
+        <attr name="wallpaperIntraCloseEnterAnimation_translate" format="reference" />
+        <attr name="wallpaperIntraCloseExitAnimation_translate" format="reference" />
+    </declare-styleable>
+</resources>

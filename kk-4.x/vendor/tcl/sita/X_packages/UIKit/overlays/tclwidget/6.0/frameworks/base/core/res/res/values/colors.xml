@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<add-resource type="color" name="btn_focus" />
+    <color name="btn_focus">#000000</color>
+<add-resource type="color" name="btn_nomal" />
+    <color name="btn_nomal">#b8a56c</color>
+<add-resource type="color" name="btn_disable" />
+    <color name="btn_disable">#808080</color>
+</resources>	

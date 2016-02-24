@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<machine_info name="F3800A">
+ <product_name name="中央处理器(CPU)  :">Cortex 1.0GHz 四核</product_name>
+ <cpu name="图形处理器(GPU)  :">Mali450 双核</cpu>
+ <gpu name="图像处理器(VPU)  :">VE 双核</gpu>
+ <core_volume name="处理器核心数(CoreVolume)  :">八核</core_volume> 
+ <memc name="存储(Memory/Flash)  :">32Gb</memc>
+ <memory name="分辨率(Resolution)  :">1920*1080</memory>
+ <sdcard name="屏类型(Panel type)  :">A+</sdcard>
+ <resolution name="可视角度(Visual angle)  :">178°</resolution>
+ <panel_type name="网络连接(Network system)  :">100-1000M LAN/内置WIFI</panel_type>
+ <threed_type name="数字电视(Digital TV)  :">DTMB地面数字波一体机</threed_type>
+ <visual_angle name=""></visual_angle> 
+ <multi_screen name=""></multi_screen>
+ <digital_tv name=""></digital_tv>
+ <speaker name=""></speaker>
+  <controll_mode name=""></controll_mode>
+  
+
+ 
+ <operating_system name="操作系统(Operating system)  :">Android 4.4</operating_system>
+ <user_interface name="控制界面(User Interface)  :">T-UI</user_interface>
+ <safe_system name="安全系统(Safe system)  :">电视卫士</safe_system>
+ <graphics_engine name="多屏互联(Multi-screen interconnect)  :">多屏互动、微信互联（简版）</graphics_engine>
+ <graphics_engine2 name="图像处理引擎(Graphics engine)  :">混合调光专利技术(专利申请号:CN201310309269.3)</graphics_engine2>
+<graphics_engine3 name="">LED背光控制</graphics_engine3>
+  <graphics_4k_engine name="">晶彩靓黑画质提升技术</graphics_4k_engine>
+ <graphics_4k_engine2 name="">自然光技术</graphics_4k_engine2>
+ <graphics_4k_engine3 name="">HMR 480HZ</graphics_4k_engine3>
+ <audio_engine name="音频处理技术(Audio engine)  :">Dolby Digital Plus</audio_engine>
+ <audio_engine2 name="节能技术(Energy Technology)  :">节能先锋</audio_engine2>
+<audio_engine3 name=""></audio_engine3>
+ <audio_engine4 name=""></audio_engine4>
+  <audio_engine5 name=""></audio_engine5>
+  <audio_engine6 name=""></audio_engine6>
+ </machine_info>

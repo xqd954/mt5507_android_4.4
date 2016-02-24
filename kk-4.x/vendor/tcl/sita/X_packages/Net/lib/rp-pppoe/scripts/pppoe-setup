@@ -1,0 +1,397 @@
+#!/bin/busybox sh
+#***********************************************************************
+#
+# pppoe-setup
+#
+# All-purpose slicing/dicing shell script to configure rp-pppoe.
+#
+# LIC: GPL
+#
+# Copyright (C) 2000 Roaring Penguin Software Inc.
+#
+# $Id$
+#***********************************************************************
+
+# From AUTOCONF
+prefix=/usr
+exec_prefix=${prefix}
+
+# Paths to programs
+USER_PASSWD_PATH=/data/misc/ppp/pppoe.data
+IFCONFIG="busybox ifconfig"
+PPPD=/system/bin/pppd
+PPPOE=/system/bin/pppoe
+ECHO="busybox echo"
+LOGGER="busybox logger -t `busybox basename $0`"
+
+# Set to "C" locale so we can parse messages from commands
+LANG=C
+export LANG
+
+CONFIG=/data/misc/ppp/pppoe.conf
+
+# Protect created files
+umask 077
+
+copy() {
+    busybox cp $1 $2
+    if busybox test "$?" != 0  ; then
+	$ECHO "*** Error copying $1 to $2"
+	$ECHO "*** Quitting."
+	exit 1
+    fi
+}
+
+$ECHO "Welcome to the Roaring Penguin PPPoE client setup.  First, I will run"
+$ECHO "some checks on your system to make sure the PPPoE client is installed"
+$ECHO "properly..."
+$ECHO ""
+
+# Must be root
+if busybox test "`busybox id -u`" != 0  ; then
+    $ECHO "$0: Sorry, you must be root to run this script"
+    exit 1
+fi
+
+# Prototype config fie must exist
+if busybox test ! -r "$CONFIG"  ; then
+    if busybox test -r /system/etc/ppp/pppoe.conf ; then
+	    copy /system/etc/ppp/pppoe.conf /data/misc/ppp/pppoe.conf
+		chmod 777 /data/misc/ppp
+        chmod 777 /data/misc/ppp/*
+	else
+        $ECHO "Oh, dear, I don't see the file '$CONFIG' anywhere.  Please"
+        $ECHO "re-install the PPPoE client."
+        exit 1
+	fi
+fi
+
+# /var/run directory must exist
+if busybox test ! -d /var/run ; then
+	mkdir /var/run
+	chmod 777 /var/run
+	chmod 777 /var/run/*
+fi
+
+# User and password file must exit
+if busybox test ! -r "$USER_PASSWD_PATH"  ; then
+    $ECHO "$USER_PASSWD_PATH is not exited."
+    exit 1
+fi
+
+# Get user
+tmp1=$(busybox grep 'user_name' $USER_PASSWD_PATH)
+# tmp2=${tmp1#*\"user_name\">}
+# tmp_user=${tmp2%*</string>}
+tmp_user=${tmp1#*user_name=}
+
+# Get password
+tmp1=$(busybox grep 'pass_word' $USER_PASSWD_PATH)
+# tmp2=${tmp1#*\"pass_word\">}
+# tmp_password=${tmp2%*</string>}
+tmp_password=${tmp1#*pass_word=}
+
+# Get interface
+tmp1=$(busybox grep 'net_if' $USER_PASSWD_PATH)
+tmp_interface=${tmp1#*net_if=}
+
+# Must have pppd
+if busybox test ! -x $PPPD  ; then
+    $ECHO "Oops, I can't execute the program '$PPPD'.  You"
+    $ECHO "must install the PPP software suite, version 2.3.10 or later."
+    exit 1
+fi
+export CONFIG
+. $CONFIG
+
+if busybox test "$DEMAND" = ""  ; then
+    DEMAND=no
+fi
+
+# pppoe must exist
+if busybox test ! -x "$PPPOE"  ; then
+    $ECHO "Oh, dear, I can't execute the program '$PPPOE'.  Please"
+    $ECHO "re-install the rp-pppoe client."
+    exit 1
+fi
+
+$ECHO "Looks good!  Now, please enter some information:"
+
+while  true  ; do
+    $ECHO ""
+    $ECHO "USER NAME"
+    $ECHO ""
+    busybox printf "%s" ">>> Enter your PPPoE user name (default $USER): "
+#    read U
+    U=$tmp_user
+
+    if busybox test "$U" = ""  ; then
+	U="$USER"
+    fi
+
+    # Under Linux, "fix" the default interface if eth1 is not available
+    if busybox test `busybox uname -s` = "Linux" ; then
+	$IFCONFIG $ETH > /dev/null 2>&1 || ETH=eth0
+    fi
+    $ECHO ""
+    $ECHO "INTERFACE"
+    $ECHO ""
+    $ECHO ">>> Enter the Ethernet interface connected to the DSL modem"
+    $ECHO "For Solaris, this is likely to be something like /dev/hme0."
+    $ECHO "For Linux, it will be ethn, where 'n' is a number."
+    busybox printf "%s" "(default $ETH): "
+#    read E
+#    E=""
+    E=$tmp_interface
+
+    if busybox test "$E" = ""  ; then
+	E="$ETH"
+    fi
+
+    $ECHO ""
+    $ECHO "Do you want the link to come up on demand, or stay up continuously?"
+    $ECHO "If you want it to come up on demand, enter the idle time in seconds"
+    $ECHO "after which the link should be dropped.  If you want the link to"
+    $ECHO "stay up permanently, enter 'no' (two letters, lower-case.)"
+    $ECHO "NOTE: Demand-activated links do not interact well with dynamic IP"
+    $ECHO "addresses.  You may have some problems with demand-activated links."
+    printf "%s" ">>> Enter the demand value (default $DEMAND): "
+#    read D
+    D=""
+    if busybox test "$D" = ""  ; then
+	D=$DEMAND
+    fi
+
+    $ECHO ""
+    $ECHO "DNS"
+    $ECHO ""
+    $ECHO "Please enter the IP address of your ISP's primary DNS server."
+    $ECHO "If your ISP claims that 'the server will provide DNS addresses',"
+    $ECHO "enter 'server' (all lower-case) here."
+    $ECHO "If you just press enter, I will assume you know what you are"
+    $ECHO "doing and not modify your DNS setup."
+    printf "%s" ">>> Enter the DNS information here: "
+
+#    read DNS1
+    DNS1=server
+
+
+    if busybox test "$DNS1" != ""  ; then
+        if busybox test "$DNS1" != "server"  ; then
+	    $ECHO "Please enter the IP address of your ISP's secondary DNS server."
+	    $ECHO "If you just press enter, I will assume there is only one DNS server."
+	    busybox printf "%s" ">>> Enter the secondary DNS server address here: "
+	    read DNS2
+	fi
+    fi
+
+    while  true  ; do
+	$ECHO ""
+	$ECHO "PASSWORD"
+	$ECHO ""
+	busybox stty -echo
+	busybox printf "%s" ">>> Please enter your PPPoE password:    "
+#	read PWD1
+        PWD1=$tmp_password
+	$ECHO ""
+	busybox printf "%s" ">>> Please re-enter your PPPoE password: "
+#	read PWD2
+        PWD2=$tmp_password
+	$ECHO ""
+	busybox stty echo
+	if busybox test "$PWD1" = "$PWD2"  ; then
+	    break
+	fi
+
+	busybox printf "%s" ">>> Sorry, the passwords do not match.  Try again? (y/n)"
+	read ANS
+	case "$ANS" in
+	    N|No|NO|Non|n|no|non)
+		$ECHO "OK, quitting.  Bye."
+		exit 1
+	esac
+    done
+
+    # Firewalling
+    $ECHO ""
+    $ECHO "FIREWALLING"
+    $ECHO ""
+    if busybox test `busybox uname -s` != "Linux" ; then
+	$ECHO "Sorry, firewalling is only supported under Linux.  Consult"
+	$ECHO "your operating system manuals for details on setting up"
+	$ECHO "packet filters for your system."
+	FIREWALL=NONE
+    else
+	$ECHO "Please choose the firewall rules to use.  Note that these rules are"
+	$ECHO "very basic.  You are strongly encouraged to use a more sophisticated"
+	$ECHO "firewall setup; however, these will provide basic security.  If you"
+	$ECHO "are running any servers on your machine, you must choose 'NONE' and"
+	$ECHO "set up firewalling yourself.  Otherwise, the firewall rules will deny"
+	$ECHO "access to all standard servers like Web, e-mail, ftp, etc.  If you"
+	$ECHO "are using SSH, the rules will block outgoing SSH connections which"
+	$ECHO "allocate a privileged source port."
+	$ECHO ""
+	while  true  ; do
+	    $ECHO "The firewall choices are:"
+	    $ECHO "0 - NONE: This script will not set any firewall rules.  You are responsible"
+	    $ECHO "          for ensuring the security of your machine.  You are STRONGLY"
+	    $ECHO "          recommended to use some kind of firewall rules."
+	    $ECHO "1 - STANDALONE: Appropriate for a basic stand-alone web-surfing workstation"
+	    $ECHO "2 - MASQUERADE: Appropriate for a machine acting as an Internet gateway"
+	    $ECHO "                for a LAN"
+	    busybox printf "%s" ">>> Choose a type of firewall (0-2): "
+#	    read a
+            a=0
+	    if busybox test "$a" = 0 -o "$a" = 1 -o "$a" = 2  ; then
+		break
+	    fi
+	    $ECHO "Please enter a number from 0 to 2"
+	done
+
+	case "$a" in
+	    0)
+		FIREWALL=NONE
+		;;
+	    1)
+		FIREWALL=STANDALONE
+		;;
+	    2)
+		FIREWALL=MASQUERADE
+		;;
+	esac
+    fi
+
+    $ECHO ""
+    $ECHO "** Summary of what you entered **"
+    $ECHO ""
+    $ECHO "Ethernet Interface: $E"
+    $ECHO "User name:          $U"
+    if busybox test "$D" = "no"  ; then
+	$ECHO "Activate-on-demand: No"
+    else
+	$ECHO "Activate-on-demand: Yes; idle timeout = $D seconds"
+    fi
+
+    if busybox test "$DNS1" != ""  ; then
+        if busybox test "$DNS1" = "server"  ; then
+	    $ECHO "DNS addresses:      Supplied by ISP's server"
+        else
+	    $ECHO "Primary DNS:        $DNS1"
+	    if busybox test "$DNS2" != ""  ; then
+		$ECHO "Secondary DNS:      $DNS2"
+	    fi
+        fi
+    else
+	$ECHO "DNS:                Do not adjust"
+    fi
+    $ECHO "Firewalling:        $FIREWALL"
+    $ECHO ""
+    while  true  ; do
+        busybox printf "%s" '>>> Accept these settings and adjust configuration files (y/n)? '
+#        read ANS
+        ANS=y
+	case "ANS" in
+	    Y|y|yes|Yes|oui|Oui)
+		ANS=y
+		;;
+            N|n|no|No|non|Non)
+		ANS=n
+		;;
+	esac
+	if busybox test "$ANS" = "y" -o "$ANS" = "n"  ; then
+	    break
+        fi
+    done
+    if busybox test "$ANS" = "y"  ; then
+	break
+    fi
+done
+
+# Adjust configuration files.  First to $CONFIG
+
+$ECHO "Adjusting $CONFIG"
+
+copy $CONFIG $CONFIG-bak
+if busybox test "$DNS1" = "server"  ; then
+    DNSTYPE=SERVER
+    DNS1=""
+    PEERDNS=yes
+else
+    PEERDNS=no
+    if busybox test "$DNS1" = ""  ; then
+	DNSTYPE=NOCHANGE
+    else
+	DNSTYPE=SPECIFY
+    fi
+fi
+
+# Where is pppd likely to put its pid?
+if busybox test -d /var/run  ; then
+    VARRUN=/var/run
+else
+    VARRUN=/data/misc/ppp
+fi
+
+# Some #$(*& ISP's use a slash in the user name...
+busybox sed -e "s&^USER=.*&USER='$U'&" \
+    -e "s&^ETH=.*&ETH='$E'&" \
+    -e "s&^PIDFILE=.*&PIDFILE=\"$VARRUN/\$CF_BASE-pppoe.pid\"&" \
+    -e "s/^FIREWALL=.*/FIREWALL=$FIREWALL/" \
+    -e "s/^DEMAND=.*/DEMAND=$D/" \
+    -e "s/^DNSTYPE=.*/DNSTYPE=$DNSTYPE/" \
+    -e "s/^DNS1=.*/DNS1=$DNS1/" \
+    -e "s/^DNS2=.*/DNS2=$DNS2/" \
+    -e "s/^PEERDNS=.*/PEERDNS=$PEERDNS/" \
+    < $CONFIG-bak > $CONFIG
+
+if busybox test $? != 0  ; then
+    $ECHO "** Error modifying $CONFIG"
+    $ECHO "** Quitting"
+    exit 1
+fi
+
+if busybox test "$DNS1" != ""  ; then
+    if busybox tst "$DNS1" != "server"  ; then
+	$ECHO "Adjusting /data/misc/resolv.conf"
+	if busybox test -r /data/misc/resolv.conf  ; then
+	    busybox grep -s "MADE-BY-RP-PPPOE" /data/misc/resolv.conf > /dev/null 2>&1
+	    if busybox test "$?" != 0  ; then
+		$ECHO "  (But first backing it up to /data/misc/resolv.conf-bak)"
+		copy /data/misc/resolv.conf /data/misc/resolv.conf-bak
+	    fi
+	fi
+	$ECHO "# MADE-BY-RP-PPPOE" > /data/misc/resolv.conf
+	$ECHO "nameserver $DNS1" >> /data/misc/resolv.conf
+	if busybox test "$DNS2" != ""  ; then
+	    $ECHO "nameserver $DNS2" >> /data/misc/resolv.conf
+	fi
+    fi
+fi
+
+$ECHO "Adjusting /data/misc/ppp/pap-secrets and /data/misc/ppp/chap-secrets"
+if busybox test -r /data/misc/ppp/pap-secrets  ; then
+    $ECHO "  (But first backing it up to /data/misc/ppp/pap-secrets-bak)"
+    copy /data/misc/ppp/pap-secrets /data/misc/ppp/pap-secrets-bak
+else
+    busybox cp /dev/null /data/misc/ppp/pap-secrets-bak
+fi
+if busybox test -r /data/misc/ppp/chap-secrets  ; then
+    $ECHO "  (But first backing it up to /data/misc/ppp/chap-secrets-bak)"
+    copy /data/misc/ppp/chap-secrets /data/misc/ppp/chap-secrets-bak
+else
+    busybox cp /dev/null /data/misc/ppp/chap-secrets-bak
+fi
+
+busybox egrep -v "^$U|^\"$U\"" /data/misc/ppp/pap-secrets-bak > /data/misc/ppp/pap-secrets
+$ECHO "\"$U\"	*	\"$PWD1\"" >> /data/misc/ppp/pap-secrets
+busybox egrep -v "^$U|^\"$U\"" /data/misc/ppp/chap-secrets-bak > /data/misc/ppp/chap-secrets
+$ECHO "\"$U\"	*	\"$PWD1\"" >> /data/misc/ppp/chap-secrets
+
+$ECHO ""
+$ECHO ""
+$ECHO ""
+$ECHO "Congratulations, it should be all set up!"
+$ECHO ""
+$ECHO "Type 'pppoe-start' to bring up your PPPoE link and 'pppoe-stop' to bring"
+$ECHO "it down.  Type 'pppoe-status' to see the link status."
+exit 0
